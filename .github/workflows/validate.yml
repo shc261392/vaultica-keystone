@@ -1,0 +1,79 @@
+name: Validate Tokens
+
+on:
+    pull_request:
+        paths:
+            - "tokens/**"
+            - "ai/**"
+    push:
+        paths:
+            - "tokens/**"
+            - "ai/**"
+
+jobs:
+    validate:
+        name: Validate Design System
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
+                  cache: "npm"
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Validate token structure
+              run: npm run validate
+
+            - name: Check JSON syntax
+              run: |
+                  for file in tokens/*.json; do
+                    echo "Validating $file..."
+                    node -e "JSON.parse(require('fs').readFileSync('$file', 'utf8'))"
+                  done
+
+            - name: Check for required files
+              run: |
+                  REQUIRED_FILES=(
+                    "tokens/colors.json"
+                    "tokens/typography.json"
+                    "tokens/effects.json"
+                    "tokens/spacing.json"
+                    "tokens/semantic.json"
+                    "ai/brand-context.md"
+                    "ai/personality.md"
+                  )
+
+                  for file in "${REQUIRED_FILES[@]}"; do
+                    if [ ! -f "$file" ]; then
+                      echo "❌ Missing required file: $file"
+                      exit 1
+                    fi
+                    echo "✓ Found $file"
+                  done
+
+    lint-markdown:
+        name: Lint Markdown
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
+
+            - name: Install markdownlint
+              run: npm install -g markdownlint-cli
+
+            - name: Lint markdown files
+              run: markdownlint '**/*.md' --ignore node_modules || true
+              # Non-blocking for now - remove "|| true" to enforce

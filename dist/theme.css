@@ -1,0 +1,291 @@
+/**
+ * Vaultica Design Tokens
+ * Generated: 2026-01-12T07:11:18.956Z
+ * 
+ * DO NOT EDIT DIRECTLY - Generated from /tokens/*.json
+ * Run 'npm run build' to regenerate
+ */
+
+:root {
+  --color-alias-button-primary-bg: {color.semantic.vault.accent.default};
+  --color-alias-button-primary-bg-hover: {color.semantic.vault.accent.hover};
+  --color-alias-button-primary-text: {color.primitive.neutral.0};
+  --color-alias-button-secondary-bg: transparent;
+  --color-alias-button-secondary-border: {color.semantic.vault.border.strong};
+  --color-alias-button-secondary-text: {color.semantic.vault.text.primary};
+  --color-alias-card-bg: {color.semantic.vault.surface.secondary};
+  --color-alias-card-border: {color.semantic.vault.border.strong};
+  --color-alias-input-bg: {color.semantic.vault.surface.secondary};
+  --color-alias-input-border: {color.semantic.vault.border.default};
+  --color-alias-input-border-focus: {color.semantic.vault.border.focus};
+  --color-alias-input-placeholder: {color.semantic.vault.text.tertiary};
+  --color-alias-input-text: {color.semantic.vault.text.primary};
+  --color-bootstrap-danger: #fe1b20;
+  --color-bootstrap-dark: #363b42;
+  --color-bootstrap-info: #f0d15e;
+  --color-bootstrap-light: #d7e9f2;
+  --color-bootstrap-primary: #27abec;
+  --color-bootstrap-secondary: #1b67a1;
+  --color-bootstrap-success: #13c16a;
+  --color-bootstrap-warning: #eed210;
+  --color-brand-black: oklch(0.3503 0.014 256.77);
+  --color-brand-blue: oklch(0.7031 0.1426 236.68);
+  --color-brand-white: oklch(0.994 0.0084 197.02);
+  --color-primitive-critical-100: oklch(90% 0.08 25);
+  --color-primitive-critical-50: oklch(96% 0.03 25);
+  --color-primitive-critical-500: oklch(58% 0.24 25);
+  --color-primitive-critical-700: oklch(45% 0.18 25);
+  --color-primitive-critical-900: oklch(30% 0.10 25);
+  --color-primitive-info-100: oklch(94% 0.08 85);
+  --color-primitive-info-50: oklch(97% 0.03 85);
+  --color-primitive-info-500: oklch(86% 0.14 85);
+  --color-primitive-info-700: oklch(65% 0.12 85);
+  --color-primitive-info-900: oklch(40% 0.08 85);
+  --color-primitive-neutral-0: oklch(100% 0 0);
+  --color-primitive-neutral-100: #d7e9f2;
+  --color-primitive-neutral-1000: oklch(6% 0.005 256);
+  --color-primitive-neutral-200: oklch(88% 0.012 230);
+  --color-primitive-neutral-300: oklch(75% 0.015 230);
+  --color-primitive-neutral-400: oklch(60% 0.018 230);
+  --color-primitive-neutral-50: oklch(0.994 0.0084 197.02);
+  --color-primitive-neutral-500: oklch(45% 0.02 230);
+  --color-primitive-neutral-600: oklch(0.3503 0.014 256.77);
+  --color-primitive-neutral-700: oklch(30% 0.015 256);
+  --color-primitive-neutral-800: oklch(22% 0.012 256);
+  --color-primitive-neutral-900: oklch(16% 0.01 256);
+  --color-primitive-neutral-950: oklch(12% 0.008 256);
+  --color-primitive-primary-100: oklch(92% 0.06 236);
+  --color-primitive-primary-200: oklch(85% 0.10 236);
+  --color-primitive-primary-300: oklch(78% 0.12 236);
+  --color-primitive-primary-400: oklch(0.7031 0.1426 236.68);
+  --color-primitive-primary-50: oklch(96% 0.03 236);
+  --color-primitive-primary-500: oklch(62% 0.14 236);
+  --color-primitive-primary-600: oklch(52% 0.13 236);
+  --color-primitive-primary-700: oklch(42% 0.11 236);
+  --color-primitive-primary-800: oklch(34% 0.09 236);
+  --color-primitive-primary-900: oklch(26% 0.06 236);
+  --color-primitive-success-100: oklch(92% 0.08 155);
+  --color-primitive-success-50: oklch(96% 0.04 155);
+  --color-primitive-success-500: oklch(68% 0.18 155);
+  --color-primitive-success-700: oklch(50% 0.14 155);
+  --color-primitive-success-900: oklch(32% 0.08 155);
+  --color-primitive-warning-100: oklch(94% 0.10 95);
+  --color-primitive-warning-50: oklch(97% 0.04 95);
+  --color-primitive-warning-500: oklch(85% 0.18 95);
+  --color-primitive-warning-700: oklch(65% 0.15 95);
+  --color-primitive-warning-900: oklch(40% 0.10 95);
+  --color-semantic-vault-accent-active: {color.primitive.primary.500};
+  --color-semantic-vault-accent-default: {color.primitive.primary.400};
+  --color-semantic-vault-accent-hover: {color.primitive.primary.300};
+  --color-semantic-vault-accent-subtle: {color.primitive.primary.900};
+  --color-semantic-vault-border-default: {color.primitive.neutral.700};
+  --color-semantic-vault-border-focus: {color.primitive.primary.400};
+  --color-semantic-vault-border-strong: {color.primitive.neutral.500};
+  --color-semantic-vault-border-subtle: {color.primitive.neutral.800};
+  --color-semantic-vault-status-critical: {color.primitive.critical.500};
+  --color-semantic-vault-status-critical-subtle: {color.primitive.critical.900};
+  --color-semantic-vault-status-info: {color.primitive.info.500};
+  --color-semantic-vault-status-info-subtle: {color.primitive.info.900};
+  --color-semantic-vault-status-success: {color.primitive.success.500};
+  --color-semantic-vault-status-success-subtle: {color.primitive.success.900};
+  --color-semantic-vault-status-warning: {color.primitive.warning.500};
+  --color-semantic-vault-status-warning-subtle: {color.primitive.warning.900};
+  --color-semantic-vault-surface-inverse: {color.primitive.neutral.50};
+  --color-semantic-vault-surface-primary: {color.primitive.neutral.950};
+  --color-semantic-vault-surface-secondary: {color.primitive.neutral.900};
+  --color-semantic-vault-surface-tertiary: {color.primitive.neutral.800};
+  --color-semantic-vault-text-accent: {color.primitive.primary.300};
+  --color-semantic-vault-text-inverse: {color.primitive.neutral.900};
+  --color-semantic-vault-text-primary: {color.primitive.neutral.50};
+  --color-semantic-vault-text-secondary: {color.primitive.neutral.300};
+  --color-semantic-vault-text-tertiary: {color.primitive.neutral.400};
+  --effects-effects-blur-lg: 16px;
+  --effects-effects-blur-md: 8px;
+  --effects-effects-blur-none: 0;
+  --effects-effects-blur-sm: 4px;
+  --effects-effects-blur-xl: 24px;
+  --effects-effects-border-radius-2xl: 1.5rem;
+  --effects-effects-border-radius-full: 9999px;
+  --effects-effects-border-radius-lg: 0.75rem;
+  --effects-effects-border-radius-md: 0.5rem;
+  --effects-effects-border-radius-none: 0;
+  --effects-effects-border-radius-sm: 0.25rem;
+  --effects-effects-border-radius-xl: 1rem;
+  --effects-effects-border-style-dashed: dashed;
+  --effects-effects-border-style-solid: solid;
+  --effects-effects-border-width-default: 2px;
+  --effects-effects-border-width-heavy: 4px;
+  --effects-effects-border-width-none: 0;
+  --effects-effects-border-width-thick: 3px;
+  --effects-effects-border-width-thin: 1px;
+  --effects-effects-motion-duration-fast: 100ms;
+  --effects-effects-motion-duration-instant: 0ms;
+  --effects-effects-motion-duration-normal: 200ms;
+  --effects-effects-motion-duration-slow: 300ms;
+  --effects-effects-motion-duration-slower: 500ms;
+  --effects-effects-motion-easing-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --effects-effects-motion-easing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --effects-effects-motion-easing-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --effects-effects-motion-easing-linear: linear;
+  --effects-effects-motion-easing-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --effects-effects-motion-transition-colors: color 200ms cubic-bezier(0.4, 0, 0.2, 1), background-color 200ms cubic-bezier(0.4, 0, 0.2, 1), border-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --effects-effects-motion-transition-default: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --effects-effects-motion-transition-opacity: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --effects-effects-motion-transition-transform: transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --effects-effects-opacity-0: 0;
+  --effects-effects-opacity-10: 0.1;
+  --effects-effects-opacity-100: 1;
+  --effects-effects-opacity-20: 0.2;
+  --effects-effects-opacity-30: 0.3;
+  --effects-effects-opacity-40: 0.4;
+  --effects-effects-opacity-5: 0.05;
+  --effects-effects-opacity-50: 0.5;
+  --effects-effects-opacity-60: 0.6;
+  --effects-effects-opacity-70: 0.7;
+  --effects-effects-opacity-80: 0.8;
+  --effects-effects-opacity-90: 0.9;
+  --effects-effects-shadow-glow-accent: 0 0 20px oklch(55% 0.2 265 / 0.3);
+  --effects-effects-shadow-glow-critical: 0 0 20px oklch(55% 0.2 25 / 0.3);
+  --effects-effects-shadow-glow-success: 0 0 20px oklch(60% 0.15 155 / 0.3);
+  --effects-effects-shadow-inner: inset 0 2px 4px 0 oklch(0% 0 0 / 0.05);
+  --effects-effects-shadow-lg: 0 10px 15px -3px oklch(0% 0 0 / 0.1), 0 4px 6px -4px oklch(0% 0 0 / 0.1);
+  --effects-effects-shadow-md: 0 4px 6px -1px oklch(0% 0 0 / 0.1), 0 2px 4px -2px oklch(0% 0 0 / 0.1);
+  --effects-effects-shadow-none: none;
+  --effects-effects-shadow-sm: 0 1px 3px 0 oklch(0% 0 0 / 0.1), 0 1px 2px -1px oklch(0% 0 0 / 0.1);
+  --effects-effects-shadow-xl: 0 20px 25px -5px oklch(0% 0 0 / 0.1), 0 8px 10px -6px oklch(0% 0 0 / 0.1);
+  --effects-effects-shadow-xs: 0 1px 2px 0 oklch(0% 0 0 / 0.05);
+  --spacing-breakpoints-2xl: 1536px;
+  --spacing-breakpoints-lg: 1024px;
+  --spacing-breakpoints-md: 768px;
+  --spacing-breakpoints-sm: 640px;
+  --spacing-breakpoints-xl: 1280px;
+  --spacing-layout-card-gap: {spacing.4};
+  --spacing-layout-card-padding: {spacing.4};
+  --spacing-layout-card-padding-lg: {spacing.6};
+  --spacing-layout-container-max-width: 80rem;
+  --spacing-layout-container-padding: {spacing.4};
+  --spacing-layout-container-padding-lg: {spacing.6};
+  --spacing-layout-section-gap: {spacing.8};
+  --spacing-layout-section-gap-lg: {spacing.12};
+  --spacing-layout-stack-gap-lg: {spacing.6};
+  --spacing-layout-stack-gap-md: {spacing.4};
+  --spacing-layout-stack-gap-sm: {spacing.2};
+  --spacing-layout-stack-gap-xl: {spacing.8};
+  --spacing-layout-stack-gap-xs: {spacing.1};
+  --spacing-sizing-avatar-2xl: 5rem;
+  --spacing-sizing-avatar-lg: 3rem;
+  --spacing-sizing-avatar-md: 2.5rem;
+  --spacing-sizing-avatar-sm: 2rem;
+  --spacing-sizing-avatar-xl: 4rem;
+  --spacing-sizing-avatar-xs: 1.5rem;
+  --spacing-sizing-button-height-lg: 3rem;
+  --spacing-sizing-button-height-md: 2.5rem;
+  --spacing-sizing-button-height-sm: 2rem;
+  --spacing-sizing-icon-lg: 1.5rem;
+  --spacing-sizing-icon-md: 1.25rem;
+  --spacing-sizing-icon-sm: 1rem;
+  --spacing-sizing-icon-xl: 2rem;
+  --spacing-sizing-icon-xs: 0.75rem;
+  --spacing-sizing-input-height-lg: 3rem;
+  --spacing-sizing-input-height-md: 2.5rem;
+  --spacing-sizing-input-height-sm: 2rem;
+  --spacing-spacing-0: 0;
+  --spacing-spacing-0.5: 0.125rem;
+  --spacing-spacing-1: 0.25rem;
+  --spacing-spacing-1.5: 0.375rem;
+  --spacing-spacing-10: 2.5rem;
+  --spacing-spacing-11: 2.75rem;
+  --spacing-spacing-12: 3rem;
+  --spacing-spacing-14: 3.5rem;
+  --spacing-spacing-16: 4rem;
+  --spacing-spacing-2: 0.5rem;
+  --spacing-spacing-2.5: 0.625rem;
+  --spacing-spacing-20: 5rem;
+  --spacing-spacing-24: 6rem;
+  --spacing-spacing-28: 7rem;
+  --spacing-spacing-3: 0.75rem;
+  --spacing-spacing-3.5: 0.875rem;
+  --spacing-spacing-32: 8rem;
+  --spacing-spacing-36: 9rem;
+  --spacing-spacing-4: 1rem;
+  --spacing-spacing-40: 10rem;
+  --spacing-spacing-44: 11rem;
+  --spacing-spacing-48: 12rem;
+  --spacing-spacing-5: 1.25rem;
+  --spacing-spacing-52: 13rem;
+  --spacing-spacing-56: 14rem;
+  --spacing-spacing-6: 1.5rem;
+  --spacing-spacing-60: 15rem;
+  --spacing-spacing-64: 16rem;
+  --spacing-spacing-7: 1.75rem;
+  --spacing-spacing-72: 18rem;
+  --spacing-spacing-8: 2rem;
+  --spacing-spacing-80: 20rem;
+  --spacing-spacing-9: 2.25rem;
+  --spacing-spacing-96: 24rem;
+  --spacing-spacing-px: 1px;
+  --spacing-zIndex-base: 0;
+  --spacing-zIndex-dropdown: 10;
+  --spacing-zIndex-fixed: 30;
+  --spacing-zIndex-modal: 50;
+  --spacing-zIndex-modal-backdrop: 40;
+  --spacing-zIndex-popover: 60;
+  --spacing-zIndex-sticky: 20;
+  --spacing-zIndex-toast: 80;
+  --spacing-zIndex-tooltip: 70;
+  --typography-typography-fontFamily-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --typography-typography-fontFamily-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  --typography-typography-fontFamily-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-typography-fontSize-2xl: 1.5rem;
+  --typography-typography-fontSize-3xl: 1.875rem;
+  --typography-typography-fontSize-4xl: 2.25rem;
+  --typography-typography-fontSize-5xl: 3rem;
+  --typography-typography-fontSize-6xl: 3.75rem;
+  --typography-typography-fontSize-7xl: 4.5rem;
+  --typography-typography-fontSize-base: 1rem;
+  --typography-typography-fontSize-lg: 1.125rem;
+  --typography-typography-fontSize-sm: 0.875rem;
+  --typography-typography-fontSize-xl: 1.25rem;
+  --typography-typography-fontSize-xs: 0.75rem;
+  --typography-typography-fontWeight-bold: 700;
+  --typography-typography-fontWeight-heavy: 800;
+  --typography-typography-fontWeight-medium: 500;
+  --typography-typography-fontWeight-regular: 400;
+  --typography-typography-fontWeight-semibold: 600;
+  --typography-typography-letterSpacing-normal: 0;
+  --typography-typography-letterSpacing-tight: -0.02em;
+  --typography-typography-letterSpacing-tighter: -0.04em;
+  --typography-typography-letterSpacing-wide: 0.02em;
+  --typography-typography-letterSpacing-wider: 0.04em;
+  --typography-typography-letterSpacing-widest: 0.08em;
+  --typography-typography-lineHeight-loose: 2;
+  --typography-typography-lineHeight-none: 1;
+  --typography-typography-lineHeight-normal: 1.5;
+  --typography-typography-lineHeight-relaxed: 1.625;
+  --typography-typography-lineHeight-snug: 1.35;
+  --typography-typography-lineHeight-tight: 1.2;
+}
+
+/* Dark theme (default) */
+[data-theme="dark"],
+.theme-dark {
+  color-scheme: dark;
+}
+
+/* Light theme */
+[data-theme="light"],
+.theme-light {
+  color-scheme: light;
+  /* Light theme overrides would go here */
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

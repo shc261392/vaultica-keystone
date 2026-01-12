@@ -1,0 +1,33 @@
+{
+    "editor.formatOnSave": true,
+    "files.associations": {
+        "*.json": "jsonc"
+    },
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "tokens/*.json"
+            ],
+            "url": "https://json-schema.org/draft/2020-12/schema"
+        }
+    ],
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "css.customData": [],
+    "files.exclude": {
+        "node_modules": true
+    },
+    "search.exclude": {
+        "node_modules": true,
+        "dist": false
+    },
+    "github.copilot.chat.codeGeneration.instructions": [
+        {
+            "file": ".cursorrules"
+        },
+        {
+            "file": "ai/brand-context.md"
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$metadata": {
+    "description": "Vaultica Spacing Tokens - Consistent spacing scale for layouts",
+    "version": "1.0.0",
+    "lastUpdated": "2026-01-12"
+  },
+  "spacing": {
+    "$description": "Base 4px spacing scale for consistent rhythm",
+    "0": { "value": "0", "type": "spacing" },
+    "px": { "value": "1px", "type": "spacing" },
+    "0.5": { "value": "0.125rem", "type": "spacing", "px": "2px" },
+    "1": { "value": "0.25rem", "type": "spacing", "px": "4px" },
+    "1.5": { "value": "0.375rem", "type": "spacing", "px": "6px" },
+    "2": { "value": "0.5rem", "type": "spacing", "px": "8px" },
+    "2.5": { "value": "0.625rem", "type": "spacing", "px": "10px" },
+    "3": { "value": "0.75rem", "type": "spacing", "px": "12px" },
+    "3.5": { "value": "0.875rem", "type": "spacing", "px": "14px" },
+    "4": { "value": "1rem", "type": "spacing", "px": "16px" },
+    "5": { "value": "1.25rem", "type": "spacing", "px": "20px" },
+    "6": { "value": "1.5rem", "type": "spacing", "px": "24px" },
+    "7": { "value": "1.75rem", "type": "spacing", "px": "28px" },
+    "8": { "value": "2rem", "type": "spacing", "px": "32px" },
+    "9": { "value": "2.25rem", "type": "spacing", "px": "36px" },
+    "10": { "value": "2.5rem", "type": "spacing", "px": "40px" },
+    "11": { "value": "2.75rem", "type": "spacing", "px": "44px" },
+    "12": { "value": "3rem", "type": "spacing", "px": "48px" },
+    "14": { "value": "3.5rem", "type": "spacing", "px": "56px" },
+    "16": { "value": "4rem", "type": "spacing", "px": "64px" },
+    "20": { "value": "5rem", "type": "spacing", "px": "80px" },
+    "24": { "value": "6rem", "type": "spacing", "px": "96px" },
+    "28": { "value": "7rem", "type": "spacing", "px": "112px" },
+    "32": { "value": "8rem", "type": "spacing", "px": "128px" },
+    "36": { "value": "9rem", "type": "spacing", "px": "144px" },
+    "40": { "value": "10rem", "type": "spacing", "px": "160px" },
+    "44": { "value": "11rem", "type": "spacing", "px": "176px" },
+    "48": { "value": "12rem", "type": "spacing", "px": "192px" },
+    "52": { "value": "13rem", "type": "spacing", "px": "208px" },
+    "56": { "value": "14rem", "type": "spacing", "px": "224px" },
+    "60": { "value": "15rem", "type": "spacing", "px": "240px" },
+    "64": { "value": "16rem", "type": "spacing", "px": "256px" },
+    "72": { "value": "18rem", "type": "spacing", "px": "288px" },
+    "80": { "value": "20rem", "type": "spacing", "px": "320px" },
+    "96": { "value": "24rem", "type": "spacing", "px": "384px" }
+  },
+  "sizing": {
+    "$description": "Standard component sizes",
+    "icon": {
+      "xs": { "value": "0.75rem", "type": "sizing", "px": "12px" },
+      "sm": { "value": "1rem", "type": "sizing", "px": "16px" },
+      "md": { "value": "1.25rem", "type": "sizing", "px": "20px" },
+      "lg": { "value": "1.5rem", "type": "sizing", "px": "24px" },
+      "xl": { "value": "2rem", "type": "sizing", "px": "32px" }
+    },
+    "button": {
+      "height-sm": { "value": "2rem", "type": "sizing", "px": "32px" },
+      "height-md": { "value": "2.5rem", "type": "sizing", "px": "40px" },
+      "height-lg": { "value": "3rem", "type": "sizing", "px": "48px" }
+    },
+    "input": {
+      "height-sm": { "value": "2rem", "type": "sizing", "px": "32px" },
+      "height-md": { "value": "2.5rem", "type": "sizing", "px": "40px" },
+      "height-lg": { "value": "3rem", "type": "sizing", "px": "48px" }
+    },
+    "avatar": {
+      "xs": { "value": "1.5rem", "type": "sizing", "px": "24px" },
+      "sm": { "value": "2rem", "type": "sizing", "px": "32px" },
+      "md": { "value": "2.5rem", "type": "sizing", "px": "40px" },
+      "lg": { "value": "3rem", "type": "sizing", "px": "48px" },
+      "xl": { "value": "4rem", "type": "sizing", "px": "64px" },
+      "2xl": { "value": "5rem", "type": "sizing", "px": "80px" }
+    }
+  },
+  "layout": {
+    "$description": "Layout-specific spacing",
+    "container": {
+      "padding": { "value": "{spacing.4}", "type": "spacing" },
+      "padding-lg": { "value": "{spacing.6}", "type": "spacing" },
+      "max-width": { "value": "80rem", "type": "sizing", "px": "1280px" }
+    },
+    "section": {
+      "gap": { "value": "{spacing.8}", "type": "spacing" },
+      "gap-lg": { "value": "{spacing.12}", "type": "spacing" }
+    },
+    "card": {
+      "padding": { "value": "{spacing.4}", "type": "spacing" },
+      "padding-lg": { "value": "{spacing.6}", "type": "spacing" },
+      "gap": { "value": "{spacing.4}", "type": "spacing" }
+    },
+    "stack": {
+      "gap-xs": { "value": "{spacing.1}", "type": "spacing" },
+      "gap-sm": { "value": "{spacing.2}", "type": "spacing" },
+      "gap-md": { "value": "{spacing.4}", "type": "spacing" },
+      "gap-lg": { "value": "{spacing.6}", "type": "spacing" },
+      "gap-xl": { "value": "{spacing.8}", "type": "spacing" }
+    }
+  },
+  "breakpoints": {
+    "$description": "Responsive breakpoints",
+    "sm": { "value": "640px", "type": "breakpoint" },
+    "md": { "value": "768px", "type": "breakpoint" },
+    "lg": { "value": "1024px", "type": "breakpoint" },
+    "xl": { "value": "1280px", "type": "breakpoint" },
+    "2xl": { "value": "1536px", "type": "breakpoint" }
+  },
+  "zIndex": {
+    "$description": "Z-index scale for layering",
+    "base": { "value": "0", "type": "zIndex" },
+    "dropdown": { "value": "10", "type": "zIndex" },
+    "sticky": { "value": "20", "type": "zIndex" },
+    "fixed": { "value": "30", "type": "zIndex" },
+    "modal-backdrop": { "value": "40", "type": "zIndex" },
+    "modal": { "value": "50", "type": "zIndex" },
+    "popover": { "value": "60", "type": "zIndex" },
+    "tooltip": { "value": "70", "type": "zIndex" },
+    "toast": { "value": "80", "type": "zIndex" }
+  }
+}

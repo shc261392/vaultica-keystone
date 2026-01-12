@@ -1,0 +1,74 @@
+# Vaultica Keystone - Cursor/Copilot Rules
+
+# Point your AI assistant to this file for brand-aligned code generation
+
+## Project Context
+
+This is the Vaultica Keystone repository - the Single Source of Truth (SSoT) for the Vaultica brand.
+Vaultica is an intelligent digital vault for people who capture everything but have no time to organize.
+
+## Primary Reference Files
+
+- Read `ai/brand-context.md` for complete brand understanding
+- Read `ai/personality.md` for voice and tone guidelines  
+- Read `ai/component-patterns.md` for UI component specifications
+
+## Design Token Rules
+
+### Color Usage
+
+- NEVER use raw hex codes (#ffffff, #000000, etc.)
+- ALWAYS use CSS variables from dist/theme.css
+- Use semantic tokens (--vault-*) not primitive tokens (--color-primitive-*)
+- Default to OKLCH color format for any new colors
+
+### Semantic Color Mapping
+
+```
+Surface backgrounds: var(--vault-surface-primary/secondary/tertiary)
+Text: var(--vault-text-primary/secondary/tertiary)
+Borders: var(--vault-border-default/strong/subtle)
+Accent/CTA: var(--vault-accent-default/hover/active)
+Status: var(--vault-status-success/warning/critical)
+```
+
+### Typography
+
+- Primary font: var(--font-family-primary) - Inter
+- Monospace: var(--font-family-mono) - JetBrains Mono
+- Use font-weight-semibold (600) or font-weight-bold (700) for emphasis
+- Heavy weight (800) reserved for hero headlines
+
+### Border Philosophy (Industrial Elegance)
+
+- Default border: 2px (--border-width-default)
+- Heavy/brutalist border: 3-4px (--border-width-thick/heavy)
+- Borders should be VISIBLE and INTENTIONAL
+- Cards and inputs should have strong borders
+
+## Voice & Tone
+
+- Stoic and Precise
+- Confident, not boastful
+- Use: "Encrypted," "Stable," "Verified," "Core," "Foundation"
+- Avoid: "Cool," "Trendy," "Easy-peasy," "Awesome"
+
+## Component Patterns
+
+- Buttons: Heavy borders on secondary, solid bg on primary
+- Cards: 2-3px borders, dark backgrounds
+- Inputs: Thick focus borders, dark backgrounds
+- Focus states: Always visible, use accent color
+
+## Accessibility Requirements
+
+- 4.5:1 contrast ratio minimum (WCAG AA)
+- Focus states must be clearly visible
+- Touch targets: 44x44px minimum
+
+## File Modification Rules
+
+1. Token changes go in /tokens/*.json files
+2. After modifying tokens, run: npm run build
+3. Never edit /dist/ files directly
+4. When this repo is used as submodule, remind to git pull in consumer project

@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$metadata": {
+    "description": "Vaultica Semantic Tokens - Theme mapping and component tokens",
+    "version": "1.0.0",
+    "lastUpdated": "2026-01-12"
+  },
+  "semantic": {
+    "theme": {
+      "dark": {
+        "$description": "Default Vaultica theme - Industrial Elegance dark mode",
+        "surface": {
+          "app": "{color.primitive.neutral.950}",
+          "panel": "{color.primitive.neutral.900}",
+          "card": "{color.primitive.neutral.900}",
+          "elevated": "{color.primitive.neutral.800}",
+          "overlay": "oklch(0% 0 0 / 0.6)"
+        },
+        "text": {
+          "primary": "{color.primitive.neutral.50}",
+          "secondary": "{color.primitive.neutral.300}",
+          "muted": "{color.primitive.neutral.400}",
+          "disabled": "{color.primitive.neutral.600}"
+        },
+        "border": {
+          "default": "{color.primitive.neutral.700}",
+          "strong": "{color.primitive.neutral.500}",
+          "subtle": "{color.primitive.neutral.800}"
+        },
+        "interactive": {
+          "default": "{color.primitive.accent.500}",
+          "hover": "{color.primitive.accent.400}",
+          "active": "{color.primitive.accent.600}",
+          "disabled": "{color.primitive.neutral.700}"
+        }
+      },
+      "light": {
+        "$description": "Light mode variant (optional - users may request)",
+        "surface": {
+          "app": "{color.primitive.neutral.0}",
+          "panel": "{color.primitive.neutral.50}",
+          "card": "{color.primitive.neutral.0}",
+          "elevated": "{color.primitive.neutral.100}",
+          "overlay": "oklch(100% 0 0 / 0.6)"
+        },
+        "text": {
+          "primary": "{color.primitive.neutral.900}",
+          "secondary": "{color.primitive.neutral.600}",
+          "muted": "{color.primitive.neutral.500}",
+          "disabled": "{color.primitive.neutral.400}"
+        },
+        "border": {
+          "default": "{color.primitive.neutral.200}",
+          "strong": "{color.primitive.neutral.400}",
+          "subtle": "{color.primitive.neutral.100}"
+        },
+        "interactive": {
+          "default": "{color.primitive.accent.600}",
+          "hover": "{color.primitive.accent.500}",
+          "active": "{color.primitive.accent.700}",
+          "disabled": "{color.primitive.neutral.300}"
+        }
+      }
+    },
+    "component": {
+      "$description": "Component-specific semantic tokens",
+      "button": {
+        "primary": {
+          "background": "{color.semantic.vault.accent.default}",
+          "background-hover": "{color.semantic.vault.accent.hover}",
+          "background-active": "{color.semantic.vault.accent.active}",
+          "text": "{color.primitive.neutral.0}",
+          "border": "transparent"
+        },
+        "secondary": {
+          "background": "transparent",
+          "background-hover": "{color.primitive.neutral.800}",
+          "background-active": "{color.primitive.neutral.700}",
+          "text": "{color.semantic.vault.text.primary}",
+          "border": "{color.semantic.vault.border.strong}"
+        },
+        "ghost": {
+          "background": "transparent",
+          "background-hover": "{color.primitive.neutral.800}",
+          "background-active": "{color.primitive.neutral.700}",
+          "text": "{color.semantic.vault.text.primary}",
+          "border": "transparent"
+        },
+        "danger": {
+          "background": "{color.primitive.critical.500}",
+          "background-hover": "{color.primitive.critical.400}",
+          "background-active": "{color.primitive.critical.600}",
+          "text": "{color.primitive.neutral.0}",
+          "border": "transparent"
+        }
+      },
+      "input": {
+        "background": "{color.semantic.vault.surface.secondary}",
+        "background-focus": "{color.semantic.vault.surface.tertiary}",
+        "border": "{color.semantic.vault.border.default}",
+        "border-focus": "{color.semantic.vault.border.focus}",
+        "border-error": "{color.primitive.critical.500}",
+        "text": "{color.semantic.vault.text.primary}",
+        "placeholder": "{color.semantic.vault.text.tertiary}"
+      },
+      "card": {
+        "background": "{color.semantic.vault.surface.secondary}",
+        "border": "{color.semantic.vault.border.strong}",
+        "shadow": "{effects.shadow.sm}"
+      },
+      "badge": {
+        "default": {
+          "background": "{color.primitive.neutral.700}",
+          "text": "{color.primitive.neutral.100}"
+        },
+        "accent": {
+          "background": "{color.primitive.accent.900}",
+          "text": "{color.primitive.accent.200}"
+        },
+        "success": {
+          "background": "{color.primitive.success.900}",
+          "text": "{color.primitive.success.100}"
+        },
+        "warning": {
+          "background": "{color.primitive.warning.900}",
+          "text": "{color.primitive.warning.100}"
+        },
+        "critical": {
+          "background": "{color.primitive.critical.900}",
+          "text": "{color.primitive.critical.100}"
+        }
+      },
+      "toast": {
+        "default": {
+          "background": "{color.primitive.neutral.800}",
+          "border": "{color.primitive.neutral.600}",
+          "text": "{color.primitive.neutral.100}"
+        },
+        "success": {
+          "background": "{color.primitive.success.900}",
+          "border": "{color.primitive.success.700}",
+          "text": "{color.primitive.success.100}"
+        },
+        "error": {
+          "background": "{color.primitive.critical.900}",
+          "border": "{color.primitive.critical.700}",
+          "text": "{color.primitive.critical.100}"
+        }
+      },
+      "nav": {
+        "item-default": {
+          "background": "transparent",
+          "text": "{color.semantic.vault.text.secondary}"
+        },
+        "item-hover": {
+          "background": "{color.primitive.neutral.800}",
+          "text": "{color.semantic.vault.text.primary}"
+        },
+        "item-active": {
+          "background": "{color.primitive.accent.900}",
+          "text": "{color.primitive.accent.200}"
+        }
+      }
+    },
+    "feedback": {
+      "$description": "User feedback states",
+      "focus": {
+        "ring-width": "2px",
+        "ring-offset": "2px",
+        "ring-color": "{color.semantic.vault.border.focus}"
+      },
+      "selection": {
+        "background": "{color.primitive.accent.800}",
+        "text": "{color.primitive.accent.100}"
+      },
+      "loading": {
+        "spinner-color": "{color.semantic.vault.accent.default}",
+        "skeleton-base": "{color.primitive.neutral.800}",
+        "skeleton-shine": "{color.primitive.neutral.700}"
+      }
+    }
+  }
+}

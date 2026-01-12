@@ -1,0 +1,330 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$metadata": {
+    "description": "Vaultica Color Tokens - OKLCH values with functional naming",
+    "version": "1.1.0",
+    "lastUpdated": "2026-01-12"
+  },
+  "color": {
+    "brand": {
+      "$description": "Official Vaultica brand colors from logo",
+      "black": {
+        "value": "oklch(0.3503 0.014 256.77)",
+        "type": "color",
+        "hex": "#363b42"
+      },
+      "white": {
+        "value": "oklch(0.994 0.0084 197.02)",
+        "type": "color",
+        "hex": "#f0fbff"
+      },
+      "blue": {
+        "value": "oklch(0.7031 0.1426 236.68)",
+        "type": "color",
+        "hex": "#27abec",
+        "description": "Primary brand color"
+      }
+    },
+    "bootstrap": {
+      "$description": "Bootstrap theme colors for compatibility",
+      "light": { "value": "#d7e9f2", "type": "color" },
+      "dark": { "value": "#363b42", "type": "color" },
+      "primary": { "value": "#27abec", "type": "color" },
+      "secondary": { "value": "#1b67a1", "type": "color" },
+      "info": { "value": "#f0d15e", "type": "color" },
+      "success": { "value": "#13c16a", "type": "color" },
+      "warning": { "value": "#eed210", "type": "color" },
+      "danger": { "value": "#fe1b20", "type": "color" }
+    },
+    "primitive": {
+      "$description": "Raw color values - DO NOT USE DIRECTLY in components",
+      "neutral": {
+        "0": {
+          "value": "oklch(100% 0 0)",
+          "type": "color",
+          "description": "Pure white"
+        },
+        "50": {
+          "value": "oklch(0.994 0.0084 197.02)",
+          "type": "color",
+          "description": "Brand white"
+        },
+        "100": {
+          "value": "#d7e9f2",
+          "type": "color",
+          "description": "Light (Bootstrap)"
+        },
+        "200": { "value": "oklch(88% 0.012 230)", "type": "color" },
+        "300": { "value": "oklch(75% 0.015 230)", "type": "color" },
+        "400": { "value": "oklch(60% 0.018 230)", "type": "color" },
+        "500": { "value": "oklch(45% 0.02 230)", "type": "color" },
+        "600": {
+          "value": "oklch(0.3503 0.014 256.77)",
+          "type": "color",
+          "description": "Brand black"
+        },
+        "700": { "value": "oklch(30% 0.015 256)", "type": "color" },
+        "800": { "value": "oklch(22% 0.012 256)", "type": "color" },
+        "900": { "value": "oklch(16% 0.01 256)", "type": "color" },
+        "950": { "value": "oklch(12% 0.008 256)", "type": "color" },
+        "1000": { "value": "oklch(6% 0.005 256)", "type": "color" }
+      },
+      "primary": {
+        "$description": "Primary blue scale based on brand blue",
+        "50": { "value": "oklch(96% 0.03 236)", "type": "color" },
+        "100": { "value": "oklch(92% 0.06 236)", "type": "color" },
+        "200": { "value": "oklch(85% 0.10 236)", "type": "color" },
+        "300": { "value": "oklch(78% 0.12 236)", "type": "color" },
+        "400": {
+          "value": "oklch(0.7031 0.1426 236.68)",
+          "type": "color",
+          "description": "Brand blue"
+        },
+        "500": { "value": "oklch(62% 0.14 236)", "type": "color" },
+        "600": { "value": "oklch(52% 0.13 236)", "type": "color" },
+        "700": {
+          "value": "oklch(42% 0.11 236)",
+          "type": "color",
+          "description": "Secondary (#1b67a1)"
+        },
+        "800": { "value": "oklch(34% 0.09 236)", "type": "color" },
+        "900": { "value": "oklch(26% 0.06 236)", "type": "color" }
+      },
+      "success": {
+        "$description": "Based on Bootstrap success #13c16a",
+        "50": { "value": "oklch(96% 0.04 155)", "type": "color" },
+        "100": { "value": "oklch(92% 0.08 155)", "type": "color" },
+        "500": {
+          "value": "oklch(68% 0.18 155)",
+          "type": "color",
+          "hex": "#13c16a"
+        },
+        "700": { "value": "oklch(50% 0.14 155)", "type": "color" },
+        "900": { "value": "oklch(32% 0.08 155)", "type": "color" }
+      },
+      "warning": {
+        "$description": "Based on Bootstrap warning #eed210",
+        "50": { "value": "oklch(97% 0.04 95)", "type": "color" },
+        "100": { "value": "oklch(94% 0.10 95)", "type": "color" },
+        "500": {
+          "value": "oklch(85% 0.18 95)",
+          "type": "color",
+          "hex": "#eed210"
+        },
+        "700": { "value": "oklch(65% 0.15 95)", "type": "color" },
+        "900": { "value": "oklch(40% 0.10 95)", "type": "color" }
+      },
+      "info": {
+        "$description": "Based on Bootstrap info #f0d15e",
+        "50": { "value": "oklch(97% 0.03 85)", "type": "color" },
+        "100": { "value": "oklch(94% 0.08 85)", "type": "color" },
+        "500": {
+          "value": "oklch(86% 0.14 85)",
+          "type": "color",
+          "hex": "#f0d15e"
+        },
+        "700": { "value": "oklch(65% 0.12 85)", "type": "color" },
+        "900": { "value": "oklch(40% 0.08 85)", "type": "color" }
+      },
+      "critical": {
+        "$description": "Based on Bootstrap danger #fe1b20",
+        "50": { "value": "oklch(96% 0.03 25)", "type": "color" },
+        "100": { "value": "oklch(90% 0.08 25)", "type": "color" },
+        "500": {
+          "value": "oklch(58% 0.24 25)",
+          "type": "color",
+          "hex": "#fe1b20"
+        },
+        "700": { "value": "oklch(45% 0.18 25)", "type": "color" },
+        "900": { "value": "oklch(30% 0.10 25)", "type": "color" }
+      }
+    },
+    "semantic": {
+      "$description": "Use these tokens in components - maps to primitives",
+      "vault": {
+        "surface": {
+          "primary": {
+            "value": "{color.primitive.neutral.950}",
+            "type": "color",
+            "description": "Main app background"
+          },
+          "secondary": {
+            "value": "{color.primitive.neutral.900}",
+            "type": "color",
+            "description": "Card/panel backgrounds"
+          },
+          "tertiary": {
+            "value": "{color.primitive.neutral.800}",
+            "type": "color",
+            "description": "Elevated surfaces"
+          },
+          "inverse": {
+            "value": "{color.primitive.neutral.50}",
+            "type": "color",
+            "description": "Light mode surfaces"
+          }
+        },
+        "border": {
+          "default": {
+            "value": "{color.primitive.neutral.700}",
+            "type": "color",
+            "description": "Standard borders"
+          },
+          "strong": {
+            "value": "{color.primitive.neutral.500}",
+            "type": "color",
+            "description": "Heavy brutalist borders"
+          },
+          "subtle": {
+            "value": "{color.primitive.neutral.800}",
+            "type": "color",
+            "description": "Subtle dividers"
+          },
+          "focus": {
+            "value": "{color.primitive.primary.400}",
+            "type": "color",
+            "description": "Focus ring color (brand blue)"
+          }
+        },
+        "text": {
+          "primary": {
+            "value": "{color.primitive.neutral.50}",
+            "type": "color",
+            "description": "Main body text"
+          },
+          "secondary": {
+            "value": "{color.primitive.neutral.300}",
+            "type": "color",
+            "description": "Subdued text"
+          },
+          "tertiary": {
+            "value": "{color.primitive.neutral.400}",
+            "type": "color",
+            "description": "Placeholder text"
+          },
+          "inverse": {
+            "value": "{color.primitive.neutral.900}",
+            "type": "color",
+            "description": "Text on light bg"
+          },
+          "accent": {
+            "value": "{color.primitive.primary.300}",
+            "type": "color",
+            "description": "Links and highlights"
+          }
+        },
+        "accent": {
+          "default": {
+            "value": "{color.primitive.primary.400}",
+            "type": "color",
+            "description": "Primary CTA (brand blue)"
+          },
+          "hover": {
+            "value": "{color.primitive.primary.300}",
+            "type": "color",
+            "description": "CTA hover state"
+          },
+          "active": {
+            "value": "{color.primitive.primary.500}",
+            "type": "color",
+            "description": "CTA active state"
+          },
+          "subtle": {
+            "value": "{color.primitive.primary.900}",
+            "type": "color",
+            "description": "Subtle accent bg"
+          }
+        },
+        "status": {
+          "success": {
+            "value": "{color.primitive.success.500}",
+            "type": "color"
+          },
+          "success-subtle": {
+            "value": "{color.primitive.success.900}",
+            "type": "color"
+          },
+          "warning": {
+            "value": "{color.primitive.warning.500}",
+            "type": "color"
+          },
+          "warning-subtle": {
+            "value": "{color.primitive.warning.900}",
+            "type": "color"
+          },
+          "info": { "value": "{color.primitive.info.500}", "type": "color" },
+          "info-subtle": {
+            "value": "{color.primitive.info.900}",
+            "type": "color"
+          },
+          "critical": {
+            "value": "{color.primitive.critical.500}",
+            "type": "color"
+          },
+          "critical-subtle": {
+            "value": "{color.primitive.critical.900}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "alias": {
+      "$description": "Component-specific aliases for quick reference",
+      "button": {
+        "primary-bg": {
+          "value": "{color.semantic.vault.accent.default}",
+          "type": "color"
+        },
+        "primary-bg-hover": {
+          "value": "{color.semantic.vault.accent.hover}",
+          "type": "color"
+        },
+        "primary-text": {
+          "value": "{color.primitive.neutral.0}",
+          "type": "color"
+        },
+        "secondary-bg": { "value": "transparent", "type": "color" },
+        "secondary-border": {
+          "value": "{color.semantic.vault.border.strong}",
+          "type": "color"
+        },
+        "secondary-text": {
+          "value": "{color.semantic.vault.text.primary}",
+          "type": "color"
+        }
+      },
+      "input": {
+        "bg": {
+          "value": "{color.semantic.vault.surface.secondary}",
+          "type": "color"
+        },
+        "border": {
+          "value": "{color.semantic.vault.border.default}",
+          "type": "color"
+        },
+        "border-focus": {
+          "value": "{color.semantic.vault.border.focus}",
+          "type": "color"
+        },
+        "placeholder": {
+          "value": "{color.semantic.vault.text.tertiary}",
+          "type": "color"
+        },
+        "text": {
+          "value": "{color.semantic.vault.text.primary}",
+          "type": "color"
+        }
+      },
+      "card": {
+        "bg": {
+          "value": "{color.semantic.vault.surface.secondary}",
+          "type": "color"
+        },
+        "border": {
+          "value": "{color.semantic.vault.border.strong}",
+          "type": "color"
+        }
+      }
+    }
+  }
+}

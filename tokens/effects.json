@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$metadata": {
+    "description": "Vaultica Effects Tokens - Shadows, borders, and motion for Industrial Elegance",
+    "version": "1.0.0",
+    "lastUpdated": "2026-01-12"
+  },
+  "effects": {
+    "shadow": {
+      "$description": "Shadows are minimal for brutalist aesthetic - emphasis on borders instead",
+      "none": { "value": "none", "type": "boxShadow" },
+      "xs": {
+        "value": "0 1px 2px 0 oklch(0% 0 0 / 0.05)",
+        "type": "boxShadow",
+        "description": "Subtle lift"
+      },
+      "sm": {
+        "value": "0 1px 3px 0 oklch(0% 0 0 / 0.1), 0 1px 2px -1px oklch(0% 0 0 / 0.1)",
+        "type": "boxShadow",
+        "description": "Small elevation"
+      },
+      "md": {
+        "value": "0 4px 6px -1px oklch(0% 0 0 / 0.1), 0 2px 4px -2px oklch(0% 0 0 / 0.1)",
+        "type": "boxShadow",
+        "description": "Medium elevation"
+      },
+      "lg": {
+        "value": "0 10px 15px -3px oklch(0% 0 0 / 0.1), 0 4px 6px -4px oklch(0% 0 0 / 0.1)",
+        "type": "boxShadow",
+        "description": "Large elevation - modals"
+      },
+      "xl": {
+        "value": "0 20px 25px -5px oklch(0% 0 0 / 0.1), 0 8px 10px -6px oklch(0% 0 0 / 0.1)",
+        "type": "boxShadow",
+        "description": "Extra large - floating panels"
+      },
+      "glow-accent": {
+        "value": "0 0 20px oklch(55% 0.2 265 / 0.3)",
+        "type": "boxShadow",
+        "description": "Accent glow for focus/active states"
+      },
+      "glow-success": {
+        "value": "0 0 20px oklch(60% 0.15 155 / 0.3)",
+        "type": "boxShadow",
+        "description": "Success glow"
+      },
+      "glow-critical": {
+        "value": "0 0 20px oklch(55% 0.2 25 / 0.3)",
+        "type": "boxShadow",
+        "description": "Critical/error glow"
+      },
+      "inner": {
+        "value": "inset 0 2px 4px 0 oklch(0% 0 0 / 0.05)",
+        "type": "boxShadow",
+        "description": "Inner shadow for inputs"
+      }
+    },
+    "border": {
+      "$description": "Heavy borders are key to Industrial Elegance / Brutalist aesthetic",
+      "width": {
+        "none": { "value": "0", "type": "borderWidth" },
+        "thin": { "value": "1px", "type": "borderWidth" },
+        "default": {
+          "value": "2px",
+          "type": "borderWidth",
+          "description": "Standard Vaultica border"
+        },
+        "thick": {
+          "value": "3px",
+          "type": "borderWidth",
+          "description": "Heavy brutalist border"
+        },
+        "heavy": {
+          "value": "4px",
+          "type": "borderWidth",
+          "description": "Maximum weight borders"
+        }
+      },
+      "radius": {
+        "none": { "value": "0", "type": "borderRadius" },
+        "sm": { "value": "0.25rem", "type": "borderRadius", "px": "4px" },
+        "md": { "value": "0.5rem", "type": "borderRadius", "px": "8px" },
+        "lg": { "value": "0.75rem", "type": "borderRadius", "px": "12px" },
+        "xl": { "value": "1rem", "type": "borderRadius", "px": "16px" },
+        "2xl": { "value": "1.5rem", "type": "borderRadius", "px": "24px" },
+        "full": { "value": "9999px", "type": "borderRadius" }
+      },
+      "style": {
+        "solid": { "value": "solid", "type": "borderStyle" },
+        "dashed": { "value": "dashed", "type": "borderStyle" }
+      }
+    },
+    "motion": {
+      "$description": "Transitions and animations - precise and purposeful",
+      "duration": {
+        "instant": { "value": "0ms", "type": "duration" },
+        "fast": { "value": "100ms", "type": "duration" },
+        "normal": { "value": "200ms", "type": "duration" },
+        "slow": { "value": "300ms", "type": "duration" },
+        "slower": { "value": "500ms", "type": "duration" }
+      },
+      "easing": {
+        "linear": { "value": "linear", "type": "cubicBezier" },
+        "ease-in": {
+          "value": "cubic-bezier(0.4, 0, 1, 1)",
+          "type": "cubicBezier"
+        },
+        "ease-out": {
+          "value": "cubic-bezier(0, 0, 0.2, 1)",
+          "type": "cubicBezier"
+        },
+        "ease-in-out": {
+          "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+          "type": "cubicBezier"
+        },
+        "spring": {
+          "value": "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+          "type": "cubicBezier"
+        }
+      },
+      "transition": {
+        "default": {
+          "value": "all 200ms cubic-bezier(0.4, 0, 0.2, 1)",
+          "type": "transition"
+        },
+        "colors": {
+          "value": "color 200ms cubic-bezier(0.4, 0, 0.2, 1), background-color 200ms cubic-bezier(0.4, 0, 0.2, 1), border-color 200ms cubic-bezier(0.4, 0, 0.2, 1)",
+          "type": "transition"
+        },
+        "transform": {
+          "value": "transform 200ms cubic-bezier(0.4, 0, 0.2, 1)",
+          "type": "transition"
+        },
+        "opacity": {
+          "value": "opacity 200ms cubic-bezier(0.4, 0, 0.2, 1)",
+          "type": "transition"
+        }
+      }
+    },
+    "blur": {
+      "none": { "value": "0", "type": "blur" },
+      "sm": { "value": "4px", "type": "blur" },
+      "md": { "value": "8px", "type": "blur" },
+      "lg": { "value": "16px", "type": "blur" },
+      "xl": { "value": "24px", "type": "blur" }
+    },
+    "opacity": {
+      "0": { "value": "0", "type": "opacity" },
+      "5": { "value": "0.05", "type": "opacity" },
+      "10": { "value": "0.1", "type": "opacity" },
+      "20": { "value": "0.2", "type": "opacity" },
+      "30": { "value": "0.3", "type": "opacity" },
+      "40": { "value": "0.4", "type": "opacity" },
+      "50": { "value": "0.5", "type": "opacity" },
+      "60": { "value": "0.6", "type": "opacity" },
+      "70": { "value": "0.7", "type": "opacity" },
+      "80": { "value": "0.8", "type": "opacity" },
+      "90": { "value": "0.9", "type": "opacity" },
+      "100": { "value": "1", "type": "opacity" }
+    }
+  }
+}

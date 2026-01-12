@@ -1,0 +1,42 @@
+{
+  "name": "@vaultica/keystone",
+  "version": "1.0.0",
+  "description": "Vaultica Design System - Single Source of Truth (SSoT) for brand tokens, AI context, and assets",
+  "author": "Vaultica Team",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vaultica/keystone.git"
+  },
+  "main": "dist/tokens.js",
+  "types": "dist/tokens.d.ts",
+  "files": [
+    "dist/",
+    "tokens/",
+    "ai/",
+    "assets/"
+  ],
+  "scripts": {
+    "build": "node scripts/build-tokens.js",
+    "validate": "node scripts/validate.js",
+    "prebuild": "npm run validate",
+    "watch": "nodemon --watch tokens --ext json --exec 'npm run build'",
+    "clean": "rm -rf dist/*",
+    "rebuild": "npm run clean && npm run build"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "keywords": [
+    "design-system",
+    "design-tokens",
+    "vaultica",
+    "brand",
+    "css-variables",
+    "tailwind"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
