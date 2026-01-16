@@ -6,10 +6,11 @@
 
 ## Design Principles Recap
 
-1. **Heavy Borders** — 2-4px, visible containment
-2. **High Contrast** — Dark surfaces, bright text/accents
+1. **Heavy Borders** — 3px standard, visible containment (Industrial Elegance)
+2. **High Contrast** — Dark surfaces (`#1a1d21`), bright text (`#f0fbff`)
 3. **Visual Weight** — Substantial, grounded elements
 4. **Precision** — Clean geometry, purposeful spacing
+5. **Brand Blue** — Primary accent `#27abec` for CTAs and focus states
 
 ---
 
@@ -61,7 +62,7 @@ Text: var(--vault-text-secondary)
 
 ```
 Background: var(--vault-surface-secondary)
-Border: 2px solid var(--vault-border-strong)  /* Heavy brutalist border */
+Border: 3px solid var(--vault-border-strong)  /* Heavy brutalist border */
 Border-radius: 12px (effects.border.radius.lg)
 Padding: 24px
 Shadow: effects.shadow.sm (minimal — borders do the work)
@@ -85,7 +86,7 @@ Overflow: hidden (for image cropping)
 
 ```
 Background: var(--vault-surface-secondary)
-Border: 2px solid var(--vault-border-default)
+Border: 3px solid var(--vault-border-default)
 Border-radius: 8px
 Padding: 12px 16px
 Height: 48px (sizing.input.height-lg)
@@ -148,7 +149,7 @@ Critical: bg critical-900, text critical-100
 
 ```
 Background: var(--vault-surface-tertiary)
-Border: 2px solid var(--vault-border-default)
+Border: 3px solid var(--vault-border-default)
 Border-radius: 12px
 Padding: 16px 20px
 Shadow: effects.shadow.lg
@@ -213,7 +214,7 @@ Date: 12px, secondary text, subtle
 
 /* Container */
 Background: neutral-900
-Border: 2px solid neutral-700
+Border: 3px solid neutral-700
 Border-radius: 12px
 Padding: 0 (edge-to-edge imagery)
 
@@ -227,7 +228,7 @@ Padding: 0 (edge-to-edge imagery)
 ```
 /* Default */
 Background: neutral-900
-Border: 2px dashed neutral-600
+Border: 3px dashed neutral-600
 Border-radius: 16px
 Padding: 48px
 Text-align: center

@@ -23,7 +23,10 @@
     "prebuild": "npm run validate",
     "watch": "nodemon --watch tokens --ext json --exec 'npm run build'",
     "clean": "rm -rf dist/*",
-    "rebuild": "npm run clean && npm run build"
+    "rebuild": "npm run clean && npm run build",
+    "preview": "pnpm --dir preview run dev",
+    "preview:install": "pnpm --dir preview install",
+    "preview:build": "pnpm --dir preview run build"
   },
   "devDependencies": {
     "nodemon": "^3.0.0"

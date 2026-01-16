@@ -11,13 +11,15 @@ This document lists items that require human lead review and decision before the
 
 ### 1.1 Primary Accent Color
 
-**Current**: Electric blue-violet (`oklch(55% 0.2 265)`)
+**Current**: Brand Blue (`oklch(0.7031 0.1426 236.68)` / `#27abec`)
 
 **Decision Needed**: Is this the final brand accent color?
 
-- [ ] Approve current color
+- [x] Approved: Brand blue #27abec (updated 2026-01-16)
 - [ ] Provide alternative hue/saturation values
 - [ ] Request color exploration options
+
+> ✅ **RESOLVED**: Primary accent color updated to match logo brand blue.
 
 **Impact**: All CTAs, focus states, links, and interactive highlights.
 
@@ -29,7 +31,7 @@ This document lists items that require human lead review and decision before the
 
 **Decision Needed**: Final font family selection
 
-- [ ] Approve Inter as primary typeface
+- [x] Approve Inter as primary typeface
 - [ ] Consider Geist (Vercel's font) as alternative
 - [ ] Commission custom typeface
 - [ ] Other: _______________
@@ -45,17 +47,19 @@ This document lists items that require human lead review and decision before the
 **Decision Needed**: Professional logo artwork required
 
 - [ ] Engage design agency/freelancer
-- [ ] Internal design team assignment
+- [x] Internal design team assignment
 - [ ] Provide design brief based on `ai/brand-context.md`
 
 **Deliverables Required**:
 
-- [ ] Primary wordmark + icon
-- [ ] Icon-only mark (for favicons, app icons)
-- [ ] Monochrome version
-- [ ] Reversed (light on dark) version
+- [x] Primary wordmark + icon (`vaultica-logo.svg`)
+- [x] Icon-only mark (`vaultica-white-icon.svg`)
+- [x] Monochrome version (black version in `vaultica-logo.svg`)
+- [x] Reversed (light on dark) version (`vaultica-logo-white.svg`)
 - [ ] App icon variants (iOS, Android requirements)
-- [ ] Favicon set (16, 32, 180, 192, 512px)
+- [x] Favicon set (`favicon.ico`)
+
+> ✅ **IN PROGRESS**: Logo assets added. Use preview tool at `pnpm preview` to review.
 
 ---
 
@@ -67,7 +71,7 @@ This document lists items that require human lead review and decision before the
 
 **Decision Needed**: Light mode support strategy
 
-- [ ] Dark-only product (no light mode)
+- [x] Dark-only product (no light mode)
 - [ ] User-selectable themes
 - [ ] System preference detection
 - [ ] Time-based auto-switching

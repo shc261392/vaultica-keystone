@@ -82,9 +82,9 @@ Vaultica's visual language is **Industrial Elegance** — the intersection of br
 | Token | Purpose | Feeling |
 |-------|---------|---------|
 | `vault-surface` | Deep, dark backgrounds | Security, depth, focus |
-| `brand-blue` | Primary accent (#27abec) | Speed, clarity, trust |
+| `brand-blue` | Primary accent `#27abec` / `oklch(0.7031 0.1426 236.68)` | Speed, clarity, trust |
 | `vault-border` | Heavy visible borders | Containment, structure |
-| `vault-text` | High-contrast text | Clarity, readability |
+| `vault-text` | High-contrast text (brand white `#f0fbff`) | Clarity, readability |
 
 ### Typography Philosophy
 

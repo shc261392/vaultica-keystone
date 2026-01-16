@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand colors */
+  --brand-black: #363b42;
+  --brand-white: #f0fbff;
+  --brand-blue: #27abec;
+  
+  /* Bootstrap theme */
+  --bs-light: #d7e9f2;
+  --bs-dark: #363b42;
+  --bs-primary: #27abec;
+  --bs-secondary: #1b67a1;
+  --bs-info: #f0d15e;
+  --bs-success: #13c16a;
+  --bs-warning: #eed210;
+  --bs-danger: #fe1b20;
+  
+  /* Vault semantic tokens */
+  --vault-surface-primary: oklch(12% 0.008 256);
+  --vault-surface-secondary: oklch(16% 0.01 256);
+  --vault-surface-tertiary: oklch(22% 0.012 256);
+  --vault-border-default: oklch(30% 0.015 256);
+  --vault-border-strong: oklch(45% 0.02 230);
+  --vault-text-primary: #f0fbff;
+  --vault-text-secondary: oklch(75% 0.015 230);
+  --vault-accent: #27abec;
+}
+
+@layer base {
+  body {
+    @apply bg-vault-surface-primary text-vault-text-primary font-sans antialiased;
+  }
+  
+  /* Industrial Elegance - Heavy borders */
+  .brutalist-border {
+    @apply border-3 border-vault-border-strong;
+  }
+  
+  .brutalist-card {
+    @apply bg-vault-surface-secondary border-3 border-vault-border-strong;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-blue text-white font-semibold px-6 py-3 
+           border-3 border-brand-blue
+           hover:bg-vault-accent-hover hover:border-vault-accent-hover
+           focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2 focus:ring-offset-vault-surface-primary
+           transition-colors duration-150;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent text-vault-text-primary font-semibold px-6 py-3
+           border-3 border-vault-border-strong
+           hover:bg-vault-surface-tertiary hover:border-vault-text-secondary
+           focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2 focus:ring-offset-vault-surface-primary
+           transition-colors duration-150;
+  }
+  
+  .input-brutalist {
+    @apply bg-vault-surface-secondary text-vault-text-primary
+           border-3 border-vault-border-default
+           focus:border-brand-blue focus:outline-none
+           placeholder:text-vault-text-tertiary
+           px-4 py-3 w-full;
+  }
+  
+  .card-brutalist {
+    @apply bg-vault-surface-secondary border-3 border-vault-border-strong p-6;
+  }
+}
+
+/* Color swatch animations */
+.color-swatch {
+  @apply transition-transform duration-200 hover:scale-105 cursor-pointer;
+}
+
+.color-swatch:active {
+  @apply scale-95;
+}
+
+/* Logo preview backgrounds */
+.preview-bg-light {
+  background: linear-gradient(135deg, #ffffff 0%, #f0fbff 100%);
+}
+
+.preview-bg-dark {
+  background: linear-gradient(135deg, #1a1d21 0%, #363b42 100%);
+}
+
+.preview-bg-checkerboard {
+  background-image: 
+    linear-gradient(45deg, #3a3f47 25%, transparent 25%),
+    linear-gradient(-45deg, #3a3f47 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #3a3f47 75%),
+    linear-gradient(-45deg, transparent 75%, #3a3f47 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  background-color: #2a2f35;
+}
