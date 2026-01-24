@@ -1,7 +1,15 @@
 {
-    "recommendations": [
-        "bradlc.vscode-tailwindcss",
-        "csstools.postcss",
-        "ms-vscode.vscode-json"
-    ]
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+    "streetsidesoftware.code-spell-checker",
+    "davidanson.vscode-markdownlint",
+    "github.copilot",
+    "github.copilot-chat",
+    "VivaanTech.vscode-conventional-commits",
+    "csstools.postcss",
+    "ms-vscode.vscode-json"
+  ],
+  "unwantedRecommendations": []
 }

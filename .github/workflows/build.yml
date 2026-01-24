@@ -1,54 +1,61 @@
 name: Build Tokens
 
 on:
-    push:
-        paths:
-            - "tokens/**"
-            - "scripts/**"
-        branches:
-            - main
-    pull_request:
-        paths:
-            - "tokens/**"
-            - "scripts/**"
-    workflow_dispatch:
+  push:
+    paths:
+      - "tokens/**"
+      - "scripts/**"
+    branches:
+      - main
+  pull_request:
+    paths:
+      - "tokens/**"
+      - "scripts/**"
+  workflow_dispatch:
 
 jobs:
-    build:
-        name: Build Design Tokens
-        runs-on: ubuntu-latest
+  build:
+    name: Build Design Tokens
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v4
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: "20"
-                  cache: "npm"
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "npm"
 
-            - name: Install dependencies
-              run: npm ci
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
-            - name: Validate tokens
-              run: npm run validate
+      - name: Run quality checks
+        run: |
+          echo "Running linting..."
+          pnpm run lint:js
+          echo "Checking code formatting..."
+          pnpm run format:check
 
-            - name: Build tokens
-              run: npm run build
+      - name: Validate tokens
+        run: pnpm run validate
 
-            - name: Upload build artifacts
-              uses: actions/upload-artifact@v4
-              with:
-                  name: vaultica-tokens
-                  path: dist/
-                  retention-days: 30
+      - name: Build tokens
+        run: pnpm run build
 
-            - name: Commit dist changes (main branch only)
-              if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-              run: |
-                  git config --local user.email "action@github.com"
-                  git config --local user.name "GitHub Action"
-                  git add dist/
-                  git diff --staged --quiet || git commit -m "chore: rebuild tokens [skip ci]"
-                  git push
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: vaultica-tokens
+          path: dist/
+          retention-days: 30
+
+      - name: Commit dist changes (main branch only)
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add dist/
+          git diff --staged --quiet || git commit -m "chore: rebuild tokens [skip ci]"
+          git push

@@ -13,6 +13,14 @@
 
 ## Checklist
 
+### Quality Gates (Required for All PRs)
+
+- [ ] ✅ ESLint passes with no errors (`npm run lint`)
+- [ ] ✅ Prettier formatting applied (`npm run format:check`)
+- [ ] ✅ No spelling errors (`npm run lint:spell`)
+- [ ] ✅ Commit messages follow conventional commit format
+- [ ] ✅ TypeScript type checking passes (if preview app changes: `cd preview && pnpm type-check`)
+
 ### For Token Changes
 
 - [ ] I have tested the build script locally (`npm run build`)
@@ -31,6 +39,13 @@
 - [ ] SVG files are optimized
 - [ ] Assets follow the naming convention
 - [ ] README in the asset folder is updated
+
+### For Code Changes (Scripts, Preview App)
+
+- [ ] Code follows the project's coding standards
+- [ ] Build succeeds (`npm run build` and/or `pnpm preview:build`)
+- [ ] Changes tested locally
+- [ ] Inline comments added for complex logic
 
 ## Visual Preview
 

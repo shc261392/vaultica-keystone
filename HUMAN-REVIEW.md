@@ -3,7 +3,8 @@
 > **Vaultica Keystone SSoT - Critical Items for Human Decision**  
 > Generated: 2026-01-12
 
-This document lists items that require human lead review and decision before the design system can be considered production-ready.
+This document lists items that require human lead review and decision before the design system can
+be considered production-ready.
 
 ---
 
@@ -34,7 +35,7 @@ This document lists items that require human lead review and decision before the
 - [x] Approve Inter as primary typeface
 - [ ] Consider Geist (Vercel's font) as alternative
 - [ ] Commission custom typeface
-- [ ] Other: _______________
+- [ ] Other: **\*\***\_\_\_**\*\***
 
 **Impact**: All text rendering, brand recognition, readability.
 
@@ -190,26 +191,26 @@ From product spec: "Vaultica appears as a native folder"
 
 ## ✅ Immediate Actions
 
-| Priority | Action | Owner | Due Date |
-|----------|--------|-------|----------|
-| 🔴 High | Approve accent color | Design Lead | ________ |
-| 🔴 High | Initiate logo design | Brand Team | ________ |
-| 🟠 Medium | Create GitHub teams | Engineering | ________ |
-| 🟠 Medium | Contrast verification | Accessibility | ________ |
-| 🟢 Low | Decide npm strategy | Engineering | ________ |
-| 🟢 Low | Light mode decision | Product | ________ |
+| Priority  | Action                | Owner         | Due Date     |
+| --------- | --------------------- | ------------- | ------------ |
+| 🔴 High   | Approve accent color  | Design Lead   | **\_\_\_\_** |
+| 🔴 High   | Initiate logo design  | Brand Team    | **\_\_\_\_** |
+| 🟠 Medium | Create GitHub teams   | Engineering   | **\_\_\_\_** |
+| 🟠 Medium | Contrast verification | Accessibility | **\_\_\_\_** |
+| 🟢 Low    | Decide npm strategy   | Engineering   | **\_\_\_\_** |
+| 🟢 Low    | Light mode decision   | Product       | **\_\_\_\_** |
 
 ---
 
 ## 📋 Sign-off
 
-| Role | Name | Approved | Date |
-|------|------|----------|------|
-| Design Lead | _______________ | ☐ | ________ |
-| Engineering Lead | _______________ | ☐ | ________ |
-| Product Lead | _______________ | ☐ | ________ |
-| Brand Lead | _______________ | ☐ | ________ |
+| Role             | Name                   | Approved | Date         |
+| ---------------- | ---------------------- | -------- | ------------ |
+| Design Lead      | **\*\***\_\_\_**\*\*** | ☐        | **\_\_\_\_** |
+| Engineering Lead | **\*\***\_\_\_**\*\*** | ☐        | **\_\_\_\_** |
+| Product Lead     | **\*\***\_\_\_**\*\*** | ☐        | **\_\_\_\_** |
+| Brand Lead       | **\*\***\_\_\_**\*\*** | ☐        | **\_\_\_\_** |
 
 ---
 
-*This document should be reviewed in a kickoff meeting and updated as decisions are made.*
+_This document should be reviewed in a kickoff meeting and updated as decisions are made._

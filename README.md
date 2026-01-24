@@ -1,18 +1,28 @@
 # 🏛️ Vaultica: Keystone SSoT
 
-This repository is the **Keystone**—the Single Source of Truth (SSoT) for the **Vaultica** brand. It is designed to treat brand assets as version-controlled code, ensuring consistency across Web, Mobile, and AI-driven development.
+![Quality Gate](https://github.com/vaultica/keystone/actions/workflows/quality-gate.yml/badge.svg)
+![Build Tokens](https://github.com/vaultica/keystone/actions/workflows/build.yml/badge.svg)
+![Validate](https://github.com/vaultica/keystone/actions/workflows/validate.yml/badge.svg)
+
+This repository is the **Keystone**—the Single Source of Truth (SSoT) for the **Vaultica** brand. It
+is designed to treat brand assets as version-controlled code, ensuring consistency across Web,
+Mobile, and AI-driven development.
+
+> **For AI Agents & Contributors**: See [AI-AGENTS.md](AI-AGENTS.md) for quality tools and workflow
+> guide.
 
 ## 🛡️ Brand Soul: Vaultica
 
 - **Core Metaphor**: The Vault—Absolute security, organized complexity, and timeless stability.
-- **Visual Aesthetic**: "Industrial Elegance." High-contrast, brutalist precision, and a focus on "Visual Weight."
+- **Visual Aesthetic**: "Industrial Elegance." High-contrast, brutalist precision, and a focus on
+  "Visual Weight."
 - **Tone**: Secure, Authoritative, and Effortless.
 
 ---
 
 ## 📂 Repository Structure
 
-```text
+````text
 /
 ├── .github/                # Automation (JSON to CSS/Tailwind builds)
 ├── ai/
@@ -40,7 +50,7 @@ This project uses **mise** for runtime version management.
 ```bash
 mise install        # Installs Node.js 24
 pnpm install        # Installs dependencies
-```
+````
 
 ---
 
@@ -65,8 +75,7 @@ Project Integration: Add this repo as a Git Submodule: git submodule add [URL] v
 
 AI Integration: Point Cursor/Copilot to vaultica-brand/ai/brand-context.md for styling logic.
 
-✅ Consistency Checklist
-[ ] Contrast: All action tokens must meet WCAG 2.2 AA standards.
+✅ Consistency Checklist [ ] Contrast: All action tokens must meet WCAG 2.2 AA standards.
 
 [ ] Scalability: All logo assets in /assets/logos/ must be optimized SVGs.
 

@@ -54,7 +54,9 @@ function loadTokens() {
  * Resolve token references like {color.primitive.neutral.500}
  */
 function resolveReference(value, allTokens, visited = new Set()) {
-  if (typeof value !== "string") return value;
+  if (typeof value !== "string") {
+    return value;
+  }
 
   const refPattern = /\{([^}]+)\}/g;
   let resolved = value;
@@ -107,7 +109,9 @@ function getNestedValue(obj, path) {
 function flattenTokens(obj, prefix = "", result = {}, allTokens = {}) {
   for (const [key, value] of Object.entries(obj)) {
     // Skip metadata keys
-    if (key.startsWith("$")) continue;
+    if (key.startsWith("$")) {
+      continue;
+    }
 
     const cssVarName = prefix ? `${prefix}-${key}` : key;
 
@@ -154,7 +158,7 @@ function generateCSS(tokens) {
  * Generated: ${new Date().toISOString()}
  * 
  * DO NOT EDIT DIRECTLY - Generated from /tokens/*.json
- * Run 'npm run build' to regenerate
+ * Run 'pnpm run build' to regenerate
  */
 
 :root {
@@ -205,7 +209,7 @@ function generateCSS(tokens) {
 /**
  * Generate Tailwind config
  */
-function generateTailwindConfig(tokens) {
+function generateTailwindConfig(_tokens) {
   console.log("\n📦 Generating Tailwind config...");
 
   const config = {
