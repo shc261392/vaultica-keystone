@@ -73,7 +73,7 @@ function updateHash(): void {
   console.log("");
   console.log("   Don't forget to commit the hash file:");
   console.log(
-    '   git add .keystone-hash && git commit -m "chore: update keystone token hash"',
+    '   git add .keystone-hash && git commit -m "chore: update keystone token hash"'
   );
 }
 
@@ -89,7 +89,7 @@ function verify(): void {
     console.log("");
     console.log("   Commit the hash file:");
     console.log(
-      '   git add .keystone-hash && git commit -m "chore: add keystone token hash"',
+      '   git add .keystone-hash && git commit -m "chore: add keystone token hash"'
     );
     return;
   }

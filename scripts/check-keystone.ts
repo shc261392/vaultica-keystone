@@ -97,7 +97,7 @@ function checkSubmoduleVersion(): CheckResult {
 
   console.log(`   Local commit:   ${localCommit.slice(0, 8)}`);
   console.log(
-    `   Remote commit:  ${remoteCommit ? remoteCommit.slice(0, 8) : "unknown"}`,
+    `   Remote commit:  ${remoteCommit ? remoteCommit.slice(0, 8) : "unknown"}`
   );
 
   if (remoteCommit && localCommit !== remoteCommit) {
