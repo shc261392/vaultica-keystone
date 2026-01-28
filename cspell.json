@@ -4,6 +4,9 @@
   "words": [
     "Vaultica",
     "keystone",
+    "magick",
+    "Nana",
+    "skeuomorphic",
     "OKLCH",
     "brutalist",
     "mise",
@@ -42,6 +45,7 @@
     "node_modules/**",
     "dist/**",
     "preview/.next/**",
+    "preview/out/**",
     "preview/node_modules/**",
     "*.log",
     "package-lock.json",

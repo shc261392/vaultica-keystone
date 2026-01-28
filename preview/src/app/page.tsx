@@ -9,7 +9,6 @@ import {
   Eye,
   Sun,
   Moon,
-  Copy,
   Check,
   Zap,
   Lock,
@@ -128,7 +127,7 @@ const neutralScale = [
 function ColorSwatch({
   color,
   name,
-  showOklch = false,
+  showOklch: _showOklch = false,
 }: {
   color: string;
   name: string;
