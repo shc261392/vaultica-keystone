@@ -1,17 +1,20 @@
 # 🏦 Vaultica & Blink Vault Brand Context
 
-> **For AI/LLM Context**: This document defines the complete brand soul, visual identity, and design principles for **Blink Vault** (by Vaultica). Reference this file when generating UI components, marketing copy, or any brand-related content.
+> **For AI/LLM Context**: This document defines the complete brand soul, visual identity, and design
+> principles for **Blink Vault** (by Vaultica). Reference this file when generating UI components,
+> marketing copy, or any brand-related content.
 
 ---
 
 ## Brand Architecture
 
-| Entity | Description |
-|--------|-------------|
-| **Vaultica** | The company — solid, professional infrastructure and "hardened" backend |
+| Entity          | Description                                                                           |
+| --------------- | ------------------------------------------------------------------------------------- |
+| **Vaultica**    | The company — solid, professional infrastructure and "hardened" backend               |
 | **Blink Vault** | The product (official legal name) — lightning-fast tool for saving visual inspiration |
 
-**Philosophy**: "See it. Blink it. Find it." Technology must be invisible. We provide a sense of *collection*, not "data processing."
+**Philosophy**: "See it. Blink it. Find it." Technology must be invisible. We provide a sense of
+_collection_, not "data processing."
 
 ---
 
@@ -19,11 +22,14 @@
 
 **Blink Vault: See it. Blink it. Find it.**
 
-Blink Vault is the intelligent visual collection tool for people who save inspiration but have no time to organize. It is designed for the **Creative Collector** — designers, artists, and visual thinkers who save screenshots, references, mood boards, and inspiration constantly.
+Blink Vault is the intelligent visual collection tool for people who save inspiration but have no
+time to organize. It is designed for the **Creative Collector** — designers, artists, and visual
+thinkers who save screenshots, references, mood boards, and inspiration constantly.
 
 ### The Problem We Solve: The "Visual Haystack"
 
-You constantly save images, screenshots, and visual references. But finding them later is impossible. You scroll through thousands of files, searching for that one design you saw.
+You constantly save images, screenshots, and visual references. But finding them later is
+impossible. You scroll through thousands of files, searching for that one design you saw.
 
 **Blink Vault makes your collection searchable. Instantly. By what you remember.**
 
@@ -53,7 +59,8 @@ Think: Swift capture into an impenetrable vault. Speed meets security.
 
 ### Design Philosophy
 
-Vaultica's visual language is **Industrial Elegance** — the intersection of brutalist precision and refined sophistication.
+Vaultica's visual language is **Industrial Elegance** — the intersection of brutalist precision and
+refined sophistication.
 
 #### Key Principles
 
@@ -79,12 +86,12 @@ Vaultica's visual language is **Industrial Elegance** — the intersection of br
 
 ### Color Psychology
 
-| Token | Purpose | Feeling |
-|-------|---------|---------|
-| `vault-surface` | Deep, dark backgrounds | Security, depth, focus |
-| `brand-blue` | Primary accent `#27abec` / `oklch(0.7031 0.1426 236.68)` | Speed, clarity, trust |
-| `vault-border` | Heavy visible borders | Containment, structure |
-| `vault-text` | High-contrast text (brand white `#f0fbff`) | Clarity, readability |
+| Token           | Purpose                                                  | Feeling                |
+| --------------- | -------------------------------------------------------- | ---------------------- |
+| `vault-surface` | Deep, dark backgrounds                                   | Security, depth, focus |
+| `brand-blue`    | Primary accent `#27abec` / `oklch(0.7031 0.1426 236.68)` | Speed, clarity, trust  |
+| `vault-border`  | Heavy visible borders                                    | Containment, structure |
+| `vault-text`    | High-contrast text (brand white `#f0fbff`)               | Clarity, readability   |
 
 ### Typography Philosophy
 
@@ -127,11 +134,13 @@ Vaultica's visual language is **Industrial Elegance** — the intersection of br
 
 ### 2. Invisible Understanding
 
-**UI Implication**: NO indicators of "indexing" or "processing." It just works. The system "understands."
+**UI Implication**: NO indicators of "indexing" or "processing." It just works. The system
+"understands."
 
 ### 3. Find by Memory
 
-**UI Implication**: Natural language search bar as hero element, type-ahead suggestions, visual results
+**UI Implication**: Natural language search bar as hero element, type-ahead suggestions, visual
+results
 
 ### 4. Visual Gallery
 
@@ -151,7 +160,8 @@ Vaultica's visual language is **Industrial Elegance** — the intersection of br
 
 ### The "Invisible Librarian" Rule
 
-**NEVER explain how search works.** The user should feel the system simply "understands" their intent. No mentions of:
+**NEVER explain how search works.** The user should feel the system simply "understands" their
+intent. No mentions of:
 
 - ❌ Indexing, mapping, OCR, vector search
 - ❌ Database, processing, recognition
@@ -206,7 +216,7 @@ Vaultica's visual language is **Industrial Elegance** — the intersection of br
 
 When generating CSS or styling:
 
-```
+```css
 --vault-surface-primary     → Main background
 --vault-surface-secondary   → Card/panel background
 --vault-border-strong       → Heavy brutalist borders
@@ -226,4 +236,5 @@ When generating CSS or styling:
 
 ---
 
-*This document is the source of truth for Blink Vault's brand expression. When in doubt: make the technology invisible, emphasize speed, and keep it visual.*
+_This document is the source of truth for Blink Vault's brand expression. When in doubt: make the
+technology invisible, emphasize speed, and keep it visual._

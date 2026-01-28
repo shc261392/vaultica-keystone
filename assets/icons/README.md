@@ -1,6 +1,7 @@
 # 🎯 Vaultica Icon Set
 
-This directory contains the custom icon set for Vaultica, designed to match the Industrial Elegance aesthetic.
+This directory contains the custom icon set for Vaultica, designed to match the Industrial Elegance
+aesthetic.
 
 ## Icon Design Specifications
 
@@ -77,10 +78,10 @@ Export each icon at:
 
 ```jsx
 // Import as React component
-import { IconSearch } from '@vaultica/icons';
+import { IconSearch } from "@vaultica/icons";
 
 // Or use as image
-<img src="/icons/search.svg" alt="" role="presentation" />
+<img src="/icons/search.svg" alt="" role="presentation" />;
 ```
 
 ## 🚨 TODO

@@ -1,73 +1,74 @@
-# 🏛️ Vaultica: Keystone SSoT
+# Vaultica Keystone
 
-This repository is the **Keystone**—the Single Source of Truth (SSoT) for the **Vaultica** brand. It is designed to treat brand assets as version-controlled code, ensuring consistency across Web, Mobile, and AI-driven development.
+Single Source of Truth for the **Blink Vault** brand. Design tokens, AI context, and assets.
 
-## 🛡️ Brand Soul: Vaultica
+## Brand Architecture
 
-- **Core Metaphor**: The Vault—Absolute security, organized complexity, and timeless stability.
-- **Visual Aesthetic**: "Industrial Elegance." High-contrast, brutalist precision, and a focus on "Visual Weight."
-- **Tone**: Secure, Authoritative, and Effortless.
+| Entity          | Role                                      | Example                        |
+| --------------- | ----------------------------------------- | ------------------------------ |
+| **Vaultica**    | The company/team name                     | "© 2026 Vaultica"              |
+| **Blink Vault** | The product name (official, legal, SEO)   | "Welcome to Blink Vault"       |
+| **Blink**       | The action keyword, command, abbreviation | "Blink it", `/blink`, `@blink` |
 
----
+## Quick Start
 
-## 📂 Repository Structure
+```bash
+mise install        # Install Node 24
+pnpm install        # Install dependencies
+pnpm run build      # Build tokens
+pnpm run preview    # Preview brand assets
+```
+
+## Structure
 
 ```text
-/
-├── .github/                # Automation (JSON to CSS/Tailwind builds)
-├── ai/
-│   ├── brand-context.md    # The Vaultica "Soul" for LLM context
-│   └── personality.md      # Voice & Tone rules for AI copy
-├── tokens/                 # Design Tokens (The Truth)
-│   ├── colors.json         # OKLCH/HSL values (Functional naming)
-│   ├── typography.json     # Font scales for the Vaultica identity
-│   └── effects.json        # Shadow and border definitions
-├── assets/
-│   ├── logos/              # SVG Primary & Monochrome assets
-│   └── social/             # Brand-aligned OG images and avatars
-├── dist/                   # Generated build artifacts (theme.css)
-├── scripts/                # Token transformation scripts
-└── README.md               # Documentation
-## 🛠️ Development Setup
-
-This project uses **mise** for runtime version management.
-
-### Prerequisites
-
-1. Install [mise](https://mise.jdx.dev/) (or use any Node 24 setup)
-2. Run the setup commands:
-
-```bash
-mise install        # Installs Node.js 24
-pnpm install        # Installs dependencies
+tokens/         Design tokens (colors, typography, spacing)
+ai/             AI context files for consistent generation
+assets/logos/   Brand logos (SVG)
+dist/           Generated CSS and JS
+preview/        Next.js preview app
+scripts/        Build and validation scripts
 ```
 
----
+## Usage
 
-## 🚀 The Vaultica Sync Flow
+### In a Project
 
-### 1. The "Set Once" Rule
-
-All style changes must happen in `/tokens/`. Never edit `theme.css` directly.
-
-### 2. The Build Process
-
-Run the transformation script to propagate token changes:
+Add as a Git submodule:
 
 ```bash
-pnpm run build      # Syncs JSON tokens to CSS and Tailwind
-pnpm run validate   # Validates token structure
+git submodule add [URL] vaultica-keystone
 ```
 
-### 3. Consumption (Single Dev Workflow)
+Import the CSS:
 
-Project Integration: Add this repo as a Git Submodule: git submodule add [URL] vaultica-brand
+```css
+@import "vaultica-keystone/dist/theme.css";
+```
 
-AI Integration: Point Cursor/Copilot to vaultica-brand/ai/brand-context.md for styling logic.
+**See [Integration Guide](docs/INTEGRATION-GUIDE.md)** for complete setup instructions including:
 
-✅ Consistency Checklist
-[ ] Contrast: All action tokens must meet WCAG 2.2 AA standards.
+- Next.js 16 + Tailwind CSS integration
+- Logo and asset usage
+- Favicon and app icons
+- Gatekeeping for token version control
 
-[ ] Scalability: All logo assets in /assets/logos/ must be optimized SVGs.
+### For AI Assistants
 
-[ ] AI Alignment: Ensure .cursorrules in your main project points to this repo.
+Point Copilot/Cursor to `ai/brand-context.md` for styling context.
+
+## Commands
+
+| Command             | Description              |
+| ------------------- | ------------------------ |
+| `pnpm run build`    | Build tokens to dist/    |
+| `pnpm run validate` | Validate token structure |
+| `pnpm run preview`  | Start preview app        |
+| `pnpm run quality`  | Run all quality checks   |
+
+## Brand Summary
+
+- **Product**: Blink Vault — "See it. Blink it. Find it."
+- **Aesthetic**: Industrial Elegance (heavy borders, high contrast)
+- **Color**: Brand blue `#27abec`
+- **Theme**: Dark-only

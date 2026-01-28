@@ -69,6 +69,6 @@ Status: var(--vault-status-success/warning/critical)
 ## File Modification Rules
 
 1. Token changes go in /tokens/*.json files
-2. After modifying tokens, run: npm run build
+2. After modifying tokens, run: pnpm run build
 3. Never edit /dist/ files directly
 4. When this repo is used as submodule, remind to git pull in consumer project

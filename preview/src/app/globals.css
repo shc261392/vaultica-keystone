@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -9,7 +9,7 @@
   --brand-black: #363b42;
   --brand-white: #f0fbff;
   --brand-blue: #27abec;
-  
+
   /* Bootstrap theme */
   --bs-light: #d7e9f2;
   --bs-dark: #363b42;
@@ -19,7 +19,7 @@
   --bs-success: #13c16a;
   --bs-warning: #eed210;
   --bs-danger: #fe1b20;
-  
+
   /* Vault semantic tokens */
   --vault-surface-primary: oklch(12% 0.008 256);
   --vault-surface-secondary: oklch(16% 0.01 256);
@@ -35,12 +35,12 @@
   body {
     @apply bg-vault-surface-primary text-vault-text-primary font-sans antialiased;
   }
-  
+
   /* Industrial Elegance - Heavy borders */
   .brutalist-border {
     @apply border-3 border-vault-border-strong;
   }
-  
+
   .brutalist-card {
     @apply bg-vault-surface-secondary border-3 border-vault-border-strong;
   }
@@ -54,7 +54,7 @@
            focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2 focus:ring-offset-vault-surface-primary
            transition-colors duration-150;
   }
-  
+
   .btn-secondary {
     @apply bg-transparent text-vault-text-primary font-semibold px-6 py-3
            border-3 border-vault-border-strong
@@ -62,7 +62,7 @@
            focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2 focus:ring-offset-vault-surface-primary
            transition-colors duration-150;
   }
-  
+
   .input-brutalist {
     @apply bg-vault-surface-secondary text-vault-text-primary
            border-3 border-vault-border-default
@@ -70,7 +70,7 @@
            placeholder:text-vault-text-tertiary
            px-4 py-3 w-full;
   }
-  
+
   .card-brutalist {
     @apply bg-vault-surface-secondary border-3 border-vault-border-strong p-6;
   }
@@ -95,12 +95,16 @@
 }
 
 .preview-bg-checkerboard {
-  background-image: 
+  background-image:
     linear-gradient(45deg, #3a3f47 25%, transparent 25%),
     linear-gradient(-45deg, #3a3f47 25%, transparent 25%),
     linear-gradient(45deg, transparent 75%, #3a3f47 75%),
     linear-gradient(-45deg, transparent 75%, #3a3f47 75%);
   background-size: 20px 20px;
-  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  background-position:
+    0 0,
+    0 10px,
+    10px -10px,
+    -10px 0px;
   background-color: #2a2f35;
 }

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800&amp;display=swap');
+      .logo-text-blink {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+      }
+      .logo-text-vault {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+    </style>
+  </defs>
+  
+  <!-- Word spacing: 0.25em (18px at 72px), centered in 400px viewbox -->
+  <!-- Blink ~172px, Vault ~180px, gap 18px = 370px total, margins 15px each -->
+  <text y="68" text-anchor="middle" dominant-baseline="auto">
+    <tspan x="101" class="logo-text-blink" font-size="72" fill="#27abec">Blink</tspan>
+    <tspan x="295" class="logo-text-vault" font-size="72" fill="#f0fbff">Vault</tspan>
+  </text>
+</svg>

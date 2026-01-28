@@ -55,7 +55,9 @@ function validateReferences(tokens) {
 
   function findRefs(obj, filePath = "") {
     for (const [key, value] of Object.entries(obj)) {
-      if (key.startsWith("$")) continue;
+      if (key.startsWith("$")) {
+        continue;
+      }
 
       const currentPath = filePath ? `${filePath}.${key}` : key;
 
@@ -112,10 +114,12 @@ function resolveRef(refPath, tokens) {
     }
   }
 
-  if (current !== null) return current;
+  if (current !== null) {
+    return current;
+  }
 
   // Try within each token category (colors, typography, etc.)
-  for (const [category, data] of Object.entries(tokens)) {
+  for (const [_category, data] of Object.entries(tokens)) {
     let found = data;
     let resolved = true;
 
@@ -191,7 +195,9 @@ function validateColorFormat(tokens) {
 
   function checkColors(obj, path = "") {
     for (const [key, value] of Object.entries(obj)) {
-      if (key.startsWith("$")) continue;
+      if (key.startsWith("$")) {
+        continue;
+      }
 
       const currentPath = path ? `${path}.${key}` : key;
 

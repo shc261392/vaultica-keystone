@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 140" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&amp;display=swap');
+      .logo-text {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+      }
+    </style>
+  </defs>
+  
+  <!-- Dark Background -->
+  <rect width="300" height="140" rx="8" fill="#363b42"/>
+  
+  <!-- Text: "Blink" - Brand Blue -->
+  <text x="50%" y="90" text-anchor="middle" class="logo-text" font-size="72" fill="#27abec">Blink</text>
+</svg>

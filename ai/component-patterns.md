@@ -1,6 +1,7 @@
 # 🧩 Blink Component Patterns
 
-> **For AI/LLM Context**: Reference this document when generating UI components for Blink. These patterns ensure visual consistency with the Industrial Elegance aesthetic.
+> **For AI/LLM Context**: Reference this document when generating UI components for Blink. These
+> patterns ensure visual consistency with the Industrial Elegance aesthetic.
 
 ---
 
@@ -20,7 +21,7 @@
 
 #### Primary Button
 
-```
+```css
 Background: var(--vault-accent-default)
 Text: var(--color-neutral-0) [white]
 Border: none
@@ -36,7 +37,7 @@ Letter-spacing: 0.02em
 
 #### Secondary Button
 
-```
+```css
 Background: transparent
 Text: var(--vault-text-primary)
 Border: 2px solid var(--vault-border-strong)
@@ -48,7 +49,7 @@ Border-radius: 8px
 
 #### Ghost Button
 
-```
+```css
 Background: transparent
 Border: none
 Text: var(--vault-text-secondary)
@@ -60,7 +61,7 @@ Text: var(--vault-text-secondary)
 
 ### Card
 
-```
+```css
 Background: var(--vault-surface-secondary)
 Border: 3px solid var(--vault-border-strong)  /* Heavy brutalist border */
 Border-radius: 12px (effects.border.radius.lg)
@@ -73,18 +74,18 @@ Overflow: hidden (for image cropping)
 
 #### Card Variations
 
-| Variant | Border | Background |
-|---------|--------|------------|
-| Default | 2px neutral-500 | neutral-900 |
-| Selected | 2px accent-500 | neutral-900 |
+| Variant   | Border                                | Background  |
+| --------- | ------------------------------------- | ----------- |
+| Default   | 2px neutral-500                       | neutral-900 |
+| Selected  | 2px accent-500                        | neutral-900 |
 | Hoverable | 2px neutral-500 → accent-400 on hover | neutral-900 |
-| Elevated | 3px neutral-500 | neutral-800 |
+| Elevated  | 3px neutral-500                       | neutral-800 |
 
 ---
 
 ### Input
 
-```
+```css
 Background: var(--vault-surface-secondary)
 Border: 3px solid var(--vault-border-default)
 Border-radius: 8px
@@ -110,7 +111,7 @@ Color: var(--vault-text-primary)
 
 The search bar is Vaultica's primary interaction point.
 
-```
+```css
 Height: 56-64px
 Border: 3px solid var(--vault-border-strong)
 Border-radius: 12px
@@ -128,7 +129,7 @@ Icon: Search icon, 24px, left-aligned
 
 ### Badge / Tag
 
-```
+```css
 Padding: 4px 12px
 Border-radius: 6px
 Font-size: 12px (typography.fontSize.xs)
@@ -147,7 +148,7 @@ Critical: bg critical-900, text critical-100
 
 ### Toast / Notification
 
-```
+```css
 Background: var(--vault-surface-tertiary)
 Border: 3px solid var(--vault-border-default)
 Border-radius: 12px
@@ -167,7 +168,7 @@ Gap: 16px
 
 ### Modal / Dialog
 
-```
+```css
 Background: var(--vault-surface-secondary)
 Border: 3px solid var(--vault-border-strong)  /* Heavy */
 Border-radius: 16px (effects.border.radius.xl)
@@ -184,7 +185,7 @@ Backdrop-filter: blur(4px)
 
 ### Navigation Item
 
-```
+```css
 Padding: 12px 16px
 Border-radius: 8px
 Font-weight: 500
@@ -202,7 +203,7 @@ Current: accent-900 bg, accent-200 text, 3px left border accent
 
 For displaying saved Blinks in the Visual Gallery:
 
-```
+```css
 /* Thumbnail area */
 Aspect-ratio: 1/1 or 4/3 (visual-first)
 Object-fit: cover
@@ -225,7 +226,7 @@ Padding: 0 (edge-to-edge imagery)
 
 ### Blink Zone (Save Area)
 
-```
+```css
 /* Default */
 Background: neutral-900
 Border: 3px dashed neutral-600
@@ -253,7 +254,7 @@ Show: "Blinked to your Vault. ⚡" toast
 
 ### App Shell
 
-```
+```css
 Display: grid
 Grid-template-columns: 240px 1fr (sidebar + main)
 Grid-template-rows: 64px 1fr (header + content)
@@ -266,7 +267,7 @@ Flex with collapsible sidebar
 
 The Visual Gallery is Blink's signature view — clean, edge-to-edge, label-free:
 
-```
+```css
 Display: grid
 Grid-template-columns: repeat(auto-fill, minmax(180px, 1fr))
 Gap: 8px (spacing.2) — tight for visual density
@@ -277,7 +278,7 @@ Gap: 8px (spacing.2) — tight for visual density
 
 ### Stack Layout
 
-```
+```css
 Display: flex
 Flex-direction: column
 Gap: 16px (spacing.4) — standard
@@ -296,19 +297,19 @@ Gap: 24px (spacing.6) — spacious
 
 ### Key Icons
 
-| Function | Icon Reference |
-|----------|----------------|
-| Blink Vault/Home | Shield or Safe |
-| Blink it (save) | Lightning bolt or blink eye |
-| Search | Magnifying glass |
-| Settings | Gear |
-| Share | Arrow from box |
-| Delete | Trash |
-| Copy Link | Chain links |
-| Expire/Timer | Clock |
-| Lock | Padlock |
-| Success | Checkmark |
-| Error | X or Triangle alert |
+| Function         | Icon Reference              |
+| ---------------- | --------------------------- |
+| Blink Vault/Home | Shield or Safe              |
+| Blink it (save)  | Lightning bolt or blink eye |
+| Search           | Magnifying glass            |
+| Settings         | Gear                        |
+| Share            | Arrow from box              |
+| Delete           | Trash                       |
+| Copy Link        | Chain links                 |
+| Expire/Timer     | Clock                       |
+| Lock             | Padlock                     |
+| Success          | Checkmark                   |
+| Error            | X or Triangle alert         |
 
 ---
 
@@ -343,4 +344,5 @@ Gap: 24px (spacing.6) — spacious
 
 ---
 
-*Use these patterns as the baseline. Remember: technology is invisible, speed is paramount, visuals come first.*
+_Use these patterns as the baseline. Remember: technology is invisible, speed is paramount, visuals
+come first._
