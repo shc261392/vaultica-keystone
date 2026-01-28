@@ -75,24 +75,54 @@ function loadTokens(): TokenCollection {
 
 /**
  * Get nested object value by dot path
+ * Tries direct path first, then searches within each token category
  */
 function getNestedValue(
   obj: TokenCollection | TokenData,
   path: string
 ): TokenValue | TokenData | string | undefined {
   const parts = path.split(".");
+
+  // First, try direct path lookup
   let current: TokenCollection | TokenData | TokenValue | string | undefined =
     obj;
-
   for (const part of parts) {
     if (current && typeof current === "object" && part in current) {
       current = (current as TokenData)[part];
     } else {
-      return undefined;
+      current = undefined;
+      break;
+    }
+  }
+  if (current !== undefined) {
+    return current as TokenValue | TokenData | string;
+  }
+
+  // If direct lookup failed, try searching within each category
+  // This handles references like {color.primitive.neutral.500} when tokens are stored as:
+  // { colors: { color: { primitive: { neutral: { 500: ... } } } } }
+  for (const category of Object.keys(obj)) {
+    const categoryData = (obj as TokenCollection)[category];
+    if (categoryData && typeof categoryData === "object") {
+      let found: TokenData | TokenValue | string | undefined = categoryData;
+      let resolved = true;
+
+      for (const part of parts) {
+        if (found && typeof found === "object" && part in found) {
+          found = (found as TokenData)[part];
+        } else {
+          resolved = false;
+          break;
+        }
+      }
+
+      if (resolved && found !== undefined) {
+        return found as TokenValue | TokenData | string;
+      }
     }
   }
 
-  return current as TokenValue | TokenData | string | undefined;
+  return undefined;
 }
 
 /**
@@ -179,13 +209,10 @@ function generateCSS(tokens: TokenCollection): CSSVariables {
 
   const cssVars: CSSVariables = {};
 
-  for (const [category, data] of Object.entries(tokens)) {
-    flattenTokens(
-      data,
-      category === "colors" ? "" : category,
-      cssVars,
-      allTokens
-    );
+  // Don't pass category as prefix since token files already have proper top-level keys
+  // e.g., colors.json has "color": {...}, typography.json has "typography": {...}
+  for (const [_category, data] of Object.entries(tokens)) {
+    flattenTokens(data, "", cssVars, allTokens);
   }
 
   // Build CSS content

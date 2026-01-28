@@ -192,6 +192,7 @@ jobs:
         run: |
           if [[ "${{ needs.lint.result }}" != "success" ]] || \
              [[ "${{ needs.format-check.result }}" != "success" ]] || \
+             [[ "${{ needs.spell-check.result }}" != "success" ]] || \
              [[ "${{ needs.security-audit.result }}" != "success" ]] || \
              [[ "${{ needs.preview-quality.result }}" != "success" ]] || \
              [[ "${{ needs.preview-build.result }}" != "success" ]]; then

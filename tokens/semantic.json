@@ -28,9 +28,9 @@
           "subtle": "{color.primitive.neutral.800}"
         },
         "interactive": {
-          "default": "{color.primitive.accent.500}",
-          "hover": "{color.primitive.accent.400}",
-          "active": "{color.primitive.accent.600}",
+          "default": "{color.primitive.primary.500}",
+          "hover": "{color.primitive.primary.400}",
+          "active": "{color.primitive.primary.600}",
           "disabled": "{color.primitive.neutral.700}"
         }
       },
@@ -55,9 +55,9 @@
           "subtle": "{color.primitive.neutral.100}"
         },
         "interactive": {
-          "default": "{color.primitive.accent.600}",
-          "hover": "{color.primitive.accent.500}",
-          "active": "{color.primitive.accent.700}",
+          "default": "{color.primitive.primary.600}",
+          "hover": "{color.primitive.primary.500}",
+          "active": "{color.primitive.primary.700}",
           "disabled": "{color.primitive.neutral.300}"
         }
       }
@@ -114,8 +114,8 @@
           "text": "{color.primitive.neutral.100}"
         },
         "accent": {
-          "background": "{color.primitive.accent.900}",
-          "text": "{color.primitive.accent.200}"
+          "background": "{color.primitive.primary.900}",
+          "text": "{color.primitive.primary.200}"
         },
         "success": {
           "background": "{color.primitive.success.900}",
@@ -157,8 +157,8 @@
           "text": "{color.semantic.vault.text.primary}"
         },
         "item-active": {
-          "background": "{color.primitive.accent.900}",
-          "text": "{color.primitive.accent.200}"
+          "background": "{color.primitive.primary.900}",
+          "text": "{color.primitive.primary.200}"
         }
       }
     },
@@ -170,8 +170,8 @@
         "ring-color": "{color.semantic.vault.border.focus}"
       },
       "selection": {
-        "background": "{color.primitive.accent.800}",
-        "text": "{color.primitive.accent.100}"
+        "background": "{color.primitive.primary.800}",
+        "text": "{color.primitive.primary.100}"
       },
       "loading": {
         "spinner-color": "{color.semantic.vault.accent.default}",
