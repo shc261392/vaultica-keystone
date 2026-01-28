@@ -19,29 +19,34 @@
     "assets/"
   ],
   "scripts": {
-    "build": "node scripts/build-tokens.js",
-    "validate": "node scripts/validate.js",
-    "prebuild": "node scripts/validate.js",
-    "watch": "nodemon --watch tokens --ext json --exec 'node scripts/build-tokens.js'",
+    "build": "tsx scripts/build-tokens.ts",
+    "validate": "tsx scripts/validate.ts",
+    "prebuild": "tsx scripts/validate.ts",
+    "watch": "nodemon --watch tokens --ext json --exec 'tsx scripts/build-tokens.ts'",
     "clean": "rm -rf dist/*",
-    "rebuild": "rm -rf dist/* && node scripts/build-tokens.js",
+    "rebuild": "rm -rf dist/* && tsx scripts/build-tokens.ts",
     "preview": "pnpm --dir preview dev",
     "preview:install": "pnpm --dir preview install",
     "preview:build": "pnpm --dir preview build",
-    "lint": "eslint \"scripts/**/*.js\" && markdownlint \"**/*.md\" --ignore node_modules && cspell \"**/*.{md,js,json}\" --no-progress",
-    "lint:js": "eslint \"scripts/**/*.js\"",
+    "lint": "eslint \"scripts/**/*.ts\" && markdownlint \"**/*.md\" --ignore node_modules && cspell \"**/*.{md,ts,json}\" --no-progress",
+    "lint:ts": "eslint \"scripts/**/*.ts\"",
     "lint:md": "markdownlint \"**/*.md\" --ignore node_modules",
-    "lint:spell": "cspell \"**/*.{md,js,json}\" --no-progress",
-    "format": "prettier --write \"**/*.{js,json,md,yml,yaml}\"",
-    "format:check": "prettier --check \"**/*.{js,json,md,yml,yaml}\"",
+    "lint:spell": "cspell \"**/*.{md,ts,json}\" --no-progress",
+    "format": "prettier --write \"**/*.{ts,json,md,yml,yaml}\"",
+    "format:check": "prettier --check \"**/*.{ts,json,md,yml,yaml}\"",
     "audit": "pnpm audit --audit-level=moderate",
-    "quality": "eslint \"scripts/**/*.js\" && markdownlint \"**/*.md\" --ignore node_modules && cspell \"**/*.{md,js,json}\" --no-progress && prettier --check \"**/*.{js,json,md,yml,yaml}\" && pnpm audit --audit-level=moderate",
-    "quality:fix": "prettier --write \"**/*.{js,json,md,yml,yaml}\" && eslint --fix \"scripts/**/*.js\" && markdownlint --fix \"**/*.md\" --ignore node_modules",
+    "quality": "eslint \"scripts/**/*.ts\" && markdownlint \"**/*.md\" --ignore node_modules && cspell \"**/*.{md,ts,json}\" --no-progress && prettier --check \"**/*.{ts,json,md,yml,yaml}\" && pnpm audit --audit-level=moderate",
+    "quality:fix": "prettier --write \"**/*.{ts,json,md,yml,yaml}\" && eslint --fix \"scripts/**/*.ts\" && markdownlint --fix \"**/*.md\" --ignore node_modules",
+    "typecheck": "tsc --noEmit",
     "prepare": "husky install || true"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.0",
     "@commitlint/config-conventional": "^18.4.0",
+    "@commitlint/types": "^20.3.1",
+    "@types/node": "^25.0.10",
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
     "cspell": "^8.3.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
@@ -49,11 +54,16 @@
     "lint-staged": "^15.2.2",
     "markdownlint-cli": "^0.47.0",
     "nodemon": "^3.0.0",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
   },
   "lint-staged": {
-    "*.js": [
+    "scripts/**/*.ts": [
       "eslint --fix",
+      "prettier --write"
+    ],
+    "*.ts": [
       "prettier --write"
     ],
     "preview/src/**/*.{ts,tsx}": [
@@ -79,5 +89,10 @@
   "engines": {
     "node": ">=24.0.0",
     "pnpm": ">=10.0.0 <11.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }

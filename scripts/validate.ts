@@ -1,3 +1,4 @@
+#!/usr/bin/env npx tsx
 /**
  * Vaultica Keystone - Token Validation Script
  *
@@ -6,23 +7,47 @@
  * - Reference resolution (no broken references)
  * - Required token presence
  *
- * Usage: node scripts/validate.js
+ * Usage: npx tsx scripts/validate.ts
  */
 
-const fs = require("fs");
-const path = require("path");
+import { existsSync, readFileSync } from "node:fs";
+import { join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 // Paths
-const TOKENS_DIR = path.join(__dirname, "..", "tokens");
+const TOKENS_DIR = join(__dirname, "..", "tokens");
 
 // Validation results
-const errors = [];
-const warnings = [];
+const errors: string[] = [];
+const warnings: string[] = [];
+
+// Type definitions
+interface TokenValue {
+  value: string;
+  type?: string;
+  description?: string;
+}
+
+type TokenData = {
+  [key: string]: TokenValue | TokenData | string;
+};
+
+type TokenCollection = {
+  [category: string]: TokenData;
+};
+
+interface TokenReference {
+  path: string;
+  reference: string;
+  file: string;
+}
 
 /**
  * Load all token files
  */
-function loadTokens() {
+function loadTokens(): TokenCollection {
   const tokenFiles = [
     "colors.json",
     "typography.json",
@@ -30,13 +55,13 @@ function loadTokens() {
     "spacing.json",
     "semantic.json",
   ];
-  const tokens = {};
+  const tokens: TokenCollection = {};
 
   for (const file of tokenFiles) {
-    const filePath = path.join(TOKENS_DIR, file);
-    if (fs.existsSync(filePath)) {
-      const content = fs.readFileSync(filePath, "utf8");
-      tokens[file.replace(".json", "")] = JSON.parse(content);
+    const filePath = join(TOKENS_DIR, file);
+    if (existsSync(filePath)) {
+      const content = readFileSync(filePath, "utf8");
+      tokens[file.replace(".json", "")] = JSON.parse(content) as TokenData;
     } else {
       errors.push(`Missing required token file: ${file}`);
     }
@@ -48,12 +73,12 @@ function loadTokens() {
 /**
  * Check if all token references can be resolved
  */
-function validateReferences(tokens) {
+function validateReferences(tokens: TokenCollection): void {
   console.log("🔗 Validating token references...");
 
-  const allRefs = [];
+  const allRefs: TokenReference[] = [];
 
-  function findRefs(obj, filePath = "") {
+  function findRefs(obj: TokenData, filePath: string = ""): void {
     for (const [key, value] of Object.entries(obj)) {
       if (key.startsWith("$")) {
         continue;
@@ -74,7 +99,7 @@ function validateReferences(tokens) {
             });
           }
         } else {
-          findRefs(value, currentPath);
+          findRefs(value as TokenData, currentPath);
         }
       }
     }
@@ -99,33 +124,37 @@ function validateReferences(tokens) {
  * Resolve a token reference
  * Handles both cross-file and within-file references
  */
-function resolveRef(refPath, tokens) {
+function resolveRef(
+  refPath: string,
+  tokens: TokenCollection
+): TokenValue | TokenData | string | undefined {
   const parts = refPath.split(".");
-  let current = tokens;
+  let current: TokenCollection | TokenData | TokenValue | string | undefined =
+    tokens;
 
   // First try direct path
   for (const part of parts) {
     if (current && typeof current === "object" && part in current) {
-      current = current[part];
+      current = (current as TokenData)[part];
     } else {
       // Try to find within specific token files
-      current = null;
+      current = undefined;
       break;
     }
   }
 
-  if (current !== null) {
-    return current;
+  if (current !== undefined) {
+    return current as TokenValue | TokenData | string;
   }
 
   // Try within each token category (colors, typography, etc.)
   for (const [_category, data] of Object.entries(tokens)) {
-    let found = data;
+    let found: TokenData | TokenValue | string | undefined = data;
     let resolved = true;
 
     for (const part of parts) {
       if (found && typeof found === "object" && part in found) {
-        found = found[part];
+        found = (found as TokenData)[part];
       } else {
         resolved = false;
         break;
@@ -133,7 +162,7 @@ function resolveRef(refPath, tokens) {
     }
 
     if (resolved && found !== undefined) {
-      return found;
+      return found as TokenValue | TokenData | string;
     }
   }
 
@@ -143,7 +172,7 @@ function resolveRef(refPath, tokens) {
 /**
  * Check required tokens exist
  */
-function validateRequiredTokens(tokens) {
+function validateRequiredTokens(tokens: TokenCollection): void {
   console.log("📋 Validating required tokens...");
 
   const required = [
@@ -187,13 +216,17 @@ function validateRequiredTokens(tokens) {
 /**
  * Validate OKLCH color values
  */
-function validateColorFormat(tokens) {
+function validateColorFormat(tokens: TokenCollection): void {
   console.log("🎨 Validating color formats...");
 
-  const colorTokens = tokens.colors?.color?.primitive || {};
+  const colorsData = tokens.colors?.color;
+  const colorTokens: TokenData =
+    colorsData && typeof colorsData === "object" && "primitive" in colorsData
+      ? ((colorsData as TokenData).primitive as TokenData)
+      : {};
   let colorCount = 0;
 
-  function checkColors(obj, path = "") {
+  function checkColors(obj: TokenData, path: string = ""): void {
     for (const [key, value] of Object.entries(obj)) {
       if (key.startsWith("$")) {
         continue;
@@ -202,7 +235,11 @@ function validateColorFormat(tokens) {
       const currentPath = path ? `${path}.${key}` : key;
 
       if (value && typeof value === "object") {
-        if ("value" in value && value.type === "color") {
+        if (
+          "value" in value &&
+          (value as TokenValue).type === "color" &&
+          typeof value.value === "string"
+        ) {
           colorCount++;
           const colorValue = value.value;
 
@@ -222,7 +259,7 @@ function validateColorFormat(tokens) {
             );
           }
         } else {
-          checkColors(value, currentPath);
+          checkColors(value as TokenData, currentPath);
         }
       }
     }
@@ -235,7 +272,7 @@ function validateColorFormat(tokens) {
 /**
  * Check for accessibility issues
  */
-function validateAccessibility(tokens) {
+function validateAccessibility(tokens: TokenCollection): void {
   console.log("♿ Validating accessibility...");
 
   // Check that focus states exist
@@ -259,7 +296,7 @@ function validateAccessibility(tokens) {
 /**
  * Main validation function
  */
-function validate() {
+function validate(): void {
   console.log("🏛️  Vaultica Keystone Token Validation\n");
   console.log("═".repeat(40));
   console.log("");

@@ -61,7 +61,9 @@ function checkSubmoduleExists(): CheckResult {
 
 function getLocalVersion(): string | null {
   const pkgPath = join(KEYSTONE_PATH, "package.json");
-  if (!existsSync(pkgPath)) return null;
+  if (!existsSync(pkgPath)) {
+    return null;
+  }
   try {
     const pkg = JSON.parse(readFileSync(pkgPath, "utf8"));
     return pkg.version;

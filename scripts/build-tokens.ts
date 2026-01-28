@@ -1,3 +1,4 @@
+#!/usr/bin/env npx tsx
 /**
  * Vaultica Keystone - Token Build Script
  *
@@ -6,25 +7,47 @@
  * - Tailwind CSS config
  * - JavaScript/TypeScript exports
  *
- * Usage: node scripts/build-tokens.js
+ * Usage: npx tsx scripts/build-tokens.ts
  */
 
-const fs = require("fs");
-const path = require("path");
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 // Paths
-const TOKENS_DIR = path.join(__dirname, "..", "tokens");
-const DIST_DIR = path.join(__dirname, "..", "dist");
+const TOKENS_DIR = join(__dirname, "..", "tokens");
+const DIST_DIR = join(__dirname, "..", "dist");
+
+// Type definitions
+interface TokenValue {
+  value: string;
+  type?: string;
+  description?: string;
+}
+
+type TokenData = {
+  [key: string]: TokenValue | TokenData | string;
+};
+
+type TokenCollection = {
+  [category: string]: TokenData;
+};
+
+type CSSVariables = {
+  [name: string]: string;
+};
 
 // Ensure dist directory exists
-if (!fs.existsSync(DIST_DIR)) {
-  fs.mkdirSync(DIST_DIR, { recursive: true });
+if (!existsSync(DIST_DIR)) {
+  mkdirSync(DIST_DIR, { recursive: true });
 }
 
 /**
  * Load all token files
  */
-function loadTokens() {
+function loadTokens(): TokenCollection {
   const tokenFiles = [
     "colors.json",
     "typography.json",
@@ -32,13 +55,13 @@ function loadTokens() {
     "spacing.json",
     "semantic.json",
   ];
-  const tokens = {};
+  const tokens: TokenCollection = {};
 
   for (const file of tokenFiles) {
-    const filePath = path.join(TOKENS_DIR, file);
-    if (fs.existsSync(filePath)) {
-      const content = fs.readFileSync(filePath, "utf8");
-      const parsed = JSON.parse(content);
+    const filePath = join(TOKENS_DIR, file);
+    if (existsSync(filePath)) {
+      const content = readFileSync(filePath, "utf8");
+      const parsed = JSON.parse(content) as TokenData;
       const name = file.replace(".json", "");
       tokens[name] = parsed;
       console.log(`✓ Loaded ${file}`);
@@ -51,11 +74,37 @@ function loadTokens() {
 }
 
 /**
+ * Get nested object value by dot path
+ */
+function getNestedValue(
+  obj: TokenCollection | TokenData,
+  path: string
+): TokenValue | TokenData | string | undefined {
+  const parts = path.split(".");
+  let current: TokenCollection | TokenData | TokenValue | string | undefined =
+    obj;
+
+  for (const part of parts) {
+    if (current && typeof current === "object" && part in current) {
+      current = (current as TokenData)[part];
+    } else {
+      return undefined;
+    }
+  }
+
+  return current as TokenValue | TokenData | string | undefined;
+}
+
+/**
  * Resolve token references like {color.primitive.neutral.500}
  */
-function resolveReference(value, allTokens, visited = new Set()) {
+function resolveReference(
+  value: string | TokenData | TokenValue,
+  allTokens: TokenCollection,
+  visited: Set<string> = new Set()
+): string {
   if (typeof value !== "string") {
-    return value;
+    return String(value);
   }
 
   const refPattern = /\{([^}]+)\}/g;
@@ -75,7 +124,7 @@ function resolveReference(value, allTokens, visited = new Set()) {
     const refValue = getNestedValue(allTokens, refPath);
     if (refValue !== undefined) {
       const resolvedRef =
-        typeof refValue === "object" && refValue.value
+        typeof refValue === "object" && "value" in refValue
           ? resolveReference(refValue.value, allTokens, visited)
           : resolveReference(refValue, allTokens, visited);
       resolved = resolved.replace(match[0], resolvedRef);
@@ -86,27 +135,14 @@ function resolveReference(value, allTokens, visited = new Set()) {
 }
 
 /**
- * Get nested object value by dot path
- */
-function getNestedValue(obj, path) {
-  const parts = path.split(".");
-  let current = obj;
-
-  for (const part of parts) {
-    if (current && typeof current === "object" && part in current) {
-      current = current[part];
-    } else {
-      return undefined;
-    }
-  }
-
-  return current;
-}
-
-/**
  * Flatten tokens into CSS variable format
  */
-function flattenTokens(obj, prefix = "", result = {}, allTokens = {}) {
+function flattenTokens(
+  obj: TokenData,
+  prefix: string = "",
+  result: CSSVariables = {},
+  allTokens: TokenCollection = {}
+): CSSVariables {
   for (const [key, value] of Object.entries(obj)) {
     // Skip metadata keys
     if (key.startsWith("$")) {
@@ -116,13 +152,13 @@ function flattenTokens(obj, prefix = "", result = {}, allTokens = {}) {
     const cssVarName = prefix ? `${prefix}-${key}` : key;
 
     if (value && typeof value === "object") {
-      if ("value" in value) {
+      if ("value" in value && typeof value.value === "string") {
         // This is a token with a value
         const resolvedValue = resolveReference(value.value, allTokens);
         result[`--${cssVarName}`] = resolvedValue;
       } else {
         // This is a nested object, recurse
-        flattenTokens(value, cssVarName, result, allTokens);
+        flattenTokens(value as TokenData, cssVarName, result, allTokens);
       }
     }
   }
@@ -133,15 +169,15 @@ function flattenTokens(obj, prefix = "", result = {}, allTokens = {}) {
 /**
  * Generate CSS custom properties
  */
-function generateCSS(tokens) {
+function generateCSS(tokens: TokenCollection): CSSVariables {
   console.log("\n📦 Generating CSS...");
 
-  const allTokens = {};
+  const allTokens: TokenCollection = {};
   for (const [category, data] of Object.entries(tokens)) {
     Object.assign(allTokens, { [category]: data });
   }
 
-  const cssVars = {};
+  const cssVars: CSSVariables = {};
 
   for (const [category, data] of Object.entries(tokens)) {
     flattenTokens(
@@ -199,8 +235,8 @@ function generateCSS(tokens) {
 }
 `;
 
-  const outputPath = path.join(DIST_DIR, "theme.css");
-  fs.writeFileSync(outputPath, css);
+  const outputPath = join(DIST_DIR, "theme.css");
+  writeFileSync(outputPath, css);
   console.log(`✓ Generated ${outputPath}`);
 
   return cssVars;
@@ -209,7 +245,7 @@ function generateCSS(tokens) {
 /**
  * Generate Tailwind config
  */
-function generateTailwindConfig(_tokens) {
+function generateTailwindConfig(_tokens: TokenCollection): void {
   console.log("\n📦 Generating Tailwind config...");
 
   const config = {
@@ -305,19 +341,22 @@ function generateTailwindConfig(_tokens) {
 module.exports = ${JSON.stringify(config, null, 2)};
 `;
 
-  const outputPath = path.join(DIST_DIR, "tailwind.config.js");
-  fs.writeFileSync(outputPath, content);
+  const outputPath = join(DIST_DIR, "tailwind.config.js");
+  writeFileSync(outputPath, content);
   console.log(`✓ Generated ${outputPath}`);
 }
 
 /**
  * Generate JavaScript/TypeScript exports
  */
-function generateJSExports(tokens, cssVars) {
+function generateJSExports(
+  _tokens: TokenCollection,
+  cssVars: CSSVariables
+): void {
   console.log("\n📦 Generating JS exports...");
 
   // Create a cleaner token structure for JS consumption
-  const jsTokens = {};
+  const jsTokens: { [key: string]: string } = {};
 
   for (const [name, value] of Object.entries(cssVars)) {
     const cleanName = name.replace("--", "").replace(/-/g, "_");
@@ -346,8 +385,8 @@ export type TokenName = keyof typeof tokens;
 export default tokens;
 `;
 
-  const outputPath = path.join(DIST_DIR, "tokens.js");
-  fs.writeFileSync(outputPath, content);
+  const outputPath = join(DIST_DIR, "tokens.js");
+  writeFileSync(outputPath, content);
   console.log(`✓ Generated ${outputPath}`);
 
   // Also generate TypeScript definitions
@@ -369,15 +408,15 @@ export type TokenName = keyof typeof tokens;
 export default tokens;
 `;
 
-  const dtsPath = path.join(DIST_DIR, "tokens.d.ts");
-  fs.writeFileSync(dtsPath, dtsContent);
+  const dtsPath = join(DIST_DIR, "tokens.d.ts");
+  writeFileSync(dtsPath, dtsContent);
   console.log(`✓ Generated ${dtsPath}`);
 }
 
 /**
  * Main build function
  */
-function build() {
+function build(): void {
   console.log("🏛️  Vaultica Keystone Token Build\n");
   console.log("═".repeat(40));
 
@@ -398,7 +437,10 @@ function build() {
     console.log("  - dist/tokens.js");
     console.log("  - dist/tokens.d.ts");
   } catch (error) {
-    console.error("\n❌ Build failed:", error.message);
+    console.error(
+      "\n❌ Build failed:",
+      error instanceof Error ? error.message : error
+    );
     process.exit(1);
   }
 }

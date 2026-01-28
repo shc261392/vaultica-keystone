@@ -514,8 +514,7 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url));
 // Parse command line arguments for custom directory
 const args = process.argv.slice(2);
 const dirIndex = args.indexOf("--dir");
-const customDir =
-  dirIndex !== -1 && args[dirIndex + 1] ? args[dirIndex + 1] : null;
+const customDir = dirIndex !== -1 && args[dirIndex + 1] ? args[dirIndex + 1] : null;
 
 // When run from consumer project, keystone is the parent of scripts/
 const KEYSTONE_PATH = customDir ? resolve(customDir) : join(__dirname, "..", "vaultica-keystone");
@@ -540,8 +539,7 @@ function checkSubmoduleExists(): CheckResult {
   if (!existsSync(KEYSTONE_PATH)) {
     return {
       success: false,
-      message:
-        "Keystone submodule not found. Run: git submodule update --init --recursive",
+      message: "Keystone submodule not found. Run: git submodule update --init --recursive",
     };
   }
   return { success: true, message: "Submodule exists" };
@@ -584,9 +582,7 @@ function checkSubmoduleVersion(): CheckResult {
   }
 
   console.log(`   Local commit:   ${localCommit.slice(0, 8)}`);
-  console.log(
-    `   Remote commit:  ${remoteCommit ? remoteCommit.slice(0, 8) : "unknown"}`,
-  );
+  console.log(`   Remote commit:  ${remoteCommit ? remoteCommit.slice(0, 8) : "unknown"}`);
 
   if (remoteCommit && localCommit !== remoteCommit) {
     const message =
@@ -687,10 +683,8 @@ const args = process.argv.slice(2);
 const dirIndex = args.indexOf("--dir");
 const hashIndex = args.indexOf("--hash");
 
-const customDir =
-  dirIndex !== -1 && args[dirIndex + 1] ? args[dirIndex + 1] : null;
-const customHashFile =
-  hashIndex !== -1 && args[hashIndex + 1] ? args[hashIndex + 1] : null;
+const customDir = dirIndex !== -1 && args[dirIndex + 1] ? args[dirIndex + 1] : null;
+const customHashFile = hashIndex !== -1 && args[hashIndex + 1] ? args[hashIndex + 1] : null;
 
 const KEYSTONE_PATH = customDir ? resolve(customDir) : join(__dirname, "..", "vaultica-keystone");
 const KEYSTONE_DIST = join(KEYSTONE_PATH, "dist");
@@ -724,9 +718,7 @@ function updateHash(): void {
   console.log(`   Hash: ${hash.slice(0, 16)}...`);
   console.log("");
   console.log("   Don't forget to commit the hash file:");
-  console.log(
-    '   git add .keystone-hash && git commit -m "chore: update keystone token hash"',
-  );
+  console.log('   git add .keystone-hash && git commit -m "chore: update keystone token hash"');
 }
 
 function verify(): void {
@@ -740,9 +732,7 @@ function verify(): void {
     console.log(`   Hash: ${currentHash.slice(0, 16)}...`);
     console.log("");
     console.log("   Commit the hash file:");
-    console.log(
-      '   git add .keystone-hash && git commit -m "chore: add keystone token hash"',
-    );
+    console.log('   git add .keystone-hash && git commit -m "chore: add keystone token hash"');
     return;
   }
 
