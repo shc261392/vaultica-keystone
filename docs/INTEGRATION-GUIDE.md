@@ -469,177 +469,307 @@ export const metadata: Metadata = {
 Ensure your project always uses the latest keystone tokens. This prevents drift between design
 tokens and your application.
 
-### Method 1: Git Submodule Version Check (CI/CD)
+**Requirements:**
 
-Create a script to verify submodule version:
+- Add `tsx` as a dev dependency: `pnpm add -D tsx`
+- Set `"type": "module"` in your package.json for ES modules
 
-```javascript
-// scripts/check-keystone-version.js
-const { execSync } = require("child_process");
-const path = require("path");
-const fs = require("fs");
+### Method 1: TypeScript Version Check Script (Recommended)
 
-const KEYSTONE_PATH = path.join(__dirname, "..", "vaultica-keystone");
+Keystone includes TypeScript ES module scripts in `scripts/`. Use them directly or copy to your
+project:
 
-function getLocalVersion() {
-  const pkgPath = path.join(KEYSTONE_PATH, "package.json");
-  if (!fs.existsSync(pkgPath)) {
-    console.error("❌ Keystone submodule not found. Run: git submodule update --init");
-    process.exit(1);
-  }
-  const pkg = JSON.parse(fs.readFileSync(pkgPath, "utf8"));
-  return pkg.version;
+```typescript
+// Option A: Run directly from keystone submodule
+// pnpm check:keystone → tsx vaultica-keystone/scripts/check-keystone.ts
+
+// Option B: Copy to your project's scripts/ folder and adjust paths
+```
+
+**The check-keystone.ts script:**
+
+```typescript
+#!/usr/bin/env npx tsx
+/**
+ * Vaultica Keystone Version Checker
+ *
+ * Verifies that the keystone submodule is up to date and tokens are built.
+ * Run this script before builds to ensure design token consistency.
+ *
+ * Usage:
+ *   pnpm check:keystone
+ *
+ * Exit codes:
+ *   0 - Keystone is up to date and tokens are built
+ *   1 - Keystone is outdated, missing, or tokens not built
+ */
+
+import { execSync } from "node:child_process";
+import { existsSync, readFileSync } from "node:fs";
+import { join, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
+
+// Parse command line arguments for custom directory
+const args = process.argv.slice(2);
+const dirIndex = args.indexOf("--dir");
+const customDir =
+  dirIndex !== -1 && args[dirIndex + 1] ? args[dirIndex + 1] : null;
+
+// When run from consumer project, keystone is the parent of scripts/
+const KEYSTONE_PATH = customDir ? resolve(customDir) : join(__dirname, "..", "vaultica-keystone");
+const DIST_PATH = join(KEYSTONE_PATH, "dist");
+
+const isCI = process.env.CI === "true";
+
+interface CheckResult {
+  success: boolean;
+  message: string;
 }
 
-function getRemoteVersion() {
+function execSilent(command: string, cwd: string): string | null {
   try {
-    // Fetch latest from remote
-    execSync("git fetch origin main", {
-      cwd: KEYSTONE_PATH,
-      stdio: "pipe",
-    });
-
-    // Get version from remote main branch
-    const remoteContent = execSync("git show origin/main:package.json", {
-      cwd: KEYSTONE_PATH,
-      encoding: "utf8",
-    });
-    return JSON.parse(remoteContent).version;
-  } catch (error) {
-    console.warn("⚠️ Could not fetch remote version:", error.message);
-    return null;
-  }
-}
-
-function getLocalCommit() {
-  return execSync("git rev-parse HEAD", {
-    cwd: KEYSTONE_PATH,
-    encoding: "utf8",
-  }).trim();
-}
-
-function getRemoteCommit() {
-  try {
-    return execSync("git rev-parse origin/main", {
-      cwd: KEYSTONE_PATH,
-      encoding: "utf8",
-    }).trim();
+    return execSync(command, { cwd, encoding: "utf8", stdio: "pipe" }).trim();
   } catch {
     return null;
   }
 }
 
-function checkVersion() {
-  console.log("🔍 Checking Vaultica Keystone version...\n");
-
-  const localVersion = getLocalVersion();
-  const remoteVersion = getRemoteVersion();
-  const localCommit = getLocalCommit();
-  const remoteCommit = getRemoteCommit();
-
-  console.log(`   Local version:  ${localVersion}`);
-  console.log(`   Remote version: ${remoteVersion || "unknown"}`);
-  console.log(`   Local commit:   ${localCommit.slice(0, 8)}`);
-  console.log(`   Remote commit:  ${remoteCommit ? remoteCommit.slice(0, 8) : "unknown"}`);
-  console.log("");
-
-  // Check if behind remote
-  if (remoteCommit && localCommit !== remoteCommit) {
-    console.error("❌ Keystone is outdated!");
-    console.error("");
-    console.error("   Run the following commands to update:");
-    console.error("   git submodule update --remote vaultica-keystone");
-    console.error("   cd vaultica-keystone && pnpm run build && cd ..");
-    console.error("   git add vaultica-keystone");
-    console.error("   git commit -m 'chore: update keystone to latest'");
-    console.error("");
-
-    // Exit with error in CI
-    if (process.env.CI) {
-      process.exit(1);
-    }
-    return false;
+function checkSubmoduleExists(): CheckResult {
+  if (!existsSync(KEYSTONE_PATH)) {
+    return {
+      success: false,
+      message:
+        "Keystone submodule not found. Run: git submodule update --init --recursive",
+    };
   }
-
-  console.log("✅ Keystone is up to date!");
-  return true;
+  return { success: true, message: "Submodule exists" };
 }
 
-// Run check
-checkVersion();
+function getLocalVersion(): string | null {
+  const pkgPath = join(KEYSTONE_PATH, "package.json");
+  if (!existsSync(pkgPath)) return null;
+  try {
+    const pkg = JSON.parse(readFileSync(pkgPath, "utf8"));
+    return pkg.version;
+  } catch {
+    return null;
+  }
+}
+
+function checkTokensBuilt(): CheckResult {
+  const requiredFiles = ["theme.css", "tailwind.config.js", "tokens.js"];
+
+  for (const file of requiredFiles) {
+    if (!existsSync(join(DIST_PATH, file))) {
+      return {
+        success: false,
+        message: `Missing built token file: dist/${file}. Run: cd vaultica-keystone && pnpm install && pnpm run build`,
+      };
+    }
+  }
+  return { success: true, message: "All token files are built" };
+}
+
+function checkSubmoduleVersion(): CheckResult {
+  // Fetch latest from remote (silently, may fail if offline)
+  execSilent("git fetch origin main", KEYSTONE_PATH);
+
+  const localCommit = execSilent("git rev-parse HEAD", KEYSTONE_PATH);
+  const remoteCommit = execSilent("git rev-parse origin/main", KEYSTONE_PATH);
+
+  if (!localCommit) {
+    return { success: false, message: "Could not determine local commit" };
+  }
+
+  console.log(`   Local commit:   ${localCommit.slice(0, 8)}`);
+  console.log(
+    `   Remote commit:  ${remoteCommit ? remoteCommit.slice(0, 8) : "unknown"}`,
+  );
+
+  if (remoteCommit && localCommit !== remoteCommit) {
+    const message =
+      "Keystone submodule is outdated. Run: git submodule update --remote vaultica-keystone";
+    if (isCI) {
+      return { success: false, message };
+    }
+    // In local dev, warn but don't fail
+    console.warn(`\n⚠️  Warning: ${message}`);
+    return { success: true, message: "Outdated but continuing in dev mode" };
+  }
+
+  return { success: true, message: "Submodule is up to date" };
+}
+
+function main(): void {
+  console.log("🔍 Checking Vaultica Keystone...\n");
+
+  // Check 1: Submodule exists
+  const existsCheck = checkSubmoduleExists();
+  if (!existsCheck.success) {
+    console.error(`❌ ${existsCheck.message}`);
+    process.exit(1);
+  }
+
+  // Get and display version
+  const version = getLocalVersion();
+  console.log(`   Version:        ${version ?? "unknown"}`);
+
+  // Check 2: Submodule version
+  const versionCheck = checkSubmoduleVersion();
+  if (!versionCheck.success) {
+    console.error(`\n❌ ${versionCheck.message}`);
+    process.exit(1);
+  }
+
+  // Check 3: Tokens are built
+  const tokensCheck = checkTokensBuilt();
+  if (!tokensCheck.success) {
+    console.error(`\n❌ ${tokensCheck.message}`);
+    process.exit(1);
+  }
+
+  console.log("\n✅ Keystone submodule is valid");
+  console.log("✅ Token files are built");
+}
+
+main();
 ```
 
 Add to your `package.json`:
 
 ```json
 {
+  "type": "module",
   "scripts": {
-    "check:keystone": "node scripts/check-keystone-version.js",
-    "predev": "npm run check:keystone || true",
-    "prebuild": "npm run check:keystone"
+    "check:keystone": "tsx scripts/check-keystone.ts",
+    "check:tokens": "tsx scripts/verify-token-hash.ts",
+    "check:tokens:update": "tsx scripts/verify-token-hash.ts --update",
+    "prebuild": "pnpm check:keystone || true"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0"
   }
 }
 ```
 
-### Method 2: Token Hash Verification
+### Method 2: Token Hash Verification (TypeScript)
 
 Create a hash of the built tokens to detect changes:
 
-```javascript
-// scripts/verify-token-hash.js
-const crypto = require("crypto");
-const fs = require("fs");
-const path = require("path");
+```typescript
+#!/usr/bin/env npx tsx
+/**
+ * Vaultica Keystone Token Hash Verifier
+ *
+ * Creates and verifies a hash of the built design tokens to detect changes.
+ * This ensures that token changes are explicitly acknowledged in version control.
+ *
+ * Usage:
+ *   pnpm check:tokens          # Verify current hash
+ *   pnpm check:tokens --update # Update stored hash
+ *
+ * Exit codes:
+ *   0 - Hash verified or updated successfully
+ *   1 - Hash mismatch (tokens have changed)
+ */
 
-const KEYSTONE_DIST = path.join(__dirname, "..", "vaultica-keystone", "dist");
-const HASH_FILE = path.join(__dirname, "..", ".keystone-hash");
+import { createHash } from "node:crypto";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { join, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 
-function calculateHash() {
-  const files = ["theme.css", "tailwind.config.js", "tokens.js"];
-  const contents = files.map((f) => {
-    const filePath = path.join(KEYSTONE_DIST, f);
-    return fs.existsSync(filePath) ? fs.readFileSync(filePath, "utf8") : "";
-  });
-  return crypto.createHash("sha256").update(contents.join("")).digest("hex");
-}
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
-function verify() {
-  const currentHash = calculateHash();
+// Parse command line arguments
+const args = process.argv.slice(2);
+const dirIndex = args.indexOf("--dir");
+const hashIndex = args.indexOf("--hash");
 
-  if (!fs.existsSync(HASH_FILE)) {
-    console.log("📝 Creating initial token hash...");
-    fs.writeFileSync(HASH_FILE, currentHash);
-    console.log(`   Hash: ${currentHash.slice(0, 16)}...`);
-    return true;
-  }
+const customDir =
+  dirIndex !== -1 && args[dirIndex + 1] ? args[dirIndex + 1] : null;
+const customHashFile =
+  hashIndex !== -1 && args[hashIndex + 1] ? args[hashIndex + 1] : null;
 
-  const storedHash = fs.readFileSync(HASH_FILE, "utf8").trim();
+const KEYSTONE_PATH = customDir ? resolve(customDir) : join(__dirname, "..", "vaultica-keystone");
+const KEYSTONE_DIST = join(KEYSTONE_PATH, "dist");
+const HASH_FILE = customHashFile
+  ? resolve(customHashFile)
+  : join(__dirname, "..", ".keystone-hash");
 
-  if (currentHash !== storedHash) {
-    console.log("🔄 Keystone tokens have changed!");
-    console.log(`   Previous: ${storedHash.slice(0, 16)}...`);
-    console.log(`   Current:  ${currentHash.slice(0, 16)}...`);
-    console.log("");
-    console.log("   Update the hash file:");
-    console.log(`   echo "${currentHash}" > .keystone-hash`);
-    console.log("   git add .keystone-hash");
-    console.log("   git commit -m 'chore: update keystone token hash'");
+const TOKEN_FILES = ["theme.css", "tailwind.config.js", "tokens.js"] as const;
 
-    if (process.env.CI) {
+const isCI = process.env.CI === "true";
+
+function calculateHash(): string {
+  const contents = TOKEN_FILES.map((file) => {
+    const filePath = join(KEYSTONE_DIST, file);
+    if (!existsSync(filePath)) {
+      console.error(`❌ Missing token file: ${file}`);
+      console.error("   Run: cd vaultica-keystone && pnpm run build");
       process.exit(1);
     }
-    return false;
+    return readFileSync(filePath, "utf8");
+  });
+
+  return createHash("sha256").update(contents.join("")).digest("hex");
+}
+
+function updateHash(): void {
+  const hash = calculateHash();
+  writeFileSync(HASH_FILE, hash + "\n");
+
+  console.log("✅ Token hash updated");
+  console.log(`   Hash: ${hash.slice(0, 16)}...`);
+  console.log("");
+  console.log("   Don't forget to commit the hash file:");
+  console.log(
+    '   git add .keystone-hash && git commit -m "chore: update keystone token hash"',
+  );
+}
+
+function verify(): void {
+  console.log("🔍 Verifying Keystone token hash...\n");
+
+  const currentHash = calculateHash();
+
+  if (!existsSync(HASH_FILE)) {
+    console.log("📝 No existing hash found. Creating initial token hash...");
+    writeFileSync(HASH_FILE, currentHash + "\n");
+    console.log(`   Hash: ${currentHash.slice(0, 16)}...`);
+    console.log("");
+    console.log("   Commit the hash file:");
+    console.log(
+      '   git add .keystone-hash && git commit -m "chore: add keystone token hash"',
+    );
+    return;
+  }
+
+  const storedHash = readFileSync(HASH_FILE, "utf8").trim();
+
+  if (currentHash !== storedHash) {
+    console.error("❌ Token hash mismatch! Keystone tokens have changed.");
+    console.error("");
+    console.error(`   Previous: ${storedHash.slice(0, 16)}...`);
+    console.error(`   Current:  ${currentHash.slice(0, 16)}...`);
+    console.error("");
+    console.error("   If this change is intentional, update the hash:");
+    console.error("   pnpm check:tokens --update");
+
+    if (isCI) {
+      process.exit(1);
+    }
+    return;
   }
 
   console.log("✅ Token hash verified");
-  return true;
+  console.log(`   Hash: ${currentHash.slice(0, 16)}...`);
 }
 
-// Update command
-if (process.argv.includes("--update")) {
-  const hash = calculateHash();
-  fs.writeFileSync(HASH_FILE, hash);
-  console.log(`✅ Hash updated: ${hash.slice(0, 16)}...`);
+// Parse command line arguments
+if (args.includes("--update")) {
+  updateHash();
 } else {
   verify();
 }
@@ -647,15 +777,17 @@ if (process.argv.includes("--update")) {
 
 ### Method 3: GitHub Actions Workflow
 
+Use pnpm scripts instead of inline bash for better maintainability:
+
 ```yaml
-# .github/workflows/keystone-check.yml
-name: Keystone Version Check
+# .github/workflows/ci.yml
+name: CI
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, dev]
   push:
-    branches: [main]
+    branches: ["feat/**", "fix/**", "chore/**"]
 
 jobs:
   check-keystone:
@@ -667,7 +799,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4
         with:
           version: 10
 
@@ -677,35 +809,54 @@ jobs:
           node-version: 24
           cache: pnpm
 
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
       - name: Check keystone submodule
-        run: |
-          cd vaultica-keystone
-          git fetch origin main
+        run: pnpm check:keystone
 
-          LOCAL_COMMIT=$(git rev-parse HEAD)
-          REMOTE_COMMIT=$(git rev-parse origin/main)
+      - name: Verify token hash
+        run: pnpm check:tokens
 
-          echo "Local:  $LOCAL_COMMIT"
-          echo "Remote: $REMOTE_COMMIT"
+  lint:
+    runs-on: ubuntu-latest
+    needs: check-keystone
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
 
-          if [ "$LOCAL_COMMIT" != "$REMOTE_COMMIT" ]; then
-            echo "::error::Keystone submodule is outdated. Please update to latest."
-            exit 1
-          fi
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
 
-          echo "✅ Keystone is up to date"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
 
-      - name: Verify tokens are built
-        run: |
-          if [ ! -f "vaultica-keystone/dist/theme.css" ]; then
-            echo "::error::Keystone tokens not built. Run 'pnpm run build' in keystone directory."
-            exit 1
-          fi
-          echo "✅ Tokens are built"
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
 
-      - name: Check token hash
-        run: |
-          node scripts/verify-token-hash.js
+  test:
+    runs-on: ubuntu-latest
+    needs: check-keystone
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
 ```
 
 ### Method 4: Pre-commit Hook
@@ -737,7 +888,7 @@ fi
 
 cd ..
 
-# Run other pre-commit hooks
+# Run lint-staged
 npx lint-staged
 ```
 
