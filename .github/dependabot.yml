@@ -10,7 +10,7 @@ updates:
       time: "09:00"
     open-pull-requests-limit: 5
     reviewers:
-      - "shadowevor"
+      - "shc261392"
     commit-message:
       prefix: "chore(deps)"
       include: "scope"
@@ -33,7 +33,7 @@ updates:
       time: "09:00"
     open-pull-requests-limit: 5
     reviewers:
-      - "shadowevor"
+      - "shc261392"
     commit-message:
       prefix: "chore(deps)"
       include: "scope"
@@ -58,7 +58,7 @@ updates:
       time: "09:00"
     open-pull-requests-limit: 3
     reviewers:
-      - "shadowevor"
+      - "shc261392"
     commit-message:
       prefix: "ci"
       include: "scope"
