@@ -1,29 +1,49 @@
-# 📁 Vaultica Logo Assets
+# 📁 Blink Vault Logo Assets
+
+> Logo and icon assets for **Blink Vault** by **Vaultica**
+
+## Brand Architecture
+
+| Entity          | Role                                      | Usage Example                  |
+| --------------- | ----------------------------------------- | ------------------------------ |
+| **Vaultica**    | The company/team name                     | "© 2026 Vaultica"              |
+| **Blink Vault** | The product name (official, legal, SEO)   | "Welcome to Blink Vault"       |
+| **Blink**       | The action keyword, command, abbreviation | "Blink it", `/blink`, `@blink` |
 
 ## Files in this directory
 
-### Vaultica (Company)
+### Blink Icon (Primary Mark)
 
-| File                      | Description                        | Format |
-| ------------------------- | ---------------------------------- | ------ |
-| `vaultica-logo.svg`       | Primary full-color logo            | SVG    |
-| `vaultica-logo-white.svg` | White version for dark backgrounds | SVG    |
-| `vaultica-white-icon.svg` | Icon-only mark (white)             | SVG    |
-| `favicon.ico`             | Browser favicon                    | ICO    |
+| File             | Description                     | Format |
+| ---------------- | ------------------------------- | ------ |
+| `blink-icon.svg` | Icon symbol (512×512, centered) | SVG    |
+| `favicon.ico`    | Browser favicon (from icon)     | ICO    |
 
-### Blink / Blink Vault (Product)
+### Blink (Short Name / Action)
+
+| File                             | Description                      | Format |
+| -------------------------------- | -------------------------------- | ------ |
+| `blink-logo-text.svg`            | "Blink" text only (transparent)  | SVG    |
+| `blink-logo-dark.svg`            | "Blink" for dark backgrounds     | SVG    |
+| `blink-logo-clean.svg`           | Full traced logo (transparent)   | SVG    |
+| `blink-with-icon-horizontal.svg` | Icon + "Blink" horizontal lockup | SVG    |
+
+### Blink Vault (Full Product Name)
 
 | File                                   | Description                            | Format |
 | -------------------------------------- | -------------------------------------- | ------ |
-| `blink-logo-text.svg`                  | "Blink" text only (transparent bg)     | SVG    |
-| `blink-logo-dark.svg`                  | "Blink" on dark background             | SVG    |
-| `blink-vault-logo-text.svg`            | "Blink Vault" text (transparent bg)    | SVG    |
-| `blink-vault-logo-dark.svg`            | "Blink Vault" on dark background       | SVG    |
-| `blink-vault-logo-light.svg`           | "Blink Vault" on light background      | SVG    |
-| `blink-icon.svg`                       | Icon symbol (512×512)                  | SVG    |
-| `blink-logo-clean.svg`                 | Full traced logo (transparent)         | SVG    |
-| `blink-with-icon-horizontal.svg`       | Icon + "Blink" horizontal lockup       | SVG    |
+| `blink-vault-logo-text.svg`            | "Blink Vault" text (transparent)       | SVG    |
+| `blink-vault-logo-dark.svg`            | "Blink Vault" for dark backgrounds     | SVG    |
+| `blink-vault-logo-light.svg`           | "Blink Vault" for light backgrounds    | SVG    |
 | `blink-vault-with-icon-horizontal.svg` | Icon + "Blink Vault" horizontal lockup | SVG    |
+
+### Legacy (Vaultica Company)
+
+| File                      | Description                 | Format |
+| ------------------------- | --------------------------- | ------ |
+| `vaultica-logo.svg`       | Vaultica wordmark (color)   | SVG    |
+| `vaultica-logo-white.svg` | Vaultica wordmark (white)   | SVG    |
+| `vaultica-white-icon.svg` | Vaultica icon mark (legacy) | SVG    |
 
 ## Brand Colors
 
@@ -60,15 +80,20 @@ $theme-colors: (
 | Icon Only | 16px          | 16px           |
 | Favicon   | 16px          | 16px           |
 
+### Which Logo to Use
+
+| Context                     | Recommended File                       |
+| --------------------------- | -------------------------------------- |
+| App icon / favicon          | `blink-icon.svg`, `favicon.ico`        |
+| Dark UI header              | `blink-vault-logo-dark.svg`            |
+| Light UI header             | `blink-vault-logo-light.svg`           |
+| Horizontal lockup (dark bg) | `blink-vault-with-icon-horizontal.svg` |
+| Command/action branding     | `blink-logo-dark.svg`                  |
+| Footer copyright            | Text: "© 2026 Vaultica"                |
+
 ### Clear Space
 
-Maintain clear space equal to the height of the "V" icon on all sides.
-
-### Background Rules
-
-- **vaultica-logo.svg** — Use on light backgrounds
-- **vaultica-logo-white.svg** — Use on dark backgrounds
-- **vaultica-white-icon.svg** — Use on dark or colored backgrounds
+Maintain clear space equal to the height of the Blink icon on all sides.
 
 ### Don'ts
 

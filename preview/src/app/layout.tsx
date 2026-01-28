@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Vaultica Keystone - Brand Preview",
-  description: "Design system preview for human review of logos, colors, and typography",
+  title: "Blink Vault Design System - Brand Preview",
+  description:
+    "Design system preview for human review of Blink Vault logos, colors, and typography. By Vaultica.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logos/favicon.ico",
   },
 };
 

@@ -2,6 +2,14 @@
 
 Single Source of Truth for the **Blink Vault** brand. Design tokens, AI context, and assets.
 
+## Brand Architecture
+
+| Entity          | Role                                      | Example                        |
+| --------------- | ----------------------------------------- | ------------------------------ |
+| **Vaultica**    | The company/team name                     | "© 2026 Vaultica"              |
+| **Blink Vault** | The product name (official, legal, SEO)   | "Welcome to Blink Vault"       |
+| **Blink**       | The action keyword, command, abbreviation | "Blink it", `/blink`, `@blink` |
+
 ## Quick Start
 
 ```bash

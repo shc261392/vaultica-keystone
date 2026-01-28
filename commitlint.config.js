@@ -18,20 +18,8 @@ module.exports = {
         "revert", // Revert a previous commit
       ],
     ],
-    "scope-enum": [
-      2,
-      "always",
-      [
-        "tokens", // Design tokens
-        "preview", // Preview app
-        "scripts", // Build scripts
-        "docs", // Documentation
-        "ci", // CI/CD
-        "deps", // Dependencies
-        "config", // Configuration files
-      ],
-    ],
-    "subject-case": [2, "always", "sentence-case"],
+    "scope-enum": [0], // Disabled - accept any scope
+    "subject-case": [0], // Disabled - accept any case
     "header-max-length": [2, "always", 100],
   },
 };

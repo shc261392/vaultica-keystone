@@ -174,16 +174,14 @@ function ColorSwatch({
 }
 
 function LogoPreview() {
-  const [bgMode, setBgMode] = useState<"dark" | "light" | "checkerboard">(
-    "dark"
-  );
+  const [bgMode, setBgMode] = useState<"dark" | "light" | "checkerboard">("dark");
 
   const bgClass =
     bgMode === "dark"
       ? "preview-bg-dark"
       : bgMode === "light"
-      ? "preview-bg-light"
-      : "preview-bg-checkerboard";
+        ? "preview-bg-light"
+        : "preview-bg-checkerboard";
 
   return (
     <div className="space-y-8">
@@ -232,22 +230,20 @@ function LogoPreview() {
           >
             {bgMode === "light" ? (
               <img
-                src="/logos/vaultica-logo.svg"
-                alt="Vaultica Logo"
+                src="/logos/blink-vault-logo-light.svg"
+                alt="Blink Vault Logo"
                 className="max-w-full max-h-32 object-contain"
               />
             ) : (
               <img
-                src="/logos/vaultica-logo-white.svg"
-                alt="Vaultica Logo White"
+                src="/logos/blink-vault-logo-dark.svg"
+                alt="Blink Vault Logo Dark"
                 className="max-w-full max-h-32 object-contain"
               />
             )}
           </div>
           <p className="mt-3 text-sm text-vault-text-secondary">
-            {bgMode === "light"
-              ? "vaultica-logo.svg"
-              : "vaultica-logo-white.svg"}
+            {bgMode === "light" ? "blink-vault-logo-light.svg" : "blink-vault-logo-dark.svg"}
           </p>
         </div>
 
@@ -258,14 +254,12 @@ function LogoPreview() {
             className={`${bgClass} rounded-lg p-8 flex items-center justify-center min-h-[200px] border-2 border-vault-border-default`}
           >
             <img
-              src="/logos/vaultica-white-icon.svg"
-              alt="Vaultica Icon"
+              src="/logos/blink-icon.svg"
+              alt="Blink Icon"
               className="max-w-full max-h-24 object-contain"
             />
           </div>
-          <p className="mt-3 text-sm text-vault-text-secondary">
-            vaultica-white-icon.svg
-          </p>
+          <p className="mt-3 text-sm text-vault-text-secondary">blink-icon.svg</p>
         </div>
 
         {/* Favicon */}
@@ -275,34 +269,16 @@ function LogoPreview() {
             className={`${bgClass} rounded-lg p-8 flex items-center justify-center gap-8 min-h-[200px] border-2 border-vault-border-default`}
           >
             <div className="text-center">
-              <img
-                src="/logos/favicon.ico"
-                alt="Favicon 16x16"
-                className="w-4 h-4 mx-auto"
-              />
-              <span className="text-xs text-vault-text-secondary mt-2 block">
-                16px
-              </span>
+              <img src="/logos/favicon.ico" alt="Favicon 16x16" className="w-4 h-4 mx-auto" />
+              <span className="text-xs text-vault-text-secondary mt-2 block">16px</span>
             </div>
             <div className="text-center">
-              <img
-                src="/logos/favicon.ico"
-                alt="Favicon 32x32"
-                className="w-8 h-8 mx-auto"
-              />
-              <span className="text-xs text-vault-text-secondary mt-2 block">
-                32px
-              </span>
+              <img src="/logos/favicon.ico" alt="Favicon 32x32" className="w-8 h-8 mx-auto" />
+              <span className="text-xs text-vault-text-secondary mt-2 block">32px</span>
             </div>
             <div className="text-center">
-              <img
-                src="/logos/favicon.ico"
-                alt="Favicon 64x64"
-                className="w-16 h-16 mx-auto"
-              />
-              <span className="text-xs text-vault-text-secondary mt-2 block">
-                64px
-              </span>
+              <img src="/logos/favicon.ico" alt="Favicon 64x64" className="w-16 h-16 mx-auto" />
+              <span className="text-xs text-vault-text-secondary mt-2 block">64px</span>
             </div>
           </div>
           <p className="mt-3 text-sm text-vault-text-secondary">favicon.ico</p>
@@ -317,21 +293,21 @@ function LogoPreview() {
             <div className="border-2 border-dashed border-brand-blue/50 p-8 rounded">
               {bgMode === "light" ? (
                 <img
-                  src="/logos/vaultica-logo.svg"
-                  alt="Vaultica Logo"
+                  src="/logos/blink-vault-logo-light.svg"
+                  alt="Blink Vault Logo"
                   className="max-w-full max-h-20 object-contain"
                 />
               ) : (
                 <img
-                  src="/logos/vaultica-logo-white.svg"
-                  alt="Vaultica Logo White"
+                  src="/logos/blink-vault-logo-dark.svg"
+                  alt="Blink Vault Logo Dark"
                   className="max-w-full max-h-20 object-contain"
                 />
               )}
             </div>
           </div>
           <p className="mt-3 text-sm text-vault-text-secondary">
-            Minimum clearspace = height of lock icon
+            Minimum clearspace = height of Blink icon
           </p>
         </div>
       </div>
@@ -373,9 +349,7 @@ function ColorPalette() {
                 style={{ backgroundColor: color.hex }}
                 title={`${color.name}\n${color.hex}\n${color.oklch}`}
               />
-              <span className="text-xs text-vault-text-secondary mt-1 block">
-                {color.value}
-              </span>
+              <span className="text-xs text-vault-text-secondary mt-1 block">{color.value}</span>
             </div>
           ))}
         </div>
@@ -451,45 +425,31 @@ function Typography() {
             </p>
           </div>
           <div>
-            <span className="text-xs text-vault-text-secondary font-mono">
-              H1 / 3rem / 700
-            </span>
+            <span className="text-xs text-vault-text-secondary font-mono">H1 / 3rem / 700</span>
             <p className="text-5xl font-bold tracking-tight text-vault-text-primary">
               See it. Blink it. Find it.
             </p>
           </div>
           <div>
-            <span className="text-xs text-vault-text-secondary font-mono">
-              H2 / 2.25rem / 600
-            </span>
-            <p className="text-4xl font-semibold text-vault-text-primary">
-              Your Visual Collection
-            </p>
+            <span className="text-xs text-vault-text-secondary font-mono">H2 / 2.25rem / 600</span>
+            <p className="text-4xl font-semibold text-vault-text-primary">Your Visual Collection</p>
           </div>
           <div>
-            <span className="text-xs text-vault-text-secondary font-mono">
-              H3 / 1.5rem / 600
-            </span>
-            <p className="text-2xl font-semibold text-vault-text-primary">
-              Instant Search
-            </p>
+            <span className="text-xs text-vault-text-secondary font-mono">H3 / 1.5rem / 600</span>
+            <p className="text-2xl font-semibold text-vault-text-primary">Instant Search</p>
           </div>
           <div>
-            <span className="text-xs text-vault-text-secondary font-mono">
-              Body / 1rem / 400
-            </span>
+            <span className="text-xs text-vault-text-secondary font-mono">Body / 1rem / 400</span>
             <p className="text-base text-vault-text-primary">
-              Blink Vault makes your collection searchable. Instantly. By what
-              you remember. No more scrolling through thousands of files.
+              Blink Vault makes your collection searchable. Instantly. By what you remember. No more
+              scrolling through thousands of files.
             </p>
           </div>
           <div>
             <span className="text-xs text-vault-text-secondary font-mono">
               Small / 0.875rem / 400
             </span>
-            <p className="text-sm text-vault-text-secondary">
-              Saved 2 minutes ago · 3.2 MB · PNG
-            </p>
+            <p className="text-sm text-vault-text-secondary">Saved 2 minutes ago · 3.2 MB · PNG</p>
           </div>
           <div>
             <span className="text-xs text-vault-text-secondary font-mono">
@@ -508,35 +468,21 @@ function Typography() {
         <div className="grid grid-cols-2 gap-6">
           <div className="card-brutalist">
             <h3 className="text-lg font-semibold mb-4">Inter (Primary)</h3>
-            <p className="text-vault-text-secondary mb-4">
-              Headlines, body text, UI elements
-            </p>
+            <p className="text-vault-text-secondary mb-4">Headlines, body text, UI elements</p>
             <div className="space-y-2">
               <p className="font-normal">Regular (400) – The quick brown fox</p>
               <p className="font-medium">Medium (500) – The quick brown fox</p>
-              <p className="font-semibold">
-                Semibold (600) – The quick brown fox
-              </p>
+              <p className="font-semibold">Semibold (600) – The quick brown fox</p>
               <p className="font-bold">Bold (700) – The quick brown fox</p>
-              <p className="font-extrabold">
-                Extrabold (800) – The quick brown fox
-              </p>
+              <p className="font-extrabold">Extrabold (800) – The quick brown fox</p>
             </div>
           </div>
           <div className="card-brutalist">
-            <h3 className="text-lg font-semibold mb-4 font-mono">
-              JetBrains Mono (Code)
-            </h3>
-            <p className="text-vault-text-secondary mb-4">
-              Code blocks, technical content
-            </p>
+            <h3 className="text-lg font-semibold mb-4 font-mono">JetBrains Mono (Code)</h3>
+            <p className="text-vault-text-secondary mb-4">Code blocks, technical content</p>
             <div className="space-y-2 font-mono">
-              <p className="font-normal">
-                Regular (400) – function blinkIt() {`{}`}
-              </p>
-              <p className="font-medium">
-                Medium (500) – const vault = new Vault()
-              </p>
+              <p className="font-normal">Regular (400) – function blinkIt() {`{}`}</p>
+              <p className="font-medium">Medium (500) – const vault = new Vault()</p>
             </div>
           </div>
         </div>
@@ -558,14 +504,8 @@ function MockWebsite() {
         <header className="bg-vault-surface-secondary border-b-3 border-vault-border-strong px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <img
-                src="/logos/vaultica-white-icon.svg"
-                alt="Vaultica"
-                className="h-8 w-8"
-              />
-              <span className="text-xl font-bold text-vault-text-primary">
-                Blink Vault
-              </span>
+              <img src="/logos/blink-icon.svg" alt="Blink" className="h-8 w-8" />
+              <span className="text-xl font-bold text-vault-text-primary">Blink Vault</span>
             </div>
             <nav className="flex items-center gap-6">
               <a
@@ -586,9 +526,7 @@ function MockWebsite() {
               >
                 Docs
               </a>
-              <button className="btn-primary text-sm py-2 px-4">
-                Get Started
-              </button>
+              <button className="btn-primary text-sm py-2 px-4">Get Started</button>
             </nav>
           </div>
         </header>
@@ -599,8 +537,8 @@ function MockWebsite() {
             See it. <span className="text-brand-blue">Blink it.</span> Find it.
           </h1>
           <p className="text-xl text-vault-text-secondary max-w-2xl mx-auto mb-8">
-            The intelligent visual collection tool for people who save
-            inspiration but have no time to organize.
+            The intelligent visual collection tool for people who save inspiration but have no time
+            to organize.
           </p>
           <div className="flex items-center justify-center gap-4">
             <button className="btn-primary flex items-center gap-2">
@@ -619,9 +557,7 @@ function MockWebsite() {
               <div className="w-12 h-12 rounded-lg bg-brand-blue/20 flex items-center justify-center mb-4">
                 <Zap className="text-brand-blue" size={24} />
               </div>
-              <h3 className="text-lg font-semibold mb-2">
-                Blink It. Zero Effort
-              </h3>
+              <h3 className="text-lg font-semibold mb-2">Blink It. Zero Effort</h3>
               <p className="text-vault-text-secondary text-sm">
                 One-tap save from anywhere. Blinked to your Vault. ⚡
               </p>
@@ -668,11 +604,7 @@ function MockWebsite() {
         <footer className="px-6 py-8 bg-vault-surface-secondary border-t-3 border-vault-border-strong">
           <div className="flex items-center justify-between text-sm text-vault-text-secondary">
             <div className="flex items-center gap-2">
-              <img
-                src="/logos/vaultica-white-icon.svg"
-                alt="Vaultica"
-                className="h-5 w-5 opacity-60"
-              />
+              <img src="/logos/blink-icon.svg" alt="Blink" className="h-5 w-5 opacity-60" />
               <span>© 2026 Vaultica. All rights reserved.</span>
             </div>
             <div className="flex items-center gap-6">
@@ -717,21 +649,13 @@ function ComponentShowcase() {
       <section>
         <h3 className="text-lg font-semibold mb-4">Inputs</h3>
         <div className="card-brutalist space-y-4 max-w-md">
-          <input
-            type="text"
-            placeholder="Default input..."
-            className="input-brutalist"
-          />
+          <input type="text" placeholder="Default input..." className="input-brutalist" />
           <div className="relative">
             <Search
               className="absolute left-3 top-1/2 transform -translate-y-1/2 text-vault-text-tertiary"
               size={18}
             />
-            <input
-              type="text"
-              placeholder="Search Blinks..."
-              className="input-brutalist pl-10"
-            />
+            <input type="text" placeholder="Search Blinks..." className="input-brutalist pl-10" />
           </div>
         </div>
       </section>
@@ -748,15 +672,11 @@ function ComponentShowcase() {
           </div>
           <div className="card-brutalist hover:border-brand-blue transition-colors cursor-pointer">
             <h4 className="font-semibold mb-2">Interactive Card</h4>
-            <p className="text-vault-text-secondary text-sm">
-              Hover to see accent border.
-            </p>
+            <p className="text-vault-text-secondary text-sm">Hover to see accent border.</p>
           </div>
           <div className="bg-vault-surface-tertiary border-3 border-vault-border-default p-6">
             <h4 className="font-semibold mb-2">Elevated Card</h4>
-            <p className="text-vault-text-secondary text-sm">
-              Tertiary surface for elevation.
-            </p>
+            <p className="text-vault-text-secondary text-sm">Tertiary surface for elevation.</p>
           </div>
         </div>
       </section>
@@ -808,24 +728,15 @@ export default function Home() {
         {/* Header */}
         <header className="mb-12">
           <div className="flex items-center gap-4 mb-4">
-            <img
-              src="/logos/vaultica-white-icon.svg"
-              alt="Vaultica"
-              className="h-12 w-12"
-            />
+            <img src="/logos/blink-icon.svg" alt="Blink" className="h-12 w-12" />
             <div>
-              <h1 className="text-3xl font-bold text-vault-text-primary">
-                Vaultica Keystone
-              </h1>
-              <p className="text-vault-text-secondary">
-                Design System Preview Tool
-              </p>
+              <h1 className="text-3xl font-bold text-vault-text-primary">Vaultica Keystone</h1>
+              <p className="text-vault-text-secondary">Design System Preview Tool</p>
             </div>
           </div>
           <p className="text-vault-text-secondary max-w-2xl">
-            Human review dashboard for logos, colors, typography, and component
-            patterns. Click on colors to copy their values. Toggle backgrounds
-            for logo preview.
+            Human review dashboard for logos, colors, typography, and component patterns. Click on
+            colors to copy their values. Toggle backgrounds for logo preview.
           </p>
         </header>
 

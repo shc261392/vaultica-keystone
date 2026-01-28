@@ -12,10 +12,12 @@
 
 ## Logo Assets
 
-- [x] Primary wordmark (`vaultica-logo.svg`)
-- [x] White icon (`vaultica-white-icon.svg`)
-- [x] White logo (`vaultica-logo-white.svg`)
-- [x] Favicon (`favicon.ico`)
+- [x] Blink icon mark (`blink-icon.svg`)
+- [x] Blink Vault wordmark dark (`blink-vault-logo-dark.svg`)
+- [x] Blink Vault wordmark light (`blink-vault-logo-light.svg`)
+- [x] Blink horizontal lockup (`blink-with-icon-horizontal.svg`)
+- [x] Blink Vault horizontal lockup (`blink-vault-with-icon-horizontal.svg`)
+- [x] Favicon (`favicon.ico`) — generated from blink-icon.svg
 - [ ] App icons (iOS/Android) — when needed
 
 ## Future Considerations
