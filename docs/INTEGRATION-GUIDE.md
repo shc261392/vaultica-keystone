@@ -1006,10 +1006,10 @@ EOF
 
 # 6. Add gatekeeping script
 mkdir -p scripts
-# (copy check-keystone-version.js from above)
+# (copy check-keystone.ts from vaultica-keystone/scripts/)
 
 # 7. Update package.json scripts
-npm pkg set scripts.check:keystone="node scripts/check-keystone-version.js"
+npm pkg set scripts.check:keystone="npx tsx scripts/check-keystone.ts"
 npm pkg set scripts.prebuild="npm run check:keystone"
 
 # 8. Run dev server

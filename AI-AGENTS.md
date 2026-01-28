@@ -12,12 +12,12 @@ pnpm run preview:build  # Test preview app builds
 
 ## Quality Tools
 
-| Tool         | Command                         | Purpose          |
-| ------------ | ------------------------------- | ---------------- |
-| ESLint       | `pnpm run lint:js`              | JS/TS linting    |
-| Prettier     | `pnpm run format`               | Code formatting  |
-| markdownlint | `pnpm run lint:md`              | Markdown linting |
-| TypeScript   | `cd preview && pnpm type-check` | Type checking    |
+| Tool         | Command                         | Purpose            |
+| ------------ | ------------------------------- | ------------------ |
+| ESLint       | `pnpm run lint:ts`              | TypeScript linting |
+| Prettier     | `pnpm run format`               | Code formatting    |
+| markdownlint | `pnpm run lint:md`              | Markdown linting   |
+| TypeScript   | `cd preview && pnpm type-check` | Type checking      |
 
 ## Commit Format
 

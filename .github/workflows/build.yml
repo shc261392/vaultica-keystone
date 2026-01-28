@@ -24,8 +24,6 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          cache: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -39,7 +37,7 @@ jobs:
       - name: Run quality checks
         run: |
           echo "Running linting..."
-          pnpm run lint:js
+          pnpm run lint:ts
           echo "Checking code formatting..."
           pnpm run format:check
 
