@@ -37,14 +37,21 @@ scripts/        Build and validation scripts
 Add as a Git submodule:
 
 ```bash
-git submodule add [URL] vaultica-brand
+git submodule add [URL] vaultica-keystone
 ```
 
 Import the CSS:
 
 ```css
-@import "vaultica-brand/dist/theme.css";
+@import "vaultica-keystone/dist/theme.css";
 ```
+
+**See [Integration Guide](docs/INTEGRATION-GUIDE.md)** for complete setup instructions including:
+
+- Next.js 16 + Tailwind CSS integration
+- Logo and asset usage
+- Favicon and app icons
+- Gatekeeping for token version control
 
 ### For AI Assistants
 
