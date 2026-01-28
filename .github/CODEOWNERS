@@ -1,24 +1,2 @@
-# Vaultica Keystone - Code Owners
-# These owners will be requested for review when changes are made to their areas
-
-# Default owners for everything
-* @vaultica/design-system
-
-# Token files require design team review
-/tokens/ @vaultica/design @vaultica/design-system
-
-# AI context requires brand/content team review  
-/ai/ @vaultica/brand @vaultica/content
-
-# Build scripts require engineering review
-/scripts/ @vaultica/engineering
-
-# GitHub workflows require devops review
-/.github/ @vaultica/devops @vaultica/engineering
-
-# Assets require design review
-/assets/ @vaultica/design
-
-# Critical files require lead approval
-/README.md @vaultica/leads
-/PLANNING.md @vaultica/leads
+# Vaultica Keystone - Single owner
+* @shc261392

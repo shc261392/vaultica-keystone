@@ -2,12 +2,28 @@
 
 ## Files in this directory
 
+### Vaultica (Company)
+
 | File                      | Description                        | Format |
 | ------------------------- | ---------------------------------- | ------ |
 | `vaultica-logo.svg`       | Primary full-color logo            | SVG    |
 | `vaultica-logo-white.svg` | White version for dark backgrounds | SVG    |
 | `vaultica-white-icon.svg` | Icon-only mark (white)             | SVG    |
 | `favicon.ico`             | Browser favicon                    | ICO    |
+
+### Blink / Blink Vault (Product)
+
+| File                                   | Description                            | Format |
+| -------------------------------------- | -------------------------------------- | ------ |
+| `blink-logo-text.svg`                  | "Blink" text only (transparent bg)     | SVG    |
+| `blink-logo-dark.svg`                  | "Blink" on dark background             | SVG    |
+| `blink-vault-logo-text.svg`            | "Blink Vault" text (transparent bg)    | SVG    |
+| `blink-vault-logo-dark.svg`            | "Blink Vault" on dark background       | SVG    |
+| `blink-vault-logo-light.svg`           | "Blink Vault" on light background      | SVG    |
+| `blink-icon.svg`                       | Icon symbol (512×512)                  | SVG    |
+| `blink-logo-clean.svg`                 | Full traced logo (transparent)         | SVG    |
+| `blink-with-icon-horizontal.svg`       | Icon + "Blink" horizontal lockup       | SVG    |
+| `blink-vault-with-icon-horizontal.svg` | Icon + "Blink Vault" horizontal lockup | SVG    |
 
 ## Brand Colors
 
