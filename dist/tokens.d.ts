@@ -1,6 +1,6 @@
 /**
  * Vaultica Design Tokens - TypeScript Definitions
- * Generated: 2026-01-28T08:03:39.784Z
+ * Generated: 2026-01-31T01:45:49.558Z
  */
 
 export declare const tokens: {
@@ -213,10 +213,10 @@ export declare const tokens: {
   spacing_80: string;
   spacing_96: string;
   spacing_px: string;
-  spacing_0.5: string;
-  spacing_1.5: string;
-  spacing_2.5: string;
-  spacing_3.5: string;
+  spacing_0_5: string;
+  spacing_1_5: string;
+  spacing_2_5: string;
+  spacing_3_5: string;
   sizing_icon_xs: string;
   sizing_icon_sm: string;
   sizing_icon_md: string;

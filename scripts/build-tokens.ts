@@ -165,6 +165,15 @@ function resolveReference(
 }
 
 /**
+ * Sanitize key for CSS custom property name
+ * CSS custom properties cannot contain dots, so we replace them
+ */
+function sanitizeCSSKey(key: string): string {
+  // Replace dots with underscores (e.g., "0.5" -> "0_5")
+  return key.replace(/\./g, "_");
+}
+
+/**
  * Flatten tokens into CSS variable format
  */
 function flattenTokens(
@@ -179,7 +188,8 @@ function flattenTokens(
       continue;
     }
 
-    const cssVarName = prefix ? `${prefix}-${key}` : key;
+    const sanitizedKey = sanitizeCSSKey(key);
+    const cssVarName = prefix ? `${prefix}-${sanitizedKey}` : sanitizedKey;
 
     if (value && typeof value === "object") {
       if ("value" in value && typeof value.value === "string") {

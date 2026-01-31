@@ -1,6 +1,6 @@
 /**
  * Vaultica Design Tokens - JavaScript Export
- * Generated: 2026-01-28T08:03:39.784Z
+ * Generated: 2026-01-31T01:45:49.557Z
  * 
  * Usage:
  * import { tokens } from '@vaultica/keystone';
@@ -217,10 +217,10 @@ export const tokens = {
   "spacing_80": "20rem",
   "spacing_96": "24rem",
   "spacing_px": "1px",
-  "spacing_0.5": "0.125rem",
-  "spacing_1.5": "0.375rem",
-  "spacing_2.5": "0.625rem",
-  "spacing_3.5": "0.875rem",
+  "spacing_0_5": "0.125rem",
+  "spacing_1_5": "0.375rem",
+  "spacing_2_5": "0.625rem",
+  "spacing_3_5": "0.875rem",
   "sizing_icon_xs": "0.75rem",
   "sizing_icon_sm": "1rem",
   "sizing_icon_md": "1.25rem",

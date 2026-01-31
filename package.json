@@ -44,19 +44,19 @@
     "@commitlint/cli": "^18.4.0",
     "@commitlint/config-conventional": "^18.4.0",
     "@commitlint/types": "^20.3.1",
+    "@eslint/js": "^9.39.2",
     "@types/node": "^25.0.10",
-    "@typescript-eslint/eslint-plugin": "^8.54.0",
-    "@typescript-eslint/parser": "^8.54.0",
     "cspell": "^8.3.0",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
     "husky": "^9.0.10",
     "lint-staged": "^15.2.2",
     "markdownlint-cli": "^0.47.0",
     "nodemon": "^3.0.0",
     "prettier": "^3.2.5",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.54.0"
   },
   "lint-staged": {
     "scripts/**/*.ts": [
