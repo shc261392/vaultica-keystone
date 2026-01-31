@@ -47,18 +47,13 @@ jobs:
       - name: Build tokens
         run: pnpm run build
 
+      - name: Verify dist is up to date
+        run: |
+          git diff --exit-code dist/ || (echo "Error: dist/ is out of sync. Run 'pnpm run build' locally and commit the changes." && exit 1)
+
       - name: Upload build artifacts
         uses: actions/upload-artifact@v6
         with:
           name: vaultica-tokens
           path: dist/
           retention-days: 30
-
-      - name: Commit dist changes (main branch only)
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add dist/
-          git diff --staged --quiet || git commit -m "chore: rebuild tokens [skip ci]"
-          git push
