@@ -43,9 +43,9 @@
   "devDependencies": {
     "@commitlint/cli": "^18.4.0",
     "@commitlint/config-conventional": "^18.4.0",
-    "@commitlint/types": "^20.3.1",
+    "@commitlint/types": "^20.4.0",
     "@eslint/js": "^9.39.2",
-    "@types/node": "^25.0.10",
+    "@types/node": "^25.2.0",
     "cspell": "^8.3.0",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
