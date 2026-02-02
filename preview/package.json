@@ -7,8 +7,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
     "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
@@ -31,15 +31,15 @@
     "@types/node": "^25.2.0",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
     "autoprefixer": "^10.4.24",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^4.1.18",
-    "typescript": "^5.7.2",
     "eslint": "^9.39.2",
     "eslint-config-next": "^16.1.6",
     "eslint-config-prettier": "^10.1.8",
-    "@typescript-eslint/eslint-plugin": "^8.54.0",
-    "@typescript-eslint/parser": "^8.54.0",
-    "prettier": "^3.2.5"
+    "postcss": "^8.4.49",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.7.2"
   }
 }
