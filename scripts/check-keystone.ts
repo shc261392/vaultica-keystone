@@ -16,24 +16,23 @@
  *   1 - Keystone is outdated, missing, or tokens not built
  */
 
-import { execSync } from "node:child_process";
-import { existsSync, readFileSync } from "node:fs";
-import { join, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
+import { execSync } from 'node:child_process';
+import { existsSync, readFileSync } from 'node:fs';
+import { join, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const __dirname = fileURLToPath(new URL(".", import.meta.url));
+const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
 // Parse command line arguments for custom directory
 const args = process.argv.slice(2);
-const dirIndex = args.indexOf("--dir");
-const customDir =
-  dirIndex !== -1 && args[dirIndex + 1] ? args[dirIndex + 1] : null;
+const dirIndex = args.indexOf('--dir');
+const customDir = dirIndex !== -1 && args[dirIndex + 1] ? args[dirIndex + 1] : null;
 
 // When run from consumer project, keystone is the parent of scripts/
-const KEYSTONE_PATH = customDir ? resolve(customDir) : join(__dirname, "..");
-const DIST_PATH = join(KEYSTONE_PATH, "dist");
+const KEYSTONE_PATH = customDir ? resolve(customDir) : join(__dirname, '..');
+const DIST_PATH = join(KEYSTONE_PATH, 'dist');
 
-const isCI = process.env.CI === "true";
+const isCI = process.env.CI === 'true';
 
 interface CheckResult {
   success: boolean;
@@ -42,7 +41,7 @@ interface CheckResult {
 
 function execSilent(command: string, cwd: string): string | null {
   try {
-    return execSync(command, { cwd, encoding: "utf8", stdio: "pipe" }).trim();
+    return execSync(command, { cwd, encoding: 'utf8', stdio: 'pipe' }).trim();
   } catch {
     return null;
   }
@@ -52,20 +51,19 @@ function checkSubmoduleExists(): CheckResult {
   if (!existsSync(KEYSTONE_PATH)) {
     return {
       success: false,
-      message:
-        "Keystone submodule not found. Run: git submodule update --init --recursive",
+      message: 'Keystone submodule not found. Run: git submodule update --init --recursive',
     };
   }
-  return { success: true, message: "Submodule exists" };
+  return { success: true, message: 'Submodule exists' };
 }
 
 function getLocalVersion(): string | null {
-  const pkgPath = join(KEYSTONE_PATH, "package.json");
+  const pkgPath = join(KEYSTONE_PATH, 'package.json');
   if (!existsSync(pkgPath)) {
     return null;
   }
   try {
-    const pkg = JSON.parse(readFileSync(pkgPath, "utf8"));
+    const pkg = JSON.parse(readFileSync(pkgPath, 'utf8'));
     return pkg.version;
   } catch {
     return null;
@@ -73,7 +71,7 @@ function getLocalVersion(): string | null {
 }
 
 function checkTokensBuilt(): CheckResult {
-  const requiredFiles = ["theme.css", "tailwind.config.js", "tokens.js"];
+  const requiredFiles = ['theme.css', 'tailwind.config.js', 'tokens.js'];
 
   for (const file of requiredFiles) {
     if (!existsSync(join(DIST_PATH, file))) {
@@ -83,41 +81,39 @@ function checkTokensBuilt(): CheckResult {
       };
     }
   }
-  return { success: true, message: "All token files are built" };
+  return { success: true, message: 'All token files are built' };
 }
 
 function checkSubmoduleVersion(): CheckResult {
   // Fetch latest from remote (silently, may fail if offline)
-  execSilent("git fetch origin main", KEYSTONE_PATH);
+  execSilent('git fetch origin main', KEYSTONE_PATH);
 
-  const localCommit = execSilent("git rev-parse HEAD", KEYSTONE_PATH);
-  const remoteCommit = execSilent("git rev-parse origin/main", KEYSTONE_PATH);
+  const localCommit = execSilent('git rev-parse HEAD', KEYSTONE_PATH);
+  const remoteCommit = execSilent('git rev-parse origin/main', KEYSTONE_PATH);
 
   if (!localCommit) {
-    return { success: false, message: "Could not determine local commit" };
+    return { success: false, message: 'Could not determine local commit' };
   }
 
   console.log(`   Local commit:   ${localCommit.slice(0, 8)}`);
-  console.log(
-    `   Remote commit:  ${remoteCommit ? remoteCommit.slice(0, 8) : "unknown"}`
-  );
+  console.log(`   Remote commit:  ${remoteCommit ? remoteCommit.slice(0, 8) : 'unknown'}`);
 
   if (remoteCommit && localCommit !== remoteCommit) {
     const message =
-      "Keystone submodule is outdated. Run: git submodule update --remote vaultica-keystone";
+      'Keystone submodule is outdated. Run: git submodule update --remote vaultica-keystone';
     if (isCI) {
       return { success: false, message };
     }
     // In local dev, warn but don't fail
     console.warn(`\n⚠️  Warning: ${message}`);
-    return { success: true, message: "Outdated but continuing in dev mode" };
+    return { success: true, message: 'Outdated but continuing in dev mode' };
   }
 
-  return { success: true, message: "Submodule is up to date" };
+  return { success: true, message: 'Submodule is up to date' };
 }
 
 function main(): void {
-  console.log("🔍 Checking Vaultica Keystone...\n");
+  console.log('🔍 Checking Vaultica Keystone...\n');
   console.log(`   Path:           ${KEYSTONE_PATH}`);
 
   // Check 1: Submodule exists
@@ -129,7 +125,7 @@ function main(): void {
 
   // Get and display version
   const version = getLocalVersion();
-  console.log(`   Version:        ${version ?? "unknown"}`);
+  console.log(`   Version:        ${version ?? 'unknown'}`);
 
   // Check 2: Submodule version
   const versionCheck = checkSubmoduleVersion();
@@ -145,8 +141,8 @@ function main(): void {
     process.exit(1);
   }
 
-  console.log("\n✅ Keystone submodule is valid");
-  console.log("✅ Token files are built");
+  console.log('\n✅ Keystone submodule is valid');
+  console.log('✅ Token files are built');
 }
 
 main();

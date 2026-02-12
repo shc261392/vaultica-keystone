@@ -5,7 +5,10 @@
   "author": "Vaultica Team",
   "license": "UNLICENSED",
   "private": true,
-  "packageManager": "pnpm@10.28.1+sha512.7d7dbbca9e99447b7c3bf7a73286afaaf6be99251eb9498baefa7d406892f67b879adb3a1d7e687fc4ccc1a388c7175fbaae567a26ab44d1067b54fcb0d6a316",
+  "volta": {
+    "node": "24.13.1"
+  },
+  "packageManager": "pnpm@10.29.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/vaultica/keystone.git"
@@ -28,54 +31,33 @@
     "preview": "pnpm --dir preview dev",
     "preview:install": "pnpm --dir preview install",
     "preview:build": "pnpm --dir preview build",
-    "lint": "eslint \"scripts/**/*.ts\" && markdownlint \"**/*.md\" --ignore node_modules && cspell \"**/*.{md,ts,json}\" --no-progress",
-    "lint:ts": "eslint \"scripts/**/*.ts\"",
-    "lint:md": "markdownlint \"**/*.md\" --ignore node_modules",
-    "lint:spell": "cspell \"**/*.{md,ts,json}\" --no-progress",
-    "format": "prettier --write \"**/*.{ts,json,md,yml,yaml}\"",
-    "format:check": "prettier --check \"**/*.{ts,json,md,yml,yaml}\"",
-    "audit": "pnpm audit --audit-level=moderate",
-    "quality": "eslint \"scripts/**/*.ts\" && markdownlint \"**/*.md\" --ignore node_modules && cspell \"**/*.{md,ts,json}\" --no-progress && prettier --check \"**/*.{ts,json,md,yml,yaml}\" && pnpm audit --audit-level=moderate",
-    "quality:fix": "prettier --write \"**/*.{ts,json,md,yml,yaml}\" && eslint --fix \"scripts/**/*.ts\" && markdownlint --fix \"**/*.md\" --ignore node_modules",
+    "lint": "biome check scripts/ && markdownlint-cli2 '**/*.md' '#node_modules' '#preview'",
+    "lint:fix": "biome check --write scripts/",
+    "format": "biome format --write src/ scripts/",
     "typecheck": "tsc --noEmit",
+    "check:truth": "tsx scripts/check-truth.ts",
+    "audit": "pnpm audit --audit-level=moderate",
     "prepare": "husky install || true"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.0",
     "@commitlint/config-conventional": "^18.4.0",
     "@commitlint/types": "^20.3.1",
-    "@eslint/js": "^9.39.2",
     "@types/node": "^25.0.10",
     "cspell": "^8.3.0",
-    "eslint": "^9.39.2",
-    "eslint-config-prettier": "^10.1.8",
     "husky": "^9.0.10",
     "lint-staged": "^15.2.2",
-    "markdownlint-cli": "^0.47.0",
+    "markdownlint-cli2": "^0.20.0",
     "nodemon": "^3.0.0",
-    "prettier": "^3.2.5",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.54.0"
+    "typescript": "^5.9.3"
   },
   "lint-staged": {
     "scripts/**/*.ts": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.ts": [
-      "prettier --write"
-    ],
-    "preview/src/**/*.{ts,tsx}": [
-      "sh -c 'cd preview && pnpm exec eslint --fix \"$0\"'",
-      "sh -c 'cd preview && pnpm exec prettier --write \"$0\"'"
-    ],
-    "*.{json,yml,yaml}": [
-      "prettier --write"
+      "biome check --write --unsafe"
     ],
     "*.md": [
-      "prettier --write",
-      "markdownlint --fix"
+      "markdownlint-cli2 --fix"
     ]
   },
   "keywords": [

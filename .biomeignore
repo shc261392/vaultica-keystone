@@ -1,0 +1,29 @@
+# Build outputs
+.next/**
+.open-next/**
+dist/**
+node_modules/**
+out/**
+.wrangler/**
+
+# Test outputs
+coverage/**
+playwright-report/**
+test-results/**
+
+# Artifacts
+*.tsbuildinfo
+
+# Secrets
+.secrets
+.secrets-remote.json
+.env*
+
+# Dependencies
+pnpm-lock.yaml
+
+# CSS (Tailwind directives unsupported)
+**/*.css
+
+# Preview folder (has its own linting)
+preview/**

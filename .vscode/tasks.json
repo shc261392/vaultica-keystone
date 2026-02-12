@@ -1,0 +1,94 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Lint",
+			"type": "shell",
+			"command": "pnpm lint",
+			"group": "test",
+			"problemMatcher": [],
+			"detail": "Run Biome linting and markdown checks"
+		},
+		{
+			"label": "Lint (Fix)",
+			"type": "shell",
+			"command": "pnpm lint:fix",
+			"group": "test",
+			"problemMatcher": [],
+			"detail": "Fix linting errors with Biome"
+		},
+		{
+			"label": "Format",
+			"type": "shell",
+			"command": "pnpm format",
+			"group": "test",
+			"problemMatcher": [],
+			"detail": "Format code with Biome"
+		},
+		{
+			"label": "Type Check",
+			"type": "shell",
+			"command": "pnpm typecheck",
+			"group": "test",
+			"problemMatcher": "$tsc",
+			"detail": "Run TypeScript type checking"
+		},
+		{
+			"label": "Check Truth Docs",
+			"type": "shell",
+			"command": "pnpm check:truth",
+			"group": "test",
+			"problemMatcher": [],
+			"detail": "Verify truth documents are up-to-date"
+		},
+		{
+			"label": "Build",
+			"type": "shell",
+			"command": "pnpm build",
+			"group": "build",
+			"problemMatcher": [],
+			"detail": "Build token distribution"
+		},
+		{
+			"label": "Validate",
+			"type": "shell",
+			"command": "pnpm validate",
+			"group": "test",
+			"problemMatcher": [],
+			"detail": "Validate token structure"
+		},
+		{
+			"label": "Watch",
+			"type": "shell",
+			"command": "pnpm watch",
+			"group": "none",
+			"isBackground": true,
+			"problemMatcher": [],
+			"detail": "Watch token changes and rebuild"
+		},
+		{
+			"label": "Preview Dev",
+			"type": "shell",
+			"command": "pnpm preview",
+			"group": "none",
+			"isBackground": true,
+			"problemMatcher": [],
+			"detail": "Start preview Next.js dev server"
+		},
+		{
+			"label": "Run CI (act)",
+			"type": "shell",
+			"command": "gh",
+			"args": [
+				"act",
+				"push",
+				"--container-architecture",
+				"linux/amd64",
+				"--quiet"
+			],
+			"group": "test",
+			"problemMatcher": [],
+			"detail": "Run GitHub Actions locally via act"
+		}
+	]
+}

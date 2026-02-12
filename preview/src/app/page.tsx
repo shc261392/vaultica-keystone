@@ -1,126 +1,126 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import * as Tabs from '@radix-ui/react-tabs';
 import {
-  Palette,
-  Type,
+  Check,
+  Eye,
+  Grid3X3,
   Image,
   Layout,
-  Eye,
-  Sun,
-  Moon,
-  Check,
-  Zap,
   Lock,
+  Moon,
+  Palette,
   Search,
   Share2,
-  Grid3X3,
-} from "lucide-react";
-import * as Tabs from "@radix-ui/react-tabs";
+  Sun,
+  Type,
+  Zap,
+} from 'lucide-react';
+import { useState } from 'react';
 
 // Brand colors from tokens
 const brandColors = {
   black: {
-    hex: "#363b42",
-    oklch: "oklch(0.3503 0.014 256.77)",
-    name: "Brand Black",
+    hex: '#363b42',
+    oklch: 'oklch(0.3503 0.014 256.77)',
+    name: 'Brand Black',
   },
   white: {
-    hex: "#f0fbff",
-    oklch: "oklch(0.994 0.0084 197.02)",
-    name: "Brand White",
+    hex: '#f0fbff',
+    oklch: 'oklch(0.994 0.0084 197.02)',
+    name: 'Brand White',
   },
   blue: {
-    hex: "#27abec",
-    oklch: "oklch(0.7031 0.1426 236.68)",
-    name: "Brand Blue",
+    hex: '#27abec',
+    oklch: 'oklch(0.7031 0.1426 236.68)',
+    name: 'Brand Blue',
   },
 };
 
 const bootstrapColors = {
-  light: { hex: "#d7e9f2", name: "Light" },
-  dark: { hex: "#363b42", name: "Dark" },
-  primary: { hex: "#27abec", name: "Primary" },
-  secondary: { hex: "#1b67a1", name: "Secondary" },
-  info: { hex: "#f0d15e", name: "Info" },
-  success: { hex: "#13c16a", name: "Success" },
-  warning: { hex: "#eed210", name: "Warning" },
-  danger: { hex: "#fe1b20", name: "Danger" },
+  light: { hex: '#d7e9f2', name: 'Light' },
+  dark: { hex: '#363b42', name: 'Dark' },
+  primary: { hex: '#27abec', name: 'Primary' },
+  secondary: { hex: '#1b67a1', name: 'Secondary' },
+  info: { hex: '#f0d15e', name: 'Info' },
+  success: { hex: '#13c16a', name: 'Success' },
+  warning: { hex: '#eed210', name: 'Warning' },
+  danger: { hex: '#fe1b20', name: 'Danger' },
 };
 
 const neutralScale = [
-  { value: "0", hex: "#ffffff", oklch: "oklch(100% 0 0)", name: "Neutral 0" },
+  { value: '0', hex: '#ffffff', oklch: 'oklch(100% 0 0)', name: 'Neutral 0' },
   {
-    value: "50",
-    hex: "#f0fbff",
-    oklch: "oklch(0.994 0.0084 197.02)",
-    name: "Neutral 50",
+    value: '50',
+    hex: '#f0fbff',
+    oklch: 'oklch(0.994 0.0084 197.02)',
+    name: 'Neutral 50',
   },
   {
-    value: "100",
-    hex: "#d7e9f2",
-    oklch: "oklch(92% 0.012 230)",
-    name: "Neutral 100",
+    value: '100',
+    hex: '#d7e9f2',
+    oklch: 'oklch(92% 0.012 230)',
+    name: 'Neutral 100',
   },
   {
-    value: "200",
-    hex: "#c5d9e5",
-    oklch: "oklch(88% 0.012 230)",
-    name: "Neutral 200",
+    value: '200',
+    hex: '#c5d9e5',
+    oklch: 'oklch(88% 0.012 230)',
+    name: 'Neutral 200',
   },
   {
-    value: "300",
-    hex: "#9bb5c7",
-    oklch: "oklch(75% 0.015 230)",
-    name: "Neutral 300",
+    value: '300',
+    hex: '#9bb5c7',
+    oklch: 'oklch(75% 0.015 230)',
+    name: 'Neutral 300',
   },
   {
-    value: "400",
-    hex: "#6d8a9f",
-    oklch: "oklch(60% 0.018 230)",
-    name: "Neutral 400",
+    value: '400',
+    hex: '#6d8a9f',
+    oklch: 'oklch(60% 0.018 230)',
+    name: 'Neutral 400',
   },
   {
-    value: "500",
-    hex: "#4a6275",
-    oklch: "oklch(45% 0.02 230)",
-    name: "Neutral 500",
+    value: '500',
+    hex: '#4a6275',
+    oklch: 'oklch(45% 0.02 230)',
+    name: 'Neutral 500',
   },
   {
-    value: "600",
-    hex: "#363b42",
-    oklch: "oklch(0.3503 0.014 256.77)",
-    name: "Neutral 600",
+    value: '600',
+    hex: '#363b42',
+    oklch: 'oklch(0.3503 0.014 256.77)',
+    name: 'Neutral 600',
   },
   {
-    value: "700",
-    hex: "#2c3138",
-    oklch: "oklch(30% 0.015 256)",
-    name: "Neutral 700",
+    value: '700',
+    hex: '#2c3138',
+    oklch: 'oklch(30% 0.015 256)',
+    name: 'Neutral 700',
   },
   {
-    value: "800",
-    hex: "#23272d",
-    oklch: "oklch(22% 0.012 256)",
-    name: "Neutral 800",
+    value: '800',
+    hex: '#23272d',
+    oklch: 'oklch(22% 0.012 256)',
+    name: 'Neutral 800',
   },
   {
-    value: "900",
-    hex: "#1a1d21",
-    oklch: "oklch(16% 0.01 256)",
-    name: "Neutral 900",
+    value: '900',
+    hex: '#1a1d21',
+    oklch: 'oklch(16% 0.01 256)',
+    name: 'Neutral 900',
   },
   {
-    value: "950",
-    hex: "#141719",
-    oklch: "oklch(12% 0.008 256)",
-    name: "Neutral 950",
+    value: '950',
+    hex: '#141719',
+    oklch: 'oklch(12% 0.008 256)',
+    name: 'Neutral 950',
   },
   {
-    value: "1000",
-    hex: "#0a0b0c",
-    oklch: "oklch(6% 0.005 256)",
-    name: "Neutral 1000",
+    value: '1000',
+    hex: '#0a0b0c',
+    oklch: 'oklch(6% 0.005 256)',
+    name: 'Neutral 1000',
   },
 ];
 
@@ -142,11 +142,11 @@ function ColorSwatch({
   };
 
   const isLight =
-    color.startsWith("#f") ||
-    color.startsWith("#e") ||
-    color.startsWith("#d") ||
-    color.startsWith("#c") ||
-    color === "#ffffff";
+    color.startsWith('#f') ||
+    color.startsWith('#e') ||
+    color.startsWith('#d') ||
+    color.startsWith('#c') ||
+    color === '#ffffff';
 
   return (
     <div className="color-swatch group relative" onClick={copyColor}>
@@ -156,7 +156,7 @@ function ColorSwatch({
       >
         <span
           className={`text-xs font-mono font-medium ${
-            isLight ? "text-brand-black" : "text-brand-white"
+            isLight ? 'text-brand-black' : 'text-brand-white'
           }`}
         >
           {color}
@@ -173,14 +173,14 @@ function ColorSwatch({
 }
 
 function LogoPreview() {
-  const [bgMode, setBgMode] = useState<"dark" | "light" | "checkerboard">("dark");
+  const [bgMode, setBgMode] = useState<'dark' | 'light' | 'checkerboard'>('dark');
 
   const bgClass =
-    bgMode === "dark"
-      ? "preview-bg-dark"
-      : bgMode === "light"
-        ? "preview-bg-light"
-        : "preview-bg-checkerboard";
+    bgMode === 'dark'
+      ? 'preview-bg-dark'
+      : bgMode === 'light'
+        ? 'preview-bg-light'
+        : 'preview-bg-checkerboard';
 
   return (
     <div className="space-y-8">
@@ -188,31 +188,31 @@ function LogoPreview() {
         <h2 className="text-2xl font-bold">Logo Variants</h2>
         <div className="flex gap-2">
           <button
-            onClick={() => setBgMode("dark")}
+            onClick={() => setBgMode('dark')}
             className={`p-2 rounded border-2 ${
-              bgMode === "dark"
-                ? "border-brand-blue bg-vault-surface-tertiary"
-                : "border-vault-border-default"
+              bgMode === 'dark'
+                ? 'border-brand-blue bg-vault-surface-tertiary'
+                : 'border-vault-border-default'
             }`}
           >
             <Moon size={20} />
           </button>
           <button
-            onClick={() => setBgMode("light")}
+            onClick={() => setBgMode('light')}
             className={`p-2 rounded border-2 ${
-              bgMode === "light"
-                ? "border-brand-blue bg-vault-surface-tertiary"
-                : "border-vault-border-default"
+              bgMode === 'light'
+                ? 'border-brand-blue bg-vault-surface-tertiary'
+                : 'border-vault-border-default'
             }`}
           >
             <Sun size={20} />
           </button>
           <button
-            onClick={() => setBgMode("checkerboard")}
+            onClick={() => setBgMode('checkerboard')}
             className={`p-2 rounded border-2 ${
-              bgMode === "checkerboard"
-                ? "border-brand-blue bg-vault-surface-tertiary"
-                : "border-vault-border-default"
+              bgMode === 'checkerboard'
+                ? 'border-brand-blue bg-vault-surface-tertiary'
+                : 'border-vault-border-default'
             }`}
           >
             <Grid3X3 size={20} />
@@ -227,7 +227,7 @@ function LogoPreview() {
           <div
             className={`${bgClass} rounded-lg p-8 flex items-center justify-center min-h-[200px] border-2 border-vault-border-default`}
           >
-            {bgMode === "light" ? (
+            {bgMode === 'light' ? (
               <img
                 src="/logos/blink-vault-logo-light.svg"
                 alt="Blink Vault Logo"
@@ -242,7 +242,7 @@ function LogoPreview() {
             )}
           </div>
           <p className="mt-3 text-sm text-vault-text-secondary">
-            {bgMode === "light" ? "blink-vault-logo-light.svg" : "blink-vault-logo-dark.svg"}
+            {bgMode === 'light' ? 'blink-vault-logo-light.svg' : 'blink-vault-logo-dark.svg'}
           </p>
         </div>
 
@@ -290,7 +290,7 @@ function LogoPreview() {
             className={`${bgClass} rounded-lg p-8 flex items-center justify-center min-h-[200px] border-2 border-vault-border-default relative`}
           >
             <div className="border-2 border-dashed border-brand-blue/50 p-8 rounded">
-              {bgMode === "light" ? (
+              {bgMode === 'light' ? (
                 <img
                   src="/logos/blink-vault-logo-light.svg"
                   alt="Blink Vault Logo"
@@ -361,44 +361,44 @@ function ColorPalette() {
           <div
             className="rounded-lg p-4 border-2"
             style={{
-              backgroundColor: "oklch(32% 0.08 155)",
-              borderColor: "oklch(50% 0.14 155)",
+              backgroundColor: 'oklch(32% 0.08 155)',
+              borderColor: 'oklch(50% 0.14 155)',
             }}
           >
-            <span className="text-sm font-medium" style={{ color: "#13c16a" }}>
+            <span className="text-sm font-medium" style={{ color: '#13c16a' }}>
               Success
             </span>
           </div>
           <div
             className="rounded-lg p-4 border-2"
             style={{
-              backgroundColor: "oklch(40% 0.10 95)",
-              borderColor: "oklch(65% 0.15 95)",
+              backgroundColor: 'oklch(40% 0.10 95)',
+              borderColor: 'oklch(65% 0.15 95)',
             }}
           >
-            <span className="text-sm font-medium" style={{ color: "#eed210" }}>
+            <span className="text-sm font-medium" style={{ color: '#eed210' }}>
               Warning
             </span>
           </div>
           <div
             className="rounded-lg p-4 border-2"
             style={{
-              backgroundColor: "oklch(40% 0.08 85)",
-              borderColor: "oklch(65% 0.12 85)",
+              backgroundColor: 'oklch(40% 0.08 85)',
+              borderColor: 'oklch(65% 0.12 85)',
             }}
           >
-            <span className="text-sm font-medium" style={{ color: "#f0d15e" }}>
+            <span className="text-sm font-medium" style={{ color: '#f0d15e' }}>
               Info
             </span>
           </div>
           <div
             className="rounded-lg p-4 border-2"
             style={{
-              backgroundColor: "oklch(30% 0.10 25)",
-              borderColor: "oklch(45% 0.18 25)",
+              backgroundColor: 'oklch(30% 0.10 25)',
+              borderColor: 'oklch(45% 0.18 25)',
             }}
           >
-            <span className="text-sm font-medium" style={{ color: "#fe1b20" }}>
+            <span className="text-sm font-medium" style={{ color: '#fe1b20' }}>
               Danger
             </span>
           </div>
@@ -687,8 +687,8 @@ function ComponentShowcase() {
           <span
             className="px-3 py-1 rounded text-sm font-medium"
             style={{
-              backgroundColor: "oklch(30% 0.015 256)",
-              color: "#d7e9f2",
+              backgroundColor: 'oklch(30% 0.015 256)',
+              color: '#d7e9f2',
             }}
           >
             Default
@@ -698,19 +698,19 @@ function ComponentShowcase() {
           </span>
           <span
             className="px-3 py-1 rounded text-sm font-medium"
-            style={{ backgroundColor: "oklch(32% 0.08 155)", color: "#13c16a" }}
+            style={{ backgroundColor: 'oklch(32% 0.08 155)', color: '#13c16a' }}
           >
             Success
           </span>
           <span
             className="px-3 py-1 rounded text-sm font-medium"
-            style={{ backgroundColor: "oklch(40% 0.10 95)", color: "#eed210" }}
+            style={{ backgroundColor: 'oklch(40% 0.10 95)', color: '#eed210' }}
           >
             Warning
           </span>
           <span
             className="px-3 py-1 rounded text-sm font-medium"
-            style={{ backgroundColor: "oklch(30% 0.10 25)", color: "#fe1b20" }}
+            style={{ backgroundColor: 'oklch(30% 0.10 25)', color: '#fe1b20' }}
           >
             Danger
           </span>
