@@ -1,6 +1,6 @@
 /**
  * Vaultica Design Tokens - TypeScript Definitions
- * Generated: 2026-03-04T05:21:59.887Z
+ * Generated: 2026-03-04T07:23:43.636Z
  */
 
 export declare const tokens: {
