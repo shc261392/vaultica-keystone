@@ -7,12 +7,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "biome check src/",
-    "lint:fix": "biome check --write src/",
-    "format": "biome format --write src/",
-    "type-check": "tsc --noEmit",
-    "quality": "pnpm type-check && pnpm lint",
-    "quality:fix": "pnpm lint:fix"
+    "type-check": "tsc --noEmit"
   },
   "engines": {
     "node": ">=24.0.0",

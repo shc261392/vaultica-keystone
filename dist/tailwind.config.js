@@ -1,6 +1,6 @@
 /**
  * Vaultica Tailwind Configuration
- * Generated: 2026-03-04T07:24:37.756Z
+ * Generated: 2026-03-04T08:12:11.704Z
  * 
  * Usage: Import in your tailwind.config.js
  * 

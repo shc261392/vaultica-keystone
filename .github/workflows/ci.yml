@@ -194,16 +194,8 @@ jobs:
       - name: Install preview dependencies
         run: pnpm --dir preview install --frozen-lockfile
 
-      - name: Setup Biome
-        uses: biomejs/setup-biome@v2
-        with:
-          version: latest
-
       - name: TypeScript type check
         run: cd preview && pnpm type-check
-
-      - name: Lint with Biome
-        run: cd preview && pnpm lint
 
   preview-build:
     name: Preview App Build

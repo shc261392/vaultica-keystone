@@ -451,7 +451,9 @@ function Typography() {
           </div>
           <div>
             <span className="text-xs text-vault-text-secondary font-mono">H2 / 2.25rem / 600</span>
-            <p className="text-4xl font-semibold text-vault-text-primary">Sleep Well. Your Data is Safe.</p>
+            <p className="text-4xl font-semibold text-vault-text-primary">
+              Sleep Well. Your Data is Safe.
+            </p>
           </div>
           <div>
             <span className="text-xs text-vault-text-secondary font-mono">H3 / 1.5rem / 600</span>
@@ -460,8 +462,8 @@ function Typography() {
           <div>
             <span className="text-xs text-vault-text-secondary font-mono">Body / 1rem / 400</span>
             <p className="text-base text-vault-text-primary">
-              No folders. No effort. Blink it and move on. When you need it,
-              find it by what you remember. Zero config. Zero hassle.
+              No folders. No effort. Blink it and move on. When you need it, find it by what you
+              remember. Zero config. Zero hassle.
             </p>
           </div>
           <div>
@@ -832,22 +834,30 @@ function IconButtonShowcase() {
         <div className="card-brutalist text-center">
           <p className="text-3xl mb-3">👁</p>
           <p className="text-sm font-semibold">Icon-First</p>
-          <p className="text-xs text-vault-text-tertiary mt-1">Default to icons; add labels only when needed</p>
+          <p className="text-xs text-vault-text-tertiary mt-1">
+            Default to icons; add labels only when needed
+          </p>
         </div>
         <div className="card-brutalist text-center">
           <p className="text-3xl mb-3">🎯</p>
           <p className="text-sm font-semibold">Universal</p>
-          <p className="text-xs text-vault-text-tertiary mt-1">Recognized icons that transcend language</p>
+          <p className="text-xs text-vault-text-tertiary mt-1">
+            Recognized icons that transcend language
+          </p>
         </div>
         <div className="card-brutalist text-center">
           <p className="text-3xl mb-3">📐</p>
           <p className="text-sm font-semibold">Consistent</p>
-          <p className="text-xs text-vault-text-tertiary mt-1">20px default, 2px stroke, visual rhythm</p>
+          <p className="text-xs text-vault-text-tertiary mt-1">
+            20px default, 2px stroke, visual rhythm
+          </p>
         </div>
         <div className="card-brutalist text-center">
           <p className="text-3xl mb-3">✋</p>
           <p className="text-sm font-semibold">Touch-Ready</p>
-          <p className="text-xs text-vault-text-tertiary mt-1">44×44px minimum touch target always</p>
+          <p className="text-xs text-vault-text-tertiary mt-1">
+            44×44px minimum touch target always
+          </p>
         </div>
       </section>
 
@@ -876,31 +886,47 @@ function IconButtonShowcase() {
             <span className="text-[10px] text-vault-text-tertiary font-mono">Default</span>
           </div>
           <div className="flex flex-col items-center gap-2">
-            <button className="p-2.5 rounded-lg text-vault-text-primary bg-vault-surface-tertiary" aria-label="Hover">
+            <button
+              className="p-2.5 rounded-lg text-vault-text-primary bg-vault-surface-tertiary"
+              aria-label="Hover"
+            >
               <Copy size={20} />
             </button>
             <span className="text-[10px] text-vault-text-tertiary font-mono">Hover</span>
           </div>
           <div className="flex flex-col items-center gap-2">
-            <button className="p-2.5 rounded-lg text-brand-blue bg-vault-surface-tertiary scale-95" aria-label="Active">
+            <button
+              className="p-2.5 rounded-lg text-brand-blue bg-vault-surface-tertiary scale-95"
+              aria-label="Active"
+            >
               <Copy size={20} />
             </button>
             <span className="text-[10px] text-vault-text-tertiary font-mono">Active</span>
           </div>
           <div className="flex flex-col items-center gap-2">
-            <button className="p-2.5 rounded-lg text-vault-text-secondary outline outline-2 outline-offset-2 outline-brand-blue" aria-label="Focus">
+            <button
+              className="p-2.5 rounded-lg text-vault-text-secondary outline outline-2 outline-offset-2 outline-brand-blue"
+              aria-label="Focus"
+            >
               <Copy size={20} />
             </button>
             <span className="text-[10px] text-vault-text-tertiary font-mono">Focus</span>
           </div>
           <div className="flex flex-col items-center gap-2">
-            <button className="p-2.5 rounded-lg text-vault-text-tertiary opacity-40 cursor-not-allowed" disabled aria-label="Disabled">
+            <button
+              className="p-2.5 rounded-lg text-vault-text-tertiary opacity-40 cursor-not-allowed"
+              disabled
+              aria-label="Disabled"
+            >
               <Copy size={20} />
             </button>
             <span className="text-[10px] text-vault-text-tertiary font-mono">Disabled</span>
           </div>
           <div className="flex flex-col items-center gap-2">
-            <button className="p-2.5 rounded-lg text-brand-blue bg-brand-blue/10" aria-label="Selected">
+            <button
+              className="p-2.5 rounded-lg text-brand-blue bg-brand-blue/10"
+              aria-label="Selected"
+            >
               <Copy size={20} />
             </button>
             <span className="text-[10px] text-vault-text-tertiary font-mono">Selected</span>
@@ -913,25 +939,37 @@ function IconButtonShowcase() {
         <h3 className="text-lg font-semibold mb-4">Size Scale</h3>
         <div className="card-brutalist flex flex-wrap gap-8 items-end">
           <div className="flex flex-col items-center gap-2">
-            <button className="p-2 rounded-lg text-vault-text-secondary hover:text-vault-text-primary hover:bg-vault-surface-tertiary transition-all" aria-label="Small">
+            <button
+              className="p-2 rounded-lg text-vault-text-secondary hover:text-vault-text-primary hover:bg-vault-surface-tertiary transition-all"
+              aria-label="Small"
+            >
               <Share2 size={16} />
             </button>
             <span className="text-[10px] text-vault-text-tertiary font-mono">sm (16px)</span>
           </div>
           <div className="flex flex-col items-center gap-2">
-            <button className="p-2.5 rounded-lg text-vault-text-secondary hover:text-vault-text-primary hover:bg-vault-surface-tertiary transition-all" aria-label="Medium">
+            <button
+              className="p-2.5 rounded-lg text-vault-text-secondary hover:text-vault-text-primary hover:bg-vault-surface-tertiary transition-all"
+              aria-label="Medium"
+            >
               <Share2 size={20} />
             </button>
             <span className="text-[10px] text-vault-text-tertiary font-mono">md (20px)</span>
           </div>
           <div className="flex flex-col items-center gap-2">
-            <button className="p-3 rounded-lg text-vault-text-secondary hover:text-vault-text-primary hover:bg-vault-surface-tertiary transition-all" aria-label="Large">
+            <button
+              className="p-3 rounded-lg text-vault-text-secondary hover:text-vault-text-primary hover:bg-vault-surface-tertiary transition-all"
+              aria-label="Large"
+            >
               <Share2 size={24} />
             </button>
             <span className="text-[10px] text-vault-text-tertiary font-mono">lg (24px)</span>
           </div>
           <div className="flex flex-col items-center gap-2">
-            <button className="p-3 rounded-lg text-vault-text-secondary hover:text-vault-text-primary hover:bg-vault-surface-tertiary transition-all" aria-label="Extra Large">
+            <button
+              className="p-3 rounded-lg text-vault-text-secondary hover:text-vault-text-primary hover:bg-vault-surface-tertiary transition-all"
+              aria-label="Extra Large"
+            >
               <Share2 size={32} />
             </button>
             <span className="text-[10px] text-vault-text-tertiary font-mono">xl (32px)</span>
