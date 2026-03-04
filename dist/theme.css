@@ -1,6 +1,6 @@
 /**
  * Vaultica Design Tokens
- * Generated: 2026-02-12T14:20:21.456Z
+ * Generated: 2026-03-04T05:21:59.866Z
  * 
  * DO NOT EDIT DIRECTLY - Generated from /tokens/*.json
  * Run 'pnpm run build' to regenerate
@@ -18,10 +18,10 @@
   --color-alias-button-secondary-bg: transparent;
   --color-alias-button-secondary-border: oklch(45% 0.02 230);
   --color-alias-button-secondary-text: oklch(0.994 0.0084 197.02);
-  --color-alias-card-bg: oklch(16% 0.01 256);
+  --color-alias-card-bg: oklch(21% 0.012 254);
   --color-alias-card-border: oklch(45% 0.02 230);
-  --color-alias-input-bg: oklch(16% 0.01 256);
-  --color-alias-input-border: oklch(30% 0.015 256);
+  --color-alias-input-bg: oklch(21% 0.012 254);
+  --color-alias-input-border: oklch(33% 0.015 254);
   --color-alias-input-border-focus: oklch(0.7031 0.1426 236.68);
   --color-alias-input-placeholder: oklch(60% 0.018 230);
   --color-alias-input-text: oklch(0.994 0.0084 197.02);
@@ -48,17 +48,17 @@
   --color-primitive-info-900: oklch(40% 0.08 85);
   --color-primitive-neutral-0: oklch(100% 0 0);
   --color-primitive-neutral-100: #d7e9f2;
-  --color-primitive-neutral-1000: oklch(6% 0.005 256);
+  --color-primitive-neutral-1000: oklch(10% 0.007 254);
   --color-primitive-neutral-200: oklch(88% 0.012 230);
   --color-primitive-neutral-300: oklch(75% 0.015 230);
   --color-primitive-neutral-400: oklch(60% 0.018 230);
   --color-primitive-neutral-50: oklch(0.994 0.0084 197.02);
   --color-primitive-neutral-500: oklch(45% 0.02 230);
   --color-primitive-neutral-600: oklch(0.3503 0.014 256.77);
-  --color-primitive-neutral-700: oklch(30% 0.015 256);
-  --color-primitive-neutral-800: oklch(22% 0.012 256);
-  --color-primitive-neutral-900: oklch(16% 0.01 256);
-  --color-primitive-neutral-950: oklch(12% 0.008 256);
+  --color-primitive-neutral-700: oklch(33% 0.015 254);
+  --color-primitive-neutral-800: oklch(27% 0.014 254);
+  --color-primitive-neutral-900: oklch(21% 0.012 254);
+  --color-primitive-neutral-950: oklch(17% 0.010 254);
   --color-primitive-primary-100: oklch(92% 0.06 236);
   --color-primitive-primary-200: oklch(85% 0.10 236);
   --color-primitive-primary-300: oklch(78% 0.12 236);
@@ -83,10 +83,10 @@
   --color-semantic-vault-accent-default: oklch(0.7031 0.1426 236.68);
   --color-semantic-vault-accent-hover: oklch(78% 0.12 236);
   --color-semantic-vault-accent-subtle: oklch(26% 0.06 236);
-  --color-semantic-vault-border-default: oklch(30% 0.015 256);
+  --color-semantic-vault-border-default: oklch(33% 0.015 254);
   --color-semantic-vault-border-focus: oklch(0.7031 0.1426 236.68);
   --color-semantic-vault-border-strong: oklch(45% 0.02 230);
-  --color-semantic-vault-border-subtle: oklch(22% 0.012 256);
+  --color-semantic-vault-border-subtle: oklch(27% 0.014 254);
   --color-semantic-vault-status-critical: oklch(58% 0.24 25);
   --color-semantic-vault-status-critical-subtle: oklch(30% 0.10 25);
   --color-semantic-vault-status-info: oklch(86% 0.14 85);
@@ -96,11 +96,11 @@
   --color-semantic-vault-status-warning: oklch(85% 0.18 95);
   --color-semantic-vault-status-warning-subtle: oklch(40% 0.10 95);
   --color-semantic-vault-surface-inverse: oklch(0.994 0.0084 197.02);
-  --color-semantic-vault-surface-primary: oklch(12% 0.008 256);
-  --color-semantic-vault-surface-secondary: oklch(16% 0.01 256);
-  --color-semantic-vault-surface-tertiary: oklch(22% 0.012 256);
+  --color-semantic-vault-surface-primary: oklch(17% 0.010 254);
+  --color-semantic-vault-surface-secondary: oklch(21% 0.012 254);
+  --color-semantic-vault-surface-tertiary: oklch(27% 0.014 254);
   --color-semantic-vault-text-accent: oklch(78% 0.12 236);
-  --color-semantic-vault-text-inverse: oklch(16% 0.01 256);
+  --color-semantic-vault-text-inverse: oklch(21% 0.012 254);
   --color-semantic-vault-text-primary: oklch(0.994 0.0084 197.02);
   --color-semantic-vault-text-secondary: oklch(75% 0.015 230);
   --color-semantic-vault-text-tertiary: oklch(60% 0.018 230);

@@ -12,14 +12,14 @@
 | **Vaultica**    | The company — solid, professional infrastructure     |
 | **Blink Vault** | The product — lightning-fast visual inspiration tool |
 
-**Philosophy**: "See it. Blink it. Find it." Technology must be invisible.
+**Philosophy**: "Own it. Share it. Rest easy." Technology must be invisible.
 
 ---
 
-## Brand Voice: Swift & Minimal
+## Brand Voice: Confident & Effortless
 
-Blink speaks with **confident simplicity**. Our voice is the calm, capable curator who makes
-complexity invisible. We provide a sense of _collection_, not "data processing."
+Blink speaks with **assured calm**. Our voice is the steady hand that makes complexity vanish. We
+provide a sense of _security and ease_, not "data processing."
 
 ---
 
@@ -31,9 +31,9 @@ We emphasize speed and immediacy. Everything happens in a heartbeat.
 
 | ✅ Do                       | ❌ Don't                                              |
 | --------------------------- | ----------------------------------------------------- |
-| "Blinked to your Vault. ⚡" | "Your file has been successfully uploaded and saved." |
-| "Find anything instantly."  | "You might be able to find things faster!"            |
-| "Blink it. Find it later."  | "Save now for future reference."                      |
+| "Saved. In a blink. ⚡"     | "Your file has been successfully uploaded and saved." |
+| "Find it instantly."        | "You might be able to find things faster!"            |
+| "Blink it. Rest easy."     | "Save now for future reference."                      |
 
 ### 2. **Invisible**
 
@@ -42,8 +42,8 @@ Technology stays hidden. The user should feel the system simply "understands."
 | ✅ Do                               | ❌ Don't                                        |
 | ----------------------------------- | ----------------------------------------------- |
 | "Find by what you remember."        | "Search by content, OCR, or vector similarity." |
-| "Your Vault is locked by Vaultica." | "256-bit AES encryption at rest."               |
-| "Links expire when you set."        | "Configurable TTL on shared URLs."              |
+| "Rest assured. Locked by Vaultica." | "256-bit AES encryption at rest."               |
+| "Links expire when you say."        | "Configurable TTL on shared URLs."              |
 
 ### 3. **Minimal**
 
@@ -52,18 +52,18 @@ Never use two words when one will do.
 | ✅ Do             | ❌ Don't                                                |
 | ----------------- | ------------------------------------------------------- |
 | "Blink it"        | "Drag and drop to save to your collection"              |
-| "3 Blinks saved"  | "Congratulations! You have successfully saved 3 items!" |
+| "3 saved"         | "Congratulations! You have successfully saved 3 items!" |
 | "Open your Vault" | "Navigate to your collection of saved items"            |
 
 ### 4. **Solid**
 
 The Vault is private, personal, and unshakeable. Even errors feel grounded.
 
-| ✅ Do                        | ❌ Don't                                            |
-| ---------------------------- | --------------------------------------------------- |
-| "Couldn't Blink. Try again." | "Oops! Something went wrong! We're so sorry!"       |
-| "Too large. Max 100MB"       | "Oh no! That file is way too big for us to handle!" |
-| "Session ended. Sign in."    | "Whoopsie! Looks like you got logged out! 😅"       |
+| ✅ Do                         | ❌ Don't                                            |
+| ----------------------------- | --------------------------------------------------- |
+| "Couldn't save. Try again."   | "Oops! Something went wrong! We're so sorry!"       |
+| "Too large. Max 100MB."       | "Oh no! That file is way too big for us to handle!" |
+| "Session ended. Sign in."     | "Whoopsie! Looks like you got logged out! 😅"       |
 
 ---
 
@@ -81,10 +81,10 @@ These terms MUST be used consistently:
 
 ### Feedback Strings
 
-| Context                 | String                           |
-| ----------------------- | -------------------------------- |
-| Public confirmation     | "Blinked to your Vault. ⚡"      |
-| Private/DM notification | "Your new Blink has been saved." |
+| Context                 | String                         |
+| ----------------------- | ------------------------------ |
+| Public confirmation     | "Saved. In a blink. ⚡"        |
+| Private/DM notification | "Your Blink is safe."          |
 
 ---
 
@@ -140,20 +140,20 @@ These terms MUST be used consistently:
 
 #### Tone: Swift, Visual, Aspirational
 
-> "See it. Blink it. Find it. Your visual inspiration, instantly searchable."
+> "Own it. Share it. Rest easy. Your files, safe and searchable in a blink."
 
 ### Onboarding
 
 #### Tone: Welcoming, Minimal
 
-> "Welcome to Blink Vault. Blink anything. Find it instantly."
+> "Welcome to Blink Vault. Zero config. Blink anything to begin."
 
 ### UI Microcopy
 
 #### Tone: Minimal, Instant
 
-> Button: "Blink it" Empty state: "No Blinks yet. Start collecting." Success: "Blinked to your
-> Vault. ⚡"
+> Button: "Blink it" Empty state: "No Blinks yet. Start collecting." Success: "Saved. In a
+> blink. ⚡"
 
 ### Error Messages
 
@@ -251,12 +251,12 @@ _Note: The "Invisible Librarian" Rule — never explain how search works. It jus
 
 **Primary Tagline:**
 
-> "See it. Blink it. Find it."
+> "Own it. Share it. Rest easy."
 
 **Secondary Options:**
 
-> "Your visual inspiration, instantly searchable." "Blink now. Find later." "The Vault for visual
-> thinkers."
+> "Sleep well. Your data is safe." "In a blink. No hassle." "Zero config. Zero friction."
+> "Your vault, your rules."
 
 ---
 
@@ -264,22 +264,21 @@ _Note: The "Invisible Librarian" Rule — never explain how search works. It jus
 
 ### Short (< 20 words)
 
-> Blink Vault: Save visual inspiration instantly. Find it by memory. Your private, searchable
-> collection.
+> Blink Vault: Save anything in a blink. Find it by memory. Your private, secure vault. Rest easy.
 
 ### Medium (100-200 words)
 
-> Blink Vault is the lightning-fast way to save and find visual inspiration. See something worth
-> keeping? Blink it. That screenshot, reference image, or design detail goes straight to your
-> private Vault—organized automatically, searchable instantly.
+> Blink Vault is the fastest way to save and find anything you care about. See something worth
+> keeping? Blink it. That screenshot, reference image, or note goes straight to your
+> private Vault — organized automatically, searchable instantly.
 >
-> No folders. No tags. No effort. Just Blink it and move on. When you need it later, find it by what
-> you remember: a color, a shape, a word. Blink Vault understands.
+> No folders. No hassle. Blink it and move on. When you need it later, describe what
+> you remember: a color, a shape, a word. Done.
 >
-> Built for designers, creatives, and visual thinkers who collect constantly but hate organizing.
+> Built for people who collect constantly but hate organizing.
 > Your Vault is private, locked by Vaultica, and works across all your devices.
 >
-> See it. Blink it. Find it.
+> Own it. Share it. Rest easy.
 
 ### Long (200+ words)
 
@@ -292,21 +291,21 @@ _Note: The "Invisible Librarian" Rule — never explain how search works. It jus
 > chaos.
 >
 > Blink Vault changes that. See something? Blink it. One action sends it to your private Vault,
-> where it becomes instantly searchable. No folders to create. No tags to assign. No metadata to
-> manage. The technology stays invisible—you just save and find.
+> where it becomes instantly searchable. No folders to create. No manual tagging — AI reads what
+> you save and suggests tags automatically. Edit or add your own anytime. The technology stays
+> invisible — you save and find. That's it.
 >
-> When you need that reference later, search by what you remember. Describe the colors. Mention the
-> style. Type what the text said. Blink Vault understands your intent and surfaces exactly what
-> you're looking for.
+> When you need that reference later, describe what you remember. The colors. The style. The words.
+> Blink Vault finds it.
 >
 > Your Vault is private and secure, locked by Vaultica's infrastructure. Share individual Blinks
-> with expiring links when you choose. Keep everything else completely personal.
+> with expiring links when you choose. Keep everything else personal.
 >
 > Built for designers, art directors, creative professionals, and anyone who thinks visually. Blink
-> Vault turns your scattered inspiration into a searchable visual library that works like your
-> memory—only faster.
+> Vault turns your scattered collection into a searchable library that works like your
+> memory — only faster.
 >
-> See it. Blink it. Find it.
+> Own it. Share it. Rest easy.
 
 ---
 

@@ -19,12 +19,12 @@
   --color-bootstrap-danger: #fe1b20;
 
   /* Vault semantic colors */
-  --color-vault-surface-primary: oklch(12% 0.008 256);
-  --color-vault-surface-secondary: oklch(16% 0.01 256);
-  --color-vault-surface-tertiary: oklch(22% 0.012 256);
-  --color-vault-border-default: oklch(30% 0.015 256);
+  --color-vault-surface-primary: oklch(17% 0.010 254);
+  --color-vault-surface-secondary: oklch(21% 0.012 254);
+  --color-vault-surface-tertiary: oklch(27% 0.014 254);
+  --color-vault-border-default: oklch(33% 0.015 254);
   --color-vault-border-strong: oklch(45% 0.02 230);
-  --color-vault-border-subtle: oklch(22% 0.012 256);
+  --color-vault-border-subtle: oklch(27% 0.014 254);
   --color-vault-text-primary: #f0fbff;
   --color-vault-text-secondary: oklch(75% 0.015 230);
   --color-vault-text-tertiary: oklch(60% 0.018 230);
@@ -57,11 +57,12 @@
   --bs-danger: #fe1b20;
 
   /* Vault semantic tokens */
-  --vault-surface-primary: oklch(12% 0.008 256);
-  --vault-surface-secondary: oklch(16% 0.01 256);
-  --vault-surface-tertiary: oklch(22% 0.012 256);
-  --vault-border-default: oklch(30% 0.015 256);
+  --vault-surface-primary: oklch(17% 0.010 254);
+  --vault-surface-secondary: oklch(21% 0.012 254);
+  --vault-surface-tertiary: oklch(27% 0.014 254);
+  --vault-border-default: oklch(33% 0.015 254);
   --vault-border-strong: oklch(45% 0.02 230);
+  --vault-border-subtle: oklch(27% 0.014 254);
   --vault-text-primary: #f0fbff;
   --vault-text-secondary: oklch(75% 0.015 230);
   --vault-accent: #27abec;
@@ -186,7 +187,7 @@
 }
 
 .preview-bg-dark {
-  background: linear-gradient(135deg, #1a1d21 0%, #363b42 100%);
+  background: linear-gradient(135deg, #1e2329 0%, #2a3038 100%);
 }
 
 .preview-bg-checkerboard {
@@ -201,5 +202,5 @@
     0 10px,
     10px -10px,
     -10px 0px;
-  background-color: #2a2f35;
+  background-color: #2e343b;
 }

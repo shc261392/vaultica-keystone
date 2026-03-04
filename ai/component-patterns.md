@@ -8,7 +8,7 @@
 ## Design Principles Recap
 
 1. **Heavy Borders** — 3px standard, visible containment (Industrial Elegance)
-2. **High Contrast** — Dark surfaces (`#1a1d21`), bright text (`#f0fbff`)
+2. **High Contrast** — Comfortable dark surfaces (`#1e2329`), bright text (`#f0fbff`)
 3. **Visual Weight** — Substantial, grounded elements
 4. **Precision** — Clean geometry, purposeful spacing
 5. **Brand Blue** — Primary accent `#27abec` for CTAs and focus states

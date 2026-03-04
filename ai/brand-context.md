@@ -13,16 +13,16 @@
 | **Vaultica**    | The company — solid, professional infrastructure and "hardened" backend               |
 | **Blink Vault** | The product (official legal name) — lightning-fast tool for saving visual inspiration |
 
-**Philosophy**: "See it. Blink it. Find it." Technology must be invisible. We provide a sense of
-_collection_, not "data processing."
+**Philosophy**: "Own it. Share it. Rest easy." Technology must be invisible. We provide a sense of
+_security and calm_, not "data processing."
 
 ---
 
 ## What is Blink Vault?
 
-**Blink Vault: See it. Blink it. Find it.**
+**Blink Vault: Own it. Share it. Rest easy.**
 
-Blink Vault is the intelligent visual collection tool for people who save inspiration but have no
+Blink Vault is the intelligent collection tool for people who save everything but have no
 time to organize. It is designed for the **Creative Collector** — designers, artists, and visual
 thinkers who save screenshots, references, mood boards, and inspiration constantly.
 
@@ -86,12 +86,12 @@ refined sophistication.
 
 ### Color Psychology
 
-| Token           | Purpose                                                  | Feeling                |
-| --------------- | -------------------------------------------------------- | ---------------------- |
-| `vault-surface` | Deep, dark backgrounds                                   | Security, depth, focus |
-| `brand-blue`    | Primary accent `#27abec` / `oklch(0.7031 0.1426 236.68)` | Speed, clarity, trust  |
-| `vault-border`  | Heavy visible borders                                    | Containment, structure |
-| `vault-text`    | High-contrast text (brand white `#f0fbff`)               | Clarity, readability   |
+| Token           | Purpose                                                  | Feeling                       |
+| --------------- | -------------------------------------------------------- | ----------------------------- |
+| `vault-surface` | Comfortable dark backgrounds (brighter dark, not black)   | Security, focus, ease         |
+| `brand-blue`    | Primary accent `#27abec` / `oklch(0.7031 0.1426 236.68)` | Speed, clarity, trust         |
+| `vault-border`  | Visible borders with softer contrast                      | Structure without harshness   |
+| `vault-text`    | High-contrast text (brand white `#f0fbff`)               | Clarity, readability          |
 
 ### Typography Philosophy
 
@@ -128,9 +128,9 @@ refined sophistication.
 
 ## Core Features (Design Context)
 
-### 1. Blink It. Zero Effort
+### 1. Blink It. In a Blink
 
-**UI Implication**: One-tap save, minimal friction, instant feedback ("Blinked to your Vault. ⚡")
+**UI Implication**: One-tap save, minimal friction, instant feedback ("Saved. In a blink. ⚡")
 
 ### 2. Invisible Understanding
 
@@ -152,7 +152,8 @@ results
 
 ### 6. Locked by Vaultica
 
-**UI Implication**: Subtle security indicators, "Your Vault is private" messaging, solid feeling
+**UI Implication**: Subtle security indicators, "Rest assured. Your vault is safe."
+messaging, solid feeling
 
 ---
 

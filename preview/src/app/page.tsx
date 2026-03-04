@@ -2,18 +2,38 @@
 
 import * as Tabs from '@radix-ui/react-tabs';
 import {
+  Archive,
+  ArrowUpDown,
+  Bookmark,
   Check,
+  Copy,
+  Download,
+  Edit,
   Eye,
+  Filter,
   Grid3X3,
+  Heart,
   Image,
   Layout,
+  Link,
   Lock,
+  Mail,
+  Menu,
   Moon,
+  MoreVertical,
+  MousePointerClick,
   Palette,
+  Pin,
+  QrCode,
+  RefreshCw,
   Search,
+  Settings,
   Share2,
   Sun,
+  Tag,
+  Trash2,
   Type,
+  Upload,
   Zap,
 } from 'lucide-react';
 import { useState } from 'react';
@@ -94,32 +114,32 @@ const neutralScale = [
   },
   {
     value: '700',
-    hex: '#2c3138',
-    oklch: 'oklch(30% 0.015 256)',
+    hex: '#353c44',
+    oklch: 'oklch(33% 0.015 254)',
     name: 'Neutral 700',
   },
   {
     value: '800',
-    hex: '#23272d',
-    oklch: 'oklch(22% 0.012 256)',
+    hex: '#2e3540',
+    oklch: 'oklch(27% 0.014 254)',
     name: 'Neutral 800',
   },
   {
     value: '900',
-    hex: '#1a1d21',
-    oklch: 'oklch(16% 0.01 256)',
+    hex: '#252b33',
+    oklch: 'oklch(21% 0.012 254)',
     name: 'Neutral 900',
   },
   {
     value: '950',
-    hex: '#141719',
-    oklch: 'oklch(12% 0.008 256)',
+    hex: '#1e2329',
+    oklch: 'oklch(17% 0.010 254)',
     name: 'Neutral 950',
   },
   {
     value: '1000',
-    hex: '#0a0b0c',
-    oklch: 'oklch(6% 0.005 256)',
+    hex: '#121517',
+    oklch: 'oklch(10% 0.007 254)',
     name: 'Neutral 1000',
   },
 ];
@@ -426,22 +446,22 @@ function Typography() {
           <div>
             <span className="text-xs text-vault-text-secondary font-mono">H1 / 3rem / 700</span>
             <p className="text-5xl font-bold tracking-tight text-vault-text-primary">
-              See it. Blink it. Find it.
+              Own it. Share it. Rest easy.
             </p>
           </div>
           <div>
             <span className="text-xs text-vault-text-secondary font-mono">H2 / 2.25rem / 600</span>
-            <p className="text-4xl font-semibold text-vault-text-primary">Your Visual Collection</p>
+            <p className="text-4xl font-semibold text-vault-text-primary">Sleep Well. Your Data is Safe.</p>
           </div>
           <div>
             <span className="text-xs text-vault-text-secondary font-mono">H3 / 1.5rem / 600</span>
-            <p className="text-2xl font-semibold text-vault-text-primary">Instant Search</p>
+            <p className="text-2xl font-semibold text-vault-text-primary">In a Blink</p>
           </div>
           <div>
             <span className="text-xs text-vault-text-secondary font-mono">Body / 1rem / 400</span>
             <p className="text-base text-vault-text-primary">
-              Blink Vault makes your collection searchable. Instantly. By what you remember. No more
-              scrolling through thousands of files.
+              No folders. No effort. Blink it and move on. When you need it,
+              find it by what you remember. Zero config. Zero hassle.
             </p>
           </div>
           <div>
@@ -533,11 +553,11 @@ function MockWebsite() {
         {/* Hero Section */}
         <section className="px-6 py-16 text-center bg-vault-surface-primary">
           <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
-            See it. <span className="text-brand-blue">Blink it.</span> Find it.
+            Own it. <span className="text-brand-blue">Share it.</span> Rest easy.
           </h1>
           <p className="text-xl text-vault-text-secondary max-w-2xl mx-auto mb-8">
-            The intelligent visual collection tool for people who save inspiration but have no time
-            to organize.
+            Your data. Your vault. Zero config, zero hassle. Save anything in a blink and find it
+            when you need it. Sleep well — your files are safe.
           </p>
           <div className="flex items-center justify-center gap-4">
             <button className="btn-primary flex items-center gap-2">
@@ -556,9 +576,9 @@ function MockWebsite() {
               <div className="w-12 h-12 rounded-lg bg-brand-blue/20 flex items-center justify-center mb-4">
                 <Zap className="text-brand-blue" size={24} />
               </div>
-              <h3 className="text-lg font-semibold mb-2">Blink It. Zero Effort</h3>
+              <h3 className="text-lg font-semibold mb-2">Blink It. In a Blink</h3>
               <p className="text-vault-text-secondary text-sm">
-                One-tap save from anywhere. Blinked to your Vault. ⚡
+                One tap. Done. No setup, no hassle. Your files land safely in your Vault.
               </p>
             </div>
             <div className="card-brutalist">
@@ -567,7 +587,7 @@ function MockWebsite() {
               </div>
               <h3 className="text-lg font-semibold mb-2">Find by Memory</h3>
               <p className="text-vault-text-secondary text-sm">
-                Search by what you remember. Natural language, instant results.
+                Describe what you remember. We'll find it. No folders, no effort.
               </p>
             </div>
             <div className="card-brutalist">
@@ -576,7 +596,7 @@ function MockWebsite() {
               </div>
               <h3 className="text-lg font-semibold mb-2">Locked by Vaultica</h3>
               <p className="text-vault-text-secondary text-sm">
-                Your Vault is private. End-to-end encrypted. Always.
+                Rest assured. End-to-end encrypted. Your vault, your rules.
               </p>
             </div>
           </div>
@@ -720,6 +740,227 @@ function ComponentShowcase() {
   );
 }
 
+function IconButtonDemo({
+  icon: Icon,
+  label,
+  size = 20,
+}: {
+  icon: React.ComponentType<{ size?: number; className?: string }>;
+  label: string;
+  size?: number;
+}) {
+  return (
+    <div className="flex flex-col items-center gap-2 group">
+      <button
+        className="p-2.5 rounded-lg text-vault-text-secondary hover:text-vault-text-primary hover:bg-vault-surface-tertiary active:scale-95 transition-all duration-150"
+        title={label}
+        aria-label={label}
+      >
+        <Icon size={size} />
+      </button>
+      <span className="text-[10px] text-vault-text-tertiary font-mono group-hover:text-vault-text-secondary transition-colors">
+        {label}
+      </span>
+    </div>
+  );
+}
+
+function IconButtonShowcase() {
+  const categories = [
+    {
+      title: 'File Operations',
+      icons: [
+        { icon: Upload, label: 'Upload' },
+        { icon: Download, label: 'Download' },
+        { icon: Copy, label: 'Copy' },
+        { icon: Trash2, label: 'Delete' },
+        { icon: Edit, label: 'Edit' },
+      ],
+    },
+    {
+      title: 'Communication',
+      icons: [
+        { icon: Share2, label: 'Share' },
+        { icon: Link, label: 'Copy Link' },
+        { icon: Mail, label: 'Email' },
+        { icon: QrCode, label: 'QR Code' },
+      ],
+    },
+    {
+      title: 'Content',
+      icons: [
+        { icon: Search, label: 'Search' },
+        { icon: Filter, label: 'Filter' },
+        { icon: ArrowUpDown, label: 'Sort' },
+        { icon: Tag, label: 'Tag' },
+        { icon: Pin, label: 'Pin' },
+        { icon: Bookmark, label: 'Bookmark' },
+        { icon: Archive, label: 'Archive' },
+      ],
+    },
+    {
+      title: 'Vault Actions',
+      icons: [
+        { icon: Zap, label: 'Blink' },
+        { icon: Lock, label: 'Lock' },
+        { icon: Eye, label: 'Preview' },
+        { icon: Heart, label: 'Favorite' },
+      ],
+    },
+    {
+      title: 'System',
+      icons: [
+        { icon: Settings, label: 'Settings' },
+        { icon: RefreshCw, label: 'Refresh' },
+        { icon: Menu, label: 'Menu' },
+        { icon: MoreVertical, label: 'More' },
+      ],
+    },
+  ];
+
+  return (
+    <div className="space-y-12">
+      <div>
+        <h2 className="text-2xl font-bold mb-2">Icon Button System</h2>
+        <p className="text-vault-text-secondary mb-8">
+          Less is more. Show, don&apos;t tell. Graphic over textual. Intuitive and zero friction.
+        </p>
+      </div>
+
+      {/* Philosophy Cards */}
+      <section className="grid grid-cols-4 gap-4">
+        <div className="card-brutalist text-center">
+          <p className="text-3xl mb-3">👁</p>
+          <p className="text-sm font-semibold">Icon-First</p>
+          <p className="text-xs text-vault-text-tertiary mt-1">Default to icons; add labels only when needed</p>
+        </div>
+        <div className="card-brutalist text-center">
+          <p className="text-3xl mb-3">🎯</p>
+          <p className="text-sm font-semibold">Universal</p>
+          <p className="text-xs text-vault-text-tertiary mt-1">Recognized icons that transcend language</p>
+        </div>
+        <div className="card-brutalist text-center">
+          <p className="text-3xl mb-3">📐</p>
+          <p className="text-sm font-semibold">Consistent</p>
+          <p className="text-xs text-vault-text-tertiary mt-1">20px default, 2px stroke, visual rhythm</p>
+        </div>
+        <div className="card-brutalist text-center">
+          <p className="text-3xl mb-3">✋</p>
+          <p className="text-sm font-semibold">Touch-Ready</p>
+          <p className="text-xs text-vault-text-tertiary mt-1">44×44px minimum touch target always</p>
+        </div>
+      </section>
+
+      {/* Icon Categories */}
+      {categories.map((category) => (
+        <section key={category.title}>
+          <h3 className="text-lg font-semibold mb-4">{category.title}</h3>
+          <div className="card-brutalist">
+            <div className="flex flex-wrap gap-6">
+              {category.icons.map((item) => (
+                <IconButtonDemo key={item.label} icon={item.icon} label={item.label} />
+              ))}
+            </div>
+          </div>
+        </section>
+      ))}
+
+      {/* States Demo */}
+      <section>
+        <h3 className="text-lg font-semibold mb-4">Button States</h3>
+        <div className="card-brutalist flex flex-wrap gap-6 items-center">
+          <div className="flex flex-col items-center gap-2">
+            <button className="p-2.5 rounded-lg text-vault-text-secondary" aria-label="Default">
+              <Copy size={20} />
+            </button>
+            <span className="text-[10px] text-vault-text-tertiary font-mono">Default</span>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <button className="p-2.5 rounded-lg text-vault-text-primary bg-vault-surface-tertiary" aria-label="Hover">
+              <Copy size={20} />
+            </button>
+            <span className="text-[10px] text-vault-text-tertiary font-mono">Hover</span>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <button className="p-2.5 rounded-lg text-brand-blue bg-vault-surface-tertiary scale-95" aria-label="Active">
+              <Copy size={20} />
+            </button>
+            <span className="text-[10px] text-vault-text-tertiary font-mono">Active</span>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <button className="p-2.5 rounded-lg text-vault-text-secondary outline outline-2 outline-offset-2 outline-brand-blue" aria-label="Focus">
+              <Copy size={20} />
+            </button>
+            <span className="text-[10px] text-vault-text-tertiary font-mono">Focus</span>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <button className="p-2.5 rounded-lg text-vault-text-tertiary opacity-40 cursor-not-allowed" disabled aria-label="Disabled">
+              <Copy size={20} />
+            </button>
+            <span className="text-[10px] text-vault-text-tertiary font-mono">Disabled</span>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <button className="p-2.5 rounded-lg text-brand-blue bg-brand-blue/10" aria-label="Selected">
+              <Copy size={20} />
+            </button>
+            <span className="text-[10px] text-vault-text-tertiary font-mono">Selected</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Size Scale */}
+      <section>
+        <h3 className="text-lg font-semibold mb-4">Size Scale</h3>
+        <div className="card-brutalist flex flex-wrap gap-8 items-end">
+          <div className="flex flex-col items-center gap-2">
+            <button className="p-2 rounded-lg text-vault-text-secondary hover:text-vault-text-primary hover:bg-vault-surface-tertiary transition-all" aria-label="Small">
+              <Share2 size={16} />
+            </button>
+            <span className="text-[10px] text-vault-text-tertiary font-mono">sm (16px)</span>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <button className="p-2.5 rounded-lg text-vault-text-secondary hover:text-vault-text-primary hover:bg-vault-surface-tertiary transition-all" aria-label="Medium">
+              <Share2 size={20} />
+            </button>
+            <span className="text-[10px] text-vault-text-tertiary font-mono">md (20px)</span>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <button className="p-3 rounded-lg text-vault-text-secondary hover:text-vault-text-primary hover:bg-vault-surface-tertiary transition-all" aria-label="Large">
+              <Share2 size={24} />
+            </button>
+            <span className="text-[10px] text-vault-text-tertiary font-mono">lg (24px)</span>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <button className="p-3 rounded-lg text-vault-text-secondary hover:text-vault-text-primary hover:bg-vault-surface-tertiary transition-all" aria-label="Extra Large">
+              <Share2 size={32} />
+            </button>
+            <span className="text-[10px] text-vault-text-tertiary font-mono">xl (32px)</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Icon + Label Variants */}
+      <section>
+        <h3 className="text-lg font-semibold mb-4">Variants</h3>
+        <div className="card-brutalist flex flex-wrap gap-4">
+          <button className="btn-primary flex items-center gap-2 text-sm">
+            <Zap size={18} /> Blink It
+          </button>
+          <button className="btn-secondary flex items-center gap-2 text-sm">
+            <Share2 size={18} /> Share
+          </button>
+          <button className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-vault-text-secondary hover:text-vault-text-primary hover:bg-vault-surface-tertiary transition-all">
+            <Upload size={18} /> Upload
+          </button>
+          <button className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-brand-blue bg-brand-blue/10 hover:bg-brand-blue/20 transition-all">
+            <Download size={18} /> Download
+          </button>
+        </div>
+      </section>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <main className="min-h-screen p-8">
@@ -767,6 +1008,12 @@ export default function Home() {
               <Layout size={18} /> Components
             </Tabs.Trigger>
             <Tabs.Trigger
+              value="icons"
+              className="flex items-center gap-2 px-4 py-2 rounded-t font-medium text-vault-text-secondary data-[state=active]:text-brand-blue data-[state=active]:bg-vault-surface-secondary data-[state=active]:border-3 data-[state=active]:border-b-0 data-[state=active]:border-vault-border-strong transition-colors"
+            >
+              <MousePointerClick size={18} /> Icon Buttons
+            </Tabs.Trigger>
+            <Tabs.Trigger
               value="website"
               className="flex items-center gap-2 px-4 py-2 rounded-t font-medium text-vault-text-secondary data-[state=active]:text-brand-blue data-[state=active]:bg-vault-surface-secondary data-[state=active]:border-3 data-[state=active]:border-b-0 data-[state=active]:border-vault-border-strong transition-colors"
             >
@@ -788,6 +1035,10 @@ export default function Home() {
 
           <Tabs.Content value="components">
             <ComponentShowcase />
+          </Tabs.Content>
+
+          <Tabs.Content value="icons">
+            <IconButtonShowcase />
           </Tabs.Content>
 
           <Tabs.Content value="website">
