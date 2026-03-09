@@ -12,6 +12,7 @@
 |--------|---------|-------|
 | actions/checkout | v6 | Latest stable |
 | actions/setup-node | v6 | Latest stable |
+| actions/upload-artifact | v7 | Latest stable |
 | pnpm/action-setup | v4 | Latest stable |
 | biomejs/setup-biome | v2 | Biome linter integration |
 
@@ -21,11 +22,11 @@
 |------|---------|-------|
 | Node.js | 24.13.1 | Via Volta |
 | Biome | latest | Via GitHub Actions |
-| Markdownlint | cli2 v0.20.0 | Markdown linting |
+| Markdownlint | cli2 v0.21.0 | Markdown linting |
 
 ## Sources
 
-**Last Verified:** 2026-03-09T11:37:07Z
+**Last Verified:** 2026-03-09T11:38:51Z
 **Commit:** afc33f9
 
 | File | Description |
