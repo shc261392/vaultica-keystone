@@ -10,9 +10,9 @@
 | Entity          | Role                                                 |
 | --------------- | ---------------------------------------------------- |
 | **Vaultica**    | The company — solid, professional infrastructure     |
-| **Blink Vault** | The product — lightning-fast visual inspiration tool |
+| **Blink Vault** | The product — intelligent file vault with AI and instant sharing |
 
-**Philosophy**: "Own it. Share it. Rest easy." Technology must be invisible.
+**Philosophy**: "Store, share, and find — in a blink." Technology must be invisible.
 
 ---
 
@@ -140,7 +140,7 @@ These terms MUST be used consistently:
 
 #### Tone: Swift, Visual, Aspirational
 
-> "Own it. Share it. Rest easy. Your files, safe and searchable in a blink."
+> "Store, share, and find — in a blink. Your files, safe and searchable instantly."
 
 ### Onboarding
 
@@ -251,11 +251,12 @@ _Note: The "Invisible Librarian" Rule — never explain how search works. It jus
 
 **Primary Tagline:**
 
-> "Own it. Share it. Rest easy."
+> "Store, share, and find — in a blink."
 
 **Secondary Options:**
 
-> "Sleep well. Your data is safe." "In a blink. No hassle." "Zero config. Zero friction."
+> "AI organizes everything the moment you upload." "Share any file with a link. No setup, no
+> folders." "No setup, no folders. Instant results."
 > "Your vault, your rules."
 
 ---
@@ -264,58 +265,56 @@ _Note: The "Invisible Librarian" Rule — never explain how search works. It jus
 
 ### Short (< 20 words)
 
-> Blink Vault: Save anything in a blink. Find it by memory. Your private, secure vault. Rest easy.
+> Blink Vault: Store, share, and find — in a blink. AI organizes everything. No setup, no folders.
 
 ### Medium (100-200 words)
 
-> Blink Vault is the fastest way to save and find anything you care about. See something worth
-> keeping? Blink it. That screenshot, reference image, or note goes straight to your
-> private Vault — organized automatically, searchable instantly.
+> Blink Vault is the fastest way to store, share, and find anything you care about. Upload a file
+> and AI organizes it instantly — no folders, no setup, no hassle. Share any file with a link.
 >
-> No folders. No hassle. Blink it and move on. When you need it later, describe what
-> you remember: a color, a shape, a word. Done.
+> When you need it later, describe what you remember: a name, a color, a keyword. Done.
 >
-> Built for people who collect constantly but hate organizing.
+> Built for people who store everything but hate organizing.
 > Your Vault is private, locked by Vaultica, and works across all your devices.
 >
-> Own it. Share it. Rest easy.
+> Store, share, and find — in a blink.
 
 ### Long (200+ words)
 
-> Blink Vault is the visual collection tool built for people who save everything but organize
+> Blink Vault is the intelligent file vault built for people who save everything but organize
 > nothing.
 >
-> Every day, you encounter images worth remembering: design inspiration, UI references, mood board
-> material, typography samples, color palettes. You screenshot them, bookmark them, save them
-> somewhere—and never find them again. They vanish into camera rolls, cloud folders, and browser
-> chaos.
+> Every day, you save files worth keeping: documents, screenshots, references, photos,
+> notes. You store them somewhere—and never find them again. They vanish into cloud folders,
+> camera rolls, and browser chaos.
 >
-> Blink Vault changes that. See something? Blink it. One action sends it to your private Vault,
-> where it becomes instantly searchable. No folders to create. No manual tagging — AI reads what
-> you save and suggests tags automatically. Edit or add your own anytime. The technology stays
-> invisible — you save and find. That's it.
+> Blink Vault changes that. Upload anything and AI organizes it instantly. No folders to create.
+> No manual tagging — AI reads what you save and suggests tags automatically. Edit or add your
+> own anytime. The technology stays invisible — you store and find. That's it.
 >
-> When you need that reference later, describe what you remember. The colors. The style. The words.
+> When you need that file later, describe what you remember. The name. The content. The keywords.
 > Blink Vault finds it.
 >
-> Your Vault is private and secure, locked by Vaultica's infrastructure. Share individual Blinks
-> with expiring links when you choose. Keep everything else personal.
+> Share any file with a link. Set expiration and privacy controls. Keep everything else personal.
 >
-> Built for designers, art directors, creative professionals, and anyone who thinks visually. Blink
-> Vault turns your scattered collection into a searchable library that works like your
-> memory — only faster.
+> Your Vault is private and secure, locked by Vaultica's infrastructure.
 >
-> Own it. Share it. Rest easy.
+> Built for anyone who stores files regularly — from creative professionals
+> to everyday users. Blink Vault turns your scattered files into a searchable library
+> that works like your memory — only faster.
+>
+> Store, share, and find — in a blink.
 
 ---
 
-## Target Audience: Designers First
+## Target Audience: Everyone Who Stores Files
 
-When targeting creatives, emphasize:
+When writing copy, emphasize:
 
-- **Visual Intuition** — "Find by what it looks like"
-- **Flow** — Zero friction, instant saves
-- **Collection** — Not "data management"
+- **AI Organization** — "AI organizes everything the moment you upload"
+- **Instant Sharing** — "Share any file with a link"
+- **Zero Setup** — "No setup, no folders"
+- **Speed** — Zero friction, instant results
 
 ---
 

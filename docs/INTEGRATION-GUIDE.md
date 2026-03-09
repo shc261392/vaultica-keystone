@@ -383,7 +383,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blink Vault",
-  description: "See it. Blink it. Find it.",
+  description: "Store, share, and find — in a blink.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -402,7 +402,7 @@ export const metadata: Metadata = {
 {
   "name": "Blink Vault",
   "short_name": "Blink",
-  "description": "See it. Blink it. Find it.",
+  "description": "Store, share, and find — in a blink.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#363b42",
@@ -443,7 +443,7 @@ convert -background none -resize 180x180 public/logos/blink-icon.svg public/appl
 export const metadata: Metadata = {
   openGraph: {
     title: "Blink Vault",
-    description: "See it. Blink it. Find it.",
+    description: "Store, share, and find — in a blink.",
     images: [
       {
         url: "/og-image.png",
@@ -456,7 +456,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Blink Vault",
-    description: "See it. Blink it. Find it.",
+    description: "Store, share, and find — in a blink.",
     images: ["/og-image.png"],
   },
 };

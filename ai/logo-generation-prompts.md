@@ -84,7 +84,7 @@ Flat design, suitable for app icon and branding.
 ### Prompt 3: Blink Symbol (Abstract)
 
 ```text
-Design an abstract symbol logo for "Blink Vault" - an app that captures visual inspiration instantly.
+Design an abstract symbol logo for "Blink Vault" - an intelligent file vault with AI organization and instant sharing.
 Concept: combine the ideas of "blinking" (eyes, instant) with "vault" (secure, solid).
 Style: brutalist, geometric, industrial elegance. Heavy borders, clean shapes.
 Color: electric blue (#27abec) on dark (#363b42) or with white (#f0fbff).

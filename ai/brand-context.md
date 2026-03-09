@@ -11,27 +11,27 @@
 | Entity          | Description                                                                           |
 | --------------- | ------------------------------------------------------------------------------------- |
 | **Vaultica**    | The company — solid, professional infrastructure and "hardened" backend               |
-| **Blink Vault** | The product (official legal name) — lightning-fast tool for saving visual inspiration |
+| **Blink Vault** | The product (official legal name) — intelligent file vault with AI and instant sharing |
 
-**Philosophy**: "Own it. Share it. Rest easy." Technology must be invisible. We provide a sense of
-_security and calm_, not "data processing."
+**Philosophy**: "Store, share, and find — in a blink." Technology must be invisible. We provide a
+sense of _security and calm_, not "data processing."
 
 ---
 
 ## What is Blink Vault?
 
-**Blink Vault: Own it. Share it. Rest easy.**
+**Blink Vault: Store, share, and find — in a blink.**
 
-Blink Vault is the intelligent collection tool for people who save everything but have no
-time to organize. It is designed for the **Creative Collector** — designers, artists, and visual
-thinkers who save screenshots, references, mood boards, and inspiration constantly.
+Blink Vault is the intelligent file vault that organizes everything the moment you upload.
+Share any file with a link. No setup, no folders. It is designed for anyone who stores files
+but has no time to organize — from creative professionals to everyday users.
 
-### The Problem We Solve: The "Visual Haystack"
+### The Problem We Solve: The "File Chaos"
 
-You constantly save images, screenshots, and visual references. But finding them later is
-impossible. You scroll through thousands of files, searching for that one design you saw.
+You constantly save files, screenshots, documents, and references. But finding them later is
+impossible. You dig through folders, cloud drives, and browser chaos.
 
-**Blink Vault makes your collection searchable. Instantly. By what you remember.**
+**Blink Vault makes everything searchable. Instantly. AI organizes it for you.**
 
 ---
 
@@ -104,25 +104,25 @@ refined sophistication.
 
 ## Target Users
 
-### 1. The Creative Professional (Primary)
+### 1. The Everyday User (Primary)
 
-- Needs a "mood board" that populates itself
-- Saves design inspiration constantly
+- Stores files, photos, and documents regularly
+- Wants to find anything in seconds
+- Values simplicity, speed, and sharing
+- Non-technical, needs invisible tech
+
+### 2. The Creative Professional
+
+- Saves design references, mood boards, and inspiration
 - Searches by **visual vibe** and content
 - Values **flow** and zero friction
 - Power user who appreciates speed
 
-### 2. The Everyday User
+### 3. The Team Collaborator
 
-- Wants to find an image in seconds
-- Values simplicity and speed
-- Non-technical, needs invisible tech
-
-### 3. The Forum Power-User
-
-- Needs to find and share the perfect image instantly
+- Needs to share files instantly with a link
 - Values quick sharing and link generation
-- Active on design communities, Discord, social
+- Active in teams, communities, and remote work
 
 ---
 

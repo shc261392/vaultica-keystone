@@ -68,7 +68,7 @@ Point Copilot/Cursor to `ai/brand-context.md` for styling context.
 
 ## Brand Summary
 
-- **Product**: Blink Vault — "See it. Blink it. Find it."
+- **Product**: Blink Vault — "Store, share, and find — in a blink."
 - **Aesthetic**: Industrial Elegance (heavy borders, high contrast)
 - **Color**: Brand blue `#27abec`
 - **Theme**: Dark-only

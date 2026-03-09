@@ -446,13 +446,13 @@ function Typography() {
           <div>
             <span className="text-xs text-vault-text-secondary font-mono">H1 / 3rem / 700</span>
             <p className="text-5xl font-bold tracking-tight text-vault-text-primary">
-              Own it. Share it. Rest easy.
+              Store, share, and find — in a blink.
             </p>
           </div>
           <div>
             <span className="text-xs text-vault-text-secondary font-mono">H2 / 2.25rem / 600</span>
             <p className="text-4xl font-semibold text-vault-text-primary">
-              Sleep Well. Your Data is Safe.
+              AI Organizes Everything.
             </p>
           </div>
           <div>
@@ -555,11 +555,11 @@ function MockWebsite() {
         {/* Hero Section */}
         <section className="px-6 py-16 text-center bg-vault-surface-primary">
           <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
-            Own it. <span className="text-brand-blue">Share it.</span> Rest easy.
+            Store, share, and find — <span className="text-brand-blue">in a blink.</span>
           </h1>
           <p className="text-xl text-vault-text-secondary max-w-2xl mx-auto mb-8">
-            Your data. Your vault. Zero config, zero hassle. Save anything in a blink and find it
-            when you need it. Sleep well — your files are safe.
+            AI organizes everything the moment you upload. Share any file with a link. No setup, no
+            folders.
           </p>
           <div className="flex items-center justify-center gap-4">
             <button className="btn-primary flex items-center gap-2">
