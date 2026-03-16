@@ -40,10 +40,10 @@
     "prepare": "husky install || true"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.4.3",
-    "@commitlint/config-conventional": "^20.4.3",
-    "@commitlint/types": "^20.4.3",
-    "@types/node": "^25.3.3",
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@commitlint/types": "^20.5.0",
+    "@types/node": "^25.5.0",
     "cspell": "^8.3.0",
     "husky": "^9.0.10",
     "lint-staged": "^15.2.2",
