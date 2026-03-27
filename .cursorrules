@@ -25,11 +25,11 @@ Vaultica is an intelligent digital vault for people who capture everything but h
 ### Semantic Color Mapping
 
 ```
-Surface backgrounds: var(--vault-surface-primary/secondary/tertiary)
-Text: var(--vault-text-primary/secondary/tertiary)
-Borders: var(--vault-border-default/strong/subtle)
-Accent/CTA: var(--vault-accent-default/hover/active)
-Status: var(--vault-status-success/warning/critical)
+Surface backgrounds: --vault-surface-primary, --vault-surface-secondary, --vault-surface-tertiary
+Text: --vault-text-primary, --vault-text-secondary, --vault-text-tertiary
+Borders: --vault-border-default, --vault-border-strong, --vault-border-subtle
+Accent/CTA: --vault-accent-default, --vault-accent-hover, --vault-accent-active
+Status: --vault-status-success, --vault-status-warning, --vault-status-critical
 ```
 
 ### Typography
