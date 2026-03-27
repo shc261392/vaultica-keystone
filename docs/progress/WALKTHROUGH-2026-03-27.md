@@ -170,8 +170,8 @@ update your version checks to `>= 2.0.0`. No migration of token values is requir
 1. **Read** `ai/brand-context.md` §Design Philosophy before writing any component CSS
 2. **Reference** `docs/INTEGRATION-GUIDE.md` for concrete code examples
 3. **Use** `vaultica-keystone/dist/theme.css` CSS variables — never hardcode brand colors
-4. **Borders**: Default to `border-2` with `border-[var(--vault-border-default)]`
-5. **Surfaces**: `bg-[var(--vault-surface-primary/secondary/tertiary)]` — not `bg-zinc-950` etc.
+4. **Borders**: Default to `border-2` with `border-vault-border-default`
+5. **Surfaces**: Use `bg-vault-surface-primary`, `bg-vault-surface-secondary`, or `bg-vault-surface-tertiary` — never `bg-zinc-950` etc.
 
 ### When Updating Metadata / SEO
 
