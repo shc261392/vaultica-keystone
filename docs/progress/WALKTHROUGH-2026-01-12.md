@@ -72,7 +72,7 @@ confident, calm, and effortless — like Apple or Linear.
 |---------|----------|
 | Philosophy | "Own it. Share it. Rest easy." |
 | Tagline | "Zero config. Zero stress." |
-| Hero | "Your files, your rules." |
+| Hero | "Save anything. Find something. In a blink." |
 | Sharing | "In a Blink." |
 | Security | "Rest assured." |
 | Success feedback | "Saved. In a blink. ⚡" |

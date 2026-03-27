@@ -12,7 +12,7 @@
 | **Vaultica**    | The company — solid, professional infrastructure     |
 | **Blink Vault** | The product — intelligent file vault with AI and instant sharing |
 
-**Philosophy**: "Store, share, and find — in a blink." Technology must be invisible.
+**Philosophy**: "Save anything. Find everything. In a blink." Technology must be invisible.
 
 ---
 
@@ -140,7 +140,7 @@ These terms MUST be used consistently:
 
 #### Tone: Swift, Visual, Aspirational
 
-> "Store, share, and find — in a blink. Your files, safe and searchable instantly."
+> "Save anything. Find everything. In a blink. Your files, safe and searchable instantly."
 
 ### Onboarding
 
@@ -251,13 +251,17 @@ _Note: The "Invisible Librarian" Rule — never explain how search works. It jus
 
 **Primary Tagline:**
 
-> "Store, share, and find — in a blink."
+> "Save anything. Find everything. In a blink."
 
 **Secondary Options:**
 
-> "AI organizes everything the moment you upload." "Share any file with a link. No setup, no
-> folders." "No setup, no folders. Instant results."
-> "Your vault, your rules."
+> "AI organizes everything the moment you upload."
+> "Share any file with a link. No setup, no folders."
+> "No setup, no folders. Instant results."
+> "Everything you save. Instantly found."
+> "Blink it in. Find it fast."
+> "Your vault. Instantly searchable."
+> "Save now. Find later. Zero effort."
 
 ---
 
@@ -265,11 +269,11 @@ _Note: The "Invisible Librarian" Rule — never explain how search works. It jus
 
 ### Short (< 20 words)
 
-> Blink Vault: Store, share, and find — in a blink. AI organizes everything. No setup, no folders.
+> Blink Vault: Save anything. Find everything. In a blink. AI organizes everything. No setup, no folders.
 
 ### Medium (100-200 words)
 
-> Blink Vault is the fastest way to store, share, and find anything you care about. Upload a file
+> Blink Vault is the fastest way to save and find anything you care about. Upload a file
 > and AI organizes it instantly — no folders, no setup, no hassle. Share any file with a link.
 >
 > When you need it later, describe what you remember: a name, a color, a keyword. Done.
@@ -277,7 +281,7 @@ _Note: The "Invisible Librarian" Rule — never explain how search works. It jus
 > Built for people who store everything but hate organizing.
 > Your Vault is private, locked by Vaultica, and works across all your devices.
 >
-> Store, share, and find — in a blink.
+> Save anything. Find something. In a blink.
 
 ### Long (200+ words)
 
@@ -303,7 +307,7 @@ _Note: The "Invisible Librarian" Rule — never explain how search works. It jus
 > to everyday users. Blink Vault turns your scattered files into a searchable library
 > that works like your memory — only faster.
 >
-> Store, share, and find — in a blink.
+> Save anything. Find everything. In a blink.
 
 ---
 

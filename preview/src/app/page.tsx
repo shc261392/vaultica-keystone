@@ -446,7 +446,7 @@ function Typography() {
           <div>
             <span className="text-xs text-vault-text-secondary font-mono">H1 / 3rem / 700</span>
             <p className="text-5xl font-bold tracking-tight text-vault-text-primary">
-              Store, share, and find — in a blink.
+              Save anything. Find everything. In a blink.
             </p>
           </div>
           <div>
@@ -555,7 +555,7 @@ function MockWebsite() {
         {/* Hero Section */}
         <section className="px-6 py-16 text-center bg-vault-surface-primary">
           <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
-            Store, share, and find — <span className="text-brand-blue">in a blink.</span>
+            Save anything. Find everything. <span className="text-brand-blue">In a blink.</span>
           </h1>
           <p className="text-xl text-vault-text-secondary max-w-2xl mx-auto mb-8">
             AI organizes everything the moment you upload. Share any file with a link. No setup, no
@@ -598,7 +598,7 @@ function MockWebsite() {
               </div>
               <h3 className="text-lg font-semibold mb-2">Locked by Vaultica</h3>
               <p className="text-vault-text-secondary text-sm">
-                Rest assured. End-to-end encrypted. Your vault, your rules.
+                Rest assured. End-to-end encrypted. Your vault. Always secure.
               </p>
             </div>
           </div>

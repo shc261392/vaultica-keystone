@@ -27,9 +27,10 @@ pnpm run preview    # Start preview app
 
 - **Color**: OKLCH-based, brand blue `#27abec`
 - **Typography**: Inter + JetBrains Mono
-- **Aesthetic**: Industrial Elegance (heavy borders, high contrast)
+- **Aesthetic**: Industrial Elegance (heavy borders, high contrast, 2026 professional)
 - **Theme**: Dark-only
+- **Tagline**: "Save anything. Find everything. In a blink."
 
 ---
 
-Last updated: 2026-01-27
+Last updated: 2026-03-27

@@ -62,8 +62,8 @@ Structure in `/docs`:
 
 - **Product**: Blink Vault
 - **Aesthetic**: Industrial Elegance (heavy borders, high contrast)
-- **Voice**: Swift, minimal, solid — "Blinked to your Vault. ⚡"
-- **Avoid**: Playful language, tech jargon, weak borders
+- **Voice**: Swift, minimal, solid — "Save anything. Find everything. In a blink."
+- **Avoid**: Playful language, tech jargon, weak borders, vibe-app aesthetics
 
 ## Terminology
 

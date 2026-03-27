@@ -13,20 +13,24 @@
 | **Vaultica**    | The company — solid, professional infrastructure and "hardened" backend               |
 | **Blink Vault** | The product (official legal name) — intelligent file vault with AI and instant sharing |
 
-**Philosophy**: "Store, share, and find — in a blink." Technology must be invisible. We provide a
+**Philosophy**: "Save anything. Find everything. In a blink." Technology must be invisible. We provide a
 sense of _security and calm_, not "data processing."
 
 ---
 
 ## What is Blink Vault?
 
-**Blink Vault: Store, share, and find — in a blink.**
+**Blink Vault: Save anything. Find everything. In a blink.**
 
 Blink Vault is the intelligent file vault that organizes everything the moment you upload.
 Share any file with a link. No setup, no folders. It is designed for anyone who stores files
 but has no time to organize — from creative professionals to everyday users.
 
-### The Problem We Solve: The "File Chaos"
+### The SAFE Concept
+
+**SAFE** = **S**ave **A**nything, **F**ind **E**verything. This is the dual-mode interaction
+model at the heart of Blink Vault. One input bar handles both saving and finding — the
+user never has to think about which mode they're in.
 
 You constantly save files, screenshots, documents, and references. But finding them later is
 impossible. You dig through folders, cloud drives, and browser chaos.
@@ -60,7 +64,8 @@ Think: Swift capture into an impenetrable vault. Speed meets security.
 ### Design Philosophy
 
 Vaultica's visual language is **Industrial Elegance** — the intersection of brutalist precision and
-refined sophistication.
+refined sophistication. This is a 2026 professional tool — not a "vibe app." Every pixel
+serves a purpose. The design communicates efficiency, security, and speed.
 
 #### Key Principles
 
@@ -68,21 +73,25 @@ refined sophistication.
    - Heavy borders (2-4px) that anchor UI elements
    - Substantial typography that commands attention
    - Deliberate use of negative space
+   - Monospace accents for technical authority
 
 2. **High Contrast**
    - Dark surfaces with bright, clean text
    - Accent colors that pop against neutral backgrounds
    - Clear distinction between interactive and static elements
+   - Dark-only theme — no light mode distraction
 
 3. **Brutalist Precision**
    - Clean, geometric shapes
    - Minimal decorative elements
    - Function-first design decisions
+   - No playful rounded bubble UI, no gradient backgrounds, no emoji-driven UX
 
 4. **Security Aesthetic**
    - Lock/vault iconography where appropriate
    - Strong borders suggest containment and protection
    - Stable, grounded layouts (nothing feels fragile)
+   - Everything has a defined boundary
 
 ### Color Psychology
 

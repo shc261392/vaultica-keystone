@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$metadata": {
     "description": "Vaultica Spacing Tokens - Consistent spacing scale for layouts",
-    "version": "1.0.0",
-    "lastUpdated": "2026-01-12"
+    "version": "2.0.0",
+    "lastUpdated": "2026-03-27"
   },
   "spacing": {
     "$description": "Base 4px spacing scale for consistent rhythm",
