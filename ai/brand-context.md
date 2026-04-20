@@ -97,10 +97,13 @@ serves a purpose. The design communicates efficiency, security, and speed.
 
 | Token           | Purpose                                                  | Feeling                       |
 | --------------- | -------------------------------------------------------- | ----------------------------- |
-| `vault-surface` | Comfortable dark backgrounds (brighter dark, not black)   | Security, focus, ease         |
-| `brand-blue`    | Primary accent `#27abec` / `oklch(0.7031 0.1426 236.68)` | Speed, clarity, trust         |
-| `vault-border`  | Visible borders with softer contrast                      | Structure without harshness   |
-| `vault-text`    | High-contrast text (brand white `#f0fbff`)               | Clarity, readability          |
+| `vault-surface` | Dark navy-teal backgrounds (`#070d10`, `#0c1820`)        | Depth, tech, immersion        |
+| `brand-blue`    | Electric Blue `#00F0FF` — primary CTA accent             | Energy, speed, futurism       |
+| `neon-yellow`   | `#FFFF33` / `#FFFD37` — warning and highlight contrast   | Attention, urgency, warmth    |
+| `magenta`       | `#FF00FF` — critical/error states                        | Alert, dramatic, unmistakable |
+| `silver`        | `#C4C4C4` — secondary text, neutral UI                   | Precision, clarity, neutrality|
+| `vault-border`  | Electric teal borders (`#00A7B3`, subtle glow)           | Structure, neon containment   |
+| `vault-text`    | Cool-white primary `#e4f8ff`                             | Clarity, readability          |
 
 ### Typography Philosophy
 

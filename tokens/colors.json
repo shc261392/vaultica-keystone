@@ -7,22 +7,66 @@
   },
   "color": {
     "brand": {
-      "$description": "Official Vaultica brand colors from logo",
+      "$description": "Official Vaultica brand colors — Electric Blue palette",
       "black": {
-        "value": "oklch(0.3503 0.014 256.77)",
+        "value": "#070d10",
         "type": "color",
-        "hex": "#363b42"
+        "hex": "#070d10",
+        "description": "Dark navy-teal — brand dark"
       },
       "white": {
-        "value": "oklch(0.994 0.0084 197.02)",
+        "value": "#e4f8ff",
         "type": "color",
-        "hex": "#f0fbff"
+        "hex": "#e4f8ff",
+        "description": "Cool white tinted"
       },
       "blue": {
-        "value": "oklch(0.7031 0.1426 236.68)",
+        "value": "#00F0FF",
         "type": "color",
-        "hex": "#27abec",
-        "description": "Primary brand color"
+        "hex": "#00F0FF",
+        "description": "Electric Blue — Primary brand accent"
+      },
+      "electric-darker-1": {
+        "value": "#00CDDB",
+        "type": "color",
+        "hex": "#00CDDB",
+        "description": "Electric Blue hover"
+      },
+      "electric-darker-2": {
+        "value": "#00A7B3",
+        "type": "color",
+        "hex": "#00A7B3",
+        "description": "Electric Blue active"
+      },
+      "electric-deep": {
+        "value": "#005A61",
+        "type": "color",
+        "hex": "#005A61",
+        "description": "Electric Blue deep accent"
+      },
+      "neon-yellow": {
+        "value": "#FFFF33",
+        "type": "color",
+        "hex": "#FFFF33",
+        "description": "Neon Yellow — highlight contrast"
+      },
+      "sunshine-yellow": {
+        "value": "#FFFD37",
+        "type": "color",
+        "hex": "#FFFD37",
+        "description": "Sunshine Yellow — warning contrast"
+      },
+      "magenta": {
+        "value": "#FF00FF",
+        "type": "color",
+        "hex": "#FF00FF",
+        "description": "Magenta — critical/error contrast"
+      },
+      "silver": {
+        "value": "#C4C4C4",
+        "type": "color",
+        "hex": "#C4C4C4",
+        "description": "Silver — secondary text contrast"
       }
     },
     "bootstrap": {
@@ -70,25 +114,40 @@
         "1000": { "value": "oklch(10% 0.007 254)", "type": "color" }
       },
       "primary": {
-        "$description": "Primary blue scale based on brand blue",
-        "50": { "value": "oklch(96% 0.03 236)", "type": "color" },
-        "100": { "value": "oklch(92% 0.06 236)", "type": "color" },
-        "200": { "value": "oklch(85% 0.10 236)", "type": "color" },
-        "300": { "value": "oklch(78% 0.12 236)", "type": "color" },
-        "400": {
-          "value": "oklch(0.7031 0.1426 236.68)",
-          "type": "color",
-          "description": "Brand blue"
-        },
-        "500": { "value": "oklch(62% 0.14 236)", "type": "color" },
-        "600": { "value": "oklch(52% 0.13 236)", "type": "color" },
-        "700": {
-          "value": "oklch(42% 0.11 236)",
-          "type": "color",
-          "description": "Secondary (#1b67a1)"
-        },
-        "800": { "value": "oklch(34% 0.09 236)", "type": "color" },
-        "900": { "value": "oklch(26% 0.06 236)", "type": "color" }
+        "$description": "Electric Blue scale",
+        "50":  { "value": "#e0ffff", "type": "color" },
+        "100": { "value": "#b2ffff", "type": "color", "description": "Celeste" },
+        "200": { "value": "#6ffbff", "type": "color" },
+        "300": { "value": "#00F0FF", "type": "color", "hex": "#00F0FF", "description": "Electric Blue PRIMARY" },
+        "400": { "value": "#00CDDB", "type": "color", "hex": "#00CDDB", "description": "Hover" },
+        "500": { "value": "#00A7B3", "type": "color", "hex": "#00A7B3", "description": "Active" },
+        "600": { "value": "#007f8a", "type": "color" },
+        "700": { "value": "#005A61", "type": "color", "hex": "#005A61", "description": "Deep" },
+        "800": { "value": "#003840", "type": "color" },
+        "900": { "value": "#001f24", "type": "color" }
+      },
+      "neon-yellow": {
+        "$description": "Neon Yellow / Sunshine Yellow scale",
+        "300": { "value": "#ffff99", "type": "color" },
+        "400": { "value": "#FFFF33", "type": "color", "hex": "#FFFF33", "description": "Neon Yellow" },
+        "500": { "value": "#FFFD37", "type": "color", "hex": "#FFFD37", "description": "Sunshine Yellow" },
+        "600": { "value": "#d4d200", "type": "color" },
+        "700": { "value": "#9e9900", "type": "color" }
+      },
+      "magenta": {
+        "$description": "Magenta scale — critical/error",
+        "200": { "value": "#ff80ff", "type": "color" },
+        "400": { "value": "#FF00FF", "type": "color", "hex": "#FF00FF", "description": "Magenta" },
+        "600": { "value": "#CC00CC", "type": "color" },
+        "800": { "value": "#660066", "type": "color" },
+        "950": { "value": "#280028", "type": "color" }
+      },
+      "silver": {
+        "$description": "Silver scale — neutral contrast",
+        "200": { "value": "#ebebeb", "type": "color" },
+        "400": { "value": "#C4C4C4", "type": "color", "hex": "#C4C4C4", "description": "Silver" },
+        "600": { "value": "#8A8A8A", "type": "color" },
+        "800": { "value": "#484848", "type": "color" }
       },
       "success": {
         "$description": "Based on Bootstrap success #13c16a",

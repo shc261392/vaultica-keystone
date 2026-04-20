@@ -1,37 +1,37 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$metadata": {
-    "description": "Vaultica Semantic Tokens - Theme mapping and component tokens",
-    "version": "2.0.0",
-    "lastUpdated": "2026-03-27"
+    "description": "Vaultica Semantic Tokens - Electric Blue theme mapping",
+    "version": "2.1.0",
+    "lastUpdated": "2026-04-20"
   },
   "semantic": {
     "theme": {
       "dark": {
-        "$description": "Default Vaultica theme - Industrial Elegance dark mode",
+        "$description": "Default Vaultica theme - Electric Blue dark mode",
         "surface": {
-          "app": "{color.primitive.neutral.950}",
-          "panel": "{color.primitive.neutral.900}",
-          "card": "{color.primitive.neutral.900}",
-          "elevated": "{color.primitive.neutral.800}",
-          "overlay": "oklch(0% 0 0 / 0.6)"
+          "app": "#070d10",
+          "panel": "#0c1820",
+          "card": "#0c1820",
+          "elevated": "#122530",
+          "overlay": "rgba(0, 0, 0, 0.7)"
         },
         "text": {
-          "primary": "{color.primitive.neutral.50}",
-          "secondary": "{color.primitive.neutral.300}",
-          "muted": "{color.primitive.neutral.400}",
-          "disabled": "{color.primitive.neutral.600}"
+          "primary": "#e4f8ff",
+          "secondary": "#C4C4C4",
+          "muted": "#5a8a92",
+          "disabled": "#1a3040"
         },
         "border": {
-          "default": "{color.primitive.neutral.700}",
-          "strong": "{color.primitive.neutral.500}",
-          "subtle": "{color.primitive.neutral.800}"
+          "default": "#1a3040",
+          "strong": "#00A7B3",
+          "subtle": "rgba(0, 240, 255, 0.07)"
         },
         "interactive": {
-          "default": "{color.primitive.primary.500}",
+          "default": "{color.primitive.primary.300}",
           "hover": "{color.primitive.primary.400}",
-          "active": "{color.primitive.primary.600}",
-          "disabled": "{color.primitive.neutral.700}"
+          "active": "{color.primitive.primary.500}",
+          "disabled": "#1a3040"
         }
       },
       "light": {
@@ -66,31 +66,31 @@
       "$description": "Component-specific semantic tokens",
       "button": {
         "primary": {
-          "background": "{color.semantic.vault.accent.default}",
-          "background-hover": "{color.semantic.vault.accent.hover}",
-          "background-active": "{color.semantic.vault.accent.active}",
-          "text": "{color.primitive.neutral.0}",
+          "background": "{color.primitive.primary.300}",
+          "background-hover": "{color.primitive.primary.400}",
+          "background-active": "{color.primitive.primary.500}",
+          "text": "#070d10",
           "border": "transparent"
         },
         "secondary": {
           "background": "transparent",
-          "background-hover": "{color.primitive.neutral.800}",
-          "background-active": "{color.primitive.neutral.700}",
-          "text": "{color.semantic.vault.text.primary}",
-          "border": "{color.semantic.vault.border.strong}"
+          "background-hover": "#122530",
+          "background-active": "#1a3040",
+          "text": "#e4f8ff",
+          "border": "{color.primitive.primary.500}"
         },
         "ghost": {
           "background": "transparent",
-          "background-hover": "{color.primitive.neutral.800}",
-          "background-active": "{color.primitive.neutral.700}",
-          "text": "{color.semantic.vault.text.primary}",
+          "background-hover": "#0c1820",
+          "background-active": "#122530",
+          "text": "#e4f8ff",
           "border": "transparent"
         },
         "danger": {
-          "background": "{color.primitive.critical.500}",
-          "background-hover": "{color.primitive.critical.400}",
-          "background-active": "{color.primitive.critical.600}",
-          "text": "{color.primitive.neutral.0}",
+          "background": "{color.primitive.magenta.400}",
+          "background-hover": "{color.primitive.magenta.600}",
+          "background-active": "{color.primitive.magenta.800}",
+          "text": "#e4f8ff",
           "border": "transparent"
         }
       },
