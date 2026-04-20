@@ -14,16 +14,16 @@
       }
     </style>
     <linearGradient id="bg-gradient-dark" x1="0" y1="0" x2="440" y2="140">
-      <stop offset="0%" stop-color="#1e2329"/>
-      <stop offset="100%" stop-color="#262c34"/>
+      <stop offset="0%" stop-color="#070d10"/>
+      <stop offset="100%" stop-color="#070d10"/>
     </linearGradient>
   </defs>
   
   <!-- Rich Dark Gradient Background -->
-  <rect width="440" height="140" rx="16" fill="url(#bg-gradient-dark)"/>
+  <rect width="440" height="140" rx="16" fill="#070d10"/>
   
   <text y="90" text-anchor="middle" dominant-baseline="auto">
-    <tspan x="121" class="logo-text-blink" font-size="72" fill="#27abec">Blink</tspan>
-    <tspan x="315" class="logo-text-vault" font-size="72" fill="#d6e8f0">Vault</tspan>
+    <tspan x="121" class="logo-text-blink" font-size="72" fill="#00F0FF">Blink</tspan>
+    <tspan x="315" class="logo-text-vault" font-size="72" fill="#ffffff">Vault</tspan>
   </text>
 </svg>

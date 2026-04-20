@@ -11,8 +11,8 @@
   </defs>
   
   <!-- Dark Background -->
-  <rect width="300" height="140" rx="8" fill="#363b42"/>
+  <rect width="300" height="140" rx="8" fill="#070d10"/>
   
   <!-- Text: "Blink" - Brand Blue -->
-  <text x="50%" y="90" text-anchor="middle" class="logo-text" font-size="72" fill="#27abec">Blink</text>
+  <text x="50%" y="90" text-anchor="middle" class="logo-text" font-size="72" fill="#00F0FF">Blink</text>
 </svg>

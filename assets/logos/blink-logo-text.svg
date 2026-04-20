@@ -11,5 +11,5 @@
   </defs>
   
   <!-- Text: "Blink" - Brand Blue on transparent -->
-  <text x="50%" y="68" text-anchor="middle" class="logo-text" font-size="72" fill="#27abec">Blink</text>
+  <text x="50%" y="68" text-anchor="middle" class="logo-text" font-size="72" fill="#00F0FF">Blink</text>
 </svg>
