@@ -6,9 +6,9 @@
 
 | Entity          | Role                                      | Usage Example                  |
 | --------------- | ----------------------------------------- | ------------------------------ |
-| **Vaultica**    | The company/team name                     | "© 2026 Vaultica"              |
-| **Blink Vault** | The product name (official, legal, SEO)   | "Welcome to Blink Vault"       |
-| **Blink**       | The action keyword, command, abbreviation | "Blink it", `/blink`, `@blink` |
+| **Vaultica**    | The company/team name                    | "© 2026 Vaultica"                |
+| **Blink Vault** | The product name (official, legal, SEO)  | "Welcome to Blink Vault"         |
+| **Blink**       | Brand shorthand in the promise           | "AI-ready in a Blink"            |
 
 ## Files in this directory
 

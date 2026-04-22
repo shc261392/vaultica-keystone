@@ -245,7 +245,7 @@ function LogoPreview() {
         <div className="card-brutalist">
           <h3 className="text-lg font-semibold mb-4">Primary Wordmark</h3>
           <div
-            className={`${bgClass} rounded-lg p-8 flex items-center justify-center min-h-[200px] border-2 border-vault-border-default`}
+            className={`${bgClass} rounded-lg p-8 flex items-center justify-center min-h-50 border-2 border-vault-border-default`}
           >
             {bgMode === 'light' ? (
               <img
@@ -270,7 +270,7 @@ function LogoPreview() {
         <div className="card-brutalist">
           <h3 className="text-lg font-semibold mb-4">Icon Mark</h3>
           <div
-            className={`${bgClass} rounded-lg p-8 flex items-center justify-center min-h-[200px] border-2 border-vault-border-default`}
+            className={`${bgClass} rounded-lg p-8 flex items-center justify-center min-h-50 border-2 border-vault-border-default`}
           >
             <img
               src="/logos/blink-icon.svg"
@@ -285,7 +285,7 @@ function LogoPreview() {
         <div className="card-brutalist">
           <h3 className="text-lg font-semibold mb-4">Favicon</h3>
           <div
-            className={`${bgClass} rounded-lg p-8 flex items-center justify-center gap-8 min-h-[200px] border-2 border-vault-border-default`}
+            className={`${bgClass} rounded-lg p-8 flex items-center justify-center gap-8 min-h-50 border-2 border-vault-border-default`}
           >
             <div className="text-center">
               <img src="/logos/favicon.ico" alt="Favicon 16x16" className="w-4 h-4 mx-auto" />
@@ -307,7 +307,7 @@ function LogoPreview() {
         <div className="card-brutalist">
           <h3 className="text-lg font-semibold mb-4">Clearspace Guide</h3>
           <div
-            className={`${bgClass} rounded-lg p-8 flex items-center justify-center min-h-[200px] border-2 border-vault-border-default relative`}
+            className={`${bgClass} rounded-lg p-8 flex items-center justify-center min-h-50 border-2 border-vault-border-default relative`}
           >
             <div className="border-2 border-dashed border-brand-blue/50 p-8 rounded">
               {bgMode === 'light' ? (
@@ -446,7 +446,7 @@ function Typography() {
           <div>
             <span className="text-xs text-vault-text-secondary font-mono">H1 / 3rem / 700</span>
             <p className="text-5xl font-bold tracking-tight text-vault-text-primary">
-              Save anything. Find everything. In a blink.
+              AI-ready in a Blink.
             </p>
           </div>
           <div>
@@ -462,8 +462,8 @@ function Typography() {
           <div>
             <span className="text-xs text-vault-text-secondary font-mono">Body / 1rem / 400</span>
             <p className="text-base text-vault-text-primary">
-              No folders. No effort. Blink it and move on. When you need it, find it by what you
-              remember. Zero config. Zero hassle.
+              One vault for everything your AI needs. Sync drives, send what matters, and make
+              every format searchable without manual cleanup.
             </p>
           </div>
           <div>
@@ -555,11 +555,10 @@ function MockWebsite() {
         {/* Hero Section */}
         <section className="px-6 py-16 text-center bg-vault-surface-primary">
           <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
-            Save anything. Find everything. <span className="text-brand-blue">In a blink.</span>
+            One vault for everything your AI needs. <span className="text-brand-blue">AI-ready in a Blink.</span>
           </h1>
           <p className="text-xl text-vault-text-secondary max-w-2xl mx-auto mb-8">
-            AI organizes everything the moment you upload. Share any file with a link. No setup, no
-            folders.
+            Sync drives, send what matters from apps, and make every format AI-ready in one vault.
           </p>
           <div className="flex items-center justify-center gap-4">
             <button className="btn-primary flex items-center gap-2">
@@ -578,9 +577,10 @@ function MockWebsite() {
               <div className="w-12 h-12 rounded-lg bg-brand-blue/20 flex items-center justify-center mb-4">
                 <Zap className="text-brand-blue" size={24} />
               </div>
-              <h3 className="text-lg font-semibold mb-2">Blink It. In a Blink</h3>
+              <h3 className="text-lg font-semibold mb-2">From everywhere. Into one place.</h3>
               <p className="text-vault-text-secondary text-sm">
-                One tap. Done. No setup, no hassle. Your files land safely in your Vault.
+                Sync cloud drives, send selected content from apps, and drop local files into one
+                private vault.
               </p>
             </div>
             <div className="card-brutalist">
@@ -905,7 +905,7 @@ function IconButtonShowcase() {
           </div>
           <div className="flex flex-col items-center gap-2">
             <button
-              className="p-2.5 rounded-lg text-vault-text-secondary outline outline-2 outline-offset-2 outline-brand-blue"
+              className="p-2.5 rounded-lg text-vault-text-secondary outline-2 outline-offset-2 outline-brand-blue"
               aria-label="Focus"
             >
               <Copy size={20} />
@@ -982,7 +982,7 @@ function IconButtonShowcase() {
         <h3 className="text-lg font-semibold mb-4">Variants</h3>
         <div className="card-brutalist flex flex-wrap gap-4">
           <button className="btn-primary flex items-center gap-2 text-sm">
-            <Zap size={18} /> Blink It
+            <Zap size={18} /> Add to Vault
           </button>
           <button className="btn-secondary flex items-center gap-2 text-sm">
             <Share2 size={18} /> Share

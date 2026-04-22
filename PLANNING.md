@@ -29,7 +29,7 @@ pnpm run preview    # Start preview app
 - **Typography**: Inter + JetBrains Mono
 - **Aesthetic**: Industrial Elegance (heavy borders, high contrast, 2026 professional)
 - **Theme**: Dark-only
-- **Tagline**: "Save anything. Find everything. In a blink."
+- **Tagline**: "AI-ready in a Blink."
 
 ---
 

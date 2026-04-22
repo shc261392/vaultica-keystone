@@ -10,32 +10,29 @@
 
 | Entity          | Description                                                                           |
 | --------------- | ------------------------------------------------------------------------------------- |
-| **Vaultica**    | The company — solid, professional infrastructure and "hardened" backend               |
-| **Blink Vault** | The product (official legal name) — intelligent file vault with AI and instant sharing |
+| **Vaultica**    | The company — solid, professional infrastructure                                      |
+| **Blink Vault** | The product (official legal name) — a central vault that makes scattered content AI-ready |
 
-**Philosophy**: "Save anything. Find everything. In a blink." Technology must be invisible. We provide a
-sense of _security and calm_, not "data processing."
+**Philosophy**: **"AI-ready in a Blink."** Blink Vault brings loose digital context into one place.
+Technology stays invisible, but the outcome is obvious: centralized, searchable, AI-ready content.
 
 ---
 
 ## What is Blink Vault?
 
-**Blink Vault: Save anything. Find everything. In a blink.**
+**Blink Vault: One vault for everything your AI needs.**
 
-Blink Vault is the intelligent file vault that organizes everything the moment you upload.
-Share any file with a link. No setup, no folders. It is designed for anyone who stores files
-but has no time to organize — from creative professionals to everyday users.
+Blink Vault is the central vault for the loose digital context spread across your tools.
+Cloud drives, messaging apps, saved links, notes, PDFs, screenshots, video, and random local
+files all end up in one place — and become searchable and AI-ready.
 
-### The SAFE Concept
+Blink Vault is not framed as a bulk-import archive system. The product model is intentional:
 
-**SAFE** = **S**ave **A**nything, **F**ind **E**verything. This is the dual-mode interaction
-model at the heart of Blink Vault. One input bar handles both saving and finding — the
-user never has to think about which mode they're in.
+- **Sync** cloud drives like Dropbox and Google Drive
+- **Send** specific files, links, or messages from apps like Telegram, Discord, or WhatsApp
+- **Drop** anything from desktop or local storage
 
-You constantly save files, screenshots, documents, and references. But finding them later is
-impossible. You dig through folders, cloud drives, and browser chaos.
-
-**Blink Vault makes everything searchable. Instantly. AI organizes it for you.**
+The user chooses what goes in. Blink Vault makes it useful immediately.
 
 ---
 
@@ -55,7 +52,7 @@ The name combines:
 - **Secure** — Locked safely in your personal Vault
 - **Unique** — Avoids name collision with other apps/companies
 
-Think: Swift capture into an impenetrable vault. Speed meets security.
+Think: one vault, many sources, zero fragmentation.
 
 ---
 
@@ -116,56 +113,52 @@ serves a purpose. The design communicates efficiency, security, and speed.
 
 ## Target Users
 
-### 1. The Everyday User (Primary)
+### 1. Data Hoarders
 
-- Stores files, photos, and documents regularly
-- Wants to find anything in seconds
-- Values simplicity, speed, and sharing
-- Non-technical, needs invisible tech
+- Save everything, remember nothing
+- Need one searchable place for scattered files, links, and notes
+- Value clarity over manual organization
 
-### 2. The Creative Professional
+### 2. AI Workers & Designers
 
-- Saves design references, mood boards, and inspiration
-- Searches by **visual vibe** and content
-- Values **flow** and zero friction
-- Power user who appreciates speed
+- Need better context for AI tools
+- Pull from many sources: references, briefs, notes, assets, links
+- Value fast retrieval and low-friction ingestion
 
-### 3. The Team Collaborator
+### 3. Digital Nomads
 
-- Needs to share files instantly with a link
-- Values quick sharing and link generation
-- Active in teams, communities, and remote work
+- Work across devices and cloud tools
+- Need one place that follows them everywhere
+- Value centralization more than storage itself
 
 ---
 
 ## Core Features (Design Context)
 
-### 1. Blink It. In a Blink
+### 1. The Hub
 
-**UI Implication**: One-tap save, minimal friction, instant feedback ("Saved. In a blink. ⚡")
+**UI Implication**: Show Blink Vault as the center point for many sources. Platform cards,
+source labels, and flow cues should reinforce centralization.
 
-### 2. Invisible Understanding
+### 2. Any Format
 
-**UI Implication**: NO indicators of "indexing" or "processing." It just works. The system
-"understands."
+**UI Implication**: Surface format breadth clearly — notes, URLs, images, video, PDFs, voice,
+and data files all belong.
 
-### 3. Find by Memory
+### 3. Intentional Ingestion
 
-**UI Implication**: Natural language search bar as hero element, type-ahead suggestions, visual
-results
+**UI Implication**: Distinguish between **sync**, **send**, and **drop**. Avoid interfaces that imply
+bulk importing entire app histories.
 
-### 4. Visual Gallery
+### 4. AI-ready Fast
 
-**UI Implication**: Edge-to-edge image display, no text labels or tags, clean grid of Blinks
+**UI Implication**: Emphasize immediacy and usability. Content should feel ready for search and AI
+without exposing internals.
 
-### 5. Instant Links
+### 5. Private by Default
 
-**UI Implication**: Link generation UI, expiration controls, privacy settings
-
-### 6. Locked by Vaultica
-
-**UI Implication**: Subtle security indicators, "Rest assured. Your vault is safe."
-messaging, solid feeling
+**UI Implication**: Stable layouts, strong boundaries, and calm reassurance. Privacy should feel
+structural, not promotional.
 
 ---
 
@@ -176,9 +169,10 @@ messaging, solid feeling
 **NEVER explain how search works.** The user should feel the system simply "understands" their
 intent. No mentions of:
 
-- ❌ Indexing, mapping, OCR, vector search
+- ❌ Indexing, OCR, vector search
 - ❌ Database, processing, recognition
 - ❌ How the AI works
+- ❌ Bulk-import language that suggests whole-chat dumping
 
 ### Visual Don'ts
 
@@ -190,10 +184,11 @@ intent. No mentions of:
 
 ### Terminology Don'ts
 
-- ❌ "Capture" (legal issues)
+- ❌ "Blink it"
+- ❌ "SAFE"
+- ❌ "Dump your chats"
 - ❌ "Asset" (corporate jargon)
-- ❌ "Snippet" (lacks emotional weight)
-- ❌ "Fragment" (deprecated, use "Blink")
+- ❌ "Snippet" (too vague)
 
 ---
 
@@ -249,5 +244,5 @@ When generating CSS or styling:
 
 ---
 
-_This document is the source of truth for Blink Vault's brand expression. When in doubt: make the
-technology invisible, emphasize speed, and keep it visual._
+_This document is the source of truth for Blink Vault's brand expression. When in doubt: centralize
+the story, keep ingestion intentional, and make the result feel immediately useful to AI._

@@ -1,90 +1,104 @@
-# ✍️ Blink Voice & Tone Guide
+# ✍️ Blink Vault Voice & Tone Guide
 
-> **For AI/LLM Context**: Use this document when generating any text content for **Blink** (by
-> Vaultica) — marketing copy, UI microcopy, documentation, or communications.
+> **For AI/LLM Context**: Use this document when generating any user-facing text for **Blink Vault**
+> by Vaultica — landing pages, product descriptions, UI microcopy, onboarding, or docs.
 
 ---
 
 ## Brand Architecture
 
-| Entity          | Role                                                 |
-| --------------- | ---------------------------------------------------- |
-| **Vaultica**    | The company — solid, professional infrastructure     |
-| **Blink Vault** | The product — intelligent file vault with AI and instant sharing |
+| Entity          | Role                                                                    |
+| --------------- | ----------------------------------------------------------------------- |
+| **Vaultica**    | The company — solid, dependable infrastructure                          |
+| **Blink Vault** | The product — one vault for scattered digital context, made AI-ready    |
 
-**Philosophy**: "Save anything. Find everything. In a blink." Technology must be invisible.
+**Primary motto**: **"AI-ready in a Blink."**
+
+**Primary headline**: **"One vault for everything your AI needs."**
+
+**Philosophy**: Your loose data is everywhere. Blink Vault pulls it into one place, makes it
+searchable, and keeps the technology invisible.
 
 ---
 
-## Brand Voice: Confident & Effortless
+## Brand Voice: Calm, Clear, Intentional
 
-Blink speaks with **assured calm**. Our voice is the steady hand that makes complexity vanish. We
-provide a sense of _security and ease_, not "data processing."
+Blink Vault speaks with **assured clarity**. It does not sound like a hype machine, a consumer
+cloud drive, or a technical whitepaper. The tone is premium, direct, and useful.
+
+We emphasize:
+
+- **Centralization** — one vault, not scattered silos
+- **Intentionality** — the user decides what goes in
+- **AI-readiness** — content becomes useful to AI tools immediately
+- **Ease** — no manual organizing, no jargon, no drama
 
 ---
 
 ## Voice Attributes
 
-### 1. **Swift**
+### 1. **Centralized**
 
-We emphasize speed and immediacy. Everything happens in a heartbeat.
+The product solves fragmentation first.
 
-| ✅ Do                       | ❌ Don't                                              |
-| --------------------------- | ----------------------------------------------------- |
-| "Saved. In a blink. ⚡"     | "Your file has been successfully uploaded and saved." |
-| "Find it instantly."        | "You might be able to find things faster!"            |
-| "Blink it. Rest easy."     | "Save now for future reference."                      |
+| ✅ Do                                           | ❌ Don't                                      |
+| ----------------------------------------------- | --------------------------------------------- |
+| "From everywhere. Into one place."             | "Store more files in the cloud."             |
+| "One vault for everything your AI needs."      | "A smarter file uploader."                   |
+| "Your loose data, finally in one vault."       | "Another place to keep assets."              |
 
-### 2. **Invisible**
+### 2. **Intentional**
 
-Technology stays hidden. The user should feel the system simply "understands."
+The user controls what enters the vault.
 
-| ✅ Do                               | ❌ Don't                                        |
-| ----------------------------------- | ----------------------------------------------- |
-| "Find by what you remember."        | "Search by content, OCR, or vector similarity." |
-| "Rest assured. Locked by Vaultica." | "256-bit AES encryption at rest."               |
-| "Links expire when you say."        | "Configurable TTL on shared URLs."              |
+| ✅ Do                                                        | ❌ Don't                                            |
+| ------------------------------------------------------------ | --------------------------------------------------- |
+| "Sync drives. Send what matters."                           | "Dump your entire chat history."                   |
+| "You choose what goes in."                                  | "We ingest everything automatically."              |
+| "Forward the files, links, or messages you want indexed."   | "Connect Telegram and import it all."              |
 
-### 3. **Minimal**
+### 3. **Effortless**
 
-Never use two words when one will do.
+The product should feel immediate without sounding magical.
 
-| ✅ Do             | ❌ Don't                                                |
-| ----------------- | ------------------------------------------------------- |
-| "Blink it"        | "Drag and drop to save to your collection"              |
-| "3 saved"         | "Congratulations! You have successfully saved 3 items!" |
-| "Open your Vault" | "Navigate to your collection of saved items"            |
+| ✅ Do                                  | ❌ Don't                                      |
+| -------------------------------------- | --------------------------------------------- |
+| "Any format. All AI-ready."           | "Our proprietary system processes content."  |
+| "Drop it in. Blink does the rest."    | "Configure your pipeline to begin indexing." |
+| "Instantly searchable."               | "Eventually queryable after processing."     |
 
 ### 4. **Solid**
 
-The Vault is private, personal, and unshakeable. Even errors feel grounded.
+Everything should feel stable, private, and dependable.
 
-| ✅ Do                         | ❌ Don't                                            |
-| ----------------------------- | --------------------------------------------------- |
-| "Couldn't save. Try again."   | "Oops! Something went wrong! We're so sorry!"       |
-| "Too large. Max 100MB."       | "Oh no! That file is way too big for us to handle!" |
-| "Session ended. Sign in."     | "Whoopsie! Looks like you got logged out! 😅"       |
+| ✅ Do                         | ❌ Don't                                      |
+| ----------------------------- | --------------------------------------------- |
+| "Couldn't upload. Try again." | "Whoops! Something went wrong 😅"            |
+| "Too large. Try a smaller file." | "Uh oh, that file is too huge for us!"   |
+| "Your vault stays private."  | "Trust us, your content is probably safe."   |
 
 ---
 
 ## Core Terminology — MANDATORY
 
-These terms MUST be used consistently:
+Use these terms consistently:
 
-| Term                | Meaning                           | Usage                      |
-| ------------------- | --------------------------------- | -------------------------- |
-| **Blink Vault**     | The product (official legal name) | "Welcome to Blink Vault"   |
-| **Blink** (noun)    | A single saved item               | "Your latest Blink"        |
-| **Blink it** (verb) | The save action                   | "Blink it. Find it later." |
-| **Your Vault**      | The user's collection             | "Open your Vault"          |
-| **Visual Gallery**  | The display of Blinks             | Edge-to-edge, no labels    |
+| Term             | Meaning                                    | Usage Example                                  |
+| ---------------- | ------------------------------------------ | ---------------------------------------------- |
+| **Blink Vault**  | The product (official name)                | "Welcome to Blink Vault"                      |
+| **Your Vault**   | The user's central repository              | "Everything lands in your Vault"              |
+| **AI-ready**     | The core product promise                   | "Make every file AI-ready"                    |
+| **Sync**         | Automatic cloud-drive connection           | "Sync Dropbox and Google Drive"               |
+| **Send**         | User-initiated additions from apps         | "Send what matters from Telegram"             |
+| **Drop**         | Manual upload from desktop/local files     | "Drop anything from your desktop"             |
 
 ### Feedback Strings
 
-| Context                 | String                         |
-| ----------------------- | ------------------------------ |
-| Public confirmation     | "Saved. In a blink. ⚡"        |
-| Private/DM notification | "Your Blink is safe."          |
+| Context              | String                                  |
+| -------------------- | --------------------------------------- |
+| Upload confirmation  | "Added to your Vault."                 |
+| AI-ready confirmation| "Ready for search and AI."             |
+| Sync confirmation    | "Drive connected."                     |
 
 ---
 
@@ -92,89 +106,83 @@ These terms MUST be used consistently:
 
 ### Words to USE
 
-| Word            | Context                          |
-| --------------- | -------------------------------- |
-| **Blink Vault** | Product name (official)          |
-| **Vault**       | "Your Vault" (user's collection) |
-| **Blink**       | A saved item                     |
-| **Saved**       | Confirmation of action           |
-| **Find**        | Search functionality             |
-| **Instantly**   | Speed messaging                  |
-| **Collection**  | The user's library               |
-| **Private**     | Data ownership                   |
-| **Locked**      | Security (by Vaultica)           |
-| **Visual**      | Design/creative features         |
+| Word / Phrase           | Context                                  |
+| ----------------------- | ---------------------------------------- |
+| **Blink Vault**         | Product name                             |
+| **Your Vault**          | User's centralized collection            |
+| **AI-ready**            | Core value proposition                   |
+| **Searchable**          | Retrieval promise                        |
+| **Source**              | Where content comes from                 |
+| **Format**              | What type of content it is               |
+| **Sync**                | Cloud-drive integration                  |
+| **Send**                | User-controlled app-based addition       |
+| **Drop**                | Manual upload                            |
+| **Context**             | AI workflow framing                      |
 
 ### Words to AVOID
 
-#### STRICTLY PROHIBITED (Technical/Legal)
+#### STRICTLY PROHIBITED
 
-| ❌ Avoid          | Why              | ✅ Use Instead           |
-| ----------------- | ---------------- | ------------------------ |
-| **Indexed**       | Exposes tech     | "Saved," "In your Vault" |
-| **Mapped**        | Exposes tech     | "Find," "Instantly"      |
-| **OCR**           | Exposes tech     | (don't mention)          |
-| **Vector Search** | Exposes tech     | "Find"                   |
-| **Database**      | Exposes tech     | "Vault"                  |
-| **Processing**    | Exposes tech     | "Saved"                  |
-| **Capture**       | Legal issues     | "Blink," "Save"          |
-| **Asset**         | Corporate jargon | "Blink"                  |
-| **Snippet**       | Lacks emotion    | "Blink"                  |
+| ❌ Avoid                 | Why                                      | ✅ Use Instead                  |
+| ------------------------ | ---------------------------------------- | ------------------------------- |
+| **Blink it**             | No longer current brand action           | "Add to Vault", "Send", "Drop" |
+| **Blink** (noun)         | Old object terminology                   | "file", "item", "content"      |
+| **SAFE**                 | Retired interaction model                | "one vault", "AI-ready"         |
+| **Dump everything**      | Wrong ingestion model                    | "You choose what goes in"       |
+| **Archive your chats**   | Implies bulk import of private history   | "Forward what matters"          |
+| **Vector search / OCR**  | Exposes implementation                   | "searchable", "AI-ready"       |
+| **Database / processing**| Technical framing                        | "Vault", "searchable"          |
 
 #### Tone Violations
 
-| ❌ Avoid      | Why              | ✅ Use Instead   |
-| ------------- | ---------------- | ---------------- |
-| Cool          | Too casual       | Swift, clean     |
-| Magic/Magical | Overused         | (just works)     |
-| Awesome       | Vague            | (remove)         |
-| Just          | Diminishes value | (remove)         |
-| Stuff         | Vague            | Blinks, items    |
-| Oops          | Too playful      | (state directly) |
+| ❌ Avoid      | Why                        | ✅ Use Instead               |
+| ------------- | -------------------------- | ---------------------------- |
+| Magic/Magical | Overpromises               | effortless, instant          |
+| Awesome       | Vague                      | clear benefit                |
+| Stuff         | Too generic                | files, links, notes, images  |
+| Oops          | Too playful                | direct, calm language        |
 
 ---
 
 ## Tone by Context
 
-### Marketing/Landing Pages
+### Marketing / Landing Pages
 
-#### Tone: Swift, Visual, Aspirational
+#### Tone: Clear, premium, AI-forward
 
-> "Save anything. Find everything. In a blink. Your files, safe and searchable instantly."
+> "AI-ready in a Blink. One vault for everything your AI needs."
 
 ### Onboarding
 
-#### Tone: Welcoming, Minimal
+#### Tone: Welcoming, controlled, low-friction
 
-> "Welcome to Blink Vault. Zero config. Blink anything to begin."
+> "Connect a drive, send what matters, or drop files in. Your Vault is ready."
 
 ### UI Microcopy
 
-#### Tone: Minimal, Instant
+#### Tone: Minimal, direct
 
-> Button: "Blink it" Empty state: "No Blinks yet. Start collecting." Success: "Saved. In a
-> blink. ⚡"
+> Button: "Add to Vault" Empty state: "Nothing here yet." Success: "Added to your Vault."
 
 ### Error Messages
 
-#### Tone: Clear, Calm, Actionable
+#### Tone: Clear, calm, actionable
 
-> "Connection lost. Retrying..." "File format not supported. Use PNG, JPG, or PDF." "Search
-> unavailable. Check your connection."
+> "Upload failed. Try again." "Unsupported file type." "Drive sync unavailable right now."
 
 ### Documentation
 
-#### Tone: Clear, Helpful (Never expose technical internals)
+#### Tone: Helpful, never technical for its own sake
 
-> "Blink supports PNG, JPG, HEIC, and PDF. Text in images becomes searchable automatically."
+> "Blink Vault works with notes, links, PDFs, images, video, and more."
 
-_Note: The "Invisible Librarian" Rule — never explain how search works. It just understands._
+_Note: Explain outcomes, not internals._
 
-### Support/Help
+### Support / Help
 
-#### Tone: Empathetic, Solution-Focused
+#### Tone: Empathetic, solution-focused
 
-> "If a Blink isn't showing up, give it a moment. New Blinks become searchable within seconds."
+> "If something isn't showing up yet, give it a moment and refresh your Vault."
 
 ---
 
@@ -182,86 +190,77 @@ _Note: The "Invisible Librarian" Rule — never explain how search works. It jus
 
 ### Headlines
 
-- Sentence case preferred ("Search your vault" not "Search Your Vault")
+- Sentence case preferred
 - No periods on short headlines
-- Action-oriented when possible
+- Keep them crisp and declarative
 
 ### UI Labels
 
-- Concise (1-3 words when possible)
-- Consistent verb forms
-- No exclamation marks
+- 1–3 words when possible
+- Prefer familiar verbs: Add, Send, Sync, Open
+- No exclamation marks unless explicitly approved
 
 ### Buttons
 
-- Verb-first when actionable ("Upload files," "Generate link")
-- Noun for navigation ("Settings," "Help")
+- Action-first when actionable
+- Never use legacy "Blink it" phrasing
 
 ### Numbers
 
-- Use numerals: "3 files" not "three files"
-- Format large numbers: "1,234" or "1.2K"
+- Use numerals: "3 files", "12 sources"
+- Prefer compact UI formatting for large numbers
 
 ---
 
 ## Sample Copy Transformations
 
-### Before (Too Technical)
+### Before (Retired broad promise)
 
-> "Processing your image for text recognition and indexing it in your personal database."
+> "A generic save-and-find slogan without the current AI-ready positioning."
 
-### After (Blink Voice)
+### After (Current brand)
 
-> "Blinked to your Vault. ⚡ Find it instantly whenever you need it."
-
----
-
-### Before (Too Wordy)
-
-> "Welcome to Blink! We're so excited to have you here. To get started with your amazing new vault,
-> simply drag and drop any files you'd like to save into the upload area below!"
-
-### After (Blink Vault Voice)
-
-> "Welcome to Blink Vault. Blink anything to begin."
+> "AI-ready in a Blink. One vault for everything your AI needs."
 
 ---
 
-### Before (Exposes Tech)
+### Before (Wrong ingestion model)
 
-> "View your mapped snippets in the dashboard."
+> "Connect Telegram and import everything."
 
-### After (Blink Voice) — Example
+### After (Current product model)
 
-> "Open your Blink Vault to see your collection."
+> "Forward the messages, links, or files you want in your Vault."
 
 ---
 
-### Before (Wrong Terminology)
+### Before (Too technical)
 
-> "Your captured asset has been processed and indexed."
+> "Your content has been processed and indexed for vector retrieval."
 
-### After (Blink Voice) — Brief
+### After (Current tone)
 
-> "Saved to your Vault."
+> "Ready for search and AI."
 
 ---
 
 ## Taglines & Slogans
 
-**Primary Tagline:**
+**Primary motto:**
 
-> "Save anything. Find everything. In a blink."
+> "AI-ready in a Blink."
 
-**Secondary Options:**
+**Primary hero line:**
 
-> "AI organizes everything the moment you upload."
-> "Share any file with a link. No setup, no folders."
-> "No setup, no folders. Instant results."
-> "Everything you save. Instantly found."
-> "Blink it in. Find it fast."
-> "Your vault. Instantly searchable."
-> "Save now. Find later. Zero effort."
+> "One vault for everything your AI needs."
+
+**Secondary options:**
+
+> "From everywhere. Into one place."
+> "Any format. All AI-ready."
+> "Sync drives. Send what matters."
+> "Your loose data, finally in one vault."
+> "One vault. Every source. Every format."
 
 ---
 
@@ -269,57 +268,55 @@ _Note: The "Invisible Librarian" Rule — never explain how search works. It jus
 
 ### Short (< 20 words)
 
-> Blink Vault: Save anything. Find everything. In a blink. AI organizes everything. No setup, no folders.
+> Blink Vault makes your scattered files, links, notes, and media AI-ready in one searchable vault.
 
 ### Medium (100-200 words)
 
-> Blink Vault is the fastest way to save and find anything you care about. Upload a file
-> and AI organizes it instantly — no folders, no setup, no hassle. Share any file with a link.
+> Blink Vault is one vault for everything your AI needs.
 >
-> When you need it later, describe what you remember: a name, a color, a keyword. Done.
+> Your data is scattered across drives, desktops, notes apps, messaging apps, and saved links.
+> Blink Vault brings it together in one place and makes it instantly searchable.
 >
-> Built for people who store everything but hate organizing.
-> Your Vault is private, locked by Vaultica, and works across all your devices.
+> Sync Dropbox and Google Drive. Send specific files, links, or messages from apps like Telegram
+> and Discord. Drop anything from your desktop. You choose what goes in — Blink Vault handles the
+> organization.
 >
-> Save anything. Find something. In a blink.
+> Built for people who rely on AI, save too much, and hate manual cleanup, Blink Vault turns loose
+> digital context into a private, useful system that works like memory — only faster.
 
 ### Long (200+ words)
 
-> Blink Vault is the intelligent file vault built for people who save everything but organize
-> nothing.
+> Blink Vault is the central vault for scattered digital context.
 >
-> Every day, you save files worth keeping: documents, screenshots, references, photos,
-> notes. You store them somewhere—and never find them again. They vanish into cloud folders,
-> camera rolls, and browser chaos.
+> Modern work lives everywhere: cloud drives, messaging apps, saved links, random notes, PDFs,
+> screenshots, videos, and half-forgotten files on your desktop. The problem is not storage. The
+> problem is fragmentation. What you need is everywhere, which means your AI tools never get the
+> full picture.
 >
-> Blink Vault changes that. Upload anything and AI organizes it instantly. No folders to create.
-> No manual tagging — AI reads what you save and suggests tags automatically. Edit or add your
-> own anytime. The technology stays invisible — you store and find. That's it.
+> Blink Vault fixes that by bringing everything into one place and making it AI-ready in a Blink.
+> Sync cloud drives like Dropbox and Google Drive. Forward the specific files, links, or messages
+> you want from apps like Telegram and Discord. Drop anything from local storage. Nothing is bulk-
+> dumped without your intent. You stay in control of what enters the Vault.
 >
-> When you need that file later, describe what you remember. The name. The content. The keywords.
-> Blink Vault finds it.
+> Once content lands, Blink Vault makes it searchable and usable across your workflow. Notes,
+> website URLs, social links, images, video, PDFs, voice notes, and data files all become part of
+> the same private context layer.
 >
-> Share any file with a link. Set expiration and privacy controls. Keep everything else personal.
->
-> Your Vault is private and secure, locked by Vaultica's infrastructure.
->
-> Built for anyone who stores files regularly — from creative professionals
-> to everyday users. Blink Vault turns your scattered files into a searchable library
-> that works like your memory — only faster.
->
-> Save anything. Find everything. In a blink.
+> Built for data hoarders, AI workers, designers, and anyone whose digital life is spread across
+> too many tools, Blink Vault turns loose files into one clear system: a private vault that helps
+> you find what matters and feed better context into AI.
 
 ---
 
-## Target Audience: Everyone Who Stores Files
+## Target Audience
 
 When writing copy, emphasize:
 
-- **AI Organization** — "AI organizes everything the moment you upload"
-- **Instant Sharing** — "Share any file with a link"
-- **Zero Setup** — "No setup, no folders"
-- **Speed** — Zero friction, instant results
+- **Centralization** — one vault instead of scattered silos
+- **AI-readiness** — useful to AI tools immediately
+- **Intentional ingestion** — sync drives, send what matters, drop files manually
+- **Format breadth** — notes, links, PDFs, images, video, audio, code, data
 
 ---
 
-### When writing for Blink, ask: "Is the technology invisible? Does it feel instant?"
+### When writing for Blink Vault, ask: "Does this feel centralized, intentional, and AI-ready?"

@@ -6,9 +6,9 @@ Single Source of Truth for the **Blink Vault** brand. Design tokens, AI context,
 
 | Entity          | Role                                      | Example                        |
 | --------------- | ----------------------------------------- | ------------------------------ |
-| **Vaultica**    | The company/team name                     | "© 2026 Vaultica"              |
-| **Blink Vault** | The product name (official, legal, SEO)   | "Welcome to Blink Vault"       |
-| **Blink**       | The action keyword, command, abbreviation | "Blink it", `/blink`, `@blink` |
+| **Vaultica**    | The company/team name                    | "© 2026 Vaultica"                |
+| **Blink Vault** | The product name (official, legal, SEO)  | "Welcome to Blink Vault"         |
+| **Blink**       | Brand shorthand in the product promise   | "AI-ready in a Blink"            |
 
 ## Quick Start
 
@@ -68,7 +68,7 @@ Point Copilot/Cursor to `ai/brand-context.md` for styling context.
 
 ## Brand Summary
 
-- **Product**: Blink Vault — "Save anything. Find everything. In a blink."
+- **Product**: Blink Vault — "AI-ready in a Blink. One vault for everything your AI needs."
 - **Aesthetic**: Industrial Elegance (heavy borders, high contrast, professional 2026 design)
 - **Color**: Brand blue `#27abec`
 - **Theme**: Dark-only

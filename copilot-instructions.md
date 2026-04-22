@@ -62,13 +62,13 @@ Structure in `/docs`:
 
 - **Product**: Blink Vault
 - **Aesthetic**: Industrial Elegance (heavy borders, high contrast)
-- **Voice**: Swift, minimal, solid — "Save anything. Find everything. In a blink."
-- **Avoid**: Playful language, tech jargon, weak borders, vibe-app aesthetics
+- **Voice**: Calm, clear, intentional — "AI-ready in a Blink. One vault for everything your AI needs."
+- **Avoid**: Playful language, tech jargon, bulk-dump messaging, weak borders, vibe-app aesthetics
 
 ## Terminology
 
-- **Blink** = saved item
-- **Vault** = user's collection
-- **Blink it** = save action
+- **Vault** = user's centralized repository
+- **AI-ready** = core product promise
+- **Sync / Send / Drop** = the three ingestion models
 
 See `ai/brand-context.md` for full context.

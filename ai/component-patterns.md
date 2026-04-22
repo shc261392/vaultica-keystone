@@ -224,7 +224,7 @@ Padding: 0 (edge-to-edge imagery)
 
 ---
 
-### Blink Zone (Save Area)
+### Vault Intake Zone
 
 ```css
 /* Default */
@@ -233,7 +233,7 @@ Border: 3px dashed neutral-600
 Border-radius: 16px
 Padding: 48px
 Text-align: center
-Label: "Blink it" or "Drop to Blink"
+Label: "Add to Vault" or "Drop files here"
 
 /* Hover / Drag-over */
 Border-color: primary-400 (brand blue)
@@ -245,7 +245,7 @@ Size: 48px
 Color: neutral-400 → primary-400 on drag
 
 /* Success feedback */
-Show: "Blinked to your Vault. ⚡" toast
+Show: "Added to your Vault." toast
 ```
 
 ---
@@ -297,19 +297,21 @@ Gap: 24px (spacing.6) — spacious
 
 ### Key Icons
 
-| Function         | Icon Reference              |
-| ---------------- | --------------------------- |
-| Blink Vault/Home | Shield or Safe              |
-| Blink it (save)  | Lightning bolt or blink eye |
-| Search           | Magnifying glass            |
-| Settings         | Gear                        |
-| Share            | Arrow from box              |
-| Delete           | Trash                       |
-| Copy Link        | Chain links                 |
-| Expire/Timer     | Clock                       |
-| Lock             | Padlock                     |
-| Success          | Checkmark                   |
-| Error            | X or Triangle alert         |
+| Function           | Icon Reference                    |
+| ------------------ | --------------------------------- |
+| Blink Vault/Home   | Vault, stack, or central hub      |
+| Add to Vault       | Plus, tray, or upload arrow       |
+| Sync Drive         | Refresh arrows or linked folders  |
+| Send from App      | Arrow-in or forward indicator     |
+| Search             | Magnifying glass                  |
+| Settings           | Gear                              |
+| Share              | Arrow from box                    |
+| Delete             | Trash                             |
+| Copy Link          | Chain links                       |
+| Expire/Timer       | Clock                             |
+| Lock               | Padlock                           |
+| Success            | Checkmark                         |
+| Error              | X or Triangle alert               |
 
 ---
 
