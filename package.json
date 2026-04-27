@@ -40,14 +40,14 @@
     "prepare": "husky install || true"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.4.3",
-    "@commitlint/config-conventional": "^20.4.3",
-    "@commitlint/types": "^20.4.3",
-    "@types/node": "^25.3.3",
+    "@commitlint/cli": "^20.5.2",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@commitlint/types": "^20.5.0",
+    "@types/node": "^25.6.0",
     "cspell": "^8.3.0",
     "husky": "^9.0.10",
     "lint-staged": "^15.2.2",
-    "markdownlint-cli2": "^0.21.0",
+    "markdownlint-cli2": "^0.22.1",
     "nodemon": "^3.1.14",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
