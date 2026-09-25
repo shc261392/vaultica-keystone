@@ -1,12 +1,19 @@
 /**
  * Vaultica Design Tokens - TypeScript Definitions
- * Generated: 2026-03-09T11:31:22.464Z
+ * Generated: 2026-09-25T12:12:15.075Z
  */
 
 export declare const tokens: {
   color_brand_black: string;
   color_brand_white: string;
   color_brand_blue: string;
+  color_brand_electric_darker_1: string;
+  color_brand_electric_darker_2: string;
+  color_brand_electric_deep: string;
+  color_brand_neon_yellow: string;
+  color_brand_sunshine_yellow: string;
+  color_brand_magenta: string;
+  color_brand_silver: string;
   color_bootstrap_light: string;
   color_bootstrap_dark: string;
   color_bootstrap_primary: string;
@@ -38,6 +45,20 @@ export declare const tokens: {
   color_primitive_primary_700: string;
   color_primitive_primary_800: string;
   color_primitive_primary_900: string;
+  color_primitive_neon_yellow_300: string;
+  color_primitive_neon_yellow_400: string;
+  color_primitive_neon_yellow_500: string;
+  color_primitive_neon_yellow_600: string;
+  color_primitive_neon_yellow_700: string;
+  color_primitive_magenta_200: string;
+  color_primitive_magenta_400: string;
+  color_primitive_magenta_600: string;
+  color_primitive_magenta_800: string;
+  color_primitive_magenta_950: string;
+  color_primitive_silver_200: string;
+  color_primitive_silver_400: string;
+  color_primitive_silver_600: string;
+  color_primitive_silver_800: string;
   color_primitive_success_50: string;
   color_primitive_success_100: string;
   color_primitive_success_500: string;

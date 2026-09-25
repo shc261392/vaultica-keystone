@@ -272,6 +272,35 @@ function generateCSS(tokens: TokenCollection): CSSVariables {
 }
 `;
 
+  // Append the app-level vault theme tokens (Tailwind v4 @theme SoT).
+  // Sourced from tokens/vault-theme.json. `blink` -> @theme {} (dark default),
+  // `paper` -> html[data-theme='paper'] {} light override. Entries are emitted
+  // in the JSON's insertion order and values are kept byte-identical.
+  const vaultThemePath = join(TOKENS_DIR, 'vault-theme.json');
+  if (existsSync(vaultThemePath)) {
+    const vaultTheme = JSON.parse(readFileSync(vaultThemePath, 'utf8')) as {
+      theme?: { blink?: Record<string, string>; paper?: Record<string, string> };
+    };
+    const blink = vaultTheme.theme?.blink ?? {};
+    const paper = vaultTheme.theme?.paper ?? {};
+
+    css += `\n@theme {\n`;
+    for (const [name, value] of Object.entries(blink)) {
+      css += `  ${name}: ${value};\n`;
+    }
+    css += `}\n`;
+
+    css += `\nhtml[data-theme='paper'] {\n`;
+    for (const [name, value] of Object.entries(paper)) {
+      css += `  ${name}: ${value};\n`;
+    }
+    css += `}\n`;
+
+    console.log(`✓ Appended vault-theme (@theme + paper) from vault-theme.json`);
+  } else {
+    console.warn(`⚠ Missing vault-theme.json`);
+  }
+
   const outputPath = join(DIST_DIR, 'theme.css');
   writeFileSync(outputPath, css);
   console.log(`✓ Generated ${outputPath}`);
