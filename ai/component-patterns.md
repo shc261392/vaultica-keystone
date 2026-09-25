@@ -1,201 +1,213 @@
 # 🧩 Blink Component Patterns
 
 > **For AI/LLM Context**: Reference this document when generating UI components for Blink. These
-> patterns ensure visual consistency with the Industrial Elegance aesthetic.
+> patterns ensure visual consistency with the current **calm / trust-first Electric-Blue** system
+> (workflow `full-ui-ux-redesign`). The older "Industrial Elegance / brutalist 3px border / #27abec"
+> guidance below has been superseded — see the reconciled principles.
+>
+> **Where the tokens live:** the working token source of truth is `src/styles/globals.css` `@theme`
+> (the keystone `dist/theme.css` is imported but overridden). Two themes ship: **`blink`** (dark,
+> Electric-Blue `#00F0FF`, default) and **`paper`** (light, on-brand teal `#007f8a`). `aurora` was removed.
+>
+> **Primitive component library** (`src/lib/components/ui/`, Svelte 5): `Button`, `Card`, `Input`,
+> `Textarea`, `Badge`, `Skeleton`, `EmptyState`, `ErrorState`, `StreamingState`, plus `Icon`, `Modal`,
+> `TierBadge`, `ThemeSwitcher`. Variant/size class maps live in `variants.ts`; `cn()` in `src/lib/cn.ts`.
+> Convention: `interface Props { …; class?: string }` + `$props()`; callback-prop events (no dispatcher);
+> Snippets for slots; semantic `vault-*` token utilities only (never hardcoded hex).
 
 ---
 
-## Design Principles Recap
+## Design Principles Recap (reconciled — calm / trust-first)
 
-1. **Heavy Borders** — 3px standard, visible containment (Industrial Elegance)
-2. **High Contrast** — Comfortable dark surfaces (`#1e2329`), bright text (`#f0fbff`)
-3. **Visual Weight** — Substantial, grounded elements
-4. **Precision** — Clean geometry, purposeful spacing
-5. **Brand Blue** — Primary accent `#27abec` for CTAs and focus states
+1. **Hairline borders + elevation** — 1px `vault-border-default` + soft shadow (not 3px brutalist).
+2. **Comfortable contrast** — dark surfaces `#070d10`/`#0c1820`, text `#e4f8ff`; AA-verified on both themes.
+3. **Focused accent** — Electric-Blue `#00F0FF` (dark) / teal `#007f8a` (light) reserved for CTAs, focus ring, active nav — not large fills; reduced glow.
+4. **Precision** — clean geometry, purposeful spacing, generous whitespace.
+5. **Provenance colors** — fixed & theme-independent: `--color-cite-vault` (blue) / `--color-cite-web` (ember) for citation source signals; always paired with a label/icon (never color alone).
+
+> _Legacy note: the section below (#27abec, 3px borders, `#1e2329`) reflects the retired
+> "Industrial Elegance" system and is kept only for historical reference._
 
 ---
 
 ## Core Components
 
+> **Single accent.** Indigo was removed entirely — Electric-Blue (`blink`) / teal (`paper`) is the
+> only interactive accent. All colors below are semantic `vault-*` utilities (never raw palette scale
+> like `neutral-700`, `accent-900`, or hardcoded hex). Class maps mirror `variants.ts`.
+
 ### Button
 
-#### Primary Button
+**Base** (`BUTTON_BASE`):
 
-```css
-Background: var(--vault-accent-default)
-Text: var(--color-neutral-0) [white]
-Border: none
-Border-radius: 8px (effects.border.radius.md)
-Padding: 12px 24px
-Font-weight: 600 (semibold)
-Letter-spacing: 0.02em
-
-:hover — Background lightens (accent-hover)
-:active — Background darkens (accent-active)
-:focus — 2px ring with offset
+```text
+inline-flex items-center justify-center rounded-md font-semibold whitespace-nowrap
+transition-colors duration-150 disabled:opacity-50 disabled:pointer-events-none
 ```
 
-#### Secondary Button
+`rounded-md` = `--radius-md` (10px). Keyboard focus is handled globally by
+`:focus-visible { outline: 2px solid var(--color-vault-border-focus); outline-offset: 2px }`.
 
-```css
-Background: transparent
-Text: var(--vault-text-primary)
-Border: 2px solid var(--vault-border-strong)
-Border-radius: 8px
+**Variants:**
 
-:hover — Background: neutral-800
-:focus — Border color changes to accent
-```
+| Variant   | Classes                                                                                                                      |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Primary   | `bg-vault-accent text-vault-accent-fg hover:bg-vault-accent-hover active:bg-vault-accent-active border border-transparent`   |
+| Secondary | `bg-transparent text-vault-text-primary border border-vault-border-strong hover:bg-vault-surface-tertiary`                   |
+| Ghost     | `bg-transparent text-vault-text-secondary border border-transparent hover:bg-vault-surface-tertiary hover:text-vault-text-primary` |
+| Danger    | `bg-vault-status-critical-subtle text-vault-status-critical border border-vault-status-critical-subtle hover:bg-vault-status-critical/15` |
 
-#### Ghost Button
+> **Primary text is `text-vault-accent-fg`** — dark navy (`#070d10`) on the `blink` dark theme, white
+> on `paper` light. Never plain white on the dark accent.
 
-```css
-Background: transparent
-Border: none
-Text: var(--vault-text-secondary)
+**Sizes:**
 
-:hover — Background: neutral-800
-```
+| Size | Classes                | Height           |
+| ---- | ---------------------- | ---------------- |
+| sm   | `h-9 px-3 text-sm gap-1.5` | 36px         |
+| md   | `h-11 px-4 text-sm gap-2`  | 44px (WCAG 2.2 SC 2.5.8 target) |
+| lg   | `h-12 px-5 text-base gap-2` | 48px        |
 
 ---
 
 ### Card
 
-```css
-Background: var(--vault-surface-secondary)
-Border: 3px solid var(--vault-border-strong)  /* Heavy brutalist border */
-Border-radius: 12px (effects.border.radius.lg)
-Padding: 24px
-Shadow: effects.shadow.sm (minimal — borders do the work)
+```text
+bg-vault-surface-secondary
+border border-vault-border-default   /* 1px hairline — NOT 3px brutalist */
+rounded-lg                           /* --radius-lg = 16px */
+p-6
+shadow-sm                            /* soft elevation */
 
 /* Card with media */
-Overflow: hidden (for image cropping)
+overflow-hidden                      /* for image cropping */
 ```
 
 #### Card Variations
 
-| Variant   | Border                                | Background  |
-| --------- | ------------------------------------- | ----------- |
-| Default   | 2px neutral-500                       | neutral-900 |
-| Selected  | 2px accent-500                        | neutral-900 |
-| Hoverable | 2px neutral-500 → accent-400 on hover | neutral-900 |
-| Elevated  | 3px neutral-500                       | neutral-800 |
+| Variant   | Border                                                          | Background                  |
+| --------- | -------------------------------------------------------------- | --------------------------- |
+| Default   | `border-vault-border-default`                                  | `bg-vault-surface-secondary` |
+| Selected  | `border-vault-accent`                                          | `bg-vault-surface-secondary` |
+| Hoverable | `border-vault-border-default hover:border-vault-border-strong` | `bg-vault-surface-secondary` |
+| Elevated  | `border-vault-border-default shadow-md`                        | `bg-vault-surface-tertiary`  |
 
 ---
 
 ### Input
 
-```css
-Background: var(--vault-surface-secondary)
-Border: 3px solid var(--vault-border-default)
-Border-radius: 8px
-Padding: 12px 16px
-Height: 48px (sizing.input.height-lg)
-Color: var(--vault-text-primary)
+```text
+bg-vault-surface-secondary
+border border-vault-border-default   /* 1px hairline — NOT 3px */
+rounded-md                           /* --radius-md = 10px */
+px-4
+h-11                                 /* 44px, min touch target */
+text-vault-text-primary
+placeholder:text-vault-text-tertiary
 
-::placeholder — var(--vault-text-tertiary)
+/* Soft focus (no hard outline on the field itself) */
+focus:border-vault-accent/60 focus:ring-2 focus:ring-vault-accent/20
 
-:focus {
-  Border-color: var(--vault-accent-default)
-  Box-shadow: effects.shadow.glow-accent (optional)
-}
-
-:invalid / :error {
-  Border-color: var(--color-critical-500)
-}
+/* Error */
+aria-invalid:border-vault-status-critical
 ```
+
+> Global keyboard focus (`:focus-visible`) still applies app-wide; text/search fields opt out of the
+> hard 2px outline via `.search-field` in favor of the soft accent ring above.
 
 ---
 
 ### Search Input (Hero Element)
 
-The search bar is Vaultica's primary interaction point.
+The search bar is Vaultica's primary interaction point. The bordered wrapper carries a **1px hairline**
+and shows focus with a **soft accent ring** — not a 3px border and not a 4px box-shadow.
 
-```css
-Height: 56-64px
-Border: 3px solid var(--vault-border-strong)
-Border-radius: 12px
-Font-size: 18px (typography.fontSize.lg)
-Icon: Search icon, 24px, left-aligned
+```text
+/* Wrapper (1px hairline) */
+border border-vault-border-default
+rounded-lg                           /* --radius-lg = 16px */
 
-/* Prominent focus state */
-:focus {
-  Border-color: var(--vault-accent-default)
-  Box-shadow: 0 0 0 4px var(--vault-accent-subtle)
-}
+/* Soft focus-within treatment */
+focus-within:border-vault-accent/60
+focus-within:ring-2 focus-within:ring-vault-accent/20
+
+/* Field */
+class="search-field"                 /* opts out of the global hard :focus-visible outline */
+text-vault-text-primary
+placeholder:text-vault-text-tertiary
 ```
+
+Search icon: 24px, left-aligned, `text-vault-text-tertiary`.
 
 ---
 
 ### Badge / Tag
 
-```css
-Padding: 4px 12px
-Border-radius: 6px
-Font-size: 12px (typography.fontSize.xs)
-Font-weight: 500 (medium)
-Letter-spacing: 0.04em
+**Base:** `inline-flex items-center gap-1 rounded-full font-semibold tracking-wide`
 
-/* Variants */
-Default: bg neutral-700, text neutral-100
-Accent: bg accent-900, text accent-200
-Success: bg success-900, text success-100
-Warning: bg warning-900, text warning-100
-Critical: bg critical-900, text critical-100
-```
+**Sizes:** sm = `px-2 py-0.5 text-[11px]`, md = `px-2.5 py-1 text-xs`
+
+| Variant   | Classes                                                    |
+| --------- | ---------------------------------------------------------- |
+| Default   | `bg-vault-surface-tertiary text-vault-text-secondary`      |
+| Accent    | `bg-vault-accent-subtle text-vault-accent`                 |
+| Success   | `bg-vault-status-success-subtle text-vault-status-success` |
+| Warning   | `bg-vault-status-warning-subtle text-vault-status-warning` |
+| Critical  | `bg-vault-status-critical-subtle text-vault-status-critical` |
+
+Semantic aliases: `private` → default; `shared` / `published` → accent.
 
 ---
 
 ### Toast / Notification
 
-```css
-Background: var(--vault-surface-tertiary)
-Border: 3px solid var(--vault-border-default)
-Border-radius: 12px
-Padding: 16px 20px
-Shadow: effects.shadow.lg
-Max-width: 400px
+```text
+bg-vault-surface-tertiary
+border border-vault-border-default   /* 1px hairline — NOT 3px */
+rounded-lg                           /* --radius-lg = 16px */
+px-5 py-4
+shadow-lg
+max-w-[400px]
 
 /* Icon on left, dismiss on right */
-Display: flex
-Align-items: center
-Gap: 16px
-
-/* Variants follow badge pattern for color */
+flex items-center gap-4
 ```
+
+Variant colors follow the Badge status utilities (`bg-vault-status-*-subtle` + `text-vault-status-*`).
 
 ---
 
 ### Modal / Dialog
 
-```css
-Background: var(--vault-surface-secondary)
-Border: 3px solid var(--vault-border-strong)  /* Heavy */
-Border-radius: 16px (effects.border.radius.xl)
-Padding: 32px
-Shadow: effects.shadow.xl
-Max-width: 480px (typical)
+```text
+bg-vault-surface-secondary
+border border-vault-border-strong    /* 1px strong hairline — NOT 3px */
+rounded-lg                           /* --radius-lg = 16px */
+p-8
+shadow-xl
+max-w-[480px]
 
 /* Backdrop */
-Background: oklch(0% 0 0 / 0.6)
-Backdrop-filter: blur(4px)
+bg-vault-surface-overlay             /* dimmed overlay surface */
+backdrop-blur-sm
 ```
 
 ---
 
 ### Navigation Item
 
-```css
-Padding: 12px 16px
-Border-radius: 8px
-Font-weight: 500
-
-/* States */
-Default: transparent bg, secondary text
-Hover: neutral-800 bg, primary text
-Active: accent-900 bg, accent-200 text
-Current: accent-900 bg, accent-200 text, 3px left border accent
+```text
+px-4 py-3
+rounded-md                           /* --radius-md = 10px */
+font-medium
 ```
+
+| State   | Classes                                                        |
+| ------- | -------------------------------------------------------------- |
+| Default | `bg-transparent text-vault-text-secondary`                     |
+| Hover   | `hover:bg-vault-surface-tertiary hover:text-vault-text-primary` |
+| Active  | `bg-vault-accent-subtle text-vault-accent`                     |
+| Current | `bg-vault-accent-subtle text-vault-accent` (focused accent reserved for active nav) |
 
 ---
 
@@ -203,50 +215,56 @@ Current: accent-900 bg, accent-200 text, 3px left border accent
 
 For displaying saved Blinks in the Visual Gallery:
 
-```css
+```text
 /* Thumbnail area */
-Aspect-ratio: 1/1 or 4/3 (visual-first)
-Object-fit: cover
-Border-radius: 8px (internal)
+aspect-square or aspect-[4/3]        /* visual-first */
+object-cover
+rounded-md                           /* internal, --radius-md = 10px */
 
-/* NO metadata labels by default (Visual Gallery) */
-/* On hover or detail view: */
-Date: 12px, secondary text, subtle
+/* NO metadata labels by default (Visual Gallery). */
+/* On hover / detail view: */
+text-xs text-vault-text-secondary    /* date, subtle */
 
 /* Container */
-Background: neutral-900
-Border: 3px solid neutral-700
-Border-radius: 12px
-Padding: 0 (edge-to-edge imagery)
+bg-vault-surface-secondary
+border border-vault-border-default   /* 1px hairline — NOT 3px */
+rounded-lg                           /* --radius-lg = 16px */
+p-0                                  /* edge-to-edge imagery */
 
-:hover — Border color neutral-500
+hover:border-vault-border-strong
 ```
+
+> **Broken images fall back gracefully** to a file card / grid icon (`onerror`) — never the browser's
+> broken-image glyph.
 
 ---
 
 ### Vault Intake Zone
 
-```css
+```text
 /* Default */
-Background: neutral-900
-Border: 3px dashed neutral-600
-Border-radius: 16px
-Padding: 48px
-Text-align: center
+bg-vault-surface-secondary
+border border-dashed border-vault-border-default   /* 1px dashed hairline — NOT 3px */
+rounded-lg                                         /* --radius-lg = 16px */
+p-12
+text-center
 Label: "Add to Vault" or "Drop files here"
 
 /* Hover / Drag-over */
-Border-color: primary-400 (brand blue)
-Border-style: solid
-Background: primary-900 (subtle)
+border-vault-accent
+border-solid
+bg-vault-accent-subtle
 
 /* Icon */
-Size: 48px
-Color: neutral-400 → primary-400 on drag
+size-12                                            /* 48px */
+text-vault-text-tertiary → text-vault-accent on drag
 
 /* Success feedback */
-Show: "Added to your Vault." toast
+Toast: "Added to your Vault."
 ```
+
+> **First-run onboarding coach is an in-flow card** (rendered inline in the intake flow), not a fixed
+> overlay.
 
 ---
 
@@ -313,6 +331,13 @@ Gap: 24px (spacing.6) — spacious
 | Success            | Checkmark                         |
 | Error              | X or Triangle alert               |
 
+### File-Type Icons (Assets)
+
+Categorical, muted swatches for asset thumbnails. **PDF is neutral** —
+`bg-vault-surface-tertiary text-vault-text-secondary` — never the magenta `vault-status-critical`
+color (a PDF must not read as an error). Reserve `vault-status-critical` for genuine errors and
+destructive actions only.
+
 ---
 
 ## Animation Guidelines
@@ -330,8 +355,8 @@ Gap: 24px (spacing.6) — spacious
 
 ### Loading States
 
-- Skeleton: Pulse animation on neutral-800 → neutral-700
-- Spinner: Circular, accent color, smooth rotation
+- Skeleton: Pulse animation between `bg-vault-surface-secondary` and `bg-vault-surface-tertiary`
+- Spinner: Circular, `text-vault-accent`, smooth rotation
 
 ---
 
