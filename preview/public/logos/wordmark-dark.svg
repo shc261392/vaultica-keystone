@@ -4,8 +4,7 @@
        Outlining the glyphs to paths is a follow-up. -->
   <g transform="translate(0 4)">
     <rect x="2" y="2" width="28" height="28" rx="8" fill="#3CC8D0"/>
-    <path d="M8 16 Q16 10.5 24 16 Q16 21.5 8 16Z" fill="#0E1013"/>
-    <circle cx="16" cy="16" r="2" fill="#3CC8D0"/>
+    <path d="M10.5 7H17A4 4 0 0 1 17 15H13.5V17H19A4 4 0 0 1 19 25H10.5A1.5 1.5 0 0 1 9 23.5V8.5A1.5 1.5 0 0 1 10.5 7Z" fill="#0E1013"/>
   </g>
   <text x="40" y="28.5" fill="#F5F7F8" font-family="Geist, 'Inter', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="600" letter-spacing="-0.48">BlinkVault</text>
 </svg>

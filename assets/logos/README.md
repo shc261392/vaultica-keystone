@@ -13,25 +13,25 @@
 
 Never write the name as two words ("Blink Vault"). The assistant is referred to as BlinkVault.
 
-## The mark — "the slot"
+## The mark — "Stacked B"
 
-A rounded-square tile with a lens-shaped cut-out: an eye mid-blink, and a drop
-slot you throw things into. One geometric primitive; legible at 16px.
+A rounded-square tile with a solid B built from two stacked blocks: the
+product's initial, and saved items piling up in the vault. One path; legible at 16px.
+Replaced the earlier lens/eye mark ("the slot") on 2026-10-12.
 
 ```svg
 <!-- 32×32 grid -->
 <rect x="2" y="2" width="28" height="28" rx="8" fill="#0A7C86"/>
-<path d="M8 16 Q16 10.5 24 16 Q16 21.5 8 16Z" fill="#FFFFFF"/>
-<circle cx="16" cy="16" r="2" fill="#0A7C86"/>
+<path d="M10.5 7H17A4 4 0 0 1 17 15H13.5V17H19A4 4 0 0 1 19 25H10.5A1.5 1.5 0 0 1 9 23.5V8.5A1.5 1.5 0 0 1 10.5 7Z" fill="#FFFFFF"/>
 ```
 
-| Variant  | Tile      | Lens      | Pupil     |
-| -------- | --------- | --------- | --------- |
-| Light UI | `#0A7C86` | `#FFFFFF` | `#0A7C86` |
-| Dark UI  | `#3CC8D0` | `#0E1013` | `#3CC8D0` |
-| Mono     | `currentColor`, lens cut out with `fill-rule="evenodd"` | | |
+| Variant  | Tile      | B         |
+| -------- | --------- | --------- |
+| Light UI | `#0A7C86` | `#FFFFFF` |
+| Dark UI  | `#3CC8D0` | `#0E1013` |
+| Mono     | `currentColor`, B cut out with `fill-rule="evenodd"` | |
 
-Motion: the lens may close and reopen (140ms) on hover only. No looping pulse.
+Motion: none. No looping pulse.
 
 ## Files
 
@@ -41,7 +41,7 @@ Motion: the lens may close and reopen (140ms) on hover only. No looping pulse.
 | `mark-mono.svg`         | Single-color mark (`currentColor`)             | SVG    |
 | `wordmark-light.svg`    | Mark + "BlinkVault" for light backgrounds      | SVG    |
 | `wordmark-dark.svg`     | Mark + "BlinkVault" for dark backgrounds       | SVG    |
-| `favicon.svg`           | Favicon (lens enlarged for 16px)               | SVG    |
+| `favicon.svg`           | Favicon               | SVG    |
 | `favicon.ico`           | Multi-size favicon                             | ICO    |
 | `icon-32.png`           | 32px icon                                      | PNG    |
 | `apple-touch-icon.png`  | 180px iOS icon                                 | PNG    |
