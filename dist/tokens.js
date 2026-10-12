@@ -1,6 +1,6 @@
 /**
  * Vaultica Design Tokens - JavaScript Export
- * Generated: 2026-09-25T12:12:15.074Z
+ * Generated: 2026-10-12T01:06:56.355Z
  * 
  * Usage:
  * import { tokens } from '@vaultica/keystone';
@@ -121,9 +121,9 @@ export const tokens = {
   "color_alias_input_text": "oklch(0.994 0.0084 197.02)",
   "color_alias_card_bg": "oklch(21% 0.012 254)",
   "color_alias_card_border": "oklch(45% 0.02 230)",
-  "typography_fontFamily_primary": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-  "typography_fontFamily_mono": "'JetBrains Mono', 'SF Mono', 'Fira Code', 'Consolas', monospace",
-  "typography_fontFamily_display": "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+  "typography_fontFamily_primary": "'Geist Variable', 'Geist', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+  "typography_fontFamily_mono": "'Geist Mono Variable', 'Geist Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace",
+  "typography_fontFamily_display": "'Geist Variable', 'Geist', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
   "typography_fontWeight_regular": "400",
   "typography_fontWeight_medium": "500",
   "typography_fontWeight_semibold": "600",

@@ -8,17 +8,17 @@
   "typography": {
     "fontFamily": {
       "primary": {
-        "value": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "value": "'Geist Variable', 'Geist', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
         "type": "fontFamily",
         "description": "Primary typeface for UI and body text"
       },
       "mono": {
-        "value": "'JetBrains Mono', 'SF Mono', 'Fira Code', 'Consolas', monospace",
+        "value": "'Geist Mono Variable', 'Geist Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace",
         "type": "fontFamily",
         "description": "Monospace for code and technical content"
       },
       "display": {
-        "value": "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+        "value": "'Geist Variable', 'Geist', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
         "type": "fontFamily",
         "description": "Display/headline typeface (can be swapped for brand font)"
       }
