@@ -1,6 +1,6 @@
 # Vaultica Keystone - Status
 
-> Single Source of Truth for Blink Vault brand assets
+> Single Source of Truth for BlinkVault brand assets
 
 ## What's Done
 

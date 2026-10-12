@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 40" width="172" height="40" role="img" aria-label="BlinkVault">
+  <!-- Wordmark for LIGHT backgrounds. Transparent background.
+       TODO(brand): text uses a system font stack (no @import: webfonts do not load in <img>).
+       Outlining the glyphs to paths is a follow-up. -->
+  <g transform="translate(0 4)">
+    <rect x="2" y="2" width="28" height="28" rx="8" fill="#0A7C86"/>
+    <path d="M8 16 Q16 10.5 24 16 Q16 21.5 8 16Z" fill="#FFFFFF"/>
+    <circle cx="16" cy="16" r="2" fill="#0A7C86"/>
+  </g>
+  <text x="40" y="28.5" fill="#0E1013" font-family="Geist, 'Inter', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="600" letter-spacing="-0.48">BlinkVault</text>
+</svg>

@@ -1,6 +1,6 @@
 # Vaultica Keystone - Decisions Log
 
-> Quick checklist of brand decisions for Blink Vault.
+> Quick checklist of brand decisions for BlinkVault.
 
 ## Resolved
 
@@ -13,10 +13,10 @@
 ## Logo Assets
 
 - [x] Blink icon mark (`blink-icon.svg`)
-- [x] Blink Vault wordmark dark (`blink-vault-logo-dark.svg`)
-- [x] Blink Vault wordmark light (`blink-vault-logo-light.svg`)
+- [x] BlinkVault wordmark dark (`blink-vault-logo-dark.svg`)
+- [x] BlinkVault wordmark light (`blink-vault-logo-light.svg`)
 - [x] Blink horizontal lockup (`blink-with-icon-horizontal.svg`)
-- [x] Blink Vault horizontal lockup (`blink-vault-with-icon-horizontal.svg`)
+- [x] BlinkVault horizontal lockup (`blink-vault-with-icon-horizontal.svg`)
 - [x] Favicon (`favicon.ico`) — generated from blink-icon.svg
 - [ ] App icons (iOS/Android) — when needed
 

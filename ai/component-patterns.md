@@ -317,7 +317,7 @@ Gap: 24px (spacing.6) — spacious
 
 | Function           | Icon Reference                    |
 | ------------------ | --------------------------------- |
-| Blink Vault/Home   | Vault, stack, or central hub      |
+| BlinkVault/Home   | Vault, stack, or central hub      |
 | Add to Vault       | Plus, tray, or upload arrow       |
 | Sync Drive         | Refresh arrows or linked folders  |
 | Send from App      | Arrow-in or forward indicator     |

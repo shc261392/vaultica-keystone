@@ -51,7 +51,7 @@ The logo must evoke:
 ### 4. Abstract Lettermark
 
 - **"B" with blink motion** — letter with dynamic elements
-- **"BV" monogram** for Blink Vault
+- **"BV" monogram** for BlinkVault
 - **Speed-traced "B"** with trailing motion
 
 ---
@@ -84,7 +84,7 @@ Flat design, suitable for app icon and branding.
 ### Prompt 3: Blink Symbol (Abstract)
 
 ```text
-Design an abstract symbol logo for "Blink Vault" - an intelligent file vault with AI organization and instant sharing.
+Design an abstract symbol logo for "BlinkVault" - an intelligent file vault with AI organization and instant sharing.
 Concept: combine the ideas of "blinking" (eyes, instant) with "vault" (secure, solid).
 Style: brutalist, geometric, industrial elegance. Heavy borders, clean shapes.
 Color: electric blue (#27abec) on dark (#363b42) or with white (#f0fbff).
@@ -107,7 +107,7 @@ Vector style, clean edges, suitable for SVG export.
 
 ```text
 Design a logo icon that combines a lightning bolt with a vault/lock motif.
-For "Blink Vault" - speed meets security.
+For "BlinkVault" - speed meets security.
 The lightning should feel integrated, not forced. Perhaps as the keyhole or lock mechanism.
 Style: geometric, industrial, heavy visual weight.
 Color: electric blue (#27abec) on charcoal (#363b42).
@@ -141,7 +141,7 @@ Never include:
 
 1. **Icon only** (for app icon, favicon)
 2. **Icon + "Blink" text** (horizontal lockup)
-3. **Icon + "Blink Vault" text** (full brand)
+3. **Icon + "BlinkVault" text** (full brand)
 4. **Monochrome version** (single color)
 5. **Reverse version** (for dark backgrounds)
 

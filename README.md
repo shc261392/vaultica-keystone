@@ -1,13 +1,13 @@
 # Vaultica Keystone
 
-Single Source of Truth for the **Blink Vault** brand. Design tokens, AI context, and assets.
+Single Source of Truth for the **BlinkVault** brand. Design tokens, AI context, and assets.
 
 ## Brand Architecture
 
 | Entity          | Role                                      | Example                        |
 | --------------- | ----------------------------------------- | ------------------------------ |
 | **Vaultica**    | The company/team name                    | "© 2026 Vaultica"                |
-| **Blink Vault** | The product name (official, legal, SEO)  | "Welcome to Blink Vault"         |
+| **BlinkVault** | The product name (official, legal, SEO)  | "Welcome to BlinkVault"         |
 | **Blink**       | Brand shorthand in the product promise   | "AI-ready in a Blink"            |
 
 ## Quick Start
@@ -68,7 +68,7 @@ Point Copilot/Cursor to `ai/brand-context.md` for styling context.
 
 ## Brand Summary
 
-- **Product**: Blink Vault — "AI-ready in a Blink. One vault for everything your AI needs."
+- **Product**: BlinkVault — "AI-ready in a Blink. One vault for everything your AI needs."
 - **Aesthetic**: Industrial Elegance (heavy borders, high contrast, professional 2026 design)
 - **Color**: Brand blue `#27abec`
 - **Theme**: Dark-only

@@ -249,14 +249,14 @@ function LogoPreview() {
           >
             {bgMode === 'light' ? (
               <img
-                src="/logos/blink-vault-logo-light.svg"
-                alt="Blink Vault Logo"
+                src="/logos/wordmark-light.svg"
+                alt="BlinkVault Logo"
                 className="max-w-full max-h-32 object-contain"
               />
             ) : (
               <img
-                src="/logos/blink-vault-logo-dark.svg"
-                alt="Blink Vault Logo Dark"
+                src="/logos/wordmark-dark.svg"
+                alt="BlinkVault Logo Dark"
                 className="max-w-full max-h-32 object-contain"
               />
             )}
@@ -273,7 +273,7 @@ function LogoPreview() {
             className={`${bgClass} rounded-lg p-8 flex items-center justify-center min-h-50 border-2 border-vault-border-default`}
           >
             <img
-              src="/logos/blink-icon.svg"
+              src="/logos/mark.svg"
               alt="Blink Icon"
               className="max-w-full max-h-24 object-contain"
             />
@@ -312,14 +312,14 @@ function LogoPreview() {
             <div className="border-2 border-dashed border-brand-blue/50 p-8 rounded">
               {bgMode === 'light' ? (
                 <img
-                  src="/logos/blink-vault-logo-light.svg"
-                  alt="Blink Vault Logo"
+                  src="/logos/wordmark-light.svg"
+                  alt="BlinkVault Logo"
                   className="max-w-full max-h-20 object-contain"
                 />
               ) : (
                 <img
-                  src="/logos/blink-vault-logo-dark.svg"
-                  alt="Blink Vault Logo Dark"
+                  src="/logos/wordmark-dark.svg"
+                  alt="BlinkVault Logo Dark"
                   className="max-w-full max-h-20 object-contain"
                 />
               )}
@@ -440,7 +440,7 @@ function Typography() {
               Display / 4.5rem / 800
             </span>
             <p className="text-7xl font-extrabold tracking-tight text-vault-text-primary">
-              Blink Vault
+              BlinkVault
             </p>
           </div>
           <div>
@@ -525,8 +525,8 @@ function MockWebsite() {
         <header className="bg-vault-surface-secondary border-b-3 border-vault-border-strong px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <img src="/logos/blink-icon.svg" alt="Blink" className="h-8 w-8" />
-              <span className="text-xl font-bold text-vault-text-primary">Blink Vault</span>
+              <img src="/logos/mark.svg" alt="BlinkVault" className="h-8 w-8" />
+              <span className="text-xl font-bold text-vault-text-primary">BlinkVault</span>
             </div>
             <nav className="flex items-center gap-6">
               <a
@@ -625,7 +625,7 @@ function MockWebsite() {
         <footer className="px-6 py-8 bg-vault-surface-secondary border-t-3 border-vault-border-strong">
           <div className="flex items-center justify-between text-sm text-vault-text-secondary">
             <div className="flex items-center gap-2">
-              <img src="/logos/blink-icon.svg" alt="Blink" className="h-5 w-5 opacity-60" />
+              <img src="/logos/mark.svg" alt="BlinkVault" className="h-5 w-5 opacity-60" />
               <span>© 2026 Vaultica. All rights reserved.</span>
             </div>
             <div className="flex items-center gap-6">
@@ -1006,7 +1006,7 @@ export default function Home() {
         {/* Header */}
         <header className="mb-12">
           <div className="flex items-center gap-4 mb-4">
-            <img src="/logos/blink-icon.svg" alt="Blink" className="h-12 w-12" />
+            <img src="/logos/mark.svg" alt="BlinkVault" className="h-12 w-12" />
             <div>
               <h1 className="text-3xl font-bold text-vault-text-primary">Vaultica Keystone</h1>
               <p className="text-vault-text-secondary">Design System Preview Tool</p>

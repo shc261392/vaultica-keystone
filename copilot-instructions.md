@@ -60,7 +60,7 @@ Structure in `/docs`:
 
 ## Brand
 
-- **Product**: Blink Vault
+- **Product**: BlinkVault
 - **Aesthetic**: Industrial Elegance (heavy borders, high contrast)
 - **Voice**: Calm, clear, intentional — "AI-ready in a Blink. One vault for everything your AI needs."
 - **Avoid**: Playful language, tech jargon, bulk-dump messaging, weak borders, vibe-app aesthetics

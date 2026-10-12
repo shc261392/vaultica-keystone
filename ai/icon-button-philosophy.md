@@ -11,7 +11,7 @@
 
 Show, don't tell. Graphic over textual. Intuitive and zero friction.
 
-Icons are the primary language of action in Blink Vault. They communicate instantly, transcend
+Icons are the primary language of action in BlinkVault. They communicate instantly, transcend
 language barriers, and keep the interface clean.
 
 ### Core Principles

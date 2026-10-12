@@ -1,43 +1,55 @@
-# 📁 Blink Vault Logo Assets
+# BlinkVault Logo Assets
 
-> Logo and icon assets for **Blink Vault** by **Vaultica**
+> Logo and icon assets for **BlinkVault** by **Vaultica**. Mirrored in
+> `vaultica-web/public/logos/` — keep both in sync.
 
 ## Brand Architecture
 
-| Entity          | Role                                      | Usage Example                  |
-| --------------- | ----------------------------------------- | ------------------------------ |
-| **Vaultica**    | The company/team name                    | "© 2026 Vaultica"                |
-| **Blink Vault** | The product name (official, legal, SEO)  | "Welcome to Blink Vault"         |
-| **Blink**       | Brand shorthand in the promise           | "AI-ready in a Blink"            |
+| Entity         | Role                                     | Usage Example                                   |
+| -------------- | ---------------------------------------- | ----------------------------------------------- |
+| **Vaultica**   | The company / legal entity               | "© 2026 Vaultica"                               |
+| **BlinkVault** | The product name (one word, camel-case)  | "Welcome to BlinkVault"                         |
+| Tagline        | Product promise                          | "Dump anything. Ask anything. See the source."  |
 
-## Files in this directory
+Never write the name as two words ("Blink Vault"). The assistant is referred to as BlinkVault.
 
-### Blink Icon (Primary Mark)
+## The mark — "the slot"
 
-| File             | Description                     | Format |
-| ---------------- | ------------------------------- | ------ |
-| `blink-icon.svg` | Icon symbol (512×512, centered) | SVG    |
-| `favicon.ico`    | Browser favicon (from icon)     | ICO    |
+A rounded-square tile with a lens-shaped cut-out: an eye mid-blink, and a drop
+slot you throw things into. One geometric primitive; legible at 16px.
 
-### Blink (Short Name / Action)
+```svg
+<!-- 32×32 grid -->
+<rect x="2" y="2" width="28" height="28" rx="8" fill="#0A7C86"/>
+<path d="M8 16 Q16 10.5 24 16 Q16 21.5 8 16Z" fill="#FFFFFF"/>
+<circle cx="16" cy="16" r="2" fill="#0A7C86"/>
+```
 
-| File                             | Description                      | Format |
-| -------------------------------- | -------------------------------- | ------ |
-| `blink-logo-text.svg`            | "Blink" text only (transparent)  | SVG    |
-| `blink-logo-dark.svg`            | "Blink" for dark backgrounds     | SVG    |
-| `blink-logo-clean.svg`           | Full traced logo (transparent)   | SVG    |
-| `blink-with-icon-horizontal.svg` | Icon + "Blink" horizontal lockup | SVG    |
+| Variant  | Tile      | Lens      | Pupil     |
+| -------- | --------- | --------- | --------- |
+| Light UI | `#0A7C86` | `#FFFFFF` | `#0A7C86` |
+| Dark UI  | `#3CC8D0` | `#0E1013` | `#3CC8D0` |
+| Mono     | `currentColor`, lens cut out with `fill-rule="evenodd"` | | |
 
-### Blink Vault (Full Product Name)
+Motion: the lens may close and reopen (140ms) on hover only. No looping pulse.
 
-| File                                   | Description                            | Format |
-| -------------------------------------- | -------------------------------------- | ------ |
-| `blink-vault-logo-text.svg`            | "Blink Vault" text (transparent)       | SVG    |
-| `blink-vault-logo-dark.svg`            | "Blink Vault" for dark backgrounds     | SVG    |
-| `blink-vault-logo-light.svg`           | "Blink Vault" for light backgrounds    | SVG    |
-| `blink-vault-with-icon-horizontal.svg` | Icon + "Blink Vault" horizontal lockup | SVG    |
+## Files
 
-### Legacy (Vaultica Company)
+| File                    | Description                                    | Format |
+| ----------------------- | ---------------------------------------------- | ------ |
+| `mark.svg`              | Mark, light-UI colors                          | SVG    |
+| `mark-mono.svg`         | Single-color mark (`currentColor`)             | SVG    |
+| `wordmark-light.svg`    | Mark + "BlinkVault" for light backgrounds      | SVG    |
+| `wordmark-dark.svg`     | Mark + "BlinkVault" for dark backgrounds       | SVG    |
+| `favicon.svg`           | Favicon (lens enlarged for 16px)               | SVG    |
+| `favicon.ico`           | Multi-size favicon                             | ICO    |
+| `icon-32.png`           | 32px icon                                      | PNG    |
+| `apple-touch-icon.png`  | 180px iOS icon                                 | PNG    |
+| `icon-192.png`          | 192px PWA icon                                 | PNG    |
+| `icon-512.png`          | 512px PWA icon                                 | PNG    |
+| `icon-maskable-512.png` | 512px maskable PWA icon (20% safe zone)        | PNG    |
+
+### Legacy (Vaultica company marks)
 
 | File                      | Description                 | Format |
 | ------------------------- | --------------------------- | ------ |
@@ -45,30 +57,27 @@
 | `vaultica-logo-white.svg` | Vaultica wordmark (white)   | SVG    |
 | `vaultica-white-icon.svg` | Vaultica icon mark (legacy) | SVG    |
 
+## Wordmark
+
+"BlinkVault" in Geist SemiBold (600), tracking −0.02em, one color
+(`text-primary`). The camel-case separates the halves; no two-tone treatment.
+Lockup: mark height = 1.5× cap height, gap = 0.4× mark width.
+
+The current wordmark SVGs use a system font stack with no `@import` (webfonts
+don't load inside `<img>`). Follow-up: convert the text to outlines.
+
 ## Brand Colors
 
-The logo uses three official brand colors:
+Single source of truth is `tokens/vault-theme.json` (calm tool-like palette, v2).
 
-| Name      | OKLCH                         | HEX       | Usage                       |
-| --------- | ----------------------------- | --------- | --------------------------- |
-| **Black** | `oklch(0.3503 0.014 256.77)`  | `#363b42` | Text, dark elements         |
-| **White** | `oklch(0.994 0.0084 197.02)`  | `#f0fbff` | Light elements, backgrounds |
-| **Blue**  | `oklch(0.7031 0.1426 236.68)` | `#27abec` | Primary brand color         |
-
-## Bootstrap Theme Compatibility
-
-```scss
-$theme-colors: (
-  "light": #d7e9f2,
-  "dark": #363b42,
-  "primary": #27abec,
-  "secondary": #1b67a1,
-  "info": #f0d15e,
-  "success": #13c16a,
-  "warning": #eed210,
-  "danger": #fe1b20,
-);
-```
+| Token                  | Light     | Dark      |
+| ---------------------- | --------- | --------- |
+| Accent                 | `#0A7C86` | `#3CC8D0` |
+| Surface (app bg)       | `#FAFAFB` | `#0E1013` |
+| Text primary           | `#141619` | `#ECEDF0` |
+| Success                | `#1F8A4C` | `#3FB871` |
+| Warning                | `#A65A06` | `#E5A13A` |
+| Critical               | `#C93A3A` | `#F06A6A` |
 
 ## Usage Guidelines
 
@@ -76,29 +85,26 @@ $theme-colors: (
 
 | Asset     | Minimum Width | Minimum Height |
 | --------- | ------------- | -------------- |
-| Full Logo | 120px         | 28px           |
-| Icon Only | 16px          | 16px           |
-| Favicon   | 16px          | 16px           |
+| Wordmark  | 120px         | 24px           |
+| Mark      | 16px          | 16px           |
 
 ### Which Logo to Use
 
-| Context                     | Recommended File                       |
-| --------------------------- | -------------------------------------- |
-| App icon / favicon          | `blink-icon.svg`, `favicon.ico`        |
-| Dark UI header              | `blink-vault-logo-dark.svg`            |
-| Light UI header             | `blink-vault-logo-light.svg`           |
-| Horizontal lockup (dark bg) | `blink-vault-with-icon-horizontal.svg` |
-| Command/action branding     | `blink-logo-dark.svg`                  |
-| Footer copyright            | Text: "© 2026 Vaultica"                |
+| Context            | Recommended File                       |
+| ------------------ | -------------------------------------- |
+| App icon / favicon | `favicon.svg`, `favicon.ico`, PNG set  |
+| Light UI header    | `wordmark-light.svg`                   |
+| Dark UI header     | `wordmark-dark.svg`                    |
+| Inline / monochrome| `mark-mono.svg`                        |
+| Footer copyright   | Text: "© 2026 Vaultica"                |
 
 ### Clear Space
 
-Maintain clear space equal to the height of the Blink icon on all sides.
+Keep clear space equal to half the mark's width on all sides.
 
 ### Don'ts
 
-- ❌ Don't rotate the logo
-- ❌ Don't apply additional effects or shadows
-- ❌ Don't stretch or distort
-- ❌ Don't use colors outside the brand palette
-- ❌ Don't place on busy/low-contrast backgrounds
+- Don't rotate, stretch, or recolor the mark outside the palette above
+- Don't add glows, gradients, or drop shadows
+- Don't write the name as two words
+- Don't place on busy or low-contrast backgrounds

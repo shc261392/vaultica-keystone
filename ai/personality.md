@@ -1,6 +1,6 @@
-# ✍️ Blink Vault Voice & Tone Guide
+# ✍️ BlinkVault Voice & Tone Guide
 
-> **For AI/LLM Context**: Use this document when generating any user-facing text for **Blink Vault**
+> **For AI/LLM Context**: Use this document when generating any user-facing text for **BlinkVault**
 > by Vaultica — landing pages, product descriptions, UI microcopy, onboarding, or docs.
 
 ---
@@ -10,20 +10,20 @@
 | Entity          | Role                                                                    |
 | --------------- | ----------------------------------------------------------------------- |
 | **Vaultica**    | The company — solid, dependable infrastructure                          |
-| **Blink Vault** | The product — one vault for scattered digital context, made AI-ready    |
+| **BlinkVault** | The product — one vault for scattered digital context, made AI-ready    |
 
 **Primary motto**: **"AI-ready in a Blink."**
 
 **Primary headline**: **"One vault for everything your AI needs."**
 
-**Philosophy**: Your loose data is everywhere. Blink Vault pulls it into one place, makes it
+**Philosophy**: Your loose data is everywhere. BlinkVault pulls it into one place, makes it
 searchable, and keeps the technology invisible.
 
 ---
 
 ## Brand Voice: Calm, Clear, Intentional
 
-Blink Vault speaks with **assured clarity**. It does not sound like a hype machine, a consumer
+BlinkVault speaks with **assured clarity**. It does not sound like a hype machine, a consumer
 cloud drive, or a technical whitepaper. The tone is premium, direct, and useful.
 
 We emphasize:
@@ -85,7 +85,7 @@ Use these terms consistently:
 
 | Term             | Meaning                                    | Usage Example                                  |
 | ---------------- | ------------------------------------------ | ---------------------------------------------- |
-| **Blink Vault**  | The product (official name)                | "Welcome to Blink Vault"                      |
+| **BlinkVault**  | The product (official name)                | "Welcome to BlinkVault"                      |
 | **Your Vault**   | The user's central repository              | "Everything lands in your Vault"              |
 | **AI-ready**     | The core product promise                   | "Make every file AI-ready"                    |
 | **Sync**         | Automatic cloud-drive connection           | "Sync Dropbox and Google Drive"               |
@@ -108,7 +108,7 @@ Use these terms consistently:
 
 | Word / Phrase           | Context                                  |
 | ----------------------- | ---------------------------------------- |
-| **Blink Vault**         | Product name                             |
+| **BlinkVault**         | Product name                             |
 | **Your Vault**          | User's centralized collection            |
 | **AI-ready**            | Core value proposition                   |
 | **Searchable**          | Retrieval promise                        |
@@ -174,7 +174,7 @@ Use these terms consistently:
 
 #### Tone: Helpful, never technical for its own sake
 
-> "Blink Vault works with notes, links, PDFs, images, video, and more."
+> "BlinkVault works with notes, links, PDFs, images, video, and more."
 
 _Note: Explain outcomes, not internals._
 
@@ -268,42 +268,42 @@ _Note: Explain outcomes, not internals._
 
 ### Short (< 20 words)
 
-> Blink Vault makes your scattered files, links, notes, and media AI-ready in one searchable vault.
+> BlinkVault makes your scattered files, links, notes, and media AI-ready in one searchable vault.
 
 ### Medium (100-200 words)
 
-> Blink Vault is one vault for everything your AI needs.
+> BlinkVault is one vault for everything your AI needs.
 >
 > Your data is scattered across drives, desktops, notes apps, messaging apps, and saved links.
-> Blink Vault brings it together in one place and makes it instantly searchable.
+> BlinkVault brings it together in one place and makes it instantly searchable.
 >
 > Sync Dropbox and Google Drive. Send specific files, links, or messages from apps like Telegram
-> and Discord. Drop anything from your desktop. You choose what goes in — Blink Vault handles the
+> and Discord. Drop anything from your desktop. You choose what goes in — BlinkVault handles the
 > organization.
 >
-> Built for people who rely on AI, save too much, and hate manual cleanup, Blink Vault turns loose
+> Built for people who rely on AI, save too much, and hate manual cleanup, BlinkVault turns loose
 > digital context into a private, useful system that works like memory — only faster.
 
 ### Long (200+ words)
 
-> Blink Vault is the central vault for scattered digital context.
+> BlinkVault is the central vault for scattered digital context.
 >
 > Modern work lives everywhere: cloud drives, messaging apps, saved links, random notes, PDFs,
 > screenshots, videos, and half-forgotten files on your desktop. The problem is not storage. The
 > problem is fragmentation. What you need is everywhere, which means your AI tools never get the
 > full picture.
 >
-> Blink Vault fixes that by bringing everything into one place and making it AI-ready in a Blink.
+> BlinkVault fixes that by bringing everything into one place and making it AI-ready in a Blink.
 > Sync cloud drives like Dropbox and Google Drive. Forward the specific files, links, or messages
 > you want from apps like Telegram and Discord. Drop anything from local storage. Nothing is bulk-
 > dumped without your intent. You stay in control of what enters the Vault.
 >
-> Once content lands, Blink Vault makes it searchable and usable across your workflow. Notes,
+> Once content lands, BlinkVault makes it searchable and usable across your workflow. Notes,
 > website URLs, social links, images, video, PDFs, voice notes, and data files all become part of
 > the same private context layer.
 >
 > Built for data hoarders, AI workers, designers, and anyone whose digital life is spread across
-> too many tools, Blink Vault turns loose files into one clear system: a private vault that helps
+> too many tools, BlinkVault turns loose files into one clear system: a private vault that helps
 > you find what matters and feed better context into AI.
 
 ---
@@ -319,4 +319,4 @@ When writing copy, emphasize:
 
 ---
 
-### When writing for Blink Vault, ask: "Does this feel centralized, intentional, and AI-ready?"
+### When writing for BlinkVault, ask: "Does this feel centralized, intentional, and AI-ready?"

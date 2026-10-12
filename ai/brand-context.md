@@ -1,7 +1,7 @@
-# 🏦 Vaultica & Blink Vault Brand Context
+# 🏦 Vaultica & BlinkVault Brand Context
 
 > **For AI/LLM Context**: This document defines the complete brand soul, visual identity, and design
-> principles for **Blink Vault** (by Vaultica). Reference this file when generating UI components,
+> principles for **BlinkVault** (by Vaultica). Reference this file when generating UI components,
 > marketing copy, or any brand-related content.
 
 ---
@@ -11,41 +11,41 @@
 | Entity          | Description                                                                           |
 | --------------- | ------------------------------------------------------------------------------------- |
 | **Vaultica**    | The company — solid, professional infrastructure                                      |
-| **Blink Vault** | The product (official legal name) — a central vault that makes scattered content AI-ready |
+| **BlinkVault** | The product (official legal name) — a central vault that makes scattered content AI-ready |
 
-**Philosophy**: **"AI-ready in a Blink."** Blink Vault brings loose digital context into one place.
+**Philosophy**: **"AI-ready in a Blink."** BlinkVault brings loose digital context into one place.
 Technology stays invisible, but the outcome is obvious: centralized, searchable, AI-ready content.
 
 ---
 
-## What is Blink Vault?
+## What is BlinkVault?
 
-**Blink Vault: One vault for everything your AI needs.**
+**BlinkVault: One vault for everything your AI needs.**
 
-Blink Vault is the central vault for the loose digital context spread across your tools.
+BlinkVault is the central vault for the loose digital context spread across your tools.
 Cloud drives, messaging apps, saved links, notes, PDFs, screenshots, video, and random local
 files all end up in one place — and become searchable and AI-ready.
 
-Blink Vault is not framed as a bulk-import archive system. The product model is intentional:
+BlinkVault is not framed as a bulk-import archive system. The product model is intentional:
 
 - **Sync** cloud drives like Dropbox and Google Drive
 - **Send** specific files, links, or messages from apps like Telegram, Discord, or WhatsApp
 - **Drop** anything from desktop or local storage
 
-The user chooses what goes in. Blink Vault makes it useful immediately.
+The user chooses what goes in. BlinkVault makes it useful immediately.
 
 ---
 
 ## Core Metaphor
 
-### Blink Vault (the product)
+### BlinkVault (the product)
 
 The name combines:
 
 - **Blink** — Speed, visual intuition, effortless capture
 - **Vault** — Security, permanence, organized access
 
-### Why "Blink Vault"?
+### Why "BlinkVault"?
 
 - **Speed** — Saves in the blink of an eye
 - **Visual** — Like blinking your eyes, capturing what you see
@@ -137,7 +137,7 @@ serves a purpose. The design communicates efficiency, security, and speed.
 
 ### 1. The Hub
 
-**UI Implication**: Show Blink Vault as the center point for many sources. Platform cards,
+**UI Implication**: Show BlinkVault as the center point for many sources. Platform cards,
 source labels, and flow cues should reinforce centralization.
 
 ### 2. Any Format
@@ -244,5 +244,5 @@ When generating CSS or styling:
 
 ---
 
-_This document is the source of truth for Blink Vault's brand expression. When in doubt: centralize
+_This document is the source of truth for BlinkVault's brand expression. When in doubt: centralize
 the story, keep ingestion intentional, and make the result feel immediately useful to AI._

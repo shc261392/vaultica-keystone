@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="BlinkVault">
+  <!-- Single-colour mark: tile with the lens cut out (evenodd), pupil filled. Inherits currentColor. -->
+  <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M10 2H22A8 8 0 0 1 30 10V22A8 8 0 0 1 22 30H10A8 8 0 0 1 2 22V10A8 8 0 0 1 10 2ZM8 16Q16 10.5 24 16Q16 21.5 8 16Z"/>
+  <circle cx="16" cy="16" r="2" fill="currentColor"/>
+</svg>

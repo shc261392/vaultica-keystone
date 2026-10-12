@@ -214,7 +214,7 @@ export function Logo({ variant = "dark" }: { variant?: "dark" | "light" }) {
   const src =
     variant === "dark" ? "/logos/blink-vault-logo-dark.svg" : "/logos/blink-vault-logo-light.svg";
 
-  return <Image src={src} alt="Blink Vault" width={180} height={48} priority />;
+  return <Image src={src} alt="BlinkVault" width={180} height={48} priority />;
 }
 
 // App Icon (for small spaces)
@@ -382,7 +382,7 @@ cp vaultica-keystone/assets/logos/blink-icon.svg public/icon.svg
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blink Vault",
+  title: "BlinkVault",
   description: "One vault for everything your AI needs. Sync drives, send what matters, and make it AI-ready in a Blink.",
   icons: {
     icon: [
@@ -400,7 +400,7 @@ export const metadata: Metadata = {
 ```json
 // public/manifest.json
 {
-  "name": "Blink Vault",
+  "name": "BlinkVault",
   "short_name": "Blink",
   "description": "One vault for everything your AI needs. Sync drives, send what matters, and make it AI-ready in a Blink.",
   "start_url": "/",
@@ -442,20 +442,20 @@ convert -background none -resize 180x180 public/logos/blink-icon.svg public/appl
 // src/app/layout.tsx
 export const metadata: Metadata = {
   openGraph: {
-    title: "Blink Vault",
+    title: "BlinkVault",
     description: "One vault for everything your AI needs. Sync drives, send what matters, and make it AI-ready in a Blink.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Blink Vault",
+        alt: "BlinkVault",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blink Vault",
+    title: "BlinkVault",
     description: "One vault for everything your AI needs. Sync drives, send what matters, and make it AI-ready in a Blink.",
     images: ["/og-image.png"],
   },
