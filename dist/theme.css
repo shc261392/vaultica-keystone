@@ -1,6 +1,6 @@
 /**
  * Vaultica Design Tokens
- * Generated: 2026-10-12T01:06:56.250Z
+ * Generated: 2026-10-30T06:21:50.110Z
  * 
  * DO NOT EDIT DIRECTLY - Generated from /tokens/*.json
  * Run 'pnpm run build' to regenerate
@@ -312,30 +312,6 @@
 }
 
 @theme {
-  --color-electric-50: #e0ffff;
-  --color-electric-100: #b2ffff;
-  --color-electric-200: #6ffbff;
-  --color-electric-300: #00F0FF;
-  --color-electric-400: #00CDDB;
-  --color-electric-500: #00A7B3;
-  --color-electric-600: #007f8a;
-  --color-electric-700: #005A61;
-  --color-electric-800: #003840;
-  --color-electric-900: #001f24;
-  --color-neon-yellow-300: #ffff99;
-  --color-neon-yellow-400: #FFFF33;
-  --color-neon-yellow-500: #FFFD37;
-  --color-neon-yellow-600: #d4d200;
-  --color-neon-yellow-700: #9e9900;
-  --color-magenta-200: #ff80ff;
-  --color-magenta-400: #FF00FF;
-  --color-magenta-600: #CC00CC;
-  --color-magenta-800: #660066;
-  --color-magenta-950: #280028;
-  --color-silver-200: #ebebeb;
-  --color-silver-400: #C4C4C4;
-  --color-silver-600: #8A8A8A;
-  --color-silver-800: #484848;
   --color-vault-surface-primary: #0E1013;
   --color-vault-surface-secondary: #141619;
   --color-vault-surface-tertiary: #1B1E23;
@@ -357,6 +333,7 @@
   --color-vault-accent-active: #2BB3BB;
   --color-vault-accent-subtle: rgb(60 200 208 / 0.12);
   --color-vault-accent-glow: var(--color-vault-accent-subtle);
+  --color-vault-accent-ring: rgb(60 200 208 / 0.3);
   --color-vault-status-success: #3FB871;
   --color-vault-status-success-subtle: rgb(63 184 113 / 0.14);
   --color-vault-status-warning: #E5A13A;
@@ -426,6 +403,7 @@ html[data-theme='paper'] {
   --color-vault-accent-active: #065A62;
   --color-vault-accent-subtle: #E6F3F4;
   --color-vault-accent-glow: #E6F3F4;
+  --color-vault-accent-ring: rgb(10 124 134 / 0.24);
   --color-vault-status-success: #1F8A4C;
   --color-vault-status-success-subtle: #E7F4EC;
   --color-vault-status-warning: #A65A06;

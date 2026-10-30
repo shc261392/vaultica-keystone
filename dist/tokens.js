@@ -1,6 +1,6 @@
 /**
  * Vaultica Design Tokens - JavaScript Export
- * Generated: 2026-10-12T01:06:56.355Z
+ * Generated: 2026-10-30T06:21:50.119Z
  * 
  * Usage:
  * import { tokens } from '@vaultica/keystone';
