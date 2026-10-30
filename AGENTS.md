@@ -50,6 +50,10 @@ AI context and design assets. It is consumed as a **git submodule** by `vaultica
 7. **Ask when ambiguous** with your harness's question tool; never guess.
 8. **Downstream impact.** Token or asset changes affect three apps — call that out, and
    remind the human that consumers must bump the submodule and their token hash.
+9. **No invented facts.** Never infer business facts (legal entity, jurisdiction, location,
+   currency, team, customers, prices) from language, names or terminology. Write only what the
+   owner stated or a source confirms; otherwise ask, or mark it **[DECIDE]**. Vaultica's
+   contracting entity is **Vaultica LLC (Wyoming, USA)**.
 
 ## Quality gates
 
