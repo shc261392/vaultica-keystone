@@ -20,10 +20,14 @@
 ## Design Principles Recap (reconciled — calm / trust-first)
 
 1. **Hairline borders + elevation** — 1px `vault-border-default` + soft shadow (not 3px brutalist).
-2. **Comfortable contrast** — dark surfaces `#070d10`/`#0c1820`, text `#e4f8ff`; AA-verified on both themes.
-3. **Focused accent** — Electric-Blue `#00F0FF` (dark) / teal `#007f8a` (light) reserved for CTAs, focus ring, active nav — not large fills; reduced glow.
+2. **Comfortable contrast** — dark surfaces `#070d10`/`#0c1820`, text `#e4f8ff`; AA-verified on both
+   themes.
+3. **Focused accent** — Electric-Blue `#00F0FF` (dark) / teal `#007f8a` (light) reserved for CTAs,
+   focus ring, active nav — not large fills; reduced glow.
 4. **Precision** — clean geometry, purposeful spacing, generous whitespace.
-5. **Provenance colors** — fixed & theme-independent: `--color-cite-vault` (blue) / `--color-cite-web` (ember) for citation source signals; always paired with a label/icon (never color alone).
+5. **Provenance colors** — fixed & theme-independent: `--color-cite-vault` (blue) /
+   `--color-cite-web` (ember) for citation source signals; always paired with a label/icon (never
+   color alone).
 
 > _Legacy note: the section below (#27abec, 3px borders, `#1e2329`) reflects the retired
 > "Industrial Elegance" system and is kept only for historical reference._

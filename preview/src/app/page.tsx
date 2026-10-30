@@ -462,8 +462,8 @@ function Typography() {
           <div>
             <span className="text-xs text-vault-text-secondary font-mono">Body / 1rem / 400</span>
             <p className="text-base text-vault-text-primary">
-              One vault for everything your AI needs. Sync drives, send what matters, and make
-              every format searchable without manual cleanup.
+              One vault for everything your AI needs. Sync drives, send what matters, and make every
+              format searchable without manual cleanup.
             </p>
           </div>
           <div>
@@ -555,7 +555,8 @@ function MockWebsite() {
         {/* Hero Section */}
         <section className="px-6 py-16 text-center bg-vault-surface-primary">
           <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
-            One vault for everything your AI needs. <span className="text-brand-blue">AI-ready in a Blink.</span>
+            One vault for everything your AI needs.{' '}
+            <span className="text-brand-blue">AI-ready in a Blink.</span>
           </h1>
           <p className="text-xl text-vault-text-secondary max-w-2xl mx-auto mb-8">
             Sync drives, send what matters from apps, and make every format AI-ready in one vault.

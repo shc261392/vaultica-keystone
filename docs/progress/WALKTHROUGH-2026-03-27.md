@@ -44,6 +44,7 @@ The phrase **"Your files, your rules"** and its variants (`"your vault, your rul
 documentation, or code comments.
 
 **Files to check when copying existing text:**
+
 - `src/app/layout.tsx` — SEO metadata
 - `src/app/page.tsx` — Hero section copy
 - `src/app/auth/page.tsx` — Auth page tagline
@@ -94,6 +95,7 @@ Four new explicit prohibitions added to the Key Principles:
 When writing React components or CSS for vaultica-web:
 
 **DO:**
+
 - Use `rounded-sm` or `rounded` (≤4px radius). Square or near-square corners.
 - Use `border-2` or `border-[3px]` on interactive elements
 - Use `font-mono` for technical values (file sizes, slugs, timestamps)
@@ -101,6 +103,7 @@ When writing React components or CSS for vaultica-web:
 - Use `text-white` or near-white text on dark surfaces
 
 **DO NOT:**
+
 - Use `rounded-full` on rectangular elements (cards, panels, inputs)
 - Use decorative gradients as backgrounds (`bg-gradient-to-r`, etc.)
 - Add emoji to UI labels or button text
@@ -163,7 +166,8 @@ update your version checks to `>= 2.0.0`. No migration of token values is requir
 1. **Open** `ai/personality.md` in context before writing any user-facing copy
 2. **Match tone**: Swift, minimal, confident — 5 words max for labels, 15 words max for subtitles
 3. **Use approved taglines only** — never draft new brand slogans without human approval
-4. **Check retired list**: `"Your files, your rules"`, `"your vault, your rules"`, `"Store, share, and find"` are all banned
+4. **Check retired list**: `"Your files, your rules"`, `"your vault, your rules"`,
+   `"Store, share, and find"` are all banned
 
 ### When Building New Components
 
@@ -171,17 +175,19 @@ update your version checks to `>= 2.0.0`. No migration of token values is requir
 2. **Reference** `docs/INTEGRATION-GUIDE.md` for concrete code examples
 3. **Use** `vaultica-keystone/dist/theme.css` CSS variables — never hardcode brand colors
 4. **Borders**: Default to `border-2` with `border-vault-border-default`
-5. **Surfaces**: Use `bg-vault-surface-primary`, `bg-vault-surface-secondary`, or `bg-vault-surface-tertiary` — never `bg-zinc-950` etc.
+5. **Surfaces**: Use `bg-vault-surface-primary`, `bg-vault-surface-secondary`, or
+   `bg-vault-surface-tertiary` — never `bg-zinc-950` etc.
 
 ### When Updating Metadata / SEO
 
 The canonical description for all metadata contexts is:
 
-```
+```text
 Save anything. Find something. In a blink.
 ```
 
 Use this verbatim (with punctuation) in:
+
 - `layout.tsx` `metadata.description`
 - `metadata.openGraph.description`
 - `metadata.twitter.description`
