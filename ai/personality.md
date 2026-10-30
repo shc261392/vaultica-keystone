@@ -12,9 +12,9 @@
 | **Vaultica**    | The company — solid, dependable infrastructure                          |
 | **BlinkVault** | The product — one vault for scattered digital context, made AI-ready    |
 
-**Primary motto**: **"AI-ready in a Blink."**
-
-**Primary headline**: **"One vault for everything your AI needs."**
+**Current tagline** (source: `vaultica-web/src/lib/brand.ts`): **"Dump anything. Ask anything. See
+the source."** Use it as the primary line. "AI-ready in a Blink." and "One vault for everything
+your AI needs." are earlier lines; keep them for background, not as the lead.
 
 **Philosophy**: Your loose data is everywhere. BlinkVault pulls it into one place, makes it
 searchable, and keeps the technology invisible.
@@ -246,12 +246,13 @@ _Note: Explain outcomes, not internals._
 
 ## Taglines & Slogans
 
-**Primary motto:**
+**Current tagline** (source: `vaultica-web/src/lib/brand.ts`):
+
+> "Dump anything. Ask anything. See the source."
+
+**Earlier lines** (background only, not the lead):
 
 > "AI-ready in a Blink."
-
-**Primary hero line:**
-
 > "One vault for everything your AI needs."
 
 **Secondary options:**

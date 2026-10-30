@@ -23,10 +23,11 @@ AI context and design assets. It is consumed as a **git submodule** by `vaultica
 - **Stack:** TypeScript 5 (strict) · Node 24 (Volta) · pnpm 10 · token build via `tsx`.
 - **Quality:** Biome (system binary, **not** an npm package) · markdownlint-cli2 · cspell ·
   husky pre-commit (commitlint is installed but no `commit-msg` hook runs it).
-- **Brand:** BlinkVault (product, by Vaultica) — "AI-ready in a Blink. One vault for everything
-  your AI needs." Industrial elegance (heavy borders, high contrast). Voice: calm, clear,
-  intentional. Avoid playful language, tech jargon, bulk-dump messaging, weak borders and
-  vibe-app aesthetics. Terms: **Vault** = user's centralized repository · **AI-ready** = the core
+- **Brand:** BlinkVault (product, by Vaultica) — "Dump anything. Ask anything. See the source."
+  Design: "Quiet instrument" — Geist / Geist Mono, dark **blink** + light **paper** themes, sparse
+  1px borders, no glow or neon, shadows only on overlays, 8px radius family. Voice: calm, clear,
+  intentional. Avoid playful language, tech jargon, bulk-dump messaging and vibe-app aesthetics.
+  Terms: **Vault** = user's centralized repository · **AI-ready** = the core
   promise · **Sync / Send / Drop** = the three ingestion models. Full context:
   [`ai/brand-context.md`](ai/brand-context.md).
 
@@ -35,7 +36,8 @@ AI context and design assets. It is consumed as a **git submodule** by `vaultica
 1. **Tokens are the source.** Change styles only in `tokens/`, then run `pnpm build`.
    Never hand-edit `dist/`.
 2. **No hardcoded colors.** Use CSS variables / functional names (`vault-surface`,
-   `vault-accent`); define colors in OKLCH. Meet WCAG AA contrast (4.5:1).
+   `vault-accent`); define colors in OKLCH. Meet WCAG AA contrast (4.5:1). Never use glow, neon or
+   gradient fills; focus uses `--color-vault-accent-ring`.
 3. **Use `pnpm`**, never npm or yarn. Biome config lives in `biome.jsonc` only — no
    separate ESLint/Prettier files.
 4. **Truth docs stay in sync.** Truth docs (`docs/truth/`, mapped in `manifest.json`) must

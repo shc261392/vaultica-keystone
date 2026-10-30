@@ -71,7 +71,15 @@ Testing and release steps: [Testing and Deployment](docs/guide/testing-and-deplo
 
 ## Brand Summary
 
-- **Product**: BlinkVault — "AI-ready in a Blink. One vault for everything your AI needs."
-- **Aesthetic**: Industrial Elegance (heavy borders, high contrast, professional 2026 design)
-- **Color**: Brand blue `#27abec`
-- **Theme**: Dark-only
+- **Product**: BlinkVault. Tagline: "Dump anything. Ask anything. See the source." (source:
+  `vaultica-web/src/lib/brand.ts`)
+- **Design**: "Quiet instrument" - calm and tool-like. Sparse 1px borders, no glow or neon,
+  shadows only on overlays, an 8px radius family.
+- **Type**: Geist and Geist Mono.
+- **Themes**: dark **blink** (surface `#0E1013`, accent `#3CC8D0`) and light **paper**
+  (accent `#0A7C86`). Users choose System, Blink or Paper.
+- **Focus**: a text field owns its focus ring - accent border plus a 3px halo
+  (`--color-vault-accent-ring`).
+- **Patterns**: see [`ai/component-patterns.md`](ai/component-patterns.md).
+- **Social kit**: [`assets/social/`](assets/social/README.md) (avatar, X header, Reddit banner and
+  icon, link card), rebuilt with `pnpm build:social`.

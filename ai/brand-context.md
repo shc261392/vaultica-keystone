@@ -4,6 +4,10 @@
 > principles for **BlinkVault** (by Vaultica). Reference this file when generating UI components,
 > marketing copy, or any brand-related content.
 
+**Current tagline** (source: `vaultica-web/src/lib/brand.ts`): "Dump anything. Ask anything. See the
+source." Product line: forward links, PDFs, screenshots and notes from Telegram or Discord;
+BlinkVault sorts them into topics and answers with citations to the exact source.
+
 ---
 
 ## Brand Architecture
@@ -56,58 +60,56 @@ Think: one vault, many sources, zero fragmentation.
 
 ---
 
-## Visual Aesthetic: "Industrial Elegance"
+## Visual Aesthetic: "Quiet instrument"
 
 ### Design Philosophy
 
-Vaultica's visual language is **Industrial Elegance** — the intersection of brutalist precision and
-refined sophistication. This is a 2026 professional tool — not a "vibe app." Every pixel
-serves a purpose. The design communicates efficiency, security, and speed.
+BlinkVault looks like a well-made instrument: calm, precise, tool-like. It does not decorate. The
+interface steps back so the user's content and the cited source stay in front. The live source of
+truth is `vaultica-web/src/styles/globals.css`; the tokens in `tokens/vault-theme.json` mirror it.
 
 #### Key Principles
 
-1. **Visual Weight**
-   - Heavy borders (2-4px) that anchor UI elements
-   - Substantial typography that commands attention
-   - Deliberate use of negative space
-   - Monospace accents for technical authority
+1. **Sparse structure**
+   - 1px borders, used where they separate things - not on every element
+   - Shadows only on overlays (menus, dialogs, popovers)
+   - 8px radius family (4 / 6 / 8 / 12)
+   - Generous, consistent spacing
 
-2. **High Contrast**
-   - Dark surfaces with bright, clean text
-   - Accent colors that pop against neutral backgrounds
-   - Clear distinction between interactive and static elements
-   - Dark-only theme — no light mode distraction
+2. **One accent, used sparingly**
+   - Teal accent for the primary action, focus, active navigation and links
+   - No glow, no neon, no gradient fills
+   - Status colours (success, warning, critical) carry meaning only; never decoration
 
-3. **Brutalist Precision**
-   - Clean, geometric shapes
-   - Minimal decorative elements
-   - Function-first design decisions
-   - No playful rounded bubble UI, no gradient backgrounds, no emoji-driven UX
+3. **Two themes, same design**
+   - **blink** - dark, the default (surface `#0E1013`, accent `#3CC8D0`)
+   - **paper** - light (surface `#FAFAFB`, accent `#0A7C86`)
+   - Users choose System, Blink or Paper; every component must work in both
 
-4. **Security Aesthetic**
-   - Lock/vault iconography where appropriate
-   - Strong borders suggest containment and protection
-   - Stable, grounded layouts (nothing feels fragile)
-   - Everything has a defined boundary
+4. **Provenance is visible**
+   - Citations are numbered pills that open a source popover
+   - Vault sources and web sources use distinct, theme-aware colours, always paired with a label
 
-### Color Psychology
+### Colour
 
-| Token           | Purpose                                                  | Feeling                       |
-| --------------- | -------------------------------------------------------- | ----------------------------- |
-| `vault-surface` | Dark navy-teal backgrounds (`#070d10`, `#0c1820`)        | Depth, tech, immersion        |
-| `brand-blue`    | Electric Blue `#00F0FF` — primary CTA accent             | Energy, speed, futurism       |
-| `neon-yellow`   | `#FFFF33` / `#FFFD37` — warning and highlight contrast   | Attention, urgency, warmth    |
-| `magenta`       | `#FF00FF` — critical/error states                        | Alert, dramatic, unmistakable |
-| `silver`        | `#C4C4C4` — secondary text, neutral UI                   | Precision, clarity, neutrality|
-| `vault-border`  | Electric teal borders (`#00A7B3`, subtle glow)           | Structure, neon containment   |
-| `vault-text`    | Cool-white primary `#e4f8ff`                             | Clarity, readability          |
+| Token                         | blink (dark)            | paper (light)           | Use                              |
+| ----------------------------- | ----------------------- | ----------------------- | -------------------------------- |
+| `vault-surface-primary`       | `#0E1013`               | `#FAFAFB`               | App background                   |
+| `vault-surface-secondary`     | `#141619`               | `#FFFFFF`               | Cards, panels                    |
+| `vault-border-default`        | `#25292F`               | `#DFE1E6`               | Hairline borders                 |
+| `vault-text-primary`          | `#ECEDF0`               | `#141619`               | Body text                        |
+| `vault-accent`                | `#3CC8D0`               | `#0A7C86`               | Primary action, focus, links     |
+| `vault-accent-fg`             | `#04181A`               | `#FFFFFF`               | Text on accent fills             |
+| `vault-accent-ring`           | `rgb(60 200 208 / 0.3)` | `rgb(10 124 134 / 0.24)`| 3px focus halo on text fields    |
 
-### Typography Philosophy
+Always use the functional token name, never the hex. Tag colours are `light-dark()` pairs so one
+definition serves both themes.
 
-- **Headlines**: Bold/Heavy weights — authoritative, unmistakable
-- **Body**: Regular weight — readable, efficient, scannable
-- **Labels**: Medium weight with letter-spacing — precise, structured
-- **Monospace**: For technical content — authenticity, precision
+### Typography
+
+- **Geist** for all UI and marketing text; **Geist Mono** for code, IDs and technical values
+- Headlines: semibold, tight tracking. Body: regular. Labels: medium
+- Phones use 16px text inside every input (prevents iOS zoom on focus)
 
 ---
 
@@ -176,11 +178,12 @@ intent. No mentions of:
 
 ### Visual Don'ts
 
-1. **Don't use playful/casual design** — No rounded bubbly shapes, no rainbow gradients
-2. **Don't use weak borders** — Always visible, intentional containment
-3. **Don't sacrifice clarity for aesthetics** — Function first
-4. **Don't use decorative illustrations** — Icons should be geometric and purposeful
-5. **Don't imply insecurity** — Nothing should feel fragile or ephemeral
+1. **Don't use playful/casual design** — No bubbly shapes, no rainbow gradients, no emoji-driven UI
+2. **Don't add glow, neon or gradient fills** — Calm is the point
+3. **Don't put shadows on resting surfaces** — Shadows are for overlays only
+4. **Don't sacrifice clarity for aesthetics** — Function first
+5. **Don't use decorative illustrations** — Icons should be geometric and purposeful
+6. **Don't put internal or technical names in UI text** — The product-words test enforces this
 
 ### Terminology Don'ts
 
@@ -194,43 +197,27 @@ intent. No mentions of:
 
 ## Component Patterns
 
-### Buttons
+Full patterns, with do and don't: [`component-patterns.md`](component-patterns.md). In short:
 
-- Primary: Solid accent background, heavy weight
-- Secondary: Transparent with thick border
-- Always have visible focus states
-
-### Cards
-
-- 2-3px solid borders
-- Dark surface background
-- Clear content hierarchy
-
-### Inputs
-
-- Thick border on focus
-- Dark background
-- High-contrast placeholder
-
-### Navigation
-
-- Clear active states
-- Accent color for current item
-- Substantial touch targets
+- Primary button: solid accent fill, `vault-accent-fg` text. Secondary: 1px border, transparent
+- Cards: 1px `vault-border-default`, no resting shadow
+- Text fields: the field owns its focus - accent border plus a 3px `vault-accent-ring` halo
+- Navigation: persistent sidebar (240px, 56px rail); accent marks the current item
 
 ---
 
 ## Quick Reference Tokens
 
-When generating CSS or styling:
+When generating CSS or styling (Tailwind v4 utilities `bg-vault-*`, `text-vault-*`, `border-vault-*`):
 
 ```css
---vault-surface-primary     → Main background
---vault-surface-secondary   → Card/panel background
---vault-border-strong       → Heavy brutalist borders
---vault-accent-default      → Primary CTA color
---vault-text-primary        → Main text color
---vault-text-secondary      → Subdued text
+--color-vault-surface-primary     /* Main background */
+--color-vault-surface-secondary   /* Card/panel background */
+--color-vault-border-default      /* Hairline borders */
+--color-vault-accent              /* Primary action, focus, links */
+--color-vault-accent-ring         /* Focus halo around text fields */
+--color-vault-text-primary        /* Main text */
+--color-vault-text-secondary      /* Subdued text */
 ```
 
 ---

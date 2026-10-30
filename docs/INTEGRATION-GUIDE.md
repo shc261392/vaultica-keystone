@@ -114,9 +114,9 @@ Import the generated theme CSS in your `globals.css`:
 
 ```css
 /* Brand Colors */
---color-brand-black: #363b42;
---color-brand-white: #f0fbff;
---color-brand-blue: #27abec;
+--color-vault-accent: #3CC8D0;      /* blink (dark); paper (light) is #0A7C86 */
+--color-vault-accent-fg: #04181A;   /* text on accent fills */
+--color-vault-accent-ring: rgb(60 200 208 / 0.3); /* 3px focus halo on text fields */
 
 /* Semantic Surface Colors */
 --color-semantic-vault-surface-primary   /* Main app background */
@@ -131,7 +131,7 @@ Import the generated theme CSS in your `globals.css`:
 
 /* Semantic Border Colors */
 --color-semantic-vault-border-default    /* Standard borders */
---color-semantic-vault-border-strong     /* Heavy brutalist borders */
+--color-semantic-vault-border-strong     /* Stronger hairline */
 --color-semantic-vault-border-subtle     /* Subtle dividers */
 --color-semantic-vault-border-focus      /* Focus ring color */
 
@@ -149,7 +149,6 @@ Import the generated theme CSS in your `globals.css`:
 
 /* Effects */
 --effects-shadow-sm through --effects-shadow-xl
---effects-border-width-thick: 3px
 ```
 
 ### JavaScript/TypeScript Tokens
@@ -159,7 +158,7 @@ Import the generated theme CSS in your `globals.css`:
 import { tokens, cssVar } from "../../vaultica-keystone/dist/tokens.js";
 
 // Use raw values
-const brandBlue = tokens.color_brand_blue; // "#27abec"
+// Read tokens by their generated names (see dist/tokens.d.ts)
 
 // Use as CSS variable reference
 const accentVar = cssVar("color_semantic_vault_accent_default");
@@ -295,7 +294,7 @@ After configuration, you can use:
 
 // Border colors
 <div className="border-vault-border-default">Standard border</div>
-<div className="border-vault-border-strong border-3">Brutalist border</div>
+<div className="border border-vault-border-strong">Stronger hairline</div>
 
 // Accent colors
 <button className="bg-vault-accent hover:bg-vault-accent-hover">
@@ -308,15 +307,13 @@ After configuration, you can use:
 <span className="text-vault-status-critical">Error</span>
 
 // Font families
-<p className="font-primary">Body text (Inter)</p>
-<code className="font-mono">Code (JetBrains Mono)</code>
+<p className="font-primary">Body text (Geist)</p>
+<code className="font-mono">Code (Geist Mono)</code>
 
-// Brutalist borders
-<div className="border-thick border-vault-border-strong">3px border</div>
-<div className="border-heavy border-vault-border-strong">4px border</div>
-
-// Glow effects
-<button className="shadow-glow-accent">Glowing button</button>
+// Focus: the field owns its ring (accent border + 3px halo)
+<div className="field rounded-md border border-vault-border-default">
+  <input className="bg-transparent" />
+</div>
 ```
 
 ### Create Component Classes
@@ -324,37 +321,27 @@ After configuration, you can use:
 ```css
 /* src/app/globals.css */
 @layer components {
-  /* Primary button with Vaultica styling */
   .btn-primary {
-    @apply bg-vault-accent text-white font-semibold px-6 py-3 
-           border-3 border-vault-accent
-           hover:bg-vault-accent-hover hover:border-vault-accent-hover
-           focus:outline-none focus:ring-2 focus:ring-vault-border-focus 
-           focus:ring-offset-2 focus:ring-offset-vault-surface-primary
-           transition-colors duration-150;
+    @apply bg-vault-accent text-vault-accent-fg font-semibold px-4 py-2 rounded-md
+           hover:bg-vault-accent-hover transition-colors duration-150;
   }
 
-  /* Secondary button */
   .btn-secondary {
-    @apply bg-transparent text-vault-text-primary font-semibold px-6 py-3
-           border-3 border-vault-border-strong
-           hover:bg-vault-surface-tertiary hover:border-vault-text-secondary
-           focus:outline-none focus:ring-2 focus:ring-vault-border-focus
+    @apply bg-transparent text-vault-text-primary font-semibold px-4 py-2 rounded-md
+           border border-vault-border-strong hover:bg-vault-surface-tertiary
            transition-colors duration-150;
   }
 
-  /* Brutalist card */
-  .card-brutalist {
-    @apply bg-vault-surface-secondary border-3 border-vault-border-strong p-6;
+  .card {
+    @apply bg-vault-surface-secondary border border-vault-border-default rounded-lg p-6;
   }
 
-  /* Input field */
-  .input-brutalist {
-    @apply bg-vault-surface-secondary text-vault-text-primary
-           border-3 border-vault-border-default
-           focus:border-vault-border-focus focus:outline-none
-           placeholder:text-vault-text-tertiary
-           px-4 py-3 w-full;
+  /* Text field: the field owns its focus ring. */
+  .input {
+    @apply bg-vault-surface-secondary text-vault-text-primary rounded-md
+           border border-vault-border-default placeholder:text-vault-text-tertiary
+           px-3 py-2 w-full focus:outline-none focus:border-vault-accent;
+    &:focus { box-shadow: 0 0 0 3px var(--color-vault-accent-ring); }
   }
 }
 ```
@@ -383,7 +370,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "BlinkVault",
-  description: "One vault for everything your AI needs. Sync drives, send what matters, and make it AI-ready in a Blink.",
+  description: "Forward links, PDFs, screenshots and notes from Telegram or Discord. BlinkVault sorts them into topics and answers with citations to the exact source.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -402,11 +389,11 @@ export const metadata: Metadata = {
 {
   "name": "BlinkVault",
   "short_name": "Blink",
-  "description": "One vault for everything your AI needs. Sync drives, send what matters, and make it AI-ready in a Blink.",
+  "description": "Forward links, PDFs, screenshots and notes from Telegram or Discord. BlinkVault sorts them into topics and answers with citations to the exact source.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#363b42",
-  "theme_color": "#27abec",
+  "background_color": "#0E1013",
+  "theme_color": "#0E1013",
   "icons": [
     {
       "src": "/logos/blink-icon.svg",
@@ -443,7 +430,7 @@ convert -background none -resize 180x180 public/logos/blink-icon.svg public/appl
 export const metadata: Metadata = {
   openGraph: {
     title: "BlinkVault",
-    description: "One vault for everything your AI needs. Sync drives, send what matters, and make it AI-ready in a Blink.",
+    description: "Forward links, PDFs, screenshots and notes from Telegram or Discord. BlinkVault sorts them into topics and answers with citations to the exact source.",
     images: [
       {
         url: "/og-image.png",
@@ -456,7 +443,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "BlinkVault",
-    description: "One vault for everything your AI needs. Sync drives, send what matters, and make it AI-ready in a Blink.",
+    description: "Forward links, PDFs, screenshots and notes from Telegram or Discord. BlinkVault sorts them into topics and answers with citations to the exact source.",
     images: ["/og-image.png"],
   },
 };

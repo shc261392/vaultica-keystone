@@ -4,9 +4,16 @@
 
 ## Resolved
 
-- [x] **Brand color**: `#27abec` (brand blue)
-- [x] **Typography**: Inter (primary) + JetBrains Mono (code)
-- [x] **Theme**: Dark-only (no light mode)
+- [x] **Brand colour** (2026-10-30): teal accent - `#3CC8D0` on dark (blink), `#0A7C86` on light
+  (paper). Replaces brand blue `#27abec` and the electric/neon/magenta palette.
+- [x] **Typography** (2026-10-30): Geist (primary) + Geist Mono (code). Replaces Inter /
+  JetBrains Mono.
+- [x] **Themes** (2026-10-30): dark **blink** and light **paper**; users pick System, Blink or Paper.
+  Replaces dark-only.
+- [x] **Design language** (2026-10-30): "Quiet instrument" - sparse 1px borders, no glow or neon,
+  shadows only on overlays, 8px radius family. Replaces "Industrial Elegance".
+- [x] **Focus** (2026-10-30): the field owns its ring - accent border + 3px halo
+  (`--color-vault-accent-ring`).
 - [x] **Distribution**: Git submodule (no npm)
 - [x] **License**: Private/proprietary
 
@@ -24,11 +31,10 @@
 
 These are NOT priorities right now. Revisit when/if needed:
 
-- [ ] Light mode support
 - [ ] Native platform assets (SF Symbols, Material Icons)
 - [ ] Figma integration
 - [ ] Storybook documentation
 
 ---
 
-Last updated: 2026-01-27
+Last updated: 2026-10-30

@@ -1,42 +1,104 @@
 # 🧩 Blink Component Patterns
 
-> **For AI/LLM Context**: Reference this document when generating UI components for Blink. These
-> patterns ensure visual consistency with the current **calm / trust-first Electric-Blue** system
-> (workflow `full-ui-ux-redesign`). The older "Industrial Elegance / brutalist 3px border / #27abec"
-> guidance below has been superseded — see the reconciled principles.
+> **For AI/LLM Context**: Reference this document when generating UI for BlinkVault. It describes
+> the **"Quiet instrument"** design that went live in the web app on 2026-10-30: calm, tool-like,
+> sparse 1px borders, no glow or neon, shadows only on overlays, 8px radius family. Geist /
+> Geist Mono. Earlier guidance (Industrial Elegance, 3px borders, `#27abec`, Electric-Blue
+> `#00F0FF`) is retired.
 >
-> **Where the tokens live:** the working token source of truth is `src/styles/globals.css` `@theme`
-> (the keystone `dist/theme.css` is imported but overridden). Two themes ship: **`blink`** (dark,
-> Electric-Blue `#00F0FF`, default) and **`paper`** (light, on-brand teal `#007f8a`). `aurora` was removed.
+> **Where the tokens live:** `tokens/vault-theme.json` (this repo) builds to `dist/theme.css`; the web
+> app imports it and layers app-level rules in `src/styles/globals.css`. Two themes ship: **`blink`**
+> (dark, default, accent `#3CC8D0`) and **`paper`** (light, accent `#0A7C86`). Users pick System,
+> Blink or Paper.
 >
-> **Primitive component library** (`src/lib/components/ui/`, Svelte 5): `Button`, `Card`, `Input`,
-> `Textarea`, `Badge`, `Skeleton`, `EmptyState`, `ErrorState`, `StreamingState`, plus `Icon`, `Modal`,
-> `TierBadge`, `ThemeSwitcher`. Variant/size class maps live in `variants.ts`; `cn()` in `src/lib/cn.ts`.
-> Convention: `interface Props { …; class?: string }` + `$props()`; callback-prop events (no dispatcher);
-> Snippets for slots; semantic `vault-*` token utilities only (never hardcoded hex).
+> **Primitive component library** (web, `src/lib/components/ui/`, Svelte 5): `Button`, `Card`,
+> `Input`, `Textarea`, `Badge`, `Skeleton`, `EmptyState`, `ErrorState`, `StreamingState`, plus
+> `Icon`, `Modal`, `TierBadge`, `ThemeSwitcher`, `FilterMenu`, `ActionMenu`. Use semantic `vault-*`
+> token utilities only - never hardcoded hex.
 
 ---
 
-## Design Principles Recap (reconciled — calm / trust-first)
+## Design Principles
 
-1. **Hairline borders + elevation** — 1px `vault-border-default` + soft shadow (not 3px brutalist).
-2. **Comfortable contrast** — dark surfaces `#070d10`/`#0c1820`, text `#e4f8ff`; AA-verified on both
-   themes.
-3. **Focused accent** — Electric-Blue `#00F0FF` (dark) / teal `#007f8a` (light) reserved for CTAs,
-   focus ring, active nav — not large fills; reduced glow.
-4. **Precision** — clean geometry, purposeful spacing, generous whitespace.
-5. **Provenance colors** — fixed & theme-independent: `--color-cite-vault` (blue) /
-   `--color-cite-web` (ember) for citation source signals; always paired with a label/icon (never
-   color alone).
+1. **Sparse hairlines** - 1px `vault-border-default`, only where it separates things.
+2. **Shadows only on overlays** - menus, dialogs and popovers. Resting surfaces are flat.
+3. **One accent** - teal (`#3CC8D0` blink / `#0A7C86` paper) for the primary action, focus, active
+   navigation and links. No glow, no neon, no gradient fills.
+4. **8px radius family** - `--radius-sm` 6px, `--radius-md` 8px, `--radius-lg` 12px.
+5. **Provenance colours** - `--color-cite-vault` and `--color-cite-web` mark citation sources,
+   always paired with a label or icon (never colour alone).
+6. **Both themes, always** - tag colours are `light-dark()` pairs; test blink and paper.
 
-> _Legacy note: the section below (#27abec, 3px borders, `#1e2329`) reflects the retired
-> "Industrial Elegance" system and is kept only for historical reference._
+---
+
+## Current Patterns
+
+Each pattern: what it is, then do and don't.
+
+### Focus system
+
+A text field **owns its focus ring**: border turns `vault-accent` and a 3px halo
+`--color-vault-accent-ring` follows the field's radius (blink `rgb(60 200 208 / 0.3)`, paper
+`rgb(10 124 134 / 0.24)`). Buttons, links and rows get a 2px outline in `vault-border-focus`.
+A wrapper around a borderless input takes the class `.field` and shows the ring via `:focus-within`.
+
+- Do: let the field draw the ring; mark wrappers with `.field`.
+- Do: use 16px text in inputs on phones (prevents iOS zoom).
+- Don't: add a second outline on the inner input, or a 3px border as the focus state.
+
+### App shell and navigation
+
+Persistent sidebar, 240px wide, collapsing to a 56px rail. The command palette opens with Cmd/Ctrl+K;
+`?` opens the keyboard-shortcuts sheet. Library holds three views: **Files / Topics / Threads**.
+
+- Do: keep the current location marked with the accent.
+- Don't: hide primary navigation behind a hamburger on desktop.
+
+### Ask
+
+Ask shows live progress ("Searched your vault ✓ · Reading 2 sources · Writing…") and a **Stop**
+button while it runs. Answers carry numbered citation pills; selecting one opens a source popover.
+After an answer: three suggested follow-up chips and thumbs feedback.
+
+- Do: show what is happening in plain words; keep Stop reachable.
+- Do: cite every claim with a numbered pill.
+- Don't: explain how search works (see the "Invisible Librarian" rule) or show internal names.
+
+### Filter pills (`FilterMenu`)
+
+A pill that opens a dropdown on desktop and a **bottom sheet on phones**.
+
+- Do: show the active value in the pill.
+- Don't: use a native `<select>` for filters.
+
+### Action menu (`ActionMenu`)
+
+A ⋯ button opens the menu. **Destructive actions go last, behind a divider**, in the critical colour.
+
+- Do: confirm destructive actions that cannot be undone.
+- Don't: place Delete first or style it like a normal action.
+
+### Error pages
+
+One branded 404 / 5xx page in the same calm voice: what happened, one clear way back.
+
+- Don't: use jokes, stack traces or illustrations.
+
+### Tags
+
+Tag colours are `light-dark()` pairs, so one definition serves both themes.
+
+### Product words
+
+A test forbids internal names in UI text. Write what the user sees, in the terms in
+`ai/personality.md`.
 
 ---
 
 ## Core Components
 
-> **Single accent.** Indigo was removed entirely — Electric-Blue (`blink`) / teal (`paper`) is the
+> **Single accent.** Indigo was removed entirely — teal (`#3CC8D0` on `blink`,
+> `#0A7C86` on `paper`) is the
 > only interactive accent. All colors below are semantic `vault-*` utilities (never raw palette scale
 > like `neutral-700`, `accent-900`, or hardcoded hex). Class maps mirror `variants.ts`.
 
@@ -49,7 +111,7 @@ inline-flex items-center justify-center rounded-md font-semibold whitespace-nowr
 transition-colors duration-150 disabled:opacity-50 disabled:pointer-events-none
 ```
 
-`rounded-md` = `--radius-md` (10px). Keyboard focus is handled globally by
+`rounded-md` = `--radius-md` (8px). Keyboard focus is handled globally by
 `:focus-visible { outline: 2px solid var(--color-vault-border-focus); outline-offset: 2px }`.
 
 **Variants:**
@@ -61,7 +123,8 @@ transition-colors duration-150 disabled:opacity-50 disabled:pointer-events-none
 | Ghost     | `bg-transparent text-vault-text-secondary border border-transparent hover:bg-vault-surface-tertiary hover:text-vault-text-primary` |
 | Danger    | `bg-vault-status-critical-subtle text-vault-status-critical border border-vault-status-critical-subtle hover:bg-vault-status-critical/15` |
 
-> **Primary text is `text-vault-accent-fg`** — dark navy (`#070d10`) on the `blink` dark theme, white
+> **Primary text is `text-vault-accent-fg`** — dark teal-black (`#04181A`) on the `blink` dark
+> theme, white
 > on `paper` light. Never plain white on the dark accent.
 
 **Sizes:**
@@ -79,7 +142,7 @@ transition-colors duration-150 disabled:opacity-50 disabled:pointer-events-none
 ```text
 bg-vault-surface-secondary
 border border-vault-border-default   /* 1px hairline — NOT 3px brutalist */
-rounded-lg                           /* --radius-lg = 16px */
+rounded-lg                           /* --radius-lg = 12px */
 p-6
 shadow-sm                            /* soft elevation */
 
@@ -103,7 +166,7 @@ overflow-hidden                      /* for image cropping */
 ```text
 bg-vault-surface-secondary
 border border-vault-border-default   /* 1px hairline — NOT 3px */
-rounded-md                           /* --radius-md = 10px */
+rounded-md                           /* --radius-md = 8px */
 px-4
 h-11                                 /* 44px, min touch target */
 text-vault-text-primary
@@ -129,7 +192,7 @@ and shows focus with a **soft accent ring** — not a 3px border and not a 4px b
 ```text
 /* Wrapper (1px hairline) */
 border border-vault-border-default
-rounded-lg                           /* --radius-lg = 16px */
+rounded-lg                           /* --radius-lg = 12px */
 
 /* Soft focus-within treatment */
 focus-within:border-vault-accent/60
@@ -168,7 +231,7 @@ Semantic aliases: `private` → default; `shared` / `published` → accent.
 ```text
 bg-vault-surface-tertiary
 border border-vault-border-default   /* 1px hairline — NOT 3px */
-rounded-lg                           /* --radius-lg = 16px */
+rounded-lg                           /* --radius-lg = 12px */
 px-5 py-4
 shadow-lg
 max-w-[400px]
@@ -186,7 +249,7 @@ Variant colors follow the Badge status utilities (`bg-vault-status-*-subtle` + `
 ```text
 bg-vault-surface-secondary
 border border-vault-border-strong    /* 1px strong hairline — NOT 3px */
-rounded-lg                           /* --radius-lg = 16px */
+rounded-lg                           /* --radius-lg = 12px */
 p-8
 shadow-xl
 max-w-[480px]
@@ -202,7 +265,7 @@ backdrop-blur-sm
 
 ```text
 px-4 py-3
-rounded-md                           /* --radius-md = 10px */
+rounded-md                           /* --radius-md = 8px */
 font-medium
 ```
 
@@ -223,7 +286,7 @@ For displaying saved Blinks in the Visual Gallery:
 /* Thumbnail area */
 aspect-square or aspect-[4/3]        /* visual-first */
 object-cover
-rounded-md                           /* internal, --radius-md = 10px */
+rounded-md                           /* internal, --radius-md = 8px */
 
 /* NO metadata labels by default (Visual Gallery). */
 /* On hover / detail view: */
@@ -232,7 +295,7 @@ text-xs text-vault-text-secondary    /* date, subtle */
 /* Container */
 bg-vault-surface-secondary
 border border-vault-border-default   /* 1px hairline — NOT 3px */
-rounded-lg                           /* --radius-lg = 16px */
+rounded-lg                           /* --radius-lg = 12px */
 p-0                                  /* edge-to-edge imagery */
 
 hover:border-vault-border-strong
@@ -249,7 +312,7 @@ hover:border-vault-border-strong
 /* Default */
 bg-vault-surface-secondary
 border border-dashed border-vault-border-default   /* 1px dashed hairline — NOT 3px */
-rounded-lg                                         /* --radius-lg = 16px */
+rounded-lg                                         /* --radius-lg = 12px */
 p-12
 text-center
 Label: "Add to Vault" or "Drop files here"
