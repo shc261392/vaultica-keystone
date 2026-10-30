@@ -53,10 +53,7 @@
   },
   "github.copilot.chat.codeGeneration.instructions": [
     {
-      "file": ".cursorrules"
-    },
-    {
-      "file": "copilot-instructions.md"
+      "file": "AGENTS.md"
     },
     {
       "file": "ai/brand-context.md"

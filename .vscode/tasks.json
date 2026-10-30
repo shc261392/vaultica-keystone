@@ -76,19 +76,15 @@
 			"detail": "Start preview Next.js dev server"
 		},
 		{
-			"label": "Run CI (act)",
+			"label": "Verify (full local gate)",
 			"type": "shell",
-			"command": "gh",
+			"command": "pnpm",
 			"args": [
-				"act",
-				"push",
-				"--container-architecture",
-				"linux/amd64",
-				"--quiet"
+				"verify"
 			],
 			"group": "test",
 			"problemMatcher": [],
-			"detail": "Run GitHub Actions locally via act"
+			"detail": "Run every check CI used to run (no CI/CD)"
 		}
 	]
 }

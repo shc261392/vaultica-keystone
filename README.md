@@ -27,7 +27,8 @@ ai/             AI context files for consistent generation
 assets/logos/   Brand logos (SVG)
 dist/           Generated CSS and JS
 preview/        Next.js preview app
-scripts/        Build and validation scripts
+scripts/        Build and validation scripts (truth.mjs checks docs/truth)
+tools/truth/    Canonical truth-docs tooling, synced to the other repos
 ```
 
 ## Usage
@@ -64,7 +65,9 @@ Point Copilot/Cursor to `ai/brand-context.md` for styling context.
 | `pnpm run build`    | Build tokens to dist/    |
 | `pnpm run validate` | Validate token structure |
 | `pnpm run preview`  | Start preview app        |
-| `pnpm run quality`  | Run all quality checks   |
+| `pnpm run verify`   | Run all checks (no CI)   |
+
+Testing and release steps: [Testing and Deployment](docs/guide/testing-and-deployment.md).
 
 ## Brand Summary
 

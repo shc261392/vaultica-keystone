@@ -1,0 +1,19 @@
+{
+  // OpenCode project configuration — canonical agent rules live in AGENTS.md (auto-loaded).
+  "$schema": "https://opencode.ai/config.json",
+
+  // Model routing (see AGENTS.md "Model routing"): cheap exploration, Sonnet default.
+  "model": "anthropic/claude-sonnet-5-5",
+  "agent": {
+    "explore": { "model": "anthropic/claude-haiku-5-5" },
+    "general": { "model": "anthropic/claude-sonnet-5-5" }
+  },
+
+  // Keep human-approval boundaries from AGENTS.md enforceable at the harness level.
+  "permissions": [
+    { "action": "shell", "resource": "git commit *", "effect": "ask" },
+    { "action": "shell", "resource": "git push *", "effect": "ask" }
+  ],
+
+  "watcher": { "ignore": [".agent_workspace/**", "dist/**", "node_modules/**", "preview/.next/**"] }
+}

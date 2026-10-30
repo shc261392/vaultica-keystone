@@ -12,17 +12,13 @@
 
 ## Truth Document Requirements
 
-Every file in `truth/` MUST include a `## Sources` section:
+Every doc in `truth/` is registered in `truth/manifest.json` with the source globs it describes.
+`truth/truth.lock.json` is tool-owned and records what each doc was last verified against; never
+edit it by hand.
 
-```markdown
-## Sources
-
-**Last Verified:** 2026-02-12T00:00:00Z
-**Commit:** abc1234
-
-| File | Description |
-|------|-------------|
-| src/example.ts | Implementation |
+```bash
+pnpm truth check                                  # list STALE docs
+pnpm truth stamp docs/truth/X.md --reason "..."   # after editing the doc to match the code
 ```
 
-**Verify with:** `pnpm check:truth`
+See `tools/truth/README.md` for the rules.

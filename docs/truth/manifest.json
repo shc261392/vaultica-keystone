@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "watch": [
+    ".husky/**"
+  ],
+  "docs": {
+    "docs/truth/DEVOPS.md": {
+      "sources": [
+        "package.json",
+        ".github/workflows/**",
+        ".husky/**"
+      ],
+      "exclude": [],
+      "severity": "block"
+    }
+  }
+}

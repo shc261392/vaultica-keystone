@@ -29,3 +29,6 @@ coverage/
 *.tmp
 *.temp
 .cache/
+
+# Agent scratch space
+.agent_workspace/

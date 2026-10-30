@@ -35,9 +35,13 @@
     "lint:fix": "biome check --write scripts/",
     "format": "biome format --write src/ scripts/",
     "typecheck": "tsc --noEmit",
-    "check:truth": "tsx scripts/check-truth.ts",
+    "truth": "node scripts/truth.mjs",
+    "check:truth": "node scripts/truth.mjs check",
     "audit": "pnpm audit --audit-level=moderate",
-    "prepare": "husky install || true"
+    "check:tokens": "tsx scripts/check-tokens-files.ts",
+    "preview:typecheck": "pnpm --dir preview type-check",
+    "verify": "pnpm lint && pnpm typecheck && pnpm validate && pnpm check:tokens && pnpm check:truth && pnpm audit && pnpm build && pnpm preview:typecheck && NODE_ENV=production pnpm preview:build && test -d preview/.next",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.4.3",
