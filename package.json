@@ -23,6 +23,7 @@
   ],
   "scripts": {
     "build": "tsx scripts/build-tokens.ts",
+    "build:social": "tsx scripts/build-social.ts",
     "validate": "tsx scripts/validate.ts",
     "prebuild": "tsx scripts/validate.ts",
     "watch": "nodemon --watch tokens --ext json --exec 'tsx scripts/build-tokens.ts'",
@@ -44,16 +45,17 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.4.3",
-    "@commitlint/config-conventional": "^20.4.3",
-    "@commitlint/types": "^20.4.3",
-    "@types/node": "^25.3.3",
-    "cspell": "^8.3.0",
-    "husky": "^9.0.10",
-    "lint-staged": "^15.2.2",
-    "markdownlint-cli2": "^0.21.0",
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
+    "@commitlint/types": "^20.5.0",
+    "@resvg/resvg-js": "^2.6.2",
+    "@types/node": "^25.9.9",
+    "cspell": "^8.19.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.2",
+    "markdownlint-cli2": "^0.24.0",
     "nodemon": "^3.1.14",
-    "tsx": "^4.21.0",
+    "tsx": "^4.23.15",
     "typescript": "^5.9.3"
   },
   "lint-staged": {
@@ -79,6 +81,10 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild"
-    ]
+    ],
+    "overrides": {
+      "re2js": ">=2.8.7",
+      "katex": ">=0.18.2"
+    }
   }
 }

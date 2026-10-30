@@ -5,6 +5,8 @@
 | Package | Pinned Version | Reason | Issue Link |
 |---------|----------------|--------|------------|
 | pnpm | 10.29.3 | Stability | — |
+| katex (override, `package.json` `pnpm.overrides`) | >=0.18.2 | Fixes a low advisory in the same tree; `pnpm audit` exits non-zero on any finding | — |
+| re2js (override, `package.json` `pnpm.overrides`) | >=2.8.7 | Fixes a high advisory in `markdownlint-cli2`'s dependency tree; keeps `pnpm audit` clean | — |
 
 ## CI/CD
 
@@ -17,7 +19,8 @@ None. `.github/workflows/ci.yml` is a manual no-op. The gate is `pnpm verify`, r
 |------|---------|-------|
 | Node.js | 24.13.1 | Via Volta |
 | Biome | latest | System binary |
-| Markdownlint | cli2 ^0.21.0 | Markdown linting |
+| Markdownlint | cli2 ^0.24.0 | Markdown linting |
+| @resvg/resvg-js | 2.6.2 | Renders the social kit PNGs (`pnpm build:social`) |
 
 ## Git Hooks
 

@@ -2,18 +2,18 @@
   "version": 1,
   "docs": {
     "docs/truth/DEVOPS.md": {
-      "docHash": "191d67f233842d16",
-      "verifiedAt": "2026-10-30T03:39:01.143Z",
+      "docHash": "8c19c0bd5d4b46d4",
+      "verifiedAt": "2026-10-30T06:21:46.406Z",
       "files": {
         ".github/workflows/ci.yml": "f27f8e45efe52cda59cb5efd1e3b2375d7c44507",
         ".husky/pre-commit": "e6ba709ebde2606ba603bbb15102efc633580d93",
-        "package.json": "78c2c336335e843e9abe02429c25be179d2bdbab"
+        "package.json": "deeedc569a502c211e5dd39eb799191275640e40"
       },
       "last": {
         "changed": [
-          ".husky/commit-msg"
+          "package.json"
         ],
-        "reason": "Re-read after rebase: .husky/commit-msg removed upstream; documented that only pre-commit is wired and commitlint is not enforced"
+        "reason": "Documented katex override; re-read doc"
       }
     }
   }

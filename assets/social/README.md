@@ -1,49 +1,35 @@
-# 🌐 Vaultica Social Assets
+# Social kit
 
-This directory contains brand-aligned assets for social media and Open Graph images.
+On-brand images for BlinkVault profiles and link previews. Design: "Quiet instrument" - the blink
+surface (`#0E1013`), the Stacked B mark, Geist. Text comes only from `vaultica-web/src/lib/brand.ts`
+(name, tagline, app host).
 
-## Required Assets
+## Files
 
-| Asset                 | Dimensions | Purpose                       |
-| --------------------- | ---------- | ----------------------------- |
-| `og-default.png`      | 1200×630   | Default Open Graph image      |
-| `og-feature.png`      | 1200×630   | Feature announcement template |
-| `twitter-card.png`    | 1200×600   | Twitter summary large image   |
-| `avatar.png`          | 400×400    | Profile picture (square)      |
-| `avatar-round.png`    | 400×400    | Circular profile picture      |
-| `banner.png`          | 1500×500   | Twitter/X banner              |
-| `linkedin-banner.png` | 1128×191   | LinkedIn company banner       |
+| PNG                  | Size      | Where it goes                                                    |
+| -------------------- | --------- | ---------------------------------------------------------------- |
+| `avatar.png`         | 400x400   | Profile picture (X, Discord, Telegram, any square avatar)        |
+| `reddit-icon.png`    | 256x256   | Reddit community icon                                            |
+| `x-header.png`       | 1500x500  | X / Twitter header                                               |
+| `reddit-banner.png`  | 1920x384  | Reddit community banner                                          |
+| `link-card.png`      | 1200x630  | Open Graph / link preview card                                   |
 
-## Brand Guidelines for Social Assets
+Each PNG has an SVG source in [`src/`](src/) with the same name. Fonts used for rendering are in
+[`fonts/`](fonts/) (Geist, SIL OFL; licence text included).
 
-### Colors
+## Safe areas
 
-- Background: Use `vault-surface-primary` (#0d0d0d equivalent)
-- Accent: Use `vault-accent-default` for highlights
-- Text: High contrast white on dark
+- **Avatar and Reddit icon:** the mark fills about 60% of the canvas, so circular crops keep it whole.
+- **X header:** on mobile the avatar covers the bottom-left and the top and bottom edges crop. All
+  content sits right of x=520 and between y=130 and y=370.
+- **Reddit banner:** sides crop on narrow screens. All content is centred in the middle ~1000px.
+- **Link card:** 96px padding from the edges.
 
-### Typography
+## Rebuild
 
-- Headlines: Heavy weight (700-800)
-- Body: Medium weight (500)
-- Always maintain legibility at small sizes
+```bash
+pnpm build:social   # scripts/build-social.ts: writes src/*.svg, renders PNGs with @resvg/resvg-js
+```
 
-### Composition
-
-- Logo in consistent position (typically bottom-right or top-left)
-- Generous padding from edges (min 48px)
-- Brutalist aesthetic: strong geometric shapes, visible structure
-
-## 🚨 TODO: Create Assets
-
-These assets need to be designed and added:
-
-- [ ] og-default.png
-- [ ] og-feature.png
-- [ ] twitter-card.png
-- [ ] avatar.png
-- [ ] avatar-round.png
-- [ ] banner.png
-- [ ] linkedin-banner.png
-
-_Use the design tokens and brand context for visual consistency._
+Edit colours or text in `scripts/build-social.ts` (colours mirror `tokens/vault-theme.json`, theme
+`blink`), then rebuild. Do not hand-edit the PNGs or SVGs.
