@@ -24,6 +24,7 @@
   "scripts": {
     "build": "tsx scripts/build-tokens.ts",
     "build:social": "tsx scripts/build-social.ts",
+    "build:logo": "tsx scripts/build-company-logo.ts",
     "validate": "tsx scripts/validate.ts",
     "prebuild": "tsx scripts/validate.ts",
     "watch": "nodemon --watch tokens --ext json --exec 'tsx scripts/build-tokens.ts'",

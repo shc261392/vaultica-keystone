@@ -2,18 +2,18 @@
   "version": 1,
   "docs": {
     "docs/truth/DEVOPS.md": {
-      "docHash": "8c19c0bd5d4b46d4",
-      "verifiedAt": "2026-10-30T06:21:46.406Z",
+      "docHash": "3a2d709553417d52",
+      "verifiedAt": "2026-10-30T17:14:39.708Z",
       "files": {
         ".github/workflows/ci.yml": "f27f8e45efe52cda59cb5efd1e3b2375d7c44507",
         ".husky/pre-commit": "e6ba709ebde2606ba603bbb15102efc633580d93",
-        "package.json": "deeedc569a502c211e5dd39eb799191275640e40"
+        "package.json": "29d0375f7acbc03ea368e20104e4e48d6584a7d8"
       },
       "last": {
         "changed": [
           "package.json"
         ],
-        "reason": "Documented katex override; re-read doc"
+        "reason": "Add pnpm build:logo (Vaultica Notched shield logo, icon and Stripe PNGs)"
       }
     }
   }

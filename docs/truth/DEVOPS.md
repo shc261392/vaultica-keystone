@@ -20,7 +20,7 @@ None. `.github/workflows/ci.yml` is a manual no-op. The gate is `pnpm verify`, r
 | Node.js | 24.13.1 | Via Volta |
 | Biome | latest | System binary |
 | Markdownlint | cli2 ^0.24.0 | Markdown linting |
-| @resvg/resvg-js | 2.6.2 | Renders the social kit PNGs (`pnpm build:social`) |
+| @resvg/resvg-js | 2.6.2 | Renders the social kit PNGs (`pnpm build:social`) and the Vaultica logo, icon and Stripe PNGs (`pnpm build:logo`) |
 
 ## Git Hooks
 

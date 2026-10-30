@@ -49,13 +49,45 @@ Motion: none. No looping pulse.
 | `icon-512.png`          | 512px PWA icon                                 | PNG    |
 | `icon-maskable-512.png` | 512px maskable PWA icon (20% safe zone)        | PNG    |
 
-### Legacy (Vaultica company marks)
+## Vaultica company mark — "Chevron shield"
 
-| File                      | Description                 | Format |
-| ------------------------- | --------------------------- | ------ |
-| `vaultica-logo.svg`       | Vaultica wordmark (color)   | SVG    |
-| `vaultica-logo-white.svg` | Vaultica wordmark (white)   | SVG    |
-| `vaultica-white-icon.svg` | Vaultica icon mark (legacy) | SVG    |
+The company (Vaultica LLC) mark, separate from the product's Stacked B. A closed, flat-topped
+shield (the outline is never broken, so it reads as intact protection) with a V chevron cut
+through it. It evolves the earlier shield-and-lock mark. One even-odd path: the chevron is a real
+hole, so transparent and one-colour versions show the background through it. Adopted 2026-10-31.
+
+```svg
+<!-- 64×64 grid; visible bounds x 10.5–53.5, y 7.5–56.5; corners r = 1.5 -->
+<path fill="#0A7C86" fill-rule="evenodd"
+  d="M10.5 9A1.5 1.5 0 0 1 12 7.5H52A1.5 1.5 0 0 1 53.5 9V28C53.5 42.8 44.6 51.6 32.55 56.3Q32 56.5 31.45 56.3C19.4 51.6 10.5 42.8 10.5 28Z
+     M16.61 19H24.39L32 30.58L39.61 19H47.39L32 42.42Z"/>
+```
+
+| Variant  | Tile      | Shield    | Lockup text |
+| -------- | --------- | --------- | ----------- |
+| Light UI | `#0A7C86` | `#FFFFFF` | `#141619` (shield `#0A7C86`) |
+| Dark UI  | `#3CC8D0` | `#0E1013` | `#ECEDF0` (shield `#3CC8D0`) |
+| Mono     | —         | `currentColor` | — |
+
+The tile is the same 56/64 rounded square (radius 16) as the Stacked B, so the two marks sit
+together as a family. The lockup uses the wordmark ratios below; "Vaultica" is outlined from Geist
+SemiBold ([`src/vaultica-wordmark.json`](src/vaultica-wordmark.json)), so it renders the same in
+`<img>` and email.
+
+| File                          | Description                                        | Format |
+| ----------------------------- | -------------------------------------------------- | ------ |
+| `vaultica-mark.svg`           | App tile, light-UI colours                         | SVG    |
+| `vaultica-mark-dark.svg`      | App tile, dark-UI colours                          | SVG    |
+| `vaultica-mark-mono.svg`      | Shield only, `currentColor`                        | SVG    |
+| `vaultica-white-icon.svg`     | Shield only, white (dark backgrounds)              | SVG    |
+| `vaultica-logo.svg`           | Shield + "Vaultica", light backgrounds (504×107)   | SVG    |
+| `vaultica-logo-white.svg`     | Shield + "Vaultica", dark backgrounds (504×107)    | SVG    |
+| `vaultica/vaultica-mark-*.png`| App tile at 16, 32, 48, 64, 128, 180, 192, 256, 512, 1024 px | PNG |
+| `vaultica/vaultica-mark-maskable-512.png` | Full-bleed maskable icon (shield in the 80% safe zone) | PNG |
+| `vaultica/vaultica-logo-1200.png`, `vaultica-logo-white-1200.png` | Lockups, 1200 px wide | PNG |
+
+Rebuild with `pnpm build:logo` (`scripts/build-company-logo.ts`, also writes
+[`../stripe/`](../stripe/)). Do not hand-edit the outputs.
 
 ## Wordmark
 

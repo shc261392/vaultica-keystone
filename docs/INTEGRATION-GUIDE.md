@@ -189,8 +189,10 @@ function getToken(name: TokenName): string {
 | `blink-vault-logo-dark.svg`      | Full product logo (dark)  | Primary branding   |
 | `blink-vault-logo-light.svg`     | Full product logo (light) | Light backgrounds  |
 | `blink-with-icon-horizontal.svg` | Icon + "Blink" horiz      | Navigation headers |
-| `vaultica-logo.svg`              | Company logo              | Footer, about      |
-| `vaultica-white-icon.svg`        | White company icon        | Dark backgrounds   |
+| `vaultica-logo.svg`              | Company lockup (light UI) | Footer, about      |
+| `vaultica-logo-white.svg`        | Company lockup (dark UI)  | Footer, about      |
+| `vaultica-mark.svg`              | Company app tile          | Company avatars    |
+| `vaultica-white-icon.svg`        | White company shield      | Dark backgrounds   |
 | `favicon.ico`                    | Favicon                   | Browser tab        |
 
 ### Copy Logos to Public Folder
